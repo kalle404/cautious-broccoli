@@ -1,0 +1,5 @@
+====== Parameediku kursus ======
+
+~~NOCACHE~~
+
+<catlist wiki:parameedik -noHead -noNSInBold -noAddPageButton -maxDepth:2>

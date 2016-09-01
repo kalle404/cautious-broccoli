@@ -1,0 +1,122 @@
+====== Hingamiselundkond ======
+
+
+Hingamiselundkonna moodustavad kopsud ja hingamisteed, mis tagavad gaasivahetuse organismi ja väliskeskkonna vahel. Kõikidel hingamisteede osadel on kõva toes, seetõttu ei lane hingamisteed kokku ja õhk saab nendes vabalt liikuda. Hingamisteedes toimub õhu puhastamine, niisutamine ja soojendamine. Hingamiselundkonna hulka kuuluvad: 
+  * ninaõõs ja nina kõrvalurked (õhu puhastamine ja soojendamine, hääle resonatsioon)
+  * neel
+  * kõri
+  * hingetoru ehk trahhea
+  * kopsutorud ehk bronhid
+  * kopsutorukesed ehk bronheoolid
+  * kopsualveoolid ehk kopsusombid
+
+Hingamiselundite joonis: 
+<hidden>
+{{:parameedik:respiratory_system.png?nolink&600|}}
+</hidden>
+
+Kopsude see bronhid hargnevad ja moodustavad kummaski kopsus bronhiaalpuu. Peabronh jaguneb vastavalt sagaratele paremal kolmeks ja vasakul kaheks sagarabronhiks, mis omakorda jagunevad segmendibronhideks. Need jagunevad omakorda järjest väiksemateks ühikuteks, seega: bronh -> sagarabronh -> segmendibronh -> sagarikubronh -> bronhioolid -> alveolaarjuhakesed -> alveolaarkotikesed -> kopsualveoolid. 
+
+Rinnakelmes eristatakse kahte lestet: kopsupleura ja seinmine pleura. Mõlema pleura vahele jääb suletud pilujas ruum - pleuraõõs (inglise keeles //pleural cavity//). Selles on vähesel määral seroosset (seerumitaolist) vedelikku, mis vähendab kelmete vahelist hõõrumist. Pleuraõõnes ei ole õhku ning selles on püsiv negatiivne rõhk. 
+
+
+**Nina** 
+
+Hingamisteed algavad ninaõõnega. 
+  * nina limaskesta veresooned soojendavad õhku
+  * limaskestalt erituv lima seob tolmu ja mikroobe
+  * limaskesta ripsmekesed suunavad need ninast välja
+
+**Kõri** 
+
+Kõri on hingetoru ülemises osas paiknev kõhreline hääletekkeelund.
+  * kõris paiknevad häälekurrud ja häälepilu
+  * õhu liikumisel häälekurrud võnguvad ja tekib heli
+
+**Hingamistoru e trahhea** 
+
+Torukujuline elund mida mööda pääseb õhk kopsudesse. 
+  * hargneb kaheks kopsutoruks ehk peabronhiks
+  * hingetoru on seest vooderdatud väikeste karvakestega, mis eemaldavad sinna sattunud tolmu ja baktereid
+  * hingetorus toimub kopsu sattuva õhu soojendamine
+
+**Kopsud** 
+
+Kaks hingamiselundit, milles toimub gaasivahetus.
+  * kopsud täidavad rindkere õõnt peaaegu täielikult
+  * kopsudes hargnevad kopsutorud järjest peenemateks ja peenemateks harudeks
+  * kõige peenemad harud lõpevad kopsusompude ehk alveoolidega
+
+Parem kops jaguneb 3-ks ja vasak kops 2-ks kopsusagaraks.
+
+**Pleuraõõs ja pleura** 
+
+  * kopsud on kaetud sileda ja niiske õhukese sidekoelise kopsukelmega
+  * kopsukelme ja rindkere seesmise pinna vahele jääv kitsas ruum nn pleuraõõs on täidetud üliõhukese vedeliku kihiga (10 – 20 ml)
+  * see kaitseb hõõrdumise eest ja hoiab kopsusisest rõhku
+
+**Kopsualveoolid** 
+
+  * õhuga täidetud mullisarnased pisikesed moodustised (0,1-0,3mm)
+  * alveoolid on tillukesed kotikujulised moodustised, mida ümbritsevad kapillaarid
+  * alveoolides toimub gaasivahetus kopsude ja vere vahel
+
+
+===== Hingamine =====
+
+
+Hingamisprotsess jaguneb tinglikult:
+  - Kopsude ventilatsioon e väline hingamine
+  - Gaasivahetus kopsudes
+  - Gaaside transport veres
+  - Gaasivahetus kudedes (rakkudes)
+
+**1. Ventilatsioon**
+
+Õhuvahetus väliskeskkonna ja kopsualveoolide vahel toimub tänu __rindkere mahu muutusele__.
+
+Sissehingamisel
+  * välimised roiete lihased kontraheeruvad ja roided tõmmatakse seetõttu kokku ja üles
+  * diafragma liigub kontraheerumisel alla kõhu suunas
+  * Ruumala suureneb ja rõhk kopsudes langeb väliskeskkonna rõhust allapoole -> õhk sisse
+
+Väljahingamisel
+  * sissehingamislihased lõõgastuvad ja roided vajuvad raskusjõu mõjul alla
+  * diafragma tõuseb üles tagasi
+  * Rõhk kopsudes tõuseb ruumala vähenemise tõttu -> õhk surutakse välja
+
+**2. Gaasivahetus kopsudes**
+
+Toimub gaasivahetus läbi alveooli ja sellega külgnevate kapillaaride seinte:
+  * CO2 liigub kapillaaridesse
+  * O2 alveoolidesse
+
+**3. Gaaside transport veres**
+
+  * O2 transport hemoglobiiniga
+  * CO2 transport:
+      * Na- ja K-sooladena (80%)
+      * Hemoglobiiniga (10%)
+      * Lahustunult (10%)
+
+**4. Gaasivahetus kudedes**
+
+  * Sisemine ehk kudede hingamine toimub rakkudes, kus:
+      * O2 antakse verest kudedesse
+      * CO2 kudedest verre
+
+**Hingamissagedus**
+
+  * hingamissagedust reguleerib piklikaju hingamiskeskus CO2 sisalduse järgi veres;
+  * normaalne hingamissagedus:
+      * täiskasvanul on 12-18 korda minutis,
+      * lastel 20-30 korda minutis, 
+      * väikelastel 30-40 korda minutis.
+
+Pikaajaline suitsetamine või elamine suurlinnas põhjustab kopsukoe kahjustusi ja kopsude kärbumist. Kopsude tumenemist põhjustab tõrv ja tahm.
+
+===== Viited =====
+
+  * Wikipedia [[https://en.wikipedia.org/wiki/Lung|Lung]]
+  * Wikipedia [[https://en.wikipedia.org/wiki/Pleural_cavity|Pleural cavity]]
+

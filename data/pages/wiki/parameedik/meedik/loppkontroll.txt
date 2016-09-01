@@ -1,0 +1,752 @@
+===== Lõppkontrolli kordamisküsimused =====
+
+==== Inimese anatoomia ja füsioloogia ====
+**1) Missugused lihaskoed on aktiveeritud autonoomse e. tahtele allumatu närvisüsteemi poolt?**
+
+Südame ja seedeelundkonna lihased. 
+
+**2) Nimeta kesknärvisüsteemi osad!** 
+
+Selja- ja peaaju.
+
+**3) Millises peapiirkonnas asub piklikaju?**
+
+Kuklas (vereringe ja hingamise refleksid jpm)
+
+**4) Missugust kehaosa(-sid) aktiveerib parempoolne ajupoolkera?**
+
+Vasakpoolses kehaosas paiknevaid kehaosi. 
+
+**5) Kus paikneb seljaaju?** 
+
+Selgroo lülisambakanalis. 
+
+**6) Mida reguleerib piklikaju?** 
+
+Tahtele allumatuid tegevusi, nagu näiteks südametegevus ja hingamiskeskus.
+
+**7) Kuidas nimetatakse kõrge bioloogilise aktiivsusega aineid, mille abil reguleeritakse paljuski organismi talitust?** 
+
+Hormoonid
+
+**8) Märgi joonisel numbriga märgitud erutusjuhtesüsteemi ja südame ehituslikud osad!** 
+
+{{:parameedik:sueda.png?nolink&400 |}}
+
+  - Kopsuveenid
+  - Vasak koda
+  - Atrioventikulaarklapp
+  - Hisi kimp
+  - Hisi kimbu parem ja vasak säär
+  - Vasak vatsake
+  - Vatsakeste vahesein
+  - Purkinje kiudude võrgustik
+  - Parem vatsake 
+  - Alumine õõnesveen
+  - Parem koda
+  - Atrioventikulaarsõlm
+  - Sinuatriaalsõlm
+  - Ülemine õõnesveen
+
+**9) Nimeta südam töö tsüklid!** 
+
+  - Kodade süstol ja diastol
+  - Vatsakeste süstol ja diastol
+  - Südame lõtvumine
+
+**10) Kirjelda skemaatiliselt väikest vereringet!** 
+
+Parem vatsake -> Kopsutüvi -> Parem ja vasak kopsuarter -> Kopsukapillaarid -> Kopsuveenid -> Südame vasak koda
+
+**11) Missugustes arterites voolab venoosne veri, missugustes veenides arteriaalne veri?** 
+
+Kopsuarteris- ja veenides. 
+
+**12) Mis on süstol ja diastol?** 
+
+  * Süstol - südame kokkutõmme ehk kontraktsioon 
+  * Diastol - südame lõõgastumine
+
+**13) Kirjelda skemaatiliselt, kuidas liigub erutus südames!** 
+
+  - Paremas kojas paiknevad kaks sõlme: sinuatriaalsõlm ja atrioventikulaarsõlm
+  - Hisi kimp
+  - Hisi kimbu parem ja vasak säär
+  - Lõppharudena Purkinje kiudude võrgustik
+
+**14) Nimeta üldistatult väikese ja suure vereringe ülesanded!** 
+
+  * Väike vereringe toimetab hapnikurikka vere kopsudest südamesse ja hapnikuvaese vere vastupidi.
+  * Suur vereringe toimetab hapnikurikka vere südamest kudedesse ja hapnikuvaese vere vastupidi. 
+
+**15) Millest koosneb veri?** 
+
+  - Vereplasmast
+  - Punalibledest (erütrotsüüdid)
+  - Valgelibled (leukotsüüdid)
+  - Vereliistakud (trombotsüüdid)
+
+**16) Miks on veenides poolkuuklapid?** 
+
+Poolkuuklapid välistavad veenides vere tagasivoolamist.  
+
+**17) Mis on pärgvereringe?** 
+
+Südame vereringe. 
+
+**18) Mis on hemoglobiin ja mis on on tema ülesanded?** 
+
+Proteiinimolekul punases verelibles, millega transporditakse hapnikku kudedesse ja süsinikdioksiidi kopsudesse. 
+
+**19) Mis on trombotsüüdid ja leukotsüüdid?** 
+
+Vt. küsimust 15.
+
+**20) Nimeta südame-veresoonkonna ülesanded! (5)** 
+
+  - Kõikide elundite varustamine toitainete ja hapnikuga. 
+  - Ainevahetuse jääkproduktide eemaldamine. 
+  - Humoraalne regulatsioon. 
+  - Keha erinevate osade temperatuuri regulatsioon. 
+  - Kaitsereaktsioonid. 
+
+**21) Nimeta hingamiselundkonna osad!** 
+
+  - Ninaõõs
+  - Nina kõrvalurked
+  - Neel
+  - Kõri 
+  - Hingetoru
+  - Bronhid
+  - Bronheoolid
+  - Kopsualveoolid
+
+**22) Nimeta hingamisprotsessi faasid!** 
+
+  - Kopsude ventileerimine
+  - Gaasivahetus kopsudes
+  - Gaasivahetus veres
+  - Gaasivahetus kudedes
+
+**23) Mis jääb kopsude ja rindkere vahele?** 
+
+Rinnakelmeõõs e pleuraõõs 
+
+**24) Nimeta normaalne hingamissagedus täiskasvanutel ja lastel!** 
+
+  - Täiskasvanul 12-18 korda minutis
+  - Lapsel 20-30 korda minutis
+
+**25) Mis suunas liiguvad sissehingamisel diafragma ja roided?** 
+
+  * Diafragma - alla
+  * Roided - üles ja ette
+
+**26) Nimeta endokriin- ehk sisesekretsiooninäärmed! (8)** 
+
+  - hüpofüüs (juhtiv roll, kasvuhormoon ja sugueluhormoonid)
+  - käbikeha e epifüüs (ööpäevarütmid)
+  - kilpnääre (ainevahetus ja närvisüsteemi erutuvus)
+  - kõrvalkilpnäärmed (kaltsiumi ja fosfori ainevahetus)
+  - harkelund ehk tüümus (organismi kaitsereaktsioonid)
+  - kõhunääre ehk pankrease sisesekretoorsed saared (süsivesikute ainevahetus)
+  - neerupealised (adrenaliini ja noradrenaliini tootmine)
+  - sugunäärmete endokriinne osa (suguhormoonid, soo jätkamine)
+
+**27) Mida toodavad sisesekretsiooni näärmed?** 
+
+Hormoone
+
+**28) Nimeta naha ülesanded (5)!** 
+
+  - Kaitse (väliste vigastuste, haigusetekitajate, kiirguste, veekao eest)
+  - Erinevate ühendite sünteese
+  - Kehatemperatuuri säilitamine
+  - Meeleelund
+  - Eritusorgan
+
+**29) Nimeta maksa ülesanded! (5)** 
+
+  - Mürkainete kahjutustamine
+  - Vere suhkrusisalduse regulatsioon
+  - Toitainete asendamine teistega (rasvad ja süsivesikud vajadusel) 
+  - Veredepoo
+  - Sapi eritamine rasvade seedimiseks
+
+**30) Nimeta seedekanali osad!** 
+
+  - Suuõõs
+  - Neel 
+  - Söögitoru
+  - Magu
+  - Peensool
+  - Jämesool
+  - Pärasool
+  - Pärak
+
+==== Meditsiinieetika ja siseriiklik regulatsioon ====
+
+**31) Nimeta meditsiinieetika põhiväärtuseid ja selgita, miks on nende järgmine just meedikute puhul ülioluline!** 
+
+  - Kaastunne - inimese häda mõistmine ja selle vastu huvi tundmine. 
+  - Kompetentsus - millise puudumine võib põhjustada suuremat terviseriket või surma. 
+  - Autonoomia - meediku kliiniline vabadus valida, kuidas oma patsiente ravida. 
+
+
+**32) Nimeta toimingud, mida  võib erakorralise meditsiini tehnik lähtudes pädevusnõuetest (vt Sotsmin määrus ja kutsestandard) iseseisvalt teostada!** 
+
+MINGI VEIDER KÜSIMUS, KUNA TEGEMIST POLE EMT KURSUSEGA. 
+
+  - Osutab esmaabi ja abistab pädevuse piires parameedikut. 
+  - Korraldab sõjaajal jao meditsiinilist toetust
+
+**33) Nimeta Eesti tervishoiutöötajad, ametid!** 
+
+  - Arst
+  - Hambaarst
+  - Õde
+  - Ämmaemand
+  - Proviisor
+  - Farmatseut
+
+**34) Mida peab abi osutamisel silmas pidama nende patsientide puhul, kes pole võimelised iseseisvalt otsustama?**
+
+  - Patsiendi paremat käekäiku. 
+  - Võimalusel teadmisi patsiendi mingite eelistuste osas (näiteks kui ei soovi elustamist) 
+
+**35) Nimeta põhjuseid, millal on meedikul endal õigus mitte abi osutada!** 
+
+  - Tegevus on meedikule endale ohtlik.
+  - Tegevus väljub meediku kompetentsuse piiridest.
+
+**36) Nimeta vähemalt 2 patsiendi eetilise kohtlemise printsiipi!** 
+
+  - Lugupidamine ja võrdne kohtlemine.
+  - Informeeritud nõusoleku saavutamine. 
+  - Otsustamine otsustusvõimetute patsientite puhul. 
+  - Konfidentsiaalsus. 
+
+
+
+==== Psühhosotsiaalne abi ====
+
+**37) Nimeta psühhotrauma mõiste!** 
+
+Psühhotrauma on negatiivsetest emotsioonidest küllastunud elamus. Äge psühhotrauma on ühekordne ülitugeva negatiivse emotsiooniga elamus, emotsionaalne vapustus. Seda võib põhjustada nt. lähedase inimese ootamatu kaotus, suur õnnetus või eluohtlik olukord. Kroonilist psühhotraumat tekitab negatiivsete tundeelamuste pikaajaline toime või ühetaolise traumeeriva tundeelamuse paljukordne mõju, s.t. konfliktsituatsioon ehk krooniline emotsionaalne stress. Võib tekkida ka kroonilise ja ägeda psühhotrauma kombinatsioone.
+
+**38) Nimeta psühhotraumat süvendavad riskitegurid!** 
+
+  * intensiivse pikaajalise psühhotrauma kogemine.
+  * sarnase trauma varasem kogmine. 
+  * sagedaste traumeerivate sündmustega töö. 
+  * nõrk või puudulik toetav sotsiaalvõrgustik.
+  * vaimse tervise probleemidega veresugulaste olemasolu. 
+
+
+**39) Nimeta traumeerivas olukorras ning nende järgselt avalduvate tavapäraste psüühiliste reaktsioonide  sümptomeid, sh lahingustressi kui ühe traumaatilise stressi eriliigi sümptomeid!** 
+
+  * pealetükkivad mälestused. 
+  * meenutuste vältimine. 
+  * mõtete ja tuju langused. 
+  * emotsionaalsete reaktsioonide muutlikkus.
+
+
+**40) Nimeta psühholoogilisi esmaabi- ja eneseabivõttteid negatiivsete psüühiliste reaktsioonide, sh lahingustressi  korral!** 
+
+  * edasise kannatuse peatamine.
+  * võimaldama pingevabalt suhelda.
+  * aktiivne kuulamine. 
+  * kaastunne. 
+  * murekohtadele viitamine ja tunnustamine. 
+  * strateegiate arutamine. 
+  * sotsiaalne tugi. 
+  * vestluse kordamise pakkumine. 
+  * edasi suunamine. 
+
+**41) Nimeta profülaktilisi meetmeid negatiivsete psüühiliste reaktsioonide (sh lahingustressi)  tekke või süvenemise vältimiseks!** 
+
+  * perekonna tugi. 
+  * organisatsiooniline tugi. 
+  * psühhoteraapia. 
+  * lahingustressi meditsiiniliste aspektide teemaline koolitus. 
+  * vältimaks ajul traumaatiliste mälestuste formeerimist ravimite manustamine kohesealt peale psühhotraumat ([[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=28993|propranolool]], [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=12137|morfiin]])
+
+
+
+==== Meditsiiniline esmaabi ====
+ 
+=== Hingamis- ja vereringehäired (ERC juhised) ===
+
+**42) Nimeta tegutsemise algoritm hingamisteede sulguse korral võõrkehaga (nii osalise kui ka täieliku puhul) algoritm!** 
+
+  * Ülevaade olukorrast.
+  * Esmane hinnang patsiendi olukorra kohta.
+  * Hingamisteede sulgus? 
+    * Jah, vastavalt raskusastmele: 
+      * Aspireerida hingamisteedest veri ja okse.
+      * S-toru paigaldamine.
+      * Larüngeaalse toru paigaldamine.
+      * [[https://en.wikipedia.org/wiki/Tracheal_intubation|Endotrahheaalne intubatsioon]]. 
+      * [[https://en.wikipedia.org/wiki/Cricothyrotomy|Krikotoomia]]? 
+  * Hingamise seiskumise oht?
+    * Jah: 
+      * CPR 
+    * Ei:
+      * Patsient mugavasse stabiilsesse asendisse. 
+      * Rahustamine, hapniku andmine, intravenoosne juurdepääs, põhinäitajate võtmine. 
+      * Ravi, haiglasse toimetamine. 
+
+**43) Kirjelda ACLS algoritmi, sh ravimid! (nii defitava kui ka mitte-defitava vormi korral)!** 
+
+  * Patsient teadvuseta.
+  * Avada ülemised hingamisteed, hinnata elutunnuste olemasolu.
+    * Kutsu spets.abi. 
+  * CPR 30:2, kuni defibrillaator/ monitor on ühendatud.
+    * Rajada ja kindlustada veenitee, avatud hingamisteed, O2-lisa. 
+  * (1) Südame rütm?
+    * Defibrilleeritav (VF/ VT):
+      * Koheselt taastada CPR 30:2 2 minutit.
+      * Esimesel võimalusel defibrilleerida. 
+      * Peale 3x defibrilleerimist manustada:
+        * 1mg adrenaliini iv või io. 
+        * 300mg amiodarooni lahjendatud 20ml 5% glükoosiga. 
+      * Tagasi (1). 
+    * Mittedefibrilleeritav (Asüstoolia/ EMD): 
+      * Esimesel võimalusel manustada:
+        * 1mg adrenaliini iv või io. 
+      * Koheselt taastada CPR 30:2 2 minutit. 
+      * Manustada adrenaliini uuesti 3-5 minuti tagant. 
+      * Tagasi (1). 
+
+**44) Nimeta vereringeseiskuse vormid (vt EMT käsiraamat, lk 421-423)!** 
+
+Vereringeseiskusega südamerütmid jagatakse kahte gruppi:
+  * Defibrilleeritavad rütmid:
+    * [[https://en.wikipedia.org/wiki/Ventricular_fibrillation|Vatsakeste virvendus]] (VF) 
+    * [[https://en.wikipedia.org/wiki/Ventricular_tachycardia|Pulsita ventikulaarne tahhükardia]] (VT)
+  * Mittedefibrilleeritavad rütmid:
+    * [[https://en.wikipedia.org/wiki/Asystole|Asüstoolia]] (ASY)
+    * [[https://en.wikipedia.org/wiki/Pulseless_electrical_activity|Pulsita elektriline aktiivsus]] (PEA = EMD)
+
+**45) Nimeta BLS: massaazhi  ja hingatamise korrektse teostamise reeglid ( a la massaazhi sügavus, sagedus, käte asend rinnakul jne; hingatamise sagedus jne)!** 
+
+  * Katkematu südamemassaaži vajadus ainult minimaalsete vältimatute katkestamistega.
+  * Rindkere surutakse alla vähemalt 5cm kuid mitte üle 6cm. 
+  * Kiirus on vähemalt 100 x minutis kuid mitte üle 120 x minutis. 
+  * Massaaži ja hingatamise suhe on 30:2. 
+  * 2 x hingatamiseks ei tohi kulutada enam kui 5 sekundit. 
+  * Soovitavalt kasutada pocket-maski. 
+  * Käte asend: asetada oma peopesa kannatanu rindkere keskele, teine käsi asetada esimese käe peale. Mõlema käe sõrmed hoida sirutatult, olles kindel, et kompressioon rindkerel on suunatud ainult rinnakule, mitte roietele. Soovi korral võib sõrmed omavahel seostada.
+
+**46) Nimeta BLS: imikute ja laste elustamise eripärad!** 
+
+  * Enne elustamist esimese asjana 5 x kunstlikku hingatamist.
+  * 1 minut CPR enne abi otsimist, kui osutad abi üks. 
+  * Rindkere kokkuvajutus peab olema 1/3 rindkere paksusest. 
+  * Sagedus 100-120 korda minutis. 
+  * Tehnika: 
+    * Imikul kahe sõrmega massaaž ühe abiandja puhul, pöialdega massaaž rohkemata abiandjate puhul.
+    * Lapsel ühe või kahe käega sõltuvalt lapse suurusest. 
+
+**47) Kirjelda krikotüreotoomia teostamist!** 
+
+Sooritada vertikaalne lõige nn "aadama õunast" all, kilpnäärme kõhrel, seejärel teine põiki sisselõige krikotüreo membraanil. Sisetada tekkinud avausse toru, mille abil on võimalik patsienti hingatada. 
+
+=== Šokk (EMT käsiraamat) ===
+
+**48) Nimeta šoki definitsioon!** 
+
+Tegemist on veresoonkonna ägeda talitlushäirega, millest tulenev verevarustuse puudulikkus toob kaasa häireid üksikute elundite või tervete elundkondade töös.
+
+**49) Nimeta šoki tekkeviisid ja mehhanismid ning selle mõjud erinevatele elunditele ja kogu organismile!** 
+
+  * luude,veresoonte ja parenhümatoossete elundite vigastused; lõike-, torke- ja laskehaavad
+  * kõhulahtisus ja oksendamine, vähene vedelikutarbimine
+  * suure verekoguse kiire kaotamine
+  * kudede hävimine
+  * südametegevuse nõrgenemine
+  * mürgistus
+
+**50) Nimeta šokist tulenevaid kliinilisi sümptomeid!** 
+
+  * iiveldus
+  * kõhulahtisus
+  * oksendamine
+  * lööve
+  * kihelus
+  * nahapunetus
+  * tursed
+  * südame arütmia
+  * hingeldamine
+  * kopsuturse
+  * vererõhulangus
+  * tahhükardia
+  * südamepekslemine
+  * õhupuudus
+  * jalgade turse
+  * õhupuudus
+  * kuiv nahk
+  * palavik
+  * higistamine
+  * teadvuse hägustumine
+  * letargia
+  * väikelastel sissevajunud lõge	
+
+
+**51) Nimeta šoki puhul rakendatavad üldised tegevus- ja ravimeetmed (ravimeid ei pea teadma)!** 
+
+  * NaCl vereringesse (vedelikupuuduse vältimine ja verevarustuse säilitamine)
+  * hapnikuravi
+  * adrenaliini manustamine
+  * hingamistee kindlustamine
+
+Vedelikukaotuse kõrvaldamiseks ja perifeersete veresoonte toonuse taastamiseks manustatakse veenikanüüli kaudu vedelike ja veresoonte toonust tõstvaid (vasokonstriktsiooni esilekutsuvate) ravimeid. Sellele lisandub probleemi tekkepõhjusele suunatud ravi (nt müokardi infarkti korral lüütiline ravi, anafülaktilise šoki korral Prednisoloni manustamine, õhkrinna (pneumotooraksi) korral pleuraõõne tühjendamine jne). Kuna aga kiirabil on ravivõimalused piiratud, siis tuleks siinkohal taas rõhutada, et patsiendi peab kiiresti haiglasse toimetama: Don‘t stay and play, load and go!, s.t „Ära viivita siin, vaid autosse ja minek!“
+
+**52) Kirjelda šoki erisusi lastel!** 
+
+  * hüpovoleemiline šokk eriti kergesti tulema
+  * reageerivad hüpovoleemiale kõigepealt pulsisageduse tõusuga ja alles väga hilises staadiumis vererõhu langusega
+  * parim ja kiireim viis lapse vereringe seisundi hindamiseks jälgida tema pulsi sagedust ja tugevust ning küüneala verega taastäitumist pärast sellele surumist. Nõrga perifeerse pulsiga ja kapillaaride täitumise viivitusega (üle kahe sekundi) laps tuleb lugeda šokiseisundis olevak
+
+=== Tugi- ja liikumissüsteemi vigastused ===
+
+**53) Nimeta erinevaid võimalikke vigastusmehhanisme, mille korral kahtlustada lülisamabavigastust!** 
+
+  * Kukkumine kõrgusest
+  * Sukeldumisel löök vastu veekogu põhja
+  * Kukkumine hobuselt või mootorrattalt
+  * Liiklusavariidel järsust pidurdusest
+  * Raske eseme kukkumine seljale
+
+**54) Nimeta lülisamabavigastusele viitavad neuroloogiliseid sümptomeid!**
+
+  * Suutmatus jäsemeid kontrollida
+  * Tundlikkuse kadumine või tundehäired
+  * Kaob kontroll kusepõie või pärasoole tühjenemise üle
+  * Raskendatud hingamine
+  * Valu seljas
+
+**55) Mis tingimused peavad olema täidetud, et trauma korral ei peaks paigaldama kaelalahast (Nexus guideline)?**
+
+  * N - kaelas pole valulikkust
+  * E - puudub joove või mürgistus
+  * X - kannatanu on täiesti teadvusel
+  * U - puudub neuroloogiline defitsiit
+  * S - pole varjutavaid vigastusi nagu pikkade toruluude murrud jmt
+
+**56) Nimeta jäsemete lahastamise reeglid!**
+
+  - üksi mitte lahastada. 
+  - peab toimuma üle naaberliigeste. 
+  - ei tohi sulgeda vereringet. 
+  - haavad peavad jääma nähtavale. 
+  - panna pehmendust. 
+
+**57) Nimeta jäsemete luumurru sümptomeid!**
+
+  - kannatanu tundis luu murdumist või kuulis plõksatust murdumise hetkel. 
+  - tugev valu, mis intensiivistub jäseme liigutamisel. 
+  - kannatanu ei saa jäset liigutada. 
+  - murdunud jäseme kuju või pikkus erineb terve jäseme omast. 
+  - turse ja verevalum, mis tekivad peale luumurdu. verevalumiga kaasneb naha värvi muutumine. 
+  - krigin ja hõõrdumisheli, mida on võimalik kuulda murrukoha komplemisel või kui kannatanu jäset liigutab. 
+  - tundlikkuse kadumine või torkimistunne, mis viitavad kaasnevale närvivigastusele. 
+  - haavast paistvad luuotsa või -killud, mis on iseloomulik lahtise luumurru tunnus. 
+  - tugev lihaspinge luumurru kohal. 
+  - [[parameedik:sanitar:shokk|šoki tunnused]], mis tekivad sagemini vaagnaluu- ja reieluumurru korral. 
+
+**58) Nimeta jäsemete luumurru ohud/tüsistused!**
+
+  * Verekaotus, šokk, rasvemboolia, lahtiste murdude korral infektsioon.
+  * Veresoonte, närvide, lihaste või kõõluste vigastus murrufragmentide teravate servade tõttu.
+  * Lahtise murru teke kinnisest ebapiisava stabiliseerimise tõttu.
+  * Naha nekroosid fragmentide rõhu tõttu seestpoolt, eriti täiendava rõhu korral väljastpoolt ebaotstarbeka stabiliseerimise tõttu (nt pneumaatiline lahas õigesse asendisse paigaldamata hüppeliigese nihestusmurru korral).
+
+**59) Nimeta jäsemetrauma raskuse hindamise kriteeriumid!**
+
+  * Lahtiste vigastuste korral, s.t nahahaavaga vigastuste korral hinda esmalt verejooksu (kogus, kestvus). Kestva verejooksu peatamine on esmatähtis.
+  * Patsiendi šokiseisund. Lõpliku hinnangu andmiseks ainult teadvus-hingamine-vereringe-skeemist ei piisa. Peale selle tuleb mõõta vähemalt vererõhku ja pulsisagedust.
+  * Jäseme verevarustuse katkemine vigastatud kohas. Distaalselt vigastuse suhtes tuleb iga jäsemevigastuse korral kontrollida pulssi või vähemalt kapillaarset reperfusiooni surve abil nahale või küüntele, motoorikat ja tundlikkust.
+  * Kinniste vigastuste korral võib tegemist olla ka kompartmentsündroomiga.
+
+=== Rindkere- ja kopsuvigastused ===
+
+**60) Millised on rindkeretrauma ohud, sh võimalikud rindkeretraumaga kaasuvad vigastused?**
+
+  * intratorakaalsete ja kõhukoopasiseste organite vigastused
+  * eluohtlik vedelikukaotus
+  * hingamispuudulikkus
+  * laste rindkere elastsem, mis tõttu roide ja kopsuvigastusi vähem ent sisemisi vigastusi rohkem! 
+
+**61) Millised on pingelise pneumotooraksi sümptomid?**
+
+  * Vähenenud hingamiskahin iseäranis kopsude tippudes
+  * Perkussioon – trummikõla, pingeline õhkrind – hüpotensioon
+  * südame arütmia
+  * patsiendile on üha raskem õhku anda
+
+**62) Kirjelda Pingelise õhkrinna lahendamist (torakotsentees ehk drenaaž Monaldi järgi EMT käsiraamatus)!**
+
+Pleuraõõne drenaaž viiakse läbi Monaldi järgi kolmandas ICR-is (interkostaalses ruumis, roidevahemikus) medioklavikulaarjoonel, kombineeritud hemo-pneumotooraksi korral Bülau järgi viiendas ICR-is eesmisel aksillaarjoonel. Protseduur tehakse võimalikult kiiresti pärast endotrahheaalset intubatsiooni. Vigastatud küljele lamama asetatakse rindkeretraumade korral ainult patsiendid, keda pole viidud juhitavale hingamisele.
+
+**63) Mis on seisundi raskuse hindamisel indikaatoriks rindkeretrauma korral?**
+
+  * õhupuudus, hingamise abilihaste rakendamine, ninatiibade hingamine, kõnevõimetus;
+  * paradoksaalne segment, naha krudisemine;
+  * teadvusehäired, teadvusetus (GCS-i järgi hinnata!);
+  * kahvatus, hüpovoleemiline šokk, tsüanoos, süvenev hingamispuudulikkus;
+  * rindkeretrauma polütrauma raames.
+
+=== Kõhupiirkonna vigastused ===
+
+**64) Mis on seisundi raskuse hindamise kriteeriumid kõhupiirkonna vigastuste korral?**
+
+  * (Laud)kõvad kõhukatted, (lihaste kaitse).
+  * Kõhukatted üle rindkeretasandi (ettevõlvunud kõht)
+  * Äge kõht: selle põhjustab kõhukelme ärritus ja/või kõhukelmepõletik:
+    * kahvatus, sinakas nahavärvus,
+    * janutunne,
+    * pulss > 100/min
+    * süstoolne vererõhk < 100 mmHg,
+    * septiline-toksiline šokk,
+    * südame-vereringe seiskumine.
+  * Hüpovoleemiline šokk: selle põhjustab kõhuõõneelundite trauma koos verejooksu ja vedelikuvooluga vabasse kõhuõõnde:
+    * kahvatu nähavärvus,
+    * külm higi,
+    * rahutus,
+    * janutunne,
+    * pulss > 100/min,
+    * süstoolne vererõhk < 100 mmHg,
+    * südame-vereringe seiskumine.
+
+**65) Kirjelda kõhuvigastusega kannatanu uurimise ja ravi algoritmi!** 
+
+  * Sündmuskoha ülevaatus 
+  * Patsiendi seisundi hindamine
+  * Hingamise seiskumine, südame-vereringe seiskumine? 
+    * Jah: CPR
+    * Ei: Vajadusel haava korrastamine, transport kiirabiautosse, vajaduse korral kühvelkanderaamiga, patsiendid selili asendis, jalad kõverdatult ja pea veidi tõstetud.
+      * Rahustamine, hapniku andmine, IV, RR, EKG
+      * Infusioonilahus, Fentanyl, Dormicum
+
+=== Peapiirkonna vigastused ===
+
+**66) Kirjelda peapiirkonnavigastuste uurimise ja ravi algoritmi!** 
+
+  * Sündmuskoha ülevaatus
+  * Patsiendi esmane ülevaatus
+  * Teadvuse-hingamine-vereringe hindamine
+  * Teadvus?
+    * Jah: Õnnetuse mäletamine? 
+      * Jah: Puudub primaarne ajuvigastus (1)
+      * Ei: Teadvusetuse kestus (1)
+    * Ei: Muud elulised parameetrid
+      * Jah: Hingamisteed avatud? (1)
+      * Ei: CPR (1)
+  * (1) Hingamise tagamine
+  * GKS < 9 ? 
+    * (2) Intubatsioon ja kunstlik hingamine (3) 
+  * GKS > 8 (2) ? 
+    * Pupillid?
+      * Mitte ühe laiusega ja ei reageeri:
+        * Kontrollida kohe GKS-i (2), (4) 
+      * Ühe laiusega ja reageerivad valgusele (4) 
+  * (3) Lülisamba kaelaosa immobiliseerimine
+  * Kiirabiautosse asetamine, peaalus tõstetuna 20-30 kraadi. 
+  * (4) Õnnetuse tekkemehhanism, pealaest jalatallani uuring, kaasnevad vigastused
+  * Transportimine haiglasse
+
+**67) Millised meetmed on võimaliku ajutrauma korral kiirabietapis eriti olulised (välistamaks muid pt teadvusetuse põhjuseid)?**
+
+  * selgitada välja traumamehanism
+  * tagada nii kiiresti kui võimalik piisav gaasivahetus kopsudes
+  * tagada piisav aju verevarustus
+  * pidev järelvalve
+
+**68) Mille järgi hinnatakse teadvushäire sügavust ja mis komponentidest see hindamine koosneb (3)?**
+
+Glaskow kooma skaala abil, mis koosneb 
+  - silmade avamine
+  - motoorne reaktsioon
+  - sõnaline reaktsioon
+
+**69) Millised neuroloogilised sümptomid tuleb ajutrauma korral kindlaks teha?**
+
+  * kas suudab õnnetust meenutada? 
+  * mis täpselt juhtus ja millal? 
+  * mida vahetult enne õnnetust tegite? 
+  * kas on valusid? 
+  * kas iiveldab? 
+
+**70) Nimeta mõisted ajuvapustus, ajupõrutus!** 
+
+Ajuvapustus – ajuvigastus mööduva teadvusetusega ilma makroskoopiliselt nähtavate muudatusteta ajukoes;
+
+Ajupõrutus – ajuvigastus nähtava vigastusega (turse, verejooksud).
+
+
+=== Farmakoloogia ===
+
+**71) Nimeta ravimvormi mõiste!** 
+
+Ravimile abiainete ja mitmesuguste tehnoloogiliste võtetega antud manustamiseks sobiv kuju.
+
+**72) Too mõni näide ravimi keemilisest ja tootjapoolsest nimetusest (Eestis levinud)!** 
+
+  * peamine toimeaine: 	paratsetamool.
+  * tootjapoolne nimetus: paracetamol accord. 
+
+Eesti Ravimiregistri [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=3093|link]]
+
+**73) Nimeta erinevaid ravimvorme (vähemalt 8 erinevat)!** 
+
+  * Vedelad: lahus, tinktuur, tilgad, suspensioon, emulsioon, siirup, kuivsiirup
+  * Tahked: tablett, kapsel, pulber
+  * Pooltahked: suposiit, salv, pasta, kreem, geel
+  * Muud: aerosool, plaaster, nahaliim, -lakk
+
+
+**74) Miks ei tohi üldjuhul ravimküünalt poolitada?**
+
+  * vale ravimiannus, sest reeglina on tipus vähem 
+  * aga kui arst on määranud pool ravimiküünalt, siis lõigata pikuti
+
+**75) Mille järgi sa ravimvormi valid?**
+
+Vastavalt toime algusele ja kestusele.
+
+**76) Nimeta Keskmisi toimekiiruseid erinevate manustamiskohtade/-viiside korral!** 
+
+  * Toopiline e. välispidine		tunde v päevi
+  * Suukaudne				30-90 min
+  * Rektaalne				5-30 min (ettearvamatu)
+  * Nahaalune				15-30 min
+  * Lihasesisene				10-20 min
+  * Keelealune				3-5 min
+  * Inhalatsioon				3 min
+  * Endotrahheaalselt			3 min
+  * Veenisisene				30-60 sek
+  * Südamesisene			15 sek
+
+
+**77) Kirjelda ravimeid rühmaparameediku kotis: näidustus, annused, tähtsamad vastunäidustused!** 
+
+  * Paracetamol tbl
+    * Näidustus: palavik (valik nr 1), nõrk kuni mõõduka tugevusega valu 
+    * Annused: 500-1000 mg p.o, vajadusel iga 4-6 h järel – max d 4g ööpäevas.
+    * Vastunäidustused: Alkoholism, maksapuudulikkus. 
+  * Rennie närimistabletid
+    * Näidustus: Mao- või kaksteistsõrmiksoole haavandid. Mao ülihappesuse ja kõrvetiste sümptomaatiline ravi.
+    * Annused: 1…2 närimistabletti ühekordse annusena eelistatavalt üks tund pärast sööki ja enne magamaminekut, samuti kõrvetiste puhul valu ajal.
+    * Vastunäidustused:  
+  * Cetirizinum tbl
+    * Näidustus: Allergilise riniidi e nohu (k.a püsiv allergiline riniit) ja kroonilise idiopaatilise urtikaaria sümptomaatiline ravi. 
+    * Annused: 
+    * Vastunäidustused: 
+  * Ciprofloxacini tbl 
+    * Näidustus: infektsiooniravi
+    * Annused: 
+    * Vastunäidustused: 
+  * Braunovidon salv 
+    * Näidustus: nahakahjustused
+    * Annused: 
+    * Vastunäidustused: 
+  * NaCl süstelahus 
+    * Näidustus: 
+    * Annused: 
+    * Vastunäidustused: 
+  * Morphinum inj 10 mg/ml 1 ml plastampullis
+    * Näidustus: tugev valu, müokardiinfarkt, kardiogeenne kopsuturse
+    * Annused: 10 mg ad 10 ml 1 mg/ml, algannus 2-4 mg i.v. aeglaselt, edasi 5-10 min vahedega valu vaibumiseni kokku kuni 10-15 mg. Vajadusel 2,5-15 mg iga2-6 h järel. 
+    * Vastunäidustused: Hüpotensioon! Šokk! Äge kõht! Raske astma!  Koolikad! Iileus! Kõrge IKR! Freokromotsütoom!
+
+
+**78) Mitu tilka on 1 milliliitris vesilahuses tehes tilkinfusiooni standardse süsteemiga?**
+
+üks? 
+
+**79) Mis ravimit  ja kui palju ja kuhu/kuidas saab parameedik väga tugeva (trauma)valu korral kannatanule manustada (sõjaseisukorras)?**
+
+Morfiin, IV, IM. 
+
+**80) Millistel juhtudel ja tingimustel ning mis koguses võib parameedik iseseisvalt manustada infusiooni (NaCl)?**
+
+vedelikukadu? 
+suur verekaotus? 
+elu päästmiseks kiirabi tulekuni? 
+
+**81) Selgita järgnevaid mõisteid ja kirjuta juurde lühend!** 
+  
+  * Peroraalne - p.o, suukaudne manustamine
+  * Intravenoosne - i.v, veeni manustamine
+  * Intramuskulaarne - i.m, lihasesse manustamine
+  * Intraossaalne - i.o, luusisene manustamine
+  * Subkutaanne - s.c, naha alla manustamine 
+  * Oraalne e oromukosaalne - s.l, suuõõnde manustamine
+  * Subkutaanne - s.c, naha alla manustamine
+  * Gingivaalne - ? , igemesse manustamine
+  * Sublingvaalne - s.l , keelealune manustamine
+  * Transdermaalne - ?, nahapealne manustamine
+  * Rektaalne - ?, pärakusisene manustamine
+  * Toopiline - ?, välispidine manustamine
+
+
+==== Ägedad haigusseisundid ====
+
+**82) Nimeta järgnevate haigusseisundite tekkemehhanisme, tunnuseid ja meditsiinilise esmaabi võtted, sh valikravimid (aluseks jaotusmaterjal)!**
+
+ Vt eraldi [[parameedik:sanitar:agedad_haigusseisundid|lehelt]]
+
+==== Sõjameditsiin ====
+
+**83) Nimeta TCCC abi andmise etapid!** 
+
+  - Abi tule all.
+  - Taktikaline abi, tule alt väljas. 
+  - Abi evakuatsioonil. 
+
+**84) Selgita lühidalt, mida tähendavad mõisted Role 1, Role 2, Role 3 ja Role 4!** 
+
+Meditsiinilise abi andmise kompetentsi tasandid, kannatanu liigub vastavalt vajadusele järjest kõrgemale Role1 hoolde. 
+
+  * Role1 - pataljoni tase, abi esmareageerijalt vigastuse saamise kohapeal, rühmaparameedik. 
+  * Role2 - brigaadi medkompanii, keskhaiglad, maakonnahaiglad. 
+  * Role3 - PERH ja TÜK, võimalusel välihaigla. 
+  * Role4 - Sanatooriumid Lääne-Eestis(?).
+
+**85) Nimeta triaaži kategooriad (NATO ja vastavus tsiviilis)!** 
+
+  * NATO 
+    * T1 (Immediate)
+    * T2 (Delayed)
+    * T3 (Minimal)
+    * T4 (Expectant)
+    * Dead 
+  * Tsiviil
+    * Punane
+    * Kollane
+    * Roheline/ sinine 
+    * Must/ valge
+
+
+**86) Kirjelda hetkel KV-s kasutatava esmase triaaži põhimõtted (Juhis 1, KV esmaabijuhistes)!** 
+
+  - Võimalikult hea abi võimalikult suurele hulgale kannatanutele.
+  - Olemasolevate ressursside maksimaalselt efektiivne kasutamine.
+  - Võtmeisikute rivvi tagasi saatmine võimalikult kiiresti.
+  - Triaaži tuleb teostada alati kui kannatanute number ületab olemasolevad ressursid (abistajad või vahendid).
+  - Esmase triaaži läbiviimiseks optimaalselt 30 sekundit. 
+
+**87) Kirjelda mõisteid: medevac, casevac!** 
+
+  * Medevac - kannatanu evakueerimine lahinguväljalt meditsiiniliseks otstarbeks mõeldud liiklusvahendiga.
+  * Casevac - kannatanu evakueerimine lahinguväljalt mittemeditsiiniliseks otstarbeks mõeldud liiklusvahendiga.
+
+**88) Millest koosneb MIST raport?**
+
+  * M - vigastuse mehhanism.
+  * I - vigastuse tüüp, leitud ja kahtlustatavad.
+  * S - olulised näitajad: pulsisagedus, vererõhk, hingamine, teadvustase (AVPU)
+  * T - osutatud ravi (morfiin, žgutt jne)
+
+

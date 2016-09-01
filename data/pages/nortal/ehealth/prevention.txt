@@ -1,0 +1,127 @@
+====== PREVENTION moodul ======
+
+Ennetuse (inglise keeles Prevention) mooduli kirjeldus, seosed HIS-i teise komponentidega ja seadistamine.
+
+
+===== Seotud Jira arendustaskid =====
+
+  * EHEALTH_PRVNT-3 - Prevention attendance roof task (data model and domains)
+    * EHEALTH_PRVNT-1 - PRV.01.2 Prevention program administration
+    * EHEALTH_PRVNT-2 - PRV.01.1 Prevention program list
+    * EHEALTH_PRVNT-4 - PRV.02.1 Prevention attendance
+    * EHEALTH_PRVNT-5 - PRV.03.1 Patient prevention events
+    * EHEALTH_PRVNT-6 - PRV.04.1 Patient event details
+    * EHEALTH_PRVNT-7 - PRV.05.1 Prevention notification
+    * EHEALTH_PRVNT-8 - PRV.00 Business logic, reusable functions
+
+
+===== Äriloogika =====
+
+  * Moodulil on kaks lähenimis/ vaatepunkti: 
+    * ühelt poolt on õel võimalik teha patsientide nimekirju, vastavalt sisendiks antud omadustele, oma arsti jaoks. Nimekirja kaudu on võimalik vaadata patsientide ennetuse protsessi seisu ning vajadusel saata massiliselt kutseid ennetuse programmis osalemiseks.
+    * teiselt poolt on arstil võimalik tegeleda konkreetse patsiendiga konkreetse HJ külastuse raames. 
+  * Mooduli tellijal (LT) on hetkel kuus erinevat ennetusprogrammi. 
+  * Võimalik on koostada massilised nimekirjad põhinedes soole, vanusele, diagnoosidele, ennetuse perioodi ja ennetuse teenuse koodi järgi. 
+  * Võimalik on saata nimekirjades olevatele patsientidele teavitusi (e-post) või märkida, et üks või mitu patsienti on teavitatud (kui teavitamine toimub tavakirja või telefoni teel näiteks). 
+
+  - Läbi komponendi "PRV.01.1 Prevention programs" on võimalik tekitada uusi ennetusprogramme. Sealjuures võib ennetuspogramme olla kahte tüüpi:
+    - Vaktsineerimisprogrammid (seotud immuniseerimiskannetega JRN.10.1)
+    - Ennetusprogrammid (seotud teenusekannetega JRN.14.1)
+  - Öise job-iga tekitatakse komponenti "PRV.01.2 Attendance" nimekirjad vastavalt etteantud tingimustele (sugu, vanus, diagnoos) programmide lõikes.
+  - Komponendist "PRV.01.2 Attendance" on võimalik vaadata patsientide nimekirju ning vajadusel neile teavitusi saata. 
+  - Juhul patsient on mõnes nimekirjas, tekib HJ-s selle kohta komponenti "TRG.11 Medical info" vastav märge.
+  - Juhul kui patsiendile osutatakse vastav vaktsineerimine või teenus, märgitakse tema olek komponendis "PRV.01.2 Attendance" Planned -> Completed. 
+
+===== Mooduli komponendid =====
+
+^ Komponendi kood    ^ EN       ^ ET          ^
+| Prevention administration |||
+| PRV.01.1   | Prevention programs | Ennetusprogrammid |
+| PRV.01.2   | Attendance | Külastatavus |
+| Prevention attendance |||
+| PRV.02.1   | Prevention attendance | ? |
+| PRV.03.1   | Patient prevention events | ? |
+| PRV.04.1   | Patient event details | ? |
+| PRV.05.1   | Prevention notification | ? |
+
+
+===== Andmemudel =====
+
+Kasutusel on järgmised tabelid: 
+  * PREVENTION - kirjeldatakse üldiselt ennetuse programmid
+  * PREVENTION_ATTENDANCE
+  * PREVENTION_DIAGNOSIS
+  * PREVENTION_EVENT
+  * PREVENTION_NOTIFICATION
+  * PREVENTION_NOTIF_CONTENT
+  * PREVENTION_PATIENT
+  * PREVENTION_SERVICE
+  * PREVENTION_TARGET_GROUP
+
+Öiste job-ide tabelid
+  * SYS_DB_JOB (module_dova_code = 'PREVENTION')
+  * SYS_DB_JOB_LOG
+
+NB! Öistele job-idele pääseb ligi ka läbi UI: Manage/ admin -> System database job
+
+===== Seosed HJ kontekstiga =====
+
+TRG.11 Meditsiinilised andmed/ Medical info
+
+Eraldi plokk "Prevention": 
+  * Vaccination programs - list of PREVENTION_EVENT records where PREVENTION.ID -> PREVENTION.TYPE_DOVA_CODE = ’VACCINATION’. Entries are grouped by PREVENTION_ID (groups sorted alphabetically, PREVENTION.CODE + PREVENTION_TITLE is showna s group heading) in each group rows sorted chronologically.
+  * Date – EVENT_DATE (date value only) if it’s not null, CREATED_DATE otherwise 
+  * Medication/Active substance – PREVENTION_EVENT.JOURNAL_ENTRY_ID -> JOURNAL_ENTRY.TEXT_VALUE (cell is left blank if JOURNAL_ENTRY_ID is null)
+  * Doctor – PREVENTION_EVENT.PERFORMER_STAFF_ID -> STAFF.STAFF_NAME and STAFF_CODE.
+  * Status – PREVETION_EVENT.STATUS_DOVA_CODE text value in currently active language.
+
+
+
+===== Skriptid =====
+
+Vaktsineerimisennetuses patsientide leidmine keskkonnast:
+  select ls.display_name, ls.display_code, sc.case_number
+     from prevention_event pe
+     join prevention p on pe.prevention_id = p.id
+     join prevention_patient pp on pe.prevention_patient_id = pp.id
+     join living_subject ls on pp.living_subject_id = ls.id
+     join sickness_case sc on ls.id = sc.person_link_id
+     where p.type_dova_code = 'VACCINATION'
+     and p.id = 1000000000
+       
+Menüüpunkti nime otsimine/ muutmine:
+  select sm.* 
+       from system_message sm
+       join system_message_text smt on sm.code = smt.message_code
+       where sm.syst_mess_type_dova_code = 'MENU_ITEM'
+       and code = 'mi.sys.db_job';
+  select * 
+          from system_message_text 
+          where message_code = 'mi.sys.db_job' 
+          for update;
+          
+Mõistliku teenuse leidmine ennetuseks:
+  select sc.service_code, sct.text_value, sct.lang_dova_code
+       from service_classifier sc
+       join service_classifier_text sct on sc.id = sct.service_classificator_id
+       join article_service ase on sc.id = ase.service_classifier_id
+       join prices p on ase.article_id = p.article_id
+       
+Järgmise skriptiga leidsin vajaliku sihtgrupi SESK-testis:
+  select d.diagnosis_code, ad.formatted_text as diagnosis_text, sc.case_number
+       from appointed_diagnosis ad
+       join diagnosis d on ad.diagnosis_id = d.id
+       join sickness_case sc on ad.sickness_case_id = sc.id
+       join living_subject ls on sc.person_link_id = ls.id
+       where ad.diagnosis_id = 80942
+       and ls.gender_dova_code = 'F'
+       and birth_time between
+            to_date('14/01/1961','DD/MM/YYYY') and to_date('14/01/1966','DD/MM/YYYY')
+       and ad.end_date is null and ad.sys_delete_status = 'N'
+                   
+===== Välisviited =====
+
+  * Äriloogika algoritmiga on võimalik tutvuda [[https://confluence.nortal.com/display/LTHIS/Prevention+process|siin]]. 
+  * Ennetuse moodulite tehnilised kirjelduse asuvad [[https://confluence.nortal.com/display/docs/1.+Prevention+specs|siin]]. 
+
+

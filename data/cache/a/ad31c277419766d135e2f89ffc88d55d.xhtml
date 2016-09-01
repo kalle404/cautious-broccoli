@@ -1,0 +1,79 @@
+
+<h1 class="sectionedit1" id="tvh_ska_integratsioon">TVH SKA integratsioon</h1>
+<div class="level1">
+
+<p>
+SKAIS2 - kaasajastatud teenustega SotsiaalKindlustusAmetiInfoSüsteem
+</p>
+
+<p>
+Tabelisse TVH_TAOTLUS tekitatakse järgmised veerud:
+</p>
+<ul>
+<li class="level1"><div class="li"> skaTaotlusId → SKA_TAOTLUS_ID (number(18)) → unikaalne viide SKAIS2-s olevale TVH (ühis)taotlusele</div>
+</li>
+<li class="level1"><div class="li"> skaTaotlusNumber → SKA_TAOTLUS_NUMBER (varchar2(100char)) → taotluse number SKAIS2-s</div>
+</li>
+<li class="level1"><div class="li"> skaEdastamiseAeg → SKA_EDASTAMISE_AEG (date) → kellaaja täpsusega taotluse edastamise aeg SKA-sse</div>
+</li>
+</ul>
+
+<p>
+<strong>TVH otsuse edastamine SKAsse</strong>
+</p>
+
+<p>
+TVH otsuse <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=133508549" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=133508549" rel="nofollow">kinnitamise järgselt</a>:
+</p>
+<ul>
+<li class="level1 node"><div class="li"> teostatakse SKA andmevahetuse toimingud asünkroonselt vastavalt <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=125254898" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=125254898" rel="nofollow">TVH_SKA_1.1</a> kirjeldatud tegevustele: </div>
+<ul>
+<li class="level2"><div class="li"> kas süsteemse parameetri TVH_SKAIS2_ANDMEVAHETUS kehtiv väärtus on 1 ? </div>
+</li>
+<li class="level2"><div class="li"> kas tegemist on põhiotsusega (OTSUS.ALUS_OTSUS_ID on null) ? </div>
+</li>
+<li class="level2"><div class="li"> kas otsusega seotud taotlust on vaja esitada SKAIS-i ?</div>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code">select * 
+     	from taotlus t 
+     	join tvh_taotlus tvh on t.id = tvh.taotlus_id
+     	join tvh_taotlus_pohjus p on t.id = p.taotlus_id
+     	where p.hindamise_valik_kood = &#039;PUUDE_RASKUSASTE&#039;
+     	and tvh.ska_edastamise_aeg is null</pre>
+<ul>
+<li class="level1 node"><div class="li"> koostatakse andmevahetuse sõnum vastavalt <a href="https://confluence.nortal.com/display/TVHTVT/TVHTaotlusYksUks" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVHTaotlusYksUks" rel="nofollow">TvhTaotlusYksUks</a> andes sisendiks seotud <a href="https://confluence.nortal.com/display/TVHTVT/TVHTaotlus" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVHTaotlus" rel="nofollow">TVHtaotlus</a> objekti. </div>
+<ul>
+<li class="level2"><div class="li"> üldine reegel: kui andmeid (tühi string) pole, siis elementi ei edastata (minOccurs = 0)</div>
+</li>
+<li class="level2"><div class="li"> kui TVH_TAOTLUS.ON_TAITMISEST_LOOBUTUD = 0, siis edastatakse SKA-le taotluse andmekoosseisu kuuluvad elemendid. </div>
+</li>
+<li class="level2"><div class="li"> ülejäänud juhtudel koostatakse edastatav taotluse andmestik olemasolevate andmete pealt. </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Edastatakse taotluse andmestik SKAsee teenusega <strong>Skais2.TVHTaotlusYksUks.v1</strong></div>
+</li>
+</ul>
+
+<p>
+<strong>Tegevused SKA vastusega</strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> kas teenus tagastab vastusena skaTaotlusId ? </div>
+<ul>
+<li class="level2"><div class="li"> salvestatakse TVH_TAOTLUS.SKA_TAOTLUS_ID väljale ja väärtustatakse SKA_EDASTAMISE_AEG = sysdate</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> kas teenuse edastamine sai vea? </div>
+<ul>
+<li class="level2"><div class="li"> veateade salvestatakse tabelisse TVH_TAO_EDASTAMISE_VIGA</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>

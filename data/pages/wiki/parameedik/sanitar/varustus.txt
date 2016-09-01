@@ -1,0 +1,47 @@
+====== Jao taseme meditsiinivarustus ======
+
+===== Piiratud juurdepääsu teavitus =====
+
+
+  KAITSEVÄGI
+  ASUTUSESISESEKS KASUTAMISEKS
+  Märge tehtud 16.09.2014
+  Juurdepääsupiirang kehtib kuni 16.09.2019
+  Alus: avaliku teabe seadus § 35 lg 1 p 4
+
+
+===== MK1 - Individuaalne meditsiinivarustus =====
+
+^ Nimetus      ^  Ühik      ^  Kogus          ^
+| Arteriaalne žgutt |  tk  |  1  |   
+| Esmaabiside |  tk  |  1  | 
+| Kolmnurkrätik |  tk  |  1  | 
+| Esmaabijuhend |  tk  |  1  | 
+
+===== MK2 - Jaosanitari meditsiinivarustus =====
+
+^ Nimetus      ^  Ühik      ^  Kogus          ^
+|MK 2 sisu nimekiri |  tk  |  1  |
+| Paun |  tk  |  1  |
+| Märkmik |  tk  |  1  |
+| Pliiats |  tk  |  1  |
+| Välimeditsiini kaart |  tk  |  5  |
+| Arteriaalne žgutt |  tk  |  2  |
+| Kolmnurkrätik |  tk  |  3  |
+| Kindad, mittesteriilsed |  paar  |  2  |
+| Esmaabiside 10 cm |  tk  |  2  |
+| Esmaabiside 15 cm |  tk  |  2  |
+| Side 6 cm |  rull  |  2  |
+| Side 12 cm |  rull  |  2  |
+| Elastikside 10 cm |  tk  |  1  |
+| Haavapadjaga plaaster 10x6 cm |  tk  |  5  |
+| Haavatampoon 10x10 cm N5 steriilne |  tk  |  4  |
+| Tekstiilist rullplaaster 2,5 cm |  tk  |  1  |
+| Põletusgeel 125 g |  tk  |  1  |
+| Haaknõelte komplekt N10 |  pk  |  1  |
+| Käärid (riiete lõikamiseks) |  tk  |  1  |
+| Permanentne marker 3-5 mm, must |  tk  |  1  |
+| Nasofarüngeaaltoru koos libestusgeeliga |  tk  |  1  |
+| Kanüül G14 |  tk  |  2  |
+| Termolina |  tk  |  1  |
+| Desinfektsioonivahend nahale 50 ml |  tk  |  1  |

@@ -1,0 +1,7 @@
+====== Cron ======
+
+  * Cron format is a simple, yet powerful and flexible way to define time and frequency of various actions.
+  * Cron vormindusest saab täpsemalt lugeda [[http://www.nncron.ru/help/EN/working/cron-format.htm|siin]].
+  * Cron kalkulaator asub [[http://www.cronmaker.com/|siin]].
+
+

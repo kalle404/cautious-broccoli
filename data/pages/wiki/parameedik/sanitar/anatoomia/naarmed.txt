@@ -1,0 +1,23 @@
+====== Sisesekretoorsed näärmed ======
+
+Sisesekretoorsete näärmete (SSN) ehk endokriinnäärmete ülesandeks on produtseerida bioloogiliselt aktiivseid aineid - hormoone. Mõjutades peamiselt ainevahetust, reguleerivad hormoonid üksikute elundite või kogu organismi talitust. Sisesekretoorsetel näärmetel puuduvad viimajuhad, produtseeritavad hormoonid saadetakse otse elundit ümbritsevatesse rohketesse verekapillaaridesse. SSN ei talitle isoleeritult vaid moodustavad vastastikuses seoses oleva süsteemi, kus juhtivat rolli etendab hüpofüüs. Endokriinne süsteem ja
+närvisüsteem on selgroogsetel füüsiliselt ja funktsionaalselt seotud ajus oleva piirkonna hüpotaalamuse poolt. Hüpotaalamus on seotud hüpofüüsiga. Hüpotaalamuses on rakke, millel on nii närvirakkudele kui endokriinrakkudele iseloomulikke omadusi. Need rakud vastavad teistelt närvirakkudelt saadud stiimulitele teatud valguliste hormoonide sekreteerimisega. See omakorda aga stimuleerib organismi endokriinnäärmeid kolmandate hormoonide sünteesile, mis mõjutavad paljusid eri funktsioone. 
+
+SSN hulka kuuluvad: 
+  - **hüpofüüs** (juhtiv roll, kasvuhormoon ja sugueluhormoonid)
+  - **käbikeha** ehk epifüüs (ööpäevarütmika)
+  - **kilpnääre** (ainevahetus ja närvisüsteemi erutuvus)
+  - **kõrvalkilpnäärmed** (kaltsiumi ja fosfori ainevahetus)
+  - **harkelund** ehk tüümus (organismi kaitsereaktsioonid)
+  - **kõhunääre** ehk pankrease sisesekretoorsed saared (süsivesikute ainevahetus)
+  - **neerupealised** (adrenaliini ja noradrenaliini tootmine)
+  - **sugunäärmete endokriinne osa** (suguhormoonid, soo jätkamine)
+
+
+Mehe ja naise endokriinnäärmete paiknemine: 
+
+<hidden>{{:parameedik:naarmed.png?nolink|}}</hidden>
+
+
+===== Viited =====
+  * Wikipedia [[https://en.wikipedia.org/wiki/Endocrine_system|Endocrine system]]. 

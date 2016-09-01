@@ -1,0 +1,346 @@
+====== TETRIS vaide protsessid ======
+
+Kirjeldatud äriobjektid asuvad [[https://confluence.nortal.com/pages/viewpage.action?pageId=117344852|siin]]. 
+
+TVH/ REDIS staatused, kus ka vaide protsess kirjeldatud on [[https://confluence.nortal.com/pages/viewpage.action?pageId=120848517|siin]].
+
+**Eesmärk**: kirjeldada vaietega kaasnevad protsessid kompaktselt ühes kohas. 
+
+===== Vaide protsess =====
+
+**Vaide alustamine**
+  * "Lisa vaie" nupp asub [[https://confluence.nortal.com/pages/viewpage.action?pageId=125252828#TVH_OTS_2.0TVHotsuseüldisedtegevused(nupud-lingid)-Nupp"Lisavaie"|TVH_OTS_2.0 TVH otsuse üldised tegevused]]. Tegemist on alamkomponendiga, mis omakorda asub konteinerkomponendis [[https://confluence.nortal.com/display/TVHTVT/TVH_2.12+TAB12%3A++TVH+otsused|TVH_2.12 TAB12: TVH otsused]]
+  * Nupp kuvatakse kui seotud TVH otsus on kinnitatud, kasutajal on privileeg tvh.otsus.vaie ning TVH otsusel pole ühtegi seotud pooleliolevat vaiet. 
+  * Nupule vajutades kuvatakse [[https://confluence.nortal.com/pages/viewpage.action?pageId=143820379|VAIE_YLD_1 - Vaide lisamine/muutmine]]
+  * Täites väljad ja vajutades "Algata vaidemenetlus":
+    * kui vaidemenetlus eeldab TK arsti vastust, valikud EKSPERTIIS (Hindamise tulemus), MENETLUSE_UUENDAMINE (Menetluse uuendamine).
+      * Vaie.staatusKood='HINNANGU_OOTEL'
+      * Lisatakse uus menetlustegevus VAIE_TK_ARSTI_HINNANG (Esitatud vaie. Anna hinnang hindamise tulemusele.)
+    * kui vaidemenetlus ei eelda TK arsti vastust, valik MUU (Otsuse muu õiguspärasus).
+      * Vaie.staatusKood='VAIDEOTSUSE_OOTEL'
+  * Hindamisjuhtumi staatuseks märgitakse Vaidemenetlus algatatud (Taotlus::HindamisJuhtum::KehtivStaatus.Staatus='VAIE_ALGATATUD').
+  * Avatakse [[https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab|TVH_1.14 - TVH vaiete tab]] (sisendiks lisatud vaide id) ja kasutajale kuvatakse teade edukast toimingust "Vaidemenetlus algatatud."
+
+**Kui vaie eeldab TK arsti vastust**
+  * [[https://confluence.nortal.com/display/TVHTVT/TVH_2.11+TAB11%3A+Eksperthinnang|TVH Eksperthinnangu tab-ile]] kuvatakse nupud: 
+    * "Ekspertiis korrektne"
+      * kuvatakse kui juhtumiga on seotud arsti vastust eeldav lõpetamata vaie. 
+      * nupule vajutades salvetatakse vaidele vaie::spetsiifika::tkArstVastused.vastusTyyp ='HINDAMINE_KORREKTNE'
+    * "TTO-le vaide ülevaatusesse" 
+      * kuvatakse kui tegemist on taotluse esimese ekspertiisiga ja juhtumiga on seotud arsti vastust eeldav lõpetamata vaie
+      * nupule vajutades: 
+        * kui ekspertiis on teostatud välistavate seisundite alusel, kuvatakse kasutajale veateade: "//Välistavate seisundite alusel teostatud ekspertiisi tulemust ei ole võimalik vaide raames muuta. Kui on vaja parandada ekspertiisi sõnastust, siis palun seda teha ekspertiisi täiendamata.//"
+        * vastasel juhul kuvatakse modaalaken, kus väljade täitmise järel vajutades "Saada TTO-le":
+          * lisatakse vaidele vaie::spetsiifika::tkArstVastused.vastusTyyp ='EKSPERTIIS_YLEVAATUS' ja vaie.staatusKood=EKSPERTHINNANGU_OOTEL
+          * lisatakse menetlustegevus VAIE_TTO_ARSTI_HINNANG (Esitatud vaie. TTO-l anda hinnang hindamise tulemusele.)
+          * peatatakse menetlustegevus VAIE_TK_ARSTI_HINNANG (Esitatud vaie. Anna hinnang hindamise tulemusele.)
+
+  Kui tegemist on MUU ("Otsuse muu õiguspärasus") vaidega, siis tegevusi TVH eksperthinnang tabile ei teki
+
+**Tegevused TVH vaiete tab-il**
+
+  * [[https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab|Konteinerkomponent]] sisaldab järgnevaid vaiete komponente: 
+    * [[https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_4.3+-+Vaiete+nimekiri|Vaiete nimekiri]]
+      * kuvatakse TVH otsusega seotud vaideid
+    * [[https://confluence.nortal.com/pages/viewpage.action?pageId=143820277|Vaide üldandmed]]
+    * [[https://confluence.nortal.com/display/TVHTVT/TVH_VAIE_1.2+TK+arsti+hinnang+vaidele|TK arsti hinnang vaidele]]
+      * kuvatakse, kui vaidemenetlus eeldab TK arsti vastust. 
+      * täites väljad ning vajutades "Esita vastus":
+        * kuvatakse vastuse kinnitamise dialoogiaken, sellel valiku kinnitamisel
+        * kui vaideotsus eeldab juristi vastust, hetkel EKSPERTIIS ja MUU 
+          * muudetakse vaie.staatusKood='VAIDEOTSUSE_OOTEL'
+          * muudetakse hindamisjuhtum.kehtivStaatus='VAIDEOTSUSE_OOTEL' ja teostatakse [[https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused|"Juhtumi staatuste muutumisega kaasnevad tegevused"]] kirjeldatud tegevused
+        * kui vaideotsus ei eelda juristi vastust, hetkel MENETLUSE_UUENDAMINE
+          * muudetakse hindamisjuhtum.kehtivStaatus='LOPETATUD' ja teostatakse [[https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused|"Juhtumi staatuste muutumisega kaasnevad tegevused"]] kirjeldatud tegevused
+            * kui kasutaja on valinud "Menetluse uuendamise otsus" väärtuse "Menetlust mitte uuendada":
+              * muudetakse vaie.staatusKood='MENETL_UUENDAMISE_LOPET_OOTEL'
+              * lisatakse uus menetlustegevus TyypKood = 'VAIE_MENETL_UUENDAMINE_MITTE'
+            * kui kasutaja on valinud "Menetluse uuendamise otsus" väärtuse "Menetlust uuendada" 
+              * muudetakse vaie.staatusKood='MENETL_UUENDAMISE_OOTEL'
+              * lisatakse uus menetlustegevus TyypKood = 'VAIE_MENETL_UUENDAMINE'
+          * suletakse dialoog, komponent kuvatakse mittemuudetaval kujul ja kuvatakse edukusteade "Vastus esitatud." 
+    * [[https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_3+-+Vaideotsus|Vaideotsus]]
+        * kuvatakse, kui vaidemenetlus eeldab juristi vaideotsust (Vaie.vaidlustusTyypKood = EKSPERTIIS, MUU)
+        * vaie on vaideotsuse ootel või lõpetatud (Vaie.staatusKood='VAIDEOTSUSE_OOTEL', 'LOPETATUD')
+        * täites väljad ja vajutades nuppu "Lõpeta":
+         * Vaie.staatusKood = 'LOPETATUD'.
+         * Hindamisjuhtumi staatuseks märgitakse Lõpetatud (Taotlus::HindamisJuhtum::KehtivStaatus.Staatus='LOPETATUD').
+         * Tehakse tegevused menetlustegevustega vastavalt [[https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused|"Juhtumi staatuste muutumisega kaasnevad tegevused"]]
+         * Kasutajale kuvatakse teade edukast toimingust "Vaie lõpetatud."
+
+
+
+===== Seotud äriobjektid =====
+
+==== Hindamisjuhtum ====
+
+<hidden>
+Hindamisjuhtum äriobjekti väljad:
+  * taotlusID
+  * leping
+    * Id
+    * lepingNumber
+    * summa
+    * AdsTase1Kood - viide maakonnale
+    * AdsTase2Kood - viide linnale või vallale
+    * mahtAastas - maksimaalne tellitud hindamiste arv aastas
+    * lepingMaht - maksimaalne tellitud hindamiste arv kogu lepingu perioodis
+    * algusKp
+    * loppKp
+    * lihtsustatudHind - lihtsustatud hindamise hind
+    * dokumendipohineHind - dokumendipõhise hindamise hind
+    * visiidipohineHind - visiidpõhise hindamise hind
+  * kehtivStaatus
+  * tegevused
+    * Id
+    * ekspertiisId - kasutatakse, kui tegevusi lisatakse vaidemenetluse raames mingi konkreetse ekspertiisi kohta
+    * lepingId - kasutatakse Redisega jagatavate tegevuste defineerimiseks 
+    * TyypKood
+    * LisamiseAeg
+    * TahtaegKp
+    * StaatusKood - TVR_TEGEVUS_STAATUS
+    * LoppAeg
+    * Lisainfo
+  * visiidikulu
+    * Id
+    * HindamisJuhtum
+    * TyypKood - loendi VISIIDIKULU_TYYP väärtus
+    * HyvitajaKood - loendi VISIIDIKULU_HYVITAJA väärtus
+    * OnPohjendatud 
+    * Pohjendus
+    * Lisainfo
+    * KoguSumma - visiidikulu kogusumma (sh käibemaks kui on asutusele)
+    * StaatusKood - loendi VISIIDIKULU_STAATUS väärtus
+    * HyvitamineKinnitajaID - viide menetlejale kes vastava visiidikulu hüvitamise/mittehüvitamise kinnitas
+    * HyvitamineKinnitamiseKp - visiidikulu hüvitamise/mittehüvitamise kp
+    * KuludokumendiLisainfo - kuludokumentidele märgitud lisainfo
+    * LopetamisePohjendus - maksmiseta lõpetamise põhjendus
+    * LopetamineKinnitajaID - viide menetlejale, kes vastava kinnitatud hüvitamisega visiidikulu maksmata jätmise kinnitas.
+    * LopetamineKinnitamiseKp - visiidikulu maksmiseta lõpetamise kinnitamise kp
+  * ekspertArst
+    * redisIsikId - viide redises olevale isikule
+    * arstKood - arsti kood
+    * arstEriala - arsti eriala
+    * lepingId - viide ekspertiisile mida arst teostas
+  * visiidikuludHinnang - Juhtumikorraldaja hinnang, mis on abistavaks infoks menetlejale
+</hidden>
+
+==== Vaie ====
+<hidden>
+Vaide äriobjekti väljad: 
+  * otsusId - viide vaide alusdokumendile otsus
+  * regNr - vaide registreerimise number (kasutaja kirjutab käsitsi [[https://confluence.nortal.com/display/EMPIS/Alfresco|Alfresco]] reg.numbri) 
+  * saabumiseKp - vaide saabumise kp
+  * vaidlustusTyypKood - näitab mida vaidlustatakse, loendi VAIDLUSTUS_TYYP väärtus
+  * sisu - vaide sisu kokkuvõte
+  * menetlustahtaeg - vaide menetlustähtaeg
+  * vastus - kokkuvõttev vastus vaide sisule vaide konsultandilt (TK arst, menetleja vmt), mida jurist kasutab vaideotsuse koostamisel
+  * vaideotsusRegNr - vaideotsuse registreerimise number (kasutaja kirjutab käsitsi [[https://confluence.nortal.com/display/EMPIS/Alfresco|Alfresco]] reg numbri
+  * vaideotsusKp - vaideotsuse kuupäev
+  * vaideotsusTulemus - vaide tulemus (rahuldada, tagastada, mitte rahuldada jmt) loendi VAIE_RESOLUTSIOON väärtus
+  * vaideotsusTulemusSisu - vaide tulemuse sisuline selgitus (mida edasi teha) 
+  * sisetajaKontoId - viide vaide lisanud isikule
+  * sisestamiseAeg - vaide lisamise aeg
+  * juristKontoId - viide vaidega tegelevatele juristidele
+  * menetlejaKontoId - viide vaidega tegelevale menetlejale
+  * staatusKood - vaide staatus, loendi TVR_VAIE_STAATUS väärtus
+  * dokumendid - vaide juurde laetud dokumendid
+
+TVH vaide spetsiifika (seostabel TVH_VAIE): 
+  * infoTkArstile - info TK arstile
+  * menetlustahtaegTkArstile - TK arsti hinnangu tähtaeg
+  * ekspertiisVersioon - viide ekspertiisi versioonile, millest lähtudes tehakse edasised tegevused
+  * tkArstVastused - TK arsti poolt vastu võetud otsused vaide lahendamiseks (nb! arsti vastuseid saab olema mitu!) 
+  * tkArstKontoId - viide vaidega tegelevale TK arstile
+  * vastuseEsitamiseKp
+</hidden>
+
+===== Pooliku ekspertiisi kuvamine =====
+
+TK arst ja jurist näevad ka poolikult hinnatud ekspertiisi. Poolikult hinnatud ekspertiisil on kehtiv EKSPERTIIS_STAATUS.STAATUS_KOOD = HINDAMATA.
+
+  * Juhul kui ekspertiis on poolikult hinnatud ja ei leidu teist taotlusega seotud hinnatud ekspertiisi, siis ekspertiisi tabil ekspertiiside nimekirja ei kuvata. 
+  * 
+
+Taotluse TAB11 [[https://confluence.nortal.com/pages/viewpage.action?pageId=125253439|Eksperthinnang]] kuvatakse, kui 
+  * kasutajal on privileeg //tvh.ekspertiis.vaatamine// ja
+    * kui leidub antud taotlusega seotud Ekspertiisi ametlik versioon, mille KehtivStaatus on HINNATUD
+  * või
+  * kui kasutajal on privileeg //tvh.ekspertiis.vaatamine// ja (//tk.arst.roll// või //tvr.jurist.roll//) ja
+    * leidub antud taotlusega seotud Ekspertiisi ametlik versioon, mille KehtivStaatus on HINDAMATA. 
+
+===== Kasutaja tegevuste logimine =====
+
+  * Ekspertiisi vaatamise logimine PARINGU_LOGI tabelisse, et taotleja saaks oma digiloos vaadata, kes tema terviseandmeid on vaadanud
+  * kui kasutaja on Jurist:
+    * kui ekspertiisi staatusel on kriteerium VAIE, siis PARINGU_LOGI.PARING_EESMARK = VAIDEMENETLUS
+    * vastasel juhul PARINGU_LOGI.PARING_EESMARK = TOOVOIME_HINDAMINE
+  * kui kasutaja on TKarst 
+    * kui ekspertiisi staatusel on kriteerium VAIE, siis PARINGU_LOGI.PARING_EESMARK = VAIDEMENETLUS
+    * vastasel juhul PARINGU_LOGI.PARING_EESMARK = TOOVOIME_HINDAMINE
+
+
+
+===== Seotud skriptid =====
+
+  * TK arsti vastust eeldavad vaidemenetlused
+
+  select *  
+  from empis_domain_value_criterion edvc
+  where edvc.domain_code = 'VAIDLUSTUS_TYYP'
+  and edvc.criterion = 'TK_ARST';
+
+  * rakenduses kasutatava vaide nimetuse leidmiseks
+
+  select * 
+  from empis_domain_value edv
+  where edv.domain_code = 'VAIDLUSTUS_TYYP'
+  and edv.code = 'EKSPERTIIS';
+
+  * TVR menetlustegevuste nimetuse leidmine
+
+  select *
+  from empis_domain_value
+  where domain_code = 'TVR_TEGEVUS_TYYP'
+  and code = 'VAIE_TK_ARSTI_HINNANG';
+
+  * TVR vaideotsused, mille on kriteerium KORRAS
+
+  select *
+  from empis_domain_value_criterion edvc
+  where edvc.domain_code = 'VAIE_RESOLUTSIOON'
+  and edvc.criterion = 'KORRAS';
+
+  * rakenduses kasutatava vaideotsuse nimetuse leidmiseks
+
+  select * 
+  from empis_domain_value edv
+  where edv.domain_code = 'VAIE_RESOLUTSIOON'
+  and edv.code = 'MENETL_UUENDAMINE';
+
+  * taotlused, millel on lõpetamata ekspertiis
+
+  select t.*
+  from ekspertiis_staatus es
+  join ekspertiis e on es.ekspertiis_id = e.id 
+  join taotlus t on e.taotlus_id = t.id
+  where es.kehtiv_kuni is null
+  and es.staatus_kood = 'HINDAMATA'
+
+
+===== Vaiete support =====
+
+Vaiete lahenduses ei saa TK hetkel vaiet TTO-le mitu korda hindamisse saata. Praegune protsess on: vaie TTO-le -> TTO vastus täiendamisega või ilma -> TK arst annab vastuse juristile -> vaideotsus.
+Kahjuks on TK-l vaja juba ka hetkel TTO-lt tulnud vastus uuesti TTO-le saata, et TTO muudaks oma vastust ja see on võimalik ainult nii, et me teeme baasis muudatusi. 
+
+**1. Kui TTO on vaides hinnagut täiendanud, aga TK soovib, et TTO täiendaks hinnangut veel**, siis me teeme baasis sellist mädžigut, et vaie on TTO käes taas hindamisel. 
+Ekspertiis on staatuses Hindamisel
+Vaie on staatuses Eksperthinnangu ootel    
+Juhtum on staatuses Ekspertiis korrigeerimisel    
+
+Siin ei pea nüüd enam TK poolt vahepealset mänguvaideotsust teema ja uut vaiet sisestama, vaid TTO ekspertarstile saab ekspertiisi kohe muuta ja uuesti hinnata sama vaide raames. 
+
+Nt mina tegin sellist möllu baasis:
+  select * from taotlus where taotlus_number='TVH-16029780'
+
+  select * from hindamis_juhtum where taotlus_id=1028942
+  select * from hindamis_juhtum_staatus where hindamis_juhtum_id=1005134 order by id
+  UPDATE hindamis_juhtum_staatus 
+   SET kehtiv_kuni=null
+   where id=1017771
+
+   DELETE FROM hindamis_juhtum_staatus
+   WHERE id=1017772
+
+  select * from EKSPERTIIS where taotlus_id=1028942
+  select * from EKSPERTIIS_STAATUS where ekspertiis_id=1002861 order by id
+  UPDATE EKSPERTIIS_STAATUS 
+   SET kehtiv_kuni='19.08.2016 10:08:22,469000000'
+   where id=1003269
+
+   INSERT INTO EKSPERTIIS_STAATUS (ekspertiis_id, kehtiv_alates, sys_muutja_id, staatus_kood)
+   VALUES (1002861, '19.08.2016 10:08:22,469000000', -1, 'HINDAMISEL')
+
+  select * from otsus where taotlus_id=1028942
+  select * from vaie where otsus_id=3045630
+  UPDATE vaie 
+   SET staatus_kood='EKSPERTHINNANGU_OOTEL', vastus=null
+   where id=1000417
+
+  select * from tvh_vaie where vaie_id=1000417
+  UPDATE tvh_vaie 
+   SET vastuse_esitamise_kp=null
+   where vaie_id=1000417
+
+  select * from TK_ARST_VASTUS where tvh_vaie_id=1000417
+  UPDATE TK_ARST_VASTUS 
+   SET ekspertiis_muudatus=null
+   where tvh_vaie_id=1000417
+
+
+**Tiina tegi järgmist möllu** 
+
+  1) taotlus -> hindamis_juhtum -> hindamis_juhtum_staatus 
+  2) eemaldada lõpukuupäev staatusel VAIE_EKSPERTIIS_MUUTMINE
+  3) kustutada staatus VAIE_ARSTI_VASTUSE_OOTEL
+  4) taotlus -> ekspertiis -> ekspertiis_staatus 
+  5) lisada staatusega HINNATUD kirjele lõpukuupäev
+  6) eemaldada staatused HINDAMISEL kirjel lõpukuupäev
+  7) taotlus -> otsus -> vaie
+  8) muuta vaidel staatus_kood.LOPLIKU_HINNANGU_OOTEL -> EKSPERTHINNANGU_OOTEL
+  9) taotlus -> otsus -> vaie -> tvh_vaie
+  10) eemaldada väärtus, tvh_vaie.vastuse_esitamise_kp = null
+  11) eemaldada väärtus, tvh_vaie seotud kirje tk_arst_vastus.ekspertiis_muudatus = null
+  + edastada kliendile tk_arst_vastus ja TTO vastuste <clob> 
+
+**2. Kui TTO on vaides öelnud, et nad ei täienda ekspertiisi, aga TK soovib, et TTO täiendaks ikkagi**, siis me teeme keerame baasis vaide menetluse algusesse. Vaie on TK arsti käes ja ootab TTO-sse saatmist, et TK arst saaks helistamise asemel sisestada süsteemi TTO-le põhjuse miks TTO peaks ikkagi püüdma hinnata. 
+Vaie on staatuses Hinnangu ootel   
+Juhtum on staatuses Vaidemenetlus algatatud  
+
+TK arst peab tab-l Eksperthinnang valima "TTO-le vaide ülevaatusesse", avaneval modaalil saab TK arst määrata uue tähtaja TTO-le ja väljas 'Info vaide kohta' selgitada TTO-le miks ja mida peaks 
+TTO ikkagi saama hinnata. 
+Pärast seda tegevust läheb vaie taas TTO-le ja TK arst peab ootama millal TTO esitab vastuse (varem ei tohiks TK arst nuppu "Esita vastus" vajutada). TTO leiab vaidega ekspertiisi taotluste nimekirjast (Vaie üle vaadata), näeb Vaide info tab-l tähtaega on TK arsti poolt kirjutatud põhjendust ning saab vastata uuesti (täiendab või ei täienda ekspertiisi). TK arst saab anda oma lõpliku vastuse vaidele pärast TTO vastust kui vaie on staatuses Lõpliku hinnangu ootal (juhtum on staatuses TK arsti vastuse ootel). 
+
+Soovitav on kliendile anda ka baasist senine TK arsti vastus ja TTO vastus, sest me kustutame need baasist. 
+
+Nt baasis saab nii teha: 
+  select * from taotlus where taotlus_number='TVH-16000310'
+
+  select * from hindamis_juhtum where taotlus_id=1000673
+  select * from hindamis_juhtum_staatus where hindamis_juhtum_id=1000352 order by id
+  //vaja VAIE_ALGATATUD saada
+  UPDATE hindamis_juhtum_staatus 
+   SET kehtiv_kuni=null
+   where id=1007152
+
+   DELETE FROM hindamis_juhtum_staatus
+   WHERE id=1007870
+    DELETE FROM hindamis_juhtum_staatus
+   WHERE id=1007900
+    DELETE FROM hindamis_juhtum_staatus
+   WHERE id=1009012
+
+  select * from EKSPERTIIS where taotlus_id=1000673
+  select * from EKSPERTIIS_STAATUS where ekspertiis_id=1000333 order by id
+  //ei pea midagi tegema, on juba HINNATUD
+
+  select * from otsus where taotlus_id=1000673
+  select * from vaie where otsus_id=1001361
+  //HINNANGU_OOTEL vaja saada
+  UPDATE vaie 
+   SET staatus_kood='HINNANGU_OOTEL', vastus=null 
+   where id=1000005
+
+  select * from tvh_vaie where vaie_id=1000005
+  UPDATE tvh_vaie 
+   SET ekspertiis_versioon_id=null, tk_arst_id=null, vastuse_esitamise_kp=null
+   where vaie_id=1000005
+
+  select * from TK_ARST_VASTUS where tvh_vaie_id=1000005
+    DELETE FROM TK_ARST_VASTUS
+   WHERE id=1000004
+
+
+Senikaua kui meil ei ole süsteemis TTO-le vaide tagasisaatmise võimalust, saame baasi kaudu selle tagasi kuhu iganes põrgatada. 
+
+Vaide Tiina

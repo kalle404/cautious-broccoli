@@ -1,0 +1,72 @@
+====== Lihastik ======
+
+Liikumisaparaadi lihastik ehk muskulatuur võimaldab koos luude ja liigestega inimkeha püsti hoida ja sooritada väga mitmekesiseid liigutusi. Inimese kehas võib eristada umbes 400 skeletilihast. Iga lihas koosneb suurest hulgast lihaskiududest. Neid seob üheks tervikuks vähemal määral veniv lihaspaun (fascia). Skeletilihased moodustavad 40% täiskasvanu kehamassist. Meie kehas on kolme tüüpi lihaseid: skeleti-, sile- ja südamelihased.
+
+Skeletilihased on vöötlihased, mis koosnevad kimpudeks koondunud vöötlihasrakkudest. Lihas koosneb keskosas lihasrakkudest ja algus- ning lõpposas kõõlustest. Skeletilihased tõmbuvad kokku kiiresti ja nende tegevus allub meie tahtele. Lihaste kokkutõmbed saavad toimuda närvidest saabuva impulsi tõttu. Lihastel peab tööks olema hea verevarustus, seda võimaldavad veresooned, mille kaudu tulevad toitained ja viiakse ära jääkained.
+
+Südamelihased on vöötlihased, mille rakkudes on mitu tuuma. Tegevuselt on nad sarnased skeletilihastega, kuid ei allu meie tahtele. Südamelihased töötavad automaatselt rütmiliselt.
+Silelihased vooderavad siseelundite seinu ja nende tegevus ei allu meie tahtele. Silelihased tõmbuvad kokku aeglaselt ja väikese jõuga. Soolte lainelised liigutused on silelihaste kokkutõmbumiste ja lõtvumiste tulemus.
+
+Skeletilihased jaotatakse pea-, kere- ja jäsemete lihasteks. Pealihased jaotuvad mälumis- ja miimilisteks lihasteks. Näoilmeid võimaldavad lihased on inimesel väga hästi arenenud. Me saame väljendada emotsioone – rõõmu, viha ja hirmu, kurbust jne. Kuju järgi eristatakse pikki, laiu ja lühikesi lihaseid.
+Selleks et liigutusi teha, vajavad lihased energiat. Energiat saavad lihased glükoosist. Glükoosi lagundamiseks on vaja hapnikku. Lihaste töö jõudlus sõltub toitainete ja hapnikuga varustatusest. Verevarustuse intensiivsust saab treeningutega tõsta. Treenimata lihastes ei lagune glükoos lõplikult, tekib piimhape, mis annab tunda lihasvaluna. See võib tekkida ka ülepingutusest või sundasendi tõttu. Kiire töörütmi ja suure töökoormuse tõttu väsivad lihased kiiresti.
+
+Lihased kinnituvad luu külge enamasti kõõluste abil. Pikemad kõõlused asuvad kõõlusetupes.
+
+**Kokkuvõte**
+
+Inimese liikumis- ja tugiaparaat koosneb luudest, liigestest, lihastest ja abiorganitest. Nende peamine ülesanne on anda inimkehale kuju ja seda toetada, liikuda, siseorganeid kaitsta ja võtta osa hingamisest.
+
+Liikumine on võimalik seetõttu, et kehale lähemal asuva luu külge kinnituv lihas tõmbub kokku. Lihase kokkutõmbe tõttu tõmmatakse kehast kaugemal olev luu (mis on omakorda ühendatud liigesega) suunas, mida liiges võimaldab.
+
+Tavaliselt on igal lihasel olemas paariline, mis liigub vastassuunas (agonist ja antagonist). Tänu sellele süsteemile ning väikeajus asuvale motoorsele juhtimiskeskusele, on võimalik liikuda koordineeritult ja kooskõlastatult.
+
+Eristatakse kolme liiki lihaskudet:
+  * **Südamelihaskude**
+      * esineb vaid südames, kus ta moodustab südame lihaselise seina, mille kokkutõmbed panevad vere veresoontes liikuma
+      * töötab automaatselt välisteguritest ja meie tahtest sõltumata
+  * **Skeletilihas- ehk vöötlihaskude **
+      * Moodustab skeletilihaseid ning teatud siseelundite – keele, pehme suulae, neelu ja söögitoru ülaosa lihaseid
+      * Allub inimese tahtele
+  * **Silelihaskude**
+      * nahas
+      * vere-ja lümfisoonte ning õõneselundite (siseelundite seintes) – kude kindlustab siseorganite motoorika ja veresoonte toonuse
+      * tõmbuvad kokku meie tahtest sõltumatult
+
+Lihased töötavad tavaliselt rühmiti, kombineeritult, kusjuures iga lihase tegevus mingi liigutuse puhul on tihedalt seotud teiste samast liigutusest osavõtvate lihaste tegevusega. Kombineeritud liigutustes võib iga lihas tegutseda agonisti (sooritavad antud liigutust), fiksaatori (liikumatu alguskoht) või sünergistina (kontraheeruvad samaaegselt agonistiga ja pidurdavad liigutuse korral ebavajalikke kõrvalliigutusi). 
+===== Inimese tahtele alluvad lihased =====
+
+  * Lihaste süsteemis käsitletakse skeletilihaseid, mis luudele kinnitunult panevad need liikuma ja nahalihaseid, mille põhiülesandeks on pea piirkonna avauste kuju ja asendi reguleerimine. 
+  * Skeletilihaseid on üle 400 ja nende kogumass moodustab täiskasvanul inimesel sõltuvalt elueast ja treenitusest ligikaudu 40% kehakaalust.
+  * Suurimad lihased inimesel on tuharalihased ja väikseimad silmalihased.
+
+Inimese skeletilihased:
+<hidden>
+{{:parameedik:sanitar:anatoomia:skeletilihased.png?nolink&600|}}
+</hidden>
+
+  * Kehalihastiku moodustavad pea-, kere-, jäsemetelihased.
+  * Inimese pealihased jagunevad: 
+      * mälumislihased,
+      * miimilised lihased,
+      * suupõhjalihased.
+  * Erinevaid näoilmeid esilekutsuvad miimilised lihased kinnituvad ühe otsaga koljule ja teise otsaga nahale.  
+
+Skeletilihaste ehitus - Kõõluste abil kinnituvad lihased luudele, ent lihase mõlemad pead ei kinnitu kunagi samale luule. Tavaliselt kulgevad lihased üle ühe liigese teisele luule. (Lihase üht kinnituskohta nimetatakse alguskohaks (//orgio//), teist kinnituskohaks (//insertio//). Kokku tõmbudes võivad lihased sel teel luid üksteisele lähendada ja põhjustada liigutusi. Mõned lihased kulgevad üle kahe liigese. Sel juhul suudavad nad näiteks painutama üht ja sirutama teist liigest.
+
+Sirutajalihased ja painutajalihased - Lihased paiknevad enamasti teineteisele vastupidiselt toimivate paaridena. Liigutuse ajal üks lihastest lõtvub ja teine tõmbub samal ajal kokku.
+
+Skeletilihaste töö:
+  * Allub inimese tahtele – lihased võivad kiiresti kokku tõmbuda ja lõdvestuda
+  * Lihased töötavad pidevalt – liigutused, keha asendi muutmine või keha asendi säilitamine. Lihaste tööks on vaja energiat mida saadakse peamiselt glükoosi lagundamisel hapniku abil
+  * Treeningu käigus suureneb lihaste mass ja paraneb verevarustus
+
+Lihaste ülesanded: 
+  - keha liigutamine või asendi säilitamine,
+  - siseelundite töö,
+  - annavad kehale kuju,
+  - toodavad kehasoojust, 
+  - kaitsevad siseelundeid, 
+  - ka info edastamine – miimilised lihased.
+
+===== Viited =====
+  * Wikipedia [[https://en.wikipedia.org/wiki/Human_musculoskeletal_system|Human muscuskeletal system]]

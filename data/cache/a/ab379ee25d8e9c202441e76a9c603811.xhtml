@@ -1,0 +1,246 @@
+
+<h1 class="sectionedit1" id="prevention_moodul">PREVENTION moodul</h1>
+<div class="level1">
+
+<p>
+Ennetuse (inglise keeles Prevention) mooduli kirjeldus, seosed HIS-i teise komponentidega ja seadistamine.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "PREVENTION moodul" [1-142] -->
+<h2 class="sectionedit2" id="seotud_jira_arendustaskid">Seotud Jira arendustaskid</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> EHEALTH_PRVNT-3 - Prevention attendance roof task (data model and domains)</div>
+<ul>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-1 - PRV.01.2 Prevention program administration</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-2 - PRV.01.1 Prevention program list</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-4 - PRV.02.1 Prevention attendance</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-5 - PRV.03.1 Patient prevention events</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-6 - PRV.04.1 Patient event details</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-7 - PRV.05.1 Prevention notification</div>
+</li>
+<li class="level2"><div class="li"> EHEALTH_PRVNT-8 - PRV.00 Business logic, reusable functions</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Seotud Jira arendustaskid" [143-678] -->
+<h2 class="sectionedit3" id="aeriloogika">Äriloogika</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> Moodulil on kaks lähenimis/ vaatepunkti: </div>
+<ul>
+<li class="level2"><div class="li"> ühelt poolt on õel võimalik teha patsientide nimekirju, vastavalt sisendiks antud omadustele, oma arsti jaoks. Nimekirja kaudu on võimalik vaadata patsientide ennetuse protsessi seisu ning vajadusel saata massiliselt kutseid ennetuse programmis osalemiseks.</div>
+</li>
+<li class="level2"><div class="li"> teiselt poolt on arstil võimalik tegeleda konkreetse patsiendiga konkreetse HJ külastuse raames. </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Mooduli tellijal (LT) on hetkel kuus erinevat ennetusprogrammi. </div>
+</li>
+<li class="level1"><div class="li"> Võimalik on koostada massilised nimekirjad põhinedes soole, vanusele, diagnoosidele, ennetuse perioodi ja ennetuse teenuse koodi järgi. </div>
+</li>
+<li class="level1"><div class="li"> Võimalik on saata nimekirjades olevatele patsientidele teavitusi (e-post) või märkida, et üks või mitu patsienti on teavitatud (kui teavitamine toimub tavakirja või telefoni teel näiteks). </div>
+</li>
+</ul>
+<ol>
+<li class="level1 node"><div class="li"> Läbi komponendi “PRV.01.1 Prevention programs” on võimalik tekitada uusi ennetusprogramme. Sealjuures võib ennetuspogramme olla kahte tüüpi:</div>
+<ol>
+<li class="level2"><div class="li"> Vaktsineerimisprogrammid (seotud immuniseerimiskannetega JRN.10.1)</div>
+</li>
+<li class="level2"><div class="li"> Ennetusprogrammid (seotud teenusekannetega JRN.14.1)</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> Öise job-iga tekitatakse komponenti “PRV.01.2 Attendance” nimekirjad vastavalt etteantud tingimustele (sugu, vanus, diagnoos) programmide lõikes.</div>
+</li>
+<li class="level1"><div class="li"> Komponendist “PRV.01.2 Attendance” on võimalik vaadata patsientide nimekirju ning vajadusel neile teavitusi saata. </div>
+</li>
+<li class="level1"><div class="li"> Juhul patsient on mõnes nimekirjas, tekib HJ-s selle kohta komponenti “TRG.11 Medical info” vastav märge.</div>
+</li>
+<li class="level1"><div class="li"> Juhul kui patsiendile osutatakse vastav vaktsineerimine või teenus, märgitakse tema olek komponendis “PRV.01.2 Attendance” Planned → Completed. </div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT3 SECTION "Äriloogika" [679-2359] -->
+<h2 class="sectionedit4" id="mooduli_komponendid">Mooduli komponendid</h2>
+<div class="level2">
+<div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Komponendi kood    </th><th class="col1 leftalign"> EN       </th><th class="col2 leftalign"> ET          </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0" colspan="3"> Prevention administration </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> PRV.01.1   </td><td class="col1"> Prevention programs </td><td class="col2"> Ennetusprogrammid </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> PRV.01.2   </td><td class="col1"> Attendance </td><td class="col2"> Külastatavus </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0" colspan="3"> Prevention attendance </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> PRV.02.1   </td><td class="col1"> Prevention attendance </td><td class="col2"> ? </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> PRV.03.1   </td><td class="col1"> Patient prevention events </td><td class="col2"> ? </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> PRV.04.1   </td><td class="col1"> Patient event details </td><td class="col2"> ? </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> PRV.05.1   </td><td class="col1"> Prevention notification </td><td class="col2"> ? </td>
+	</tr>
+</table></div>
+<!-- EDIT5 TABLE [2393-2779] -->
+</div>
+<!-- EDIT4 SECTION "Mooduli komponendid" [2360-2781] -->
+<h2 class="sectionedit6" id="andmemudel">Andmemudel</h2>
+<div class="level2">
+
+<p>
+Kasutusel on järgmised tabelid:
+</p>
+<ul>
+<li class="level1"><div class="li"> PREVENTION - kirjeldatakse üldiselt ennetuse programmid</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_ATTENDANCE</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_DIAGNOSIS</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_EVENT</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_NOTIFICATION</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_NOTIF_CONTENT</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_PATIENT</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_SERVICE</div>
+</li>
+<li class="level1"><div class="li"> PREVENTION_TARGET_GROUP</div>
+</li>
+</ul>
+
+<p>
+Öiste job-ide tabelid
+</p>
+<ul>
+<li class="level1"><div class="li"> SYS_DB_JOB (module_dova_code = &#039;PREVENTION&#039;)</div>
+</li>
+<li class="level1"><div class="li"> SYS_DB_JOB_LOG</div>
+</li>
+</ul>
+
+<p>
+NB! Öistele job-idele pääseb ligi ka läbi UI: Manage/ admin → System database job
+</p>
+
+</div>
+<!-- EDIT6 SECTION "Andmemudel" [2782-3284] -->
+<h2 class="sectionedit7" id="seosed_hj_kontekstiga">Seosed HJ kontekstiga</h2>
+<div class="level2">
+
+<p>
+TRG.11 Meditsiinilised andmed/ Medical info
+</p>
+
+<p>
+Eraldi plokk “Prevention”:
+</p>
+<ul>
+<li class="level1"><div class="li"> Vaccination programs - list of PREVENTION_EVENT records where PREVENTION.ID → PREVENTION.TYPE_DOVA_CODE = ’VACCINATION’. Entries are grouped by PREVENTION_ID (groups sorted alphabetically, PREVENTION.CODE + PREVENTION_TITLE is showna s group heading) in each group rows sorted chronologically.</div>
+</li>
+<li class="level1"><div class="li"> Date – EVENT_DATE (date value only) if it’s not null, CREATED_DATE otherwise </div>
+</li>
+<li class="level1"><div class="li"> Medication/Active substance – PREVENTION_EVENT.JOURNAL_ENTRY_ID → JOURNAL_ENTRY.TEXT_VALUE (cell is left blank if JOURNAL_ENTRY_ID is null)</div>
+</li>
+<li class="level1"><div class="li"> Doctor – PREVENTION_EVENT.PERFORMER_STAFF_ID → STAFF.STAFF_NAME and STAFF_CODE.</div>
+</li>
+<li class="level1"><div class="li"> Status – PREVETION_EVENT.STATUS_DOVA_CODE text value in currently active language.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT7 SECTION "Seosed HJ kontekstiga" [3285-4107] -->
+<h2 class="sectionedit8" id="skriptid">Skriptid</h2>
+<div class="level2">
+
+<p>
+Vaktsineerimisennetuses patsientide leidmine keskkonnast:
+</p>
+<pre class="code">select ls.display_name, ls.display_code, sc.case_number
+   from prevention_event pe
+   join prevention p on pe.prevention_id = p.id
+   join prevention_patient pp on pe.prevention_patient_id = pp.id
+   join living_subject ls on pp.living_subject_id = ls.id
+   join sickness_case sc on ls.id = sc.person_link_id
+   where p.type_dova_code = &#039;VACCINATION&#039;
+   and p.id = 1000000000
+     </pre>
+
+<p>
+Menüüpunkti nime otsimine/ muutmine:
+</p>
+<pre class="code">select sm.* 
+     from system_message sm
+     join system_message_text smt on sm.code = smt.message_code
+     where sm.syst_mess_type_dova_code = &#039;MENU_ITEM&#039;
+     and code = &#039;mi.sys.db_job&#039;;
+select * 
+        from system_message_text 
+        where message_code = &#039;mi.sys.db_job&#039; 
+        for update;
+        </pre>
+
+<p>
+Mõistliku teenuse leidmine ennetuseks:
+</p>
+<pre class="code">select sc.service_code, sct.text_value, sct.lang_dova_code
+     from service_classifier sc
+     join service_classifier_text sct on sc.id = sct.service_classificator_id
+     join article_service ase on sc.id = ase.service_classifier_id
+     join prices p on ase.article_id = p.article_id
+     </pre>
+
+<p>
+Järgmise skriptiga leidsin vajaliku sihtgrupi SESK-testis:
+</p>
+<pre class="code">select d.diagnosis_code, ad.formatted_text as diagnosis_text, sc.case_number
+     from appointed_diagnosis ad
+     join diagnosis d on ad.diagnosis_id = d.id
+     join sickness_case sc on ad.sickness_case_id = sc.id
+     join living_subject ls on sc.person_link_id = ls.id
+     where ad.diagnosis_id = 80942
+     and ls.gender_dova_code = &#039;F&#039;
+     and birth_time between
+          to_date(&#039;14/01/1961&#039;,&#039;DD/MM/YYYY&#039;) and to_date(&#039;14/01/1966&#039;,&#039;DD/MM/YYYY&#039;)
+     and ad.end_date is null and ad.sys_delete_status = &#039;N&#039;
+                 </pre>
+
+</div>
+<!-- EDIT8 SECTION "Skriptid" [4108-5918] -->
+<h2 class="sectionedit9" id="vaelisviited">Välisviited</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Äriloogika algoritmiga on võimalik tutvuda <a href="https://confluence.nortal.com/display/LTHIS/Prevention+process" class="urlextern" title="https://confluence.nortal.com/display/LTHIS/Prevention+process" rel="nofollow">siin</a>. </div>
+</li>
+<li class="level1"><div class="li"> Ennetuse moodulite tehnilised kirjelduse asuvad <a href="https://confluence.nortal.com/display/docs/1.+Prevention+specs" class="urlextern" title="https://confluence.nortal.com/display/docs/1.+Prevention+specs" rel="nofollow">siin</a>. </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "Välisviited" [5919-] -->

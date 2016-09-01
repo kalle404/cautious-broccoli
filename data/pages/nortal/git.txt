@@ -1,0 +1,28 @@
+====== Git ======
+
+==== Tüüpilised käsud ====
+
+
+  * git help [command]
+  * git init
+  * git status
+  * git add [filename]
+    * git add * - kõikide failide lisamiseks
+  * git diff [filename]
+  * git commit -m "[commit message]"
+  * git log
+  * git show HEAD
+  * git reset HEAD [filename]
+  * git reset [SHA]
+  * git branch [branch_name]
+  * git checkout [branch_name]
+  * git merge [branch_name]
+  * git branch -d [branch_name]
+
+=== Meeskonnatöö ===
+
+  * git clone [remote_location] [clone_name]
+  * git remote -v
+  * git fetch
+  * git merge origin/master
+  * git push origin [your_branch_name]

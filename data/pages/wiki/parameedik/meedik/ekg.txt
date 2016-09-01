@@ -1,0 +1,96 @@
+====== Elektrokardiogramm (EKG) ======
+
+**Esmane monitooring** 
+
+Esmane monitooring kujutab endast ohtlike arütmiate, südame elektrilise aktiivsuse (kas süda töötab või ei) kiirdiagnoosi. Täpne analüüs järgneb hiljem 3- või 12-kanalilise EKG abil.
+
+Südamerütmihäired on üks südamehaigustest tingitud surmade sagedasemaid põhjusi. Akuutse müokardiinfarkti ja raske isheemiatõvega patsientide suurim oht seisneb eluohtlike südame rütmihäirete tekkimises.
+
+Esmane monitooring defibrillaatorelektroodide abil on sageli kasutatavaim meetod vereringeseiskusega patsientide puhul, et otsustada defibrillatsiooni vajaduse üle. Edasi võetakse kasutusele 3 või 12 lülitusega EKG.
+
+**Teostamine**
+
+  * Vereringeseiskuse kindlakstegemine – kontrollige teadvust, hingamist ja vereringe tunnuseid.
+  * Paigaldage elektroodid.
+  * Registreerige defibrillaatori elektroodide kaudu EKG.
+  * Südamerütmi analüüs.
+  * Esmane diagnoos saadud EKG alusel.
+
+===== EKG =====
+
+Elektrokardiogrammil on erakorralises meditsiinis väga tähtis osa. Ühelt poolt kasutatakse seda pideva EKG-monitooringuna südamerütmihäirete kindlaksmääramiseks ja jälgimiseks, teiselt poolt aga (12 lülitusega EKG kujul) rindkerevalu, nõrkuse, teadvusekaotuste jne põhjuste diferentsiaaldiagnoosimiseks. Erakorralises meditsiinis kasutatavad EKG-seadmed sisaldavad peale EKG-monitooringu ja diagnostilise 12 lülitusega funktsiooni veel mitut täiendavat funktsiooni (defibrillatsioon, kardioversioon, SpO2 ja etCO2 monitooring ning transkutaanne südamestimulaator).
+
+EKG kasutamine – olgu siis tegemist monitooringu- või 12 lülitusega EKG-ga – eeldab kasutatava seadme täpset tundmist.
+
+  * V1 – 4. roidevahemik paremal parasternaaljoonel (l. parasternalis dex.)
+  * V2 – 4. roidevahemik vasakul parasternaaljoonel (l. parasternalis sin.)
+  * V3 –V2 ja V4 vahel 5. roidevahemik vasakul
+  * V4 – 5. roidevahemik medioklavikulaarjoonel vasakul (l. medioclavcularis sin.)
+  * V5 – 5. roidevahemik eesmisel aksillaarjoonel vasakul (l. axillaris anterior sin.)
+  * V6 – 5. roidevahemik keskmisel aksillaarjoonel vasakul (l. axillaris media sin.)
+
+{{:parameedik:ems-chest-l.png?nolink&600|}}
+
+
+==== Südame erutusjuhtesüsteem ====
+
+Südame parema koja seinas, ülemise õõnesveeni sisenemiskoha lähedal, asub siinussõlm, mille tekitatud elektriimpulss (aktsioonipotentsiaal) levib mööda kodasid edasi ja põhjustab kodade lihase kokkutõmbe. Kodadevahelises vaheseinas parema atrioventrikulaarklapi kohal asub atrioventrikulaarsõlm (AV-sõlm). Kodade erutuse tõttu vallandab atrioventrikulaarsõlm edasise erutusimpulsi, mis levib mööda spetsiaalseid juhtekiudusid. Need juhtekiud läbivad Hisi kimbuna kodade ja vatsakeste vahelise sidekoelise piiri ning hargnevad Purkinje kiududena kogu müokardis. Nende kiudude impulsi juhteteedena toimimine tagab vatsakeste koordineeritud kokkutõmbe.
+
+==== EKG-kõvera moodustumine ====
+
+Lihaskoe töötamisel (kokkutõmbumisel) tekivad nõrgad elektrivoolu kõikumised (potentsiaalierinevused). See kehtib ka südamelihase puhul. Kui inimese keha on puhkeseisundis, siis tekitab mõõdetavat elektrivoolu ainult südamelihas. See ongi elektrokardiograafia põhialus.
+
+**Märkus**. EKG mõõdab ainult südames tekkivaid elektrivoolusid. See ei anna mingit teavet südame kui pumba ( hemodünaamilise) tegevuse kohta.
+
+Südamelihas sisaldab miljoneid lihaskiudusid ja igas sellises lihaskius tekib erutuse toimel elektrilise pinge muutus. Kui EKG näitaks kõiki neid väikesi vektoreid, ei saaks sellisest virvarrist midagi kasulikku välja lugeda. Tegelikult näitab EKG aga suhteliselt lihtsat kõverat, sest kuigi miljonid elementaarvektorid suunduvad paljudesse erinevatesse suundadesse, arvutatakse need EKG puhul üheks ühiseks vektoriks (summavektoriks).
+
+EKG-pildil näha olevate sakkide suurused (kõrgused) sõltuvad samuti elektrit juhtivatelt elektroodidelt saadavate vektorite omavahelisest suhtest. Kui infarkti korral südame tagaseina juures mingi lihaseosa rivist välja läheb, siis puuduvad selle osa elektrilised pinged, mida südame tagaseinas mõõta. Eesmiste rinnakuelektroodide juures aga lähevad sakid suuremaks, sest puudub südame tagaseina „vastasmängija“, mille vektor muidu maha lahutataks.
+
+Elektrokardiograafiga saadav pilt trükitakse tavaliselt EKG-ribale, milleks kasutatakse EKG-paberit.
+
+{{:parameedik:ecg_interval.gif?nolink&600|}}
+
+**Kõvera osade kokkuvõte**
+
+P = erutuse levimine kodades
+
+QRS = erutuse levimine vatsakestes
+
+Tüüpiline EKG-kõver moodustubki nendest erutuse levimistest: vaheseina erutus Q, müokardi erutus R, kui kogu lihasmass on erutunud, siis kaob ka vektor ja R-sakk laskub taas nulljoonele. Elektroodide seisundist olenevalt tekib suurem või väiksem S-sakk. QRS-kompleksi kuju jäsemeelektroodides sõltub peamiselt (elektrilisest) südameteljest. Rinnakuelektroodidel on R-sakk V1–V5 üldiselt suurem ja S-sakk väiksem.
+
+Lisaks võetakse hindamisel arvesse muid kõvera osi, mille kirjutaja teatud aegadel üles märgib.
+
+PQ-periood: P-saki algusest QRS-kompleksi alguseni = erutuse ülejuhte aeg (0,12–0,2 sek). Osaliselt isoelektriline = nulljoonel.
+
+ST-segment: S-saki lõpust (vatsakeste erutumise lõpp) kuni T-saki alguseni. Tavajuhul isoelektriline.
+
+
+==== Südamerütmid ====
+
+  * Siinusrütm - normaalne seisund. Sagedus on vahemikus 60 kuni 80 lööki minutis.
+    * Siinusbradükardia - tegemist on aeglase siinuserutusega, mis on tingitud parasümpaatilise närvisüsteemi aktiivsuse tõusust või siinussõlme häirest, samuti võib see olla põhjustatud ravimite mõjust (digitaalise üledoos) või väga hea tervisega inimeste puhul võib ka füsioloogiliseks normiks olla. Sellisel juhul on südame sagedus madalam kui 60 lööki minutis.
+    * Siinustahhükardia - tegemist on rütmilise löögisagedusega rohkem kui 100 lööki minutis.
+  * Kodadest tulenevad rütmihäired:
+    * kodade ekstratsüstol
+    * paroksüsmaalne supraventrikulaarne tahhükardia,
+    * kodade laperdus
+    * kodade fibrillatsioon
+  * AV-sõlmest tulenevad rütmihäired
+    * atrioventrikulaarne rütm
+    * paroksüsmaalne atrioventrikulaarsõlme tahhükardia
+  * Vatsakestest tulenevad rütmihäired
+    * ventrikulaarsed ekstrasüstolid
+    * mittepüsiv ventrikulaarne tahhükardia
+    * ventrikulaarne tahhükardia
+    * vatsakeste fibrillatsioon - eluohtlik! südameseiskumine! 
+    * asüstoolia - eluohtlik! südameseiskumine!
+
+==== Defibrillatsioon ====
+
+Vereringeseiskuse korral ei pumpa süda enam verd, mistõttu kolme minuti jooksul tekib organismis hapnikupuudus ja ajukahjustus. Südame, kui pumba, funktsiooni lakkamise ja sellega kaasneva vereringeseiskuse kõige sagedasem põhjus on vatsakeste virvendus (VF), mis esineb üle 2/3 juhtudel. Vatsakeste virvenduse korral on ainsaks ravimeetodiks kiire defibrillatsioon; esimese 30 sekundi puhul on ellujäämisšansid 97%. Iga viivitatud minutiga kahaneb ellujäämistõenäosus 7–10 protsendi võrra. Tõhus südamemassaaž ja kunstlik hingamine lükkavad südame lõpliku seisaku mõnevõrra edasi, kuid ei suuda seda ära hoida.
+
+Vatsakeste fibrillatsiooni või pulsita ventrikulaarse tahhükardiaga vereringe seiskuse korral kehtib reegel: mida kiiremini defibrilleeritakse, seda parem.
+
+Defibrillatsiooni puhul juhitakse läbi südamelihase elektrivool, mis lõdvestab korraga kõik korrapäratult tõmbleva südamelihase kiud, misjärel hakkab (ideaaljuhul) tööle südame loomulik erutusteke. Tegelikult läbib südamelihast ainult väike osa läbi rinnakorvi juhitavast elektrivoolust.
+
+Võtmepunktiks on see, et kui tekib VF ja käepärast on defibrillaator, tuleb keskenduda kolmele kiirele defibrillatsioonile (muud tegevused on teisejärgulised).

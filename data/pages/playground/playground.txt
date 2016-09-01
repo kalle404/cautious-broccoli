@@ -1,0 +1,34 @@
+====== PlayGround ======
+
+<bootnote warning>Do you want to learn something ?</bootnote>
+
+
+
+|üks |kaks |kolm |
+|neli |viis |kuus |
+|seitse |kaheksa |üheksa |
+
+^NIMI ^ÜFT ^Anatoomia ^Õigused ^BLS |
+|Helen Allas |A |MA |A |A |
+|Marite Rõõm |MA |A |A |A |
+|Ann Zeemann |MA |MA |MA |A |
+|Hanna Liisa Teder |A |null |null |null |
+|Kalmar Kõivomägi |null |MA |MA |MA |
+|Heiki Müürsepp |null |MA |MA |null |
+|Kalle Kalmus |A |MA |A |A |
+|Krislin Kuuseoks |A |A |A |MA |
+|Leho Lepalo |MA |MA |A |MA |
+|Evi Gulbis |A |MA |MA |MA |
+|Marco Kompus |A |MA |A |MA |
+|Gunnar Richter |A |MA |MA |A |
+|Birgit Hüüs |null |A |A |MA |
+|Karen Kanniste |null |MA |A |MA |
+|Taniel Suvi |A |MA |A |A |
+|Kadi Hõlpus |MA |MA |A |MA |
+|Kalle Jagula |A |MA |A |A |
+|Milvi Jallajas |A |null |null |null |
+|Tanel Saimre |A |A |A |MA |
+|Rainer Vabamäe |MA |A |A |MA |
+|Eleri Siidra |MA |MA |A |A |
+
+\\

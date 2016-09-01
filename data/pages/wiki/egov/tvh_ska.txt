@@ -1,0 +1,36 @@
+====== TVH SKA integratsioon ======
+
+SKAIS2 - kaasajastatud teenustega SotsiaalKindlustusAmetiInfoSüsteem
+
+Tabelisse TVH_TAOTLUS tekitatakse järgmised veerud: 
+  * skaTaotlusId -> SKA_TAOTLUS_ID (number(18)) -> unikaalne viide SKAIS2-s olevale TVH (ühis)taotlusele
+  * skaTaotlusNumber -> SKA_TAOTLUS_NUMBER (varchar2(100char)) -> taotluse number SKAIS2-s
+  * skaEdastamiseAeg -> SKA_EDASTAMISE_AEG (date) -> kellaaja täpsusega taotluse edastamise aeg SKA-sse
+
+**TVH otsuse edastamine SKAsse**
+
+TVH otsuse [[https://confluence.nortal.com/pages/viewpage.action?pageId=133508549|kinnitamise järgselt]]:
+  * teostatakse SKA andmevahetuse toimingud asünkroonselt vastavalt [[https://confluence.nortal.com/pages/viewpage.action?pageId=125254898|TVH_SKA_1.1]] kirjeldatud tegevustele: 
+    * kas süsteemse parameetri TVH_SKAIS2_ANDMEVAHETUS kehtiv väärtus on 1 ? 
+    * kas tegemist on põhiotsusega (OTSUS.ALUS_OTSUS_ID on null) ? 
+    * kas otsusega seotud taotlust on vaja esitada SKAIS-i ?
+
+	select * 
+       	from taotlus t 
+       	join tvh_taotlus tvh on t.id = tvh.taotlus_id
+       	join tvh_taotlus_pohjus p on t.id = p.taotlus_id
+       	where p.hindamise_valik_kood = 'PUUDE_RASKUSASTE'
+       	and tvh.ska_edastamise_aeg is null
+
+  * koostatakse andmevahetuse sõnum vastavalt [[https://confluence.nortal.com/display/TVHTVT/TVHTaotlusYksUks|TvhTaotlusYksUks]] andes sisendiks seotud [[https://confluence.nortal.com/display/TVHTVT/TVHTaotlus|TVHtaotlus]] objekti. 
+    * üldine reegel: kui andmeid (tühi string) pole, siis elementi ei edastata (minOccurs = 0)
+    * kui TVH_TAOTLUS.ON_TAITMISEST_LOOBUTUD = 0, siis edastatakse SKA-le taotluse andmekoosseisu kuuluvad elemendid. 
+    * ülejäänud juhtudel koostatakse edastatav taotluse andmestik olemasolevate andmete pealt. 
+  * Edastatakse taotluse andmestik SKAsee teenusega **Skais2.TVHTaotlusYksUks.v1**
+
+**Tegevused SKA vastusega** 
+
+  * kas teenus tagastab vastusena skaTaotlusId ? 
+    * salvestatakse TVH_TAOTLUS.SKA_TAOTLUS_ID väljale ja väärtustatakse SKA_EDASTAMISE_AEG = sysdate
+  * kas teenuse edastamine sai vea? 
+    * veateade salvestatakse tabelisse TVH_TAO_EDASTAMISE_VIGA

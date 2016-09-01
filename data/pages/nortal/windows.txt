@@ -1,0 +1,8 @@
+====== Windows - Under the hood ======
+
+Kasutatud materjalid: 
+  * Brian Knittel, "Windows 7 and Vista: Guide to Scripting, Automation, and Command Line Tools", 2011;
+  * Ed Wilson,	"Microsoft Windows Scripting Self-Paced Learning Guide", 2004;
+  * Ed Bott, "Introducing Windows 10 for IT Professionals, Preview Edition", 2015; 
+  * Brian Knittel, "Windows 10 In Depth", 2016;
+

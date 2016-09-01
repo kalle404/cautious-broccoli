@@ -1,0 +1,38 @@
+====== Elustamine (BLS) ======
+
+Elustamine, inglise keeles //Basic Life Support// (BLS), on meditsiinilise abi tase, mida kasutatakse eluohtliku haigusseisundi või vigastusega  kannatanu elus hoidmiseks seni, kuni talle saab osutada põhjalikumat meditsiinilist abi haiglas. BLS-i on võimalik osutada meditsiinilise personali, sh [[parameedik:sanitar:moisted#erakorralise_meditsiini_tehnik|erakorralise meditsiini tehniku]], [[parameedik:sanitar:moisted#parameedik|parameediku]] või lihtsalt piisava väljaõppe/ kvalifikatsiooniga mööduja poolt. 
+
+
+===== Baaselustamise võtted =====
+
+**Kaudne südamemassaaž**
+  * Rõhutakse katkematu südamemassaaži vajadusele
+  * Ainult minimaalsed katkestused massaažis kui need on vältimatud
+  * Rindkere surutakse alla vähemalt 5 cm(kuid mitte üle 6 cm)
+  * kiirusega vähemalt 100 korda minutis (kuid mitte üle 120 korra minutis)
+  * Inimene jõuab efektiivselt masseerida 2 minutit!
+
+**Peamised muudatused ABC-s (viimasel hinnangul) **
+  * Koolitatud inimese puhulon klassikaline ABC teostamine efektiivsem kui ainult kaudse südamemassaaži teostamine
+  * MV suhe 30:2
+  * Soovitus kasutada Pocket-maski
+  * Kui otsustatakse ventileerida:
+    * Ei raisata aega suust võõrkeha otsimiseks, välja arvatud juhul kui esimene hingatamine osutub ebaefektiivseks (rindkere ei liigu)
+
+**Hingatamine, kehtib nii suult-suule kui maski-kotiga ventileerides**
+  * 2 hingatamiseks ei kulutata rohkem kui 5 sekundit
+  * Hüperventilatsioon on kahjulik
+    * Tõuseb intratorakaalne rõhk ja väheneb venoosne naas südamesse ning südame väljutusmaht
+    * Samuti suurendab see pause südamemassaažis
+
+Kuigi kõik elustamisketi lülid on olulised, on positiivset mõju kaugtulemustele leitud **vaid katkematul kaudsel südamemassaažil ning varajasel defibrilleerimisel**. Sekundaarsed tegevused onintubatsioon või supraglotilise hingamistee rajamine ning ravimite manustamine. 
+
+**Laste BLS eripärad**
+  * esmalt 5x kunstlikku hingatamist
+  * 1 minut CPR-i enne abi otsimist (kui tegevus toimub üksi)
+  * CPR korral suruda rinnakorvi vähemalt 1/3 ulatuses (5cm)
+
+===== Viited =====
+
+  * Baaselustamise võtted - www.cprguidelines.eu
+  * Wikipedia [[https://en.wikipedia.org/wiki/Basic_life_support|Basic Life Support]]

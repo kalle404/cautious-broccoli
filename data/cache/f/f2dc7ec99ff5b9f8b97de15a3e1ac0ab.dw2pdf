@@ -1,0 +1,82 @@
+<a name="nortalqa__"></a>
+<h1><bookmark content="QA stuff" level="0" /><a name="nortalqa__qa_stuff">QA stuff</a></h1>
+<div class="level1">
+
+<p>
+<em>They are not perhaps aware of fundamental scientific principle. There is no experient, there is no test for “it works”. There is no test for “future”, the “always”. All I now is that it has not failed yet as far as I can tell. That does not say anything about what is going to happen in next two secoonds. 
+</em>
+</p>
+
+<p>
+James Bach (at #CAST2014 - “Test cases are not testing”)
+</p>
+
+</div>
+
+<h2><bookmark content="Testing frameworks" level="1" /><a name="nortalqa__testing_frameworks">Testing frameworks</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Selenium_(software)" class="urlextern" title="https://en.wikipedia.org/wiki/Selenium_(software)"  rel="nofollow">Selenium</a> - a portable software testing framework for web applications. Selenium provides a record/playback tool for authoring tests without learning a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including Java, C#, Groovy, Perl, PHP, Python and Ruby. The tests can then be run against most modern web browsers. Selenium deploys on Windows, Linux, and Macintosh platforms. It is open-source software, released under the Apache 2.0 license, and can be downloaded and used without charge.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://angular.github.io/protractor/" class="urlextern" title="https://angular.github.io/protractor/"  rel="nofollow">Protractor</a> - end-to-end test framework for AngularJS applications.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="Types of testing" level="1" /><a name="nortalqa__types_of_testing">Types of testing</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Exploratory_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Exploratory_testing"  rel="nofollow">Exploratory testing</a> - a hands-on approach in which testers are involved in minimum planning and maximum test execution. The planning involves the creation of a test charter, a short declaration of the scope of a short (1 to 2 hour) time-boxed test effort, the objectives and possible approaches to be used.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Unit_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Unit_testing"  rel="nofollow">Unit testing</a> - a software testing method by which individual units of source code, sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine whether they are fit for use. Intuitively, one can view a unit as the smallest testable part of an application. In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure. In object-oriented programming, a unit is often an entire interface, such as a class, but could be an individual method. Unit tests are short code fragments created by programmers or occasionally by white box testers during the development process. It forms the basis for component testing.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Functional_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Functional_testing"  rel="nofollow">Functional testing</a> - a quality assurance (QA) process and a type of black-box testing that bases its test cases on the specifications of the software component under test. Functions are tested by feeding them input and examining the output, and internal program structure is rarely considered (not like in white-box testing). Functional testing usually describes what the system does. Functional testing does not imply that you are testing a function (method) of your module or class. Functional testing tests a slice of functionality of the whole system.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Regression_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Regression_testing"  rel="nofollow">Regression testing</a> - a type of software testing that verifies that software that was previously developed and tested still performs correctly after it was changed or interfaced with other software. Changes may include software enhancements, patches, configuration changes, etc.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Smoke_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Smoke_testing"  rel="nofollow">Smoke testing</a> - a testing technique that is inspired from hardware testing, which checks for the smoke from the hardware components once the hardware&#039;s power is switched on. Similarly in Software testing context, smoke testing refers to testing the basic functionality of the build.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Test_automation" class="urlextern" title="https://en.wikipedia.org/wiki/Test_automation"  rel="nofollow">Test automation</a> - the use of special software (separate from the software being tested) to control the execution of tests and the comparison of actual outcomes with predicted outcomes. Test automation can automate some repetitive but necessary tasks in a formalized testing process already in place, or add additional testing that would be difficult to perform manually. Test automation is critical for continuous delivery and continuous testing.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Security_testing" class="urlextern" title="https://en.wikipedia.org/wiki/Security_testing"  rel="nofollow">Security testing</a> - a process intended to reveal flaws in the security mechanisms of an information system that protect data and maintain functionality as intended. Due to the logical limitations of security testing, passing security testing is not an indication that no flaws exist or that the system adequately satisfies the security requirements.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/Stress_testing_(software)" class="urlextern" title="https://en.wikipedia.org/wiki/Stress_testing_(software)"  rel="nofollow">Stress testing</a> - a software testing activity that determines the robustness of software by testing beyond the limits of normal operation. Stress testing is particularly important for “mission critical” software, but is used for all types of software. Stress tests commonly put a greater emphasis on robustness, availability, and error handling under a heavy load, than on what would be considered correct behavior under normal circumstances.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://en.wikipedia.org/wiki/A/B_testing" class="urlextern" title="https://en.wikipedia.org/wiki/A/B_testing"  rel="nofollow">AB testing</a> - (sometimes called split testing) is comparing two versions of a web page to see which one performs better. You compare two web pages by showing the two variants (let&#039;s call them A and B) to similar visitors at the same time. The one that gives a better conversion rate, wins!</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="Books about testing" level="1" /><a name="nortalqa__books_about_testing">Books about testing</a></h2>
+<div class="level2">
+
+<p>
+General resource is found <a href="http://www.ministryoftesting.com/resources/ebooks/" class="urlextern" title="http://www.ministryoftesting.com/resources/ebooks/"  rel="nofollow">here</a>.
+</p>
+<ul>
+<li class="level1"><div class="li"> Alan Richardson, “Java for testers”, 2015, 291 lk;</div>
+</li>
+<li class="level1"><div class="li"> David Burns, “Selenium 2 Testing Tools”, 2012, 232 lk; </div>
+</li>
+<li class="level1"><div class="li"> Lisa Crispin, Janet Gregory, “Agile Testing - A Practical Guide For Testers And Agile Teams”, 2008, 573lk; </div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ministryoftesting.com/wp-content/uploads/2013/07/99ThingsEbook.pdf" class="urlextern" title="http://www.ministryoftesting.com/wp-content/uploads/2013/07/99ThingsEbook.pdf"  rel="nofollow">99 things to do to become a better tester</a></div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="Testing tools" level="1" /><a name="nortalqa__testing_tools">Testing tools</a></h2>
+<div class="level2">
+
+<p>
+General resource is found <a href="http://www.ministryoftesting.com/resources/software-testing-tools/" class="urlextern" title="http://www.ministryoftesting.com/resources/software-testing-tools/"  rel="nofollow">here</a>.
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="https://www.getpostman.com/apps" class="urlextern" title="https://www.getpostman.com/apps"  rel="nofollow">Postman</a> - a Postman interceptor brings the power of your Chrome window to Postman! You can set custom headers (including cookies) from within Postman, and view cookies already set on the domain. You can also capture requests being sent from Chrome and import them into Postman. </div>
+</li>
+</ul>
+
+</div>

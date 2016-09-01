@@ -1,0 +1,346 @@
+
+<h1 class="sectionedit1" id="maerkmed">Märkmed</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Märkmed" [1-25] -->
+<h2 class="sectionedit2" id="keskkonnas_hambakaardi_keele_vahetamine">Keskkonnas hambakaardi keele vahetamine</h2>
+<div class="level2">
+
+<p>
+Muuta läbi ssh keskkonna seadistusi. Faili nimi on runtime.properties, mis näiteks lt_test keskkonnas asub /LT_TEST/EHEALTH_HOME/CONF/. Seal tuleb muuta vastava mooduli ehealth-ui.lang=lt väärtus milleks parasjagu tarvis on, näiteks et eesti ja en inglise jaoks. Lisaks tuleb käivitada vastav moodul läbi tomcati. Selleks leida vastava moodul tomcatist ning valida „undeploy“. Taaskäivitamiseks paigadada nt uusim mooduli versioon. Keel peab sellega vahetunud olema. 
+</p>
+
+<p>
+Predemos pääseb failile runtime.properties ligi:
+ssh ehlarendus
+home/ build/ ehealth_home/ predemo_wlsnode_home/ conf/ runtime.properties
+peale muudatuste tegemist mõlemas nodes muudatuste tegemiseks käivitada conf/ kataloogis skript argumendiks tehtud kataloogi nimi:
+./syncEhealthHome.sh predemo_wlsnode_home/
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Keskkonnas hambakaardi keele vahetamine" [26-877] -->
+<h2 class="sectionedit3" id="mooduli_versiooni_kaesitsi_laebi_ssh_vaatamine">Mooduli versiooni käsitsi läbi ssh vaatamine</h2>
+<div class="level2">
+
+<p>
+Versioon on kirjas failis: 
+Tomcat8060/ webapps/ test-ui/ META-INF/ MANIFEST.MF
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Mooduli versiooni käsitsi läbi ssh vaatamine" [878-1019] -->
+<h2 class="sectionedit4" id="logidest_andmete_otsimine">Logidest andmete otsimine</h2>
+<div class="level2">
+
+<p>
+Logide jooksev kuvamine: 
+</p>
+<pre class="code">tail -f ehealth-integration-lt.log</pre>
+
+<p>
+Logidest märksõna otsimine: 
+</p>
+<pre class="code">grep &#039;kalle.jagula&#039; devcluster-predemo.log</pre>
+
+<p>
+Logidest 5 rida enne ja pärast otsing kahe märksõna abil:
+</p>
+<pre class="code">grep -B 5 -A 5 &#039;LopsSearchService#search\|kalle.jagula&#039; devcluster-predemo.log</pre>
+
+</div>
+<!-- EDIT4 SECTION "Logidest andmete otsimine" [1020-1343] -->
+<h2 class="sectionedit5" id="aruannete_parandamine">Aruannete parandamine</h2>
+<div class="level2">
+
+<p>
+Rippmenüüs pealkirja muutmine
+ [28.09.2015 12:41:08] sergius.tsimbalist: lisaks iga reporti jaoks peab olema system_message koodiga “report.” + report_code + “.text” kus on selle reporti nimetus
+Ehk siis midagi sellist: 
+select * 
+</p>
+<pre class="code">     from system_message_text
+     where message_code like &#039;report.BR2.12.4.1.text&#039; 
+     for update</pre>
+
+<p>
+kui viskab ette birt üldise akna:
+</p>
+
+<p>
+<img src="/docuwiki/lib/exe/fetch.php?w=200&amp;tok=826510&amp;media=nortal:birt_aken.png" class="media" alt="" width="200" />
+</p>
+<ul>
+<li class="level1"><div class="li"> [28.09.2015 15:31:59] sergius.tsimbalist: &lt;property name=“fileName”&gt;template.rptlibrary&lt;/property&gt; peab olema sama nimetus mis on report.template.library leedu ressusrsi FILE_NAME veerus</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:32:40] sergius.tsimbalist: kuna praegu seal on template.rptlibrary nimi, siis kui aruannetes teha ka &lt;property name=“fileName”&gt;template.rptlibrary&lt;/property&gt; siis hakkab töötama</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:58:20] Kalle Jagula: report.template.library → template.library ei aidanud :/</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:58:46] sergius.tsimbalist: template.rptlibrary</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 16:03:44] Kalle Jagula: läks tööle. aitäh.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Aruannete parandamine" [1344-2413] -->
+<h2 class="sectionedit6" id="baasis_cache_tuehjendamine">Baasis cache tühjendamine</h2>
+<div class="level2">
+<pre class="code">INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+    VALUES (&#039;ORGANIZATION_IDENTIFIER&#039;,&#039;NULLIFY&#039;,SYSDATE);
+INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+    VALUES (&#039;ORGANIZATION_NAME&#039;,&#039;NULLIFY&#039;,SYSDATE);</pre>
+
+</div>
+<!-- EDIT6 SECTION "Baasis cache tühjendamine" [2414-2697] -->
+<h2 class="sectionedit7" id="excelis_stringile_vajalike_characterite_lisamine">Excelis stringile vajalike characterite lisamine</h2>
+<div class="level2">
+
+<p>
+Selleks, et saaks neid kasutada näiteks suurema INSERT päringu juures:
+</p>
+<pre class="code">=&quot;&#039;&quot;&amp;B2&amp;&quot;&#039;,&quot;</pre>
+
+<p>
+Kogu INSERT päring võiks näiteks Exceli veerus midagi sellist olla: 
+</p>
+<pre class="code">=&quot;insert into service_group_service sgs 
+(sgs.service_classifier_id, sgs.service_c_group_id, sgs.sys_delete_status, sgs.sys_modify_uid)
+values (&#039;&quot;&amp;B2&amp;&quot;&#039;,1,&#039;N&#039;,&#039;KALLE&#039;);&quot;</pre>
+
+</div>
+<!-- EDIT7 SECTION "Excelis stringile vajalike characterite lisamine" [2698-3100] -->
+<h2 class="sectionedit8" id="docuwiki">Docuwiki</h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> ühest serverist teise kandmisel pole mõtet kõiki andmeid üle kanda, sest docuwiki tekitab hulgalist sodi millest kasu vaid konkreetses kohas. kustutada võib järgnevaid teeke:</div>
+<ul>
+<li class="level3"><div class="li"> attic; cache</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT8 SECTION "Docuwiki" [3101-3329] -->
+<h2 class="sectionedit9" id="commonsi_uuendamine">COMMONSi uuendamine</h2>
+<div class="level2">
+
+<p>
+kuidas predemos commonsi uuendamine käib? kas lihtsalt deploy nagu teiste moodulitegi puhul?
+</p>
+
+<p>
+commonsit eraldi ei deployda, kui on vaja mingi mooduli sisse saada uus commons, siis publitseerida sellest moodulist uus uversioon, siis ta võtab uuema commonsi sinna sisse
+</p>
+
+</div>
+<!-- EDIT9 SECTION "COMMONSi uuendamine" [3330-3633] -->
+<h2 class="sectionedit10" id="git_paigaldus_ja_kasutamine">GIT paigaldus ja kasutamine</h2>
+<div class="level2">
+
+<p>
+Git artikkel <a href="https://en.wikipedia.org/wiki/Git_(software)" class="urlextern" title="https://en.wikipedia.org/wiki/Git_(software)"  rel="nofollow">Wikipedias</a> ja ametlik <a href="https://git-scm.com/" class="urlextern" title="https://git-scm.com/"  rel="nofollow">koduleht</a>, kus hoitakse ka <a href="https://git-scm.com/doc" class="urlextern" title="https://git-scm.com/doc"  rel="nofollow">dokumentatsiooni</a>. 
+</p>
+
+<p>
+Git töövoog on üldiselt järgmine: WORKING COPY → STAGING AREA → REPOSITORY
+</p>
+
+<p>
+üldisemad käsud:
+</p>
+<ul>
+<li class="level1"><div class="li"> jooksev asukoht: pwd</div>
+</li>
+<li class="level1"><div class="li"> liigu koju: cd ~ </div>
+</li>
+</ul>
+
+<p>
+versiooni vaatamine:
+</p>
+<ul>
+<li class="level1"><div class="li"> git –version</div>
+</li>
+</ul>
+
+<p>
+kasutaja ja e-posti määramine, vajalik mitme kasutajaga git-i kasutamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git config –global user.name “Bucky Roberts”</div>
+</li>
+<li class="level1"><div class="li"> git config –global user.email “bucky@github.com”</div>
+</li>
+</ul>
+
+<p>
+seadistuste vaatamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git config –list</div>
+</li>
+</ul>
+
+<p>
+jooksva kataloogi repo-na kasutamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git init</div>
+</li>
+<li class="level1"><div class="li"> alamkataloogide ja failide lisamiseks lihtsaim viis on peale seda sisestada “git add .”</div>
+</li>
+</ul>
+
+<p>
+faili sisu indeksisse lisamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git add . </div>
+</li>
+<li class="level1"><div class="li"> punkt lõpus tähendab sisuliselt “all”</div>
+</li>
+</ul>
+
+<p>
+faili muudatuse repo-sse salvestamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git commit -m “this is first commit”</div>
+</li>
+<li class="level1"><div class="li"> tuimalt WORKING COPYIST → REPO-sse: git commit -am “tuimalt”</div>
+</li>
+</ul>
+
+<p>
+kasutaja tehtud muudatuste logi vaatamine:
+</p>
+<ul>
+<li class="level1"><div class="li"> git log –author==“kalleja”</div>
+</li>
+</ul>
+
+<p>
+Hetkeolukord kuva, kas on salvestamata infot ja lisatud faile võrreldes WORKING COPY ja STAGING AREA:
+</p>
+<ul>
+<li class="level1"><div class="li"> git status</div>
+</li>
+</ul>
+
+<p>
+WORKING COPY ja STAGING AREA erinevuse kuvamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git diff</div>
+</li>
+</ul>
+
+<p>
+STAGING AREA ja REPO erinevuse kuvamiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git diff –staged</div>
+</li>
+</ul>
+
+<p>
+Konkreetse faili taastamiseks REPO-st tuleb see REPO-st enne välja võtta:
+</p>
+<ul>
+<li class="level1"><div class="li"> git checkout – index.html</div>
+</li>
+</ul>
+
+<p>
+Failide STAGING AREA-st tagasi toomiseks:
+</p>
+<ul>
+<li class="level1"><div class="li"> git reset HEAD </div>
+</li>
+</ul>
+
+<p>
+Vanade versioonide taastamiseks REPO-st:
+</p>
+<ul>
+<li class="level1"><div class="li"> git log (vaadata millist versiooni taastada)</div>
+</li>
+<li class="level1"><div class="li"> git checkout [vajalik kogus SHA] – [faili nimi]</div>
+</li>
+</ul>
+
+<p>
+Github-i REPO-ga majandamiseks: 
+</p>
+
+<p>
+REPO muutuja seadistamine:
+</p>
+<ul>
+<li class="level1"><div class="li"> git remote add [mingi muutujua - githubRepo] [githubi repo aadress] </div>
+</li>
+</ul>
+
+<p>
+Kõikide failide korraga üles lükkamine:
+</p>
+<ul>
+<li class="level1"><div class="li"> git <strong>push</strong> -u githubRepo master</div>
+</li>
+</ul>
+
+<p>
+Failide allalaadimine
+</p>
+<ul>
+<li class="level1"><div class="li"> git <strong>pull</strong></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT10 SECTION "GIT paigaldus ja kasutamine" [3634-5570] -->
+<h2 class="sectionedit11" id="java_objects">Java objects</h2>
+<div class="level2">
+
+<p>
+Great work! Let&#039;s review everything that we&#039;ve learned about object-oriented programming in Java so far.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Class</strong>: a blueprint for how a data structure should function</div>
+</li>
+<li class="level1"><div class="li"> <strong>Constructor</strong>: instructs the class to set up the initial state of an object</div>
+</li>
+<li class="level1"><div class="li"> <strong>Object</strong>: instance of a class that stores the state of a class</div>
+</li>
+<li class="level1"><div class="li"> <strong>Method</strong>: set of instructions that can be called on an object</div>
+</li>
+<li class="level1"><div class="li"> <strong>Parameter</strong>: values that can be specified when creating an object or calling a method</div>
+</li>
+<li class="level1"><div class="li"> <strong>Return value</strong>: specifies the data type that a method will return after it runs</div>
+</li>
+<li class="level1"><div class="li"> <strong>Inheritance</strong>: allows one class to use functionality defined in another class</div>
+</li>
+</ul>
+
+<p>
+Classes
+</p>
+
+<p>
+Objects 
+</p>
+
+<p>
+Methods 
+</p>
+
+<p>
+Instances 
+</p>
+
+</div>
+<!-- EDIT11 SECTION "Java objects" [5571-] -->

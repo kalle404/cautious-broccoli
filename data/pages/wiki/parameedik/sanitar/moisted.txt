@@ -1,0 +1,194 @@
+====== Mõisted, definitsioonid ja sõnaliited ======
+
+**{{anchor:kliiniline_surm:Kliiniline surm}}** 
+pöörduv vereringe, hingamise ja kesknärvisüsteemi talitluse lakkamine, mille maksimaalne kestvus on 3-5 minutit. Kui inimene selle aja jooksul abi ei saa, saabub pöördumatu ja lõplik bioloogiline surm. 
+
+**{{anchor:bioloogiline_surm:Bioloogiline surm}}** 
+Bioloogiline surm on pöördumatu seisund, mille puhul elutähtsate organite rakkude ainevahetus on täielikult lakanud, nende kahjustus on niivõrd ulatuslik, et organismi elustamine ei ole enam võimalik.
+
+**{{anchor:abita_jatmine:Abita jätmine}}** 
+Teadvalt eluohtlikus seisundis olevale inimesele abi andmata jätmise eest õnnetuse või üldise ohu korral, kui abi andmine oleks olnud võimalik ilma abistajat ennast ohtu seadmata, - karistatakse rahalise karistuse või kuni kolmeaastase vangistusega. Tegemist on kõigile kehtiva üldnormiga. 
+
+**{{anchor:anamnees:Anamnees}}** 
+Haiguse eellugu on kas patsiendilt (kliendilt), haigelt, tema lähedastelt või saatjalt (heteroanamnees) küsitlemise käigus kogutavad andmed haiguse arvatava alguse ja kulu kohta. Anamneesi alusel püüab arst patsiendile esialgse diagnoosi panna.
+
+**{{anchor:aseptika:Aseptika}}** 
+tegevused, mille abil on võimalik nakkuseid vältida. 
+
+**{{anchor:antiseptika:Antiseptika}}** 
+haigusetekitajate hävitamine või nende paljunemise pidurdamine süstematiseeritud moel, kus kus tegevused toimuvad puhtamalt tegevuselt mustema suunas. 
+
+**{{anchor:hugieeniline_katepesu:Hügieeniline kätepesu}}** 
+Hügieenilisel käte pesemisel pestakse käed suunaga sõrmeotstest randmeni (peopesad -> käeseljad -> sõrmede sisepinnad -> sõrmeotsad -> pöidlad -> randmed).Soovituslik käte pesemise kestus on 40–60 sekundit.
+
+**{{anchor:katastroof:Katastroof}}** 
+Äkilise hävingulise toimega sündmus, mis seab ohtu elu, tervise, loodus- või tootmiskeskkonna. Olukord, kus ressursside vajadused olemasolevate võimalustega võrreldes on nii suured, et ka pärast erakorraliste abinõude rakendamist ei ole võimalik säilitada normaalseid elustandardeid.
+
+**{{anchor:hadaolukord:Hädaolukord}}** 
+Sündmus või sündmuste ahel, mis ohustab riigi julgeolekut, inimeste elu ja tervist, kahjustab oluliselt keskkonda või tekitab ulatuslikku majanduskahju ning mille lahendamiseks on vaja Vabariigi Valitsuse, valitsusasutuste ja kohalike omavalitsuste kooskõlastatud tegevust.
+
+**{{anchor:tervishoiualane_hadaolukord:Tervishoiualane hädaolukord}}** 
+Hädaolukord, mille võib põhjustada mingi sündmus või sündmuste ahel, mis ohustab inimeste elu ja tervist ning on põhjustanud või võib põhjustada paljude inimeste eluohtliku haigestumise, vigastusi või mürgistuse.
+
+**{{anchor:kirurgiline_katepesu:Kirurgiline kätepesu}}** 
+Kirurgilisel käte pesemisel pestakse käed suunaga sõrmeotstest küünarnukini. Käte pesemise kestus on vähemalt 3–5 minutit.Kirurgilisele kätepesule järgneb alati kirurgiline käte antiseptika.
+
+**{{anchor:ligeerima:Ligeerima}}** 
+(veresoont) ligatuuriga sulgema.
+
+**{{anchor:infusioonravi:Infusioonravi}}** 
+sisseniristus, suure vedelikukoguse manustamine naha alla, veeni, pärasoolde vm.
+
+**{{anchor:tervishoiuteenuse:Tervishoiuteenus}}** 
+Tervishoiuteenus on tervishoiutöötaja tegevus haiguse, vigastuse või mürgituse ennetamiseks, diagnoosimiseks ja ravimiseks eesmärgiga leevendada inimese vaevusi, hoida ära tema tervise seisundi halvenemist või haiguse ägenemist ning taastada tervist.
+
+**{{anchor:tervishoiutootajad:Tervishoiutöötajad}}** 
+arst, hambaarst, õde ja ämmaemand, teatud tingimustel proviisor ja farmatseut, kui nad on registreeritud Terviseametis. Tervishoiutöötaja võib osutada tervishoiuteenuseid omandatud eriala piirides, mille kohta talle on väljastatud Terviseameti tõend tervishoiutöötajana registreerimise kohta.
+
+**{{anchor:tervishoiuteenuse_osutaja:Tervishoiuteenuse osutaja}}** 
+Tervishoiuteenuse osutaja on tervishoiutöötaja või tervishoiuteenuseid osutav juriidiline isik.
+
+**{{anchor:triaazh:Triaaž}}** 
+Kannatanute selekteerimine nende seisundi raskuse ja prognoosi järgi.
+
+**{{anchor:valtimatu_abi:Vältimatu abi}}** 
+tervishoiuteenus, mida tervishoiutöötaja osutab olukorras, kus abi edasilükkamine või selle andmata jätmine võib põhjustada abivajaja surma või püsiva tervisekahjustuse.
+
+**{{anchor:systoolne:Süstoolne}}** 
+vererõhk, mis indikeerib suletud vereringeelundkonnaga organismidel suure vereringe suurte arterite kõige kõrgemat rõhku vatsakestesüstoli jooksul.
+
+**{{anchor:diastoolne:Diastoolne}}** 
+vererõhk, mis indikeerib suletud vereringeelundkonnaga organismidel suure vereringe suurte arterite kõige madalamat rõhku südamediastoli jooksul.
+
+**{{anchor:sepsis:Sepsis}}** 
+Nakkusveresus, veremürgi(s)tus, roiskveresus.
+
+**{{anchor:desmurgia:Desmurgia}}** 
+Sidumisõpetus
+
+**{{anchor:tccc:TCCC}}** 
+Tactical Combat Casualty Care
+
+**{{anchor:atrioventikulaar:Atrioventikulaar}}** 
+Pertaining to the atria (the upper chambers of the heart) and the ventricles (the lower chambers of the heart).
+
+**{{anchor:humoraalne_regulatsioon:Humoraalne regulatsioon }}** 
+(ladina sõnast [h]umor '(keha)vedelik') on organismi talitluse regulatsioon verre või lümfi eraldatavate bioloogiliselt aktiivsete orgaaniliste ühendite kaudu.
+
+**{{anchor:infarkt:Infarkt}}** 
+kohalik vereringehäire (ladina keeles infarctus) on elundi, või elundi osa kärbumine ehk nekroos, mis võib-olla tingitud vere juurdevoolu lakkamisest veresoone (peamiselt arteri, aga ka veeni) sulguse tagajärjel[1] ja/või toitainete ning hapnikuvaegusest. Enamasti on põhjus ateroskleroosist tingitud arteri ummistumises trombi, trombemboolia, emboli aga ka veresoone stenoosi ja kestva spasmi tagajärjel. Infarkt võib olla põhjustatud ka madalast vererõhust, bakterite, ravimite kaudu.
+
+**{{anchor:erakorralise_meditsiini_tehnik:Erakorralise meditsiini tehnik}}** 
+Erakorralise meditsiini tehnik (EMT) on mõiste, mida kasutatakse erakorralise meditsiini teenuse osutaja tähistamiseks. EMT-d on väljaõpetatud reageerimaks meditsiinilistele hädaolukordadele, traumadele ja õnnetusjuhtumitele. EMT-d töötavad enamasti kiirabis, kuid neid ei tohiks ajada segamini "kiirabi autojuhtidega" ja teistega, kellel vähemalt senise ajani pole ette nähtud detailsema meditsiinilise väljaõppe olemasolu. Lisaks kiirabile võivad EMT-d olla ka valitsusasutuste, haiglate ja vahel ka tuletõrje või politsei struktuurides. EMT-d on piiratud meditsiinilise vastutusalaga ning on tegutsevad sertifitseeritud arsti otsese juhendamise tingimustes. 
+
+**{{anchor:parameedik:Parameedik}}** 
+Parameedik on eelkõige haigla-eelsetes ja haiglavälistes tingimustes töötav kutseline tervishoiutöötaja, töötades peamiselt erakorralise meditsiini, nagu näiteks kiirabimeeskonna liikmena. Parameediku roll on lähedalt seotud teiste tervishoiutöötajatega, eriti näiteks erakorralise meditsiini tehniku rolliga, kus parameedikul on kõrgema taseme, vastutusala ja autonoomiaga ülesanded. 
+
+===== Farmakoloogia terminoloogia =====
+
+
+Analgeetik – valuvaigisti.
+
+Antiarütmikum – südame rütmihäirete raviks mõeldud ravim.
+
+Antidoot – vastumürk.
+
+Manustamine – ravimi siseandmine, pealekandmine vms.
+
+Bioloogiline saadavus – see osa manustatud ravimist, mis reaalselt sihtkudedeni jõuab. Madala bioloogilise saadavuse põhjuseks võib olla näiteks ravimi lagunemine maksas.
+
+Hematoentsefaalne (vere-aju) barjäär – kesknärvisüsteemis eraldab spetsiaalne rakkude kiht veresooni närvikudedest. Sellest barjäärist pääsevad läbi ainult rasvlahustuvad ained („lipofiilid“), väikesed molekulid, gaasid ja sellised ained, mille jaoks on olemas transpordisüsteemid. Vere-aju barjäär kaitseb närvikudesid.
+
+Poolestusaeg – aeg, mille järel on 50% ravimi toimeainest veel kehas.
+
+Hüpnootikum – und soodustav vahend, unerohi.
+
+Näidustus – kasutusala.
+
+Vastunäidustus – seisundid/haigused, mille puhul seda ravimit ei tohi kasutada.
+
+Farmakodünaamika – ravimite toimed ja kõrvaltoimed.
+
+Farmakokineetika – ravimi liikumistee organismis. See koosneb manustamisest, veres ja kudedes transportimisest, kudedes levimisest, lagunemisest ja väljutamisest.
+
+Platsentaarbarjäär – sama ehituse ja samade ülesannetega nagu hematoentsefaalne barjäär. Platsentaarbarjäär kaitseb loodet ema veres leiduvate kahjulike ainete eest. Mõned ravimid suudavad selle barjääri läbida ja last soovimatul viisil mõjutada.
+
+Relaksant – lihaste lõdvenemist põhjustav ravim.
+
+Resorptsioon – ravimite või muude ainete imendumine.
+
+Tiitrimine – ravimi aeglane, jaokaupa manustamine kuni soovitud tulemuse saavutamiseni.
+
+
+==== Sõnaliited ====
+
+
+^ Sõnaliide      ^  Tähendus      ^  Näide          ^
+| a-, an-  | ilma, puudus  | apnoe (hingamisseisak), aneemia (verevaesus)  | 
+| ab-  | ära, eemale  |  abduktsioon (liikumine kehast eemale)  | 
+| ad-  | juurde, poole  | aduktsioon (liikumine keha poole), adhesioon (kleepumine, kinnijäämine)  | 
+| angio-  | veresooni puudutav  | angiograafia (veresoonte röntgenuuring)  |
+| artro-  | liigestega seotud  | artroskoopia (liigeste uuring,-ravi)  |
+| auto-  | ise-, oma-  | autoagressioon (enda vastu suunatud vägivald)  |
+| bi-  | kaks  | bilateraalne (kahepoolne)  | 
+| bradü-  | aeglane  | bradükardia (südametegevuse aeglustumine)  | 
+| derma-  | naha-  | dermatiit (nahapõletik)  | 
+| dia-   | läbi, vahel  | diafüüs (toruluu keskmine osa)  | 
+| düs-  | eba-  | düspnoe (hingamishäire)  | 
+| e-, eks-  | välja-  | ekskreet (eritus)  | 
+| ekstra-  | eraldi  | ekstrasüstol (südame vahelöök)  | 
+| extern-  | väline  | a.iliaca externa (välimine niudearter)  | 
+| enter-  | soole-  | enteriit (soolepõletik)  | 
+| eu-  | normaalne  | eutüreoos (kilpnäärme normaalne talitlus)  | 
+| gastr-  | mao-  | gastriit (maopõletik)  | 
+| hemo-, hemato-  | vere-  | hemolüüs (punaliblede lagunemine)  | 
+| hüdro-  | vee-  | hüdrotsefaalia (vesipea)  | 
+| hüper-  | üle-, liig-  | hüperventilatsioon (hingeldamine)  | 
+| hüpo-  | ala-  | hüpoglükeemia (veresuhkru vähesus)  | 
+| in-  | mitte-  | intolerantsus (talumatus)  | 
+| infra-  | allpool  | infraspinaalne (lülist allpool)  | 
+| inter-  | vahel  | intertrigo (naha hõõrumisest tekkivad nähud), interkostaalne (roietevaheline)  | 
+| intra-  | sees  | intravenoosne (veenisisene)  | 
+| intern-  | sisemine  | a.iliaca interna (sisemine niudearter)  | 
+| kardio-  | südame-  | kardioversioon (normaalse südamerütmi taastamine)  | 
+| kole-  | sapiga seotud  | koletsüstiit (sapipõiepõletik)  | 
+| kontra-  | vastu-  | kontraindikatsioon (vastunäidustus)  | 
+| makro-  | Suur  | makrobiootika (õige toitainete vahekord)  | 
+| mikro-  | väike  | mikroskoop  | 
+| müo  | lihase-  | müalgia (lihasvalu)  | 
+| nefr-  | neeru- | nefriit (neerupõletik)  | 
+| neo-  | uus  | neoplasm (uusmoodustis = kasvaja)  | 
+| neuro-  | närvi-  | neuroos (närvihäire)  | 
+| oftal-  | silma-  | oftalmoloog (silmaarst)  | 
+| oligo-  | vähe  | oligofreenia (arenguhäire)  | 
+| ot-  | kõrva-  | otiit (kõrvapõletik)  | 
+| para-  | kõrval-  | paragripp (gripi sümptomitega hingamisteede nakkus)  | 
+| pneu-  | kopsu-, õhk | pneumoonia (kopsupõletik)  | 
+| polü-  | palju | polüuuria (uriinierituse suurenemine), polütrauma (mitme organi trauma)  | 
+| post-  | pärast  | posttraumaatiline (traumajärgne)  | 
+| pro-  | enne | prognoos (ennustus)  | 
+| pseudo-  | vale-  | pseudokrupp (kõripõletik, mis ei ole krupp)  | 
+| psühho-  | vaimu-  | psühhopaat (vaimuhaige)  | 
+| pulmo-  | kopsu-  | pulmoloog (kopsuarst)  | 
+| püo-  | mäda  | püotooraks (mäda pleuraõõnes)  | 
+| retro-  | tagasi  | retrograadne amneesia (mälukaotus)  | 
+| semi-  | pool-  | semipermeaabel (poolläbilaskev)  | 
+| sub-  | allpool  | subfebriilne (kerges palavikus)  | 
+| supra-  | ülalpool  | supraventrikulaarne (vatsakestest kõrgemal (ekstrasüstoli päritolu))  | 
+| tahhü-  | Kiire  | tahhükardia (südame pekslemine)  | 
+| tsüst-  | põie-  | tsüstiit (põiepõletik)  | 
+| uni-  | üks  | unilateraalne (ühepoolne)  | 
+| vaso-  | veresoonte-  | vasokontraktsioon (veresoonte ahenemine)  | 
+| -algia  | valu  | neuralgia (närvivalud)  | 
+| -eemia  | veri  | aneemia (kehvveresus)  | 
+| -ektoomia  | eemaldamine  | tonsillektoomia (kurgumandlite eemaldamine)  | 
+| -foobia  | hirm  | klaustrofoobia (hirm suletud ruumide ees)  | 
+| -iit  | põletik  | bursiit (limapauna põletik)  | 
+| -lüüs  | lahustamine  | trombolüüs (trombi lahustamine)  | 
+| -meeter, -meetria  | mõõteriist, mõõtmine  | kapnomeeter (süsihappegaasi mõõtja), oksümeetria (hapnikusisalduse mõõtmine)  | 
+| -oos  | haigus  | psühhoos (vaimuhaigus)  | 
+| -paatia  | haigestumine  | nefropaatia (neerude haigestumine)  | 
+| -rütmia  | reeglipärasus | arütmia (südame- või ajutegevuse korrapäratus)  | 
+| -skoop  | uurimisriist  | larüngoskoop (riist kurgu vaatamiseks)  | 
+| -skoopia  | uurimine riista abil  | gastroskoopia (mao vaatlus)  | 
+| -tsentees  | pistma  | torakotsentees (torge rinnakorvi)  | 

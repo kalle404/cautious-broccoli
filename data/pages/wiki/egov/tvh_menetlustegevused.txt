@@ -1,0 +1,133 @@
+====== TVH HJ staatused ja menetlustegevused ======
+
+  * Juhtumi staatuse muutmisega kaasnevad [[https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused|tegevused]]. 
+  * Menetlustegevuste [[https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.4+-+Menetlustegevuste+nimekiri|nimekiri]].
+
+
+**Esitamine**
+
+  * OOTEL -> ESITATUD
+    * Lisatav tegevus: JUHTUMI_MENETLUSTAHTAEG
+  * ESITATUD -> MENETLUSES
+  * MENETLUSES -> HINDAMISE_OOTEL
+    * Lisatav tegevus: HINDAMISE_TAHTAEG
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: KOOSTA_LABIVAATAMATA_OTSUS, KOOSTA_HINDAMATA_OTSUS, KOOSTA_MENETLUSE_LOPETAM_OTSUS
+
+**Hindamine**
+
+  * HINDAMISE_OOTEL -> HINDAMISEL
+  * HINDAMISEL -> TAISTAITMISEL
+  * TAISTAITMISEL -> TAIENDAMISEL
+    * Tegevus teostatakse kui oli ootel: SAADA_TAISTAITMISELE ((baasis mõned näited on, aga korrata ei õnnestu?))
+    * Tegevus peatatakse, kui oli ootel: JUHTUMI_MENETLUSTAHTAEG, HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG
+  * TAIENDAMISEL -> TAIENDATUD
+    * Lisatav tegevus: TAISTAIDETUD_YLEVAATUS
+    * Lisatav tegevus: JUHTUMI_MENETLUSTAHTAEG (kui täidetud on Taotlus::Metaandmed::NkEsitamiseKp)
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud:JUHTUMI_MENETLUSTAHTAEG
+  * TAIENDATUD -> HINDAMISEL
+    * Tegevus teostatakse kui oli ootel: TAISTAIDETUD_YLEVAATUS
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud:HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG
+  * TAIENDATUD -> OTSUSE_OOTEL
+  * HINDAMISEL -> E_TERVIS_OOTEL
+    * Lisandub tegevus: ARSTILT_ANDMED_TAIENDADA
+    * Tegevus peatatakse, kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, YRITA_HINNATA, VISIIDIGA_HINDAMISE_TAHTAEG, TAIENDA_HINNANGUT
+  * E_TERVIS_OOTEL -> HINDAMISEL
+    * Tegevus teostatakse kui oli ootel: ARSTI_ANDMED_OOTEL
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT
+  * HINDAMISEL -> VISIIDI_OOTEL
+    * Lisatav tegevus: TULEB_VISIIDIPOHINE_HINDAMINE
+  * VISIIDI_OOTEL -> VISIIDIGA_HINDAMISEL 
+    * Lisatav tegevus: VISIIDIGA_HINDAMISE_TAHTAEG
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT, TULEB_VISIIDIPOHINE_HINDAMINE
+  * VISIIDI_OOTEL -> HINDAMISEL 
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: TULEB_VISIIDIPOHINE_HINDAMINE
+  * VISIIDI_OOTEL -> HINDAMATA
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, TULEB_VISIIDIPOHINE_HINDAMINE, YRITA_HINNATA
+  * VISIIDIGA_HINDAMISEL -> HINDAMISEL
+  * HINDAMISEL -> VISIIDIGA_HINDAMISEL
+  * VISIIDIGA_HINDAMISEL -> HINNATUD
+    * Lisatav tegevus: JUHTUM_HINNATUD
+    * Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: EI_JOUA_TAHTAJAKS_HINNATUD, JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA
+  * VISIIDIGA_HINDAMISEL -> HINDAMATA
+    * Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA ((ebareaalne olukord aga vältimaks, et menetlustegevused jäävad püsti  ekspertiis on saadetud parandamisse ja  siis isik surebj))
+  * HINDAMISEL -> HINNATUD
+    * Lisatav tegevus: JUHTUM_HINNATUD
+    * Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;
+  * HINDAMISEL -> HINDAMATA
+    * Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA
+  * HINNATUD -> PARANDAMISE_OOTEL
+    * Tegevus peatatakse, kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA
+  * HINDAMATA -> PARANDAMISE_OOTEL
+    * Tegevus peatatakse, kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA
+  * PARANDAMISE_OOTEL -> HINDAMATA
+    * Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA
+  * PARANDAMISE_OOTEL -> VISIIDIGA_HINDAMISEL
+  * PARANDAMISE_OOTEL -> HINDAMISEL
+
+**Otsuse koostamine**
+
+  * HINDAMATA -> OTSUSE_OOTEL
+  * HINNATUD -> OTSUSE_OOTEL
+  * MENETLUSES -> OTSUSE_OOTEL
+  * OTSUSE_OOTEL -> OTSUS_KOOSTATUD
+    * Tegevus teostatakse kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA, TAPSUSTA_OTSUST, KOOSTA_LABIVAATAMATA_OTSUS, TAISTAIDETUD_YLEVAATUS, KOOSTA_HINDAMATA_OTSUS, KOOSTA_MENETLUSE_LOPETAM_OTSUS, TERVISE_ANDMED_PUUDUVAD, ARSTILT_ANDMED_KYSITUD
+  * OTSUSE_KOOSTATUD -> OTSUSE_OOTEL
+    * Lisatav tegevus: TAPSUSTA_OTSUST
+  * OTSUSE_OOTEL -> HINDAMATA
+    * Tegevus teostatakse kui oli ootel: TAPSUSTA_OTSUST
+  * OTSUSE_OOTEL -> HINNATUD
+    * Tegevus saab teostatud: TAPSUSTA_OTSUST
+  * OTSUS_KOOSTATUD -> LOPETATUD
+    * Tegevus teostatakse kui oli ootel: (kõik ootel tegevused)
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: (kõik peatatud tegevused)
+  * LOPETATUD -> VAIE_ALGATATUD
+
+**Vaie**
+
+  * LOPETATUD -> VAIDEOTSUSE_OOTEL
+  * VAIE_ALGATATUD -> VAIE_ARSTI_VASTUSE_OOTEL
+  * VAIE_ARSTI_VASTUSE_OOTEL -> VAIE_TTO_YLEVAATUS
+  * VAIE_TTO_YLEVAATUS -> VAIE_EKSPERTIIS_MUUTMINE
+  * VAIE_TTO_YLEVAATUS -> VAIE_ARSTI_VASTUSE_OOTEL
+    * Lisatav tegevus: VAIE_TK_ARSTI_HINNANG_LOPLIK
+    * Tegevus teostatakse kui oli ootel: VAIE_TTO_ARSTI_HINNANG
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: VAIE_TK_ARSTI_HINNANG
+  * VAIE_EKSPERTIIS_MUUTMINE -> VAIE_ARSTI_VASTUSE_OOTEL
+    * Lisatav tegevus: VAIE_TK_ARSTI_HINNANG_LOPLIK
+    * Tegevus saab teostatud: VAIE_TTO_ARSTI_HINNANG
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: VAIE_TK_ARSTI_HINNANG
+  * VAIE_ARSTI_VASTUSE_OOTEL -> VAIDEOTSUSE_OOTEL
+    * Tegevus teostatakse kui oli ootel: VAIE_TK_ARSTI_HINNANG, VAIE_TK_ARSTI_HINNANG_LOPLIK
+  * VAIDEOTSUSE_OOTEL -> LOPETATUD
+    * Tegevus teostatakse kui oli ootel: (kõik ootel tegevused)
+    * Tegevus muutub kehtetuks, kui oli ootel või peatatud: (kõik peatatud tegevused)
+  * VAIE_ARSTI_VASTUSE_OOTEL -> LOPETATUD
+    * Tegevus teostatakse kui oli ootel: VAIE_TK_ARSTI_HINNANG, VAIE_TK_ARSTI_HINNANG_LOPLIK
+
+
+===== Seotud skriptid =====
+
+**Hindamisjuhtumi staatuse kehtiva nimetuse leidmine**
+
+  select * 
+         from empis_domain_value edv
+         left join empis_domain_value_criterion edvc 
+              on edv.domain_code = edvc.domain_code
+              and edv.code = edvc.domain_value_code
+         where edv.domain_code = 'JUHTUM_STAATUS'
+         and edv.code like 'HINDAMISE_OOTEL'
+
+**Menetlustegevuse kehtiva nimetuse leidmine**
+
+  select *
+         from empis_domain_value edv
+         left join empis_domain_value_criterion edvc 
+              on edv.domain_code = edvc.domain_code
+              and edv.code = edvc.domain_value_code
+         where edv.domain_code = 'TVR_TEGEVUS_TYYP'
+         and edv.code = 'VAIE_TK_ARSTI_HINNANG'
+

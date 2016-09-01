@@ -1,0 +1,79 @@
+====== Termoregulatsioon ======
+
+Kehatemperatuuri konstantsus eeldab soojusproduktsiooni ja soojuse äraandmise võrdsust pikema ajavahemiku jooksul ehk teisiti öeldes tasakaalustatud soojusbilanssi.
+
+Soojuse äraandmine organismist toimub peamiselt naha ja hingamisteede kaudu.
+  * Nahka ja nahaalust kudet iseloomustavad isoleerivad omadused, mis aitavad säilitada kehatemperatuuri jahedas keskkonnas.
+  * Naha verevarustus on organiseeritud nii, et see võimaldab (~ 8 korda) muuta soojuse äraandmist ümbritsevasse keskkonda.
+  * Hingamisteedest antakse soojust ära vee aurumisega, samuti jahutab sissehingatav külm õhk ümbritsevaid kudesid.
+
+Naha verevarustust iseloomustab veresoonte kulgemine vahetult naha all, ulatuslike venoossete põimikute olemasolu, kusjuures verevool põimikutes saab varieeruda laiades piirides.
+
+Soojuse äraandmiseks on 4 võimalust: 
+  * soojuskiirgus ehk **radiatsioon** - soojuskiirgus on omane kõikidele kehadele, kuid soojusvoog on suunatud kõrgema temperatuuriga kehalt madalama temperatuuriga kehadele.
+  * **konduktsioon** - soojusvahetus kahe füüsilises kontaktis oleva keha vahel. Ülekantav soojushulk sõltub kehade soojusjuhtivusest ja kehadevahelise temperatuuri erinevustest.
+  * **konvektsioon** - soojus levib keha ümbritsevate liikuvate aineosakeste abil, tavaliselt ümbritseva õhu või vee liikumise kaudu. Tuulega suureneb soojuse äraandmine tugevalt.
+  * aurumine ehk **evaporatsioon** - evaporatsioon ehk vee aurumine naha ja hingamisteede limaskesta pinnalt. Kui keskkonna ja keha temperatuur võrdsustuvad, siis lakkab soojusvahetus soojuskiirguse, konduktsiooni ja konvektsiooni teel ning ainsaks soojuse äraandmise viisiks osutub evaporatsioon.
+
+Tavalisel toatemperatuuril eraldub alasti inimese kehapinnalt: 60% soojusest soojuskiirguse, ~20% aurumise, ~20% konduktsiooni ja konvektsiooni teel.
+
+===== Inimese kehatemperatuur =====
+
+Inimene kuulub püsisoojaste hulka, ning keha keskmine temperatuur on 37°C. Piirkonniti esinevad kehatemperatuuri erinevused:
+  * kehatüves on temperatuur enam-vähem 37°C;
+  * jalalabas 27-28 °C. 
+
+Esinevad ka kehatemperatuuri perioodilised kõikumised: Ööpäevased kõikumised – madalaim varahommikul, kõrgeim pärastlõunal. Menstruaaltsükliga seotud kõikumised - kehatemperatuur tõuseb 0,3-0,6°C peale ovulatsiooni.
+
+
+**Kui kehatemperatuuri on vaja langetada**
+
+Organism on sattunud sooja keskkonda.
+  - Naha veresoonte laienemine.
+  - Higistamine, mis muutub eriti intensiivseks siis, kui kehatemperatuur ületab 37°C.
+  - Soojustekke pärssimine.
+
+Inimese kehatemperatuuri reguleerib hüpotalamus ehk [[parameedik:sanitar:anatoomia:narvisusteem|vaheaju]], mis mõõdab vere temperatuuri.
+
+
+**Kui kehatemperatuuri on vaja tõsta**
+
+Organism on sattunud külma keskkonda.
+  - Naha veresoonte ahenemine; 
+  - Soojustekke suurenemine, selleks on 3 erinevat teed:
+
+  * KNS poolt indutseeritud lihasvärin;
+  * metaboolsete soojustekkeprotsesside (nn. keemilise termoregulatsiooni) aktivatsioon;
+  * türoksiinist tingitud pikemaajaline soojusproduktsiooni suurenemine. 
+ 
+Imikutel ja talisuplejatel hoiab sooja pruun rasvkude.
+
+
+**Komforttemperatuur**
+
+Keskkonna tingimusi, kus organism ei pea püsiva temperatuuri hoidmiseks kulutama energiat nimetatakse termoneutraalseks tsooniks (25-30C).
+  * näiteks bürootöö korral oleks komforttemperatuur ~22°C.
+  * vees on komforttemperatuur märksa kõrgem ~31-36°C.
+
+**Alumine letaalne temperatuur**
+
+Kui väliskeskkond muutub sedavõrd külmaks, et organism ei suuda enam hoida püsivat kehatemperatuuri ja toota piisavalt sooja ja ainevahetus peatub ning inimene sureb. 
+**Hüpotermiast** ehk alla- või mahajahtumisest räägitakse siis kui kehasisene temperatuur jääb alla 35 °C ning erinevalt  lokaalsest külmumisest on tegemist kogu keha aeglase jahtumisega
+väljastpoolt sissepoole.  
+
+Tunnused: nõrkus, kahvatus, häirunud kõne, muutused käitumises, teadvusehäire
+
+**Ülemine letaalne temperatuur**
+
+Kui vereringe ja higistamine ei suuda enam tagada normaalset kehatemperatuuri ning vajalikud ensüümid denatureeruvad (kui kehatemperatuur tõuseb 42-44°C).
+
+Hüpertermia on seisund, kus organism ei suuda enam stabiilset kehatemperatuuri hoida.
+Tunnused: peapööritus, nõrkus, peavalu, virvendus silmade ees. Raskemal juhul: krambid, oksendamine, teadvuse kaotus, nägemishäired, kiirenenud pulss ja hingamine, kehatemperatuuri tõus.
+
+**Termoregulatsiooni mõjutavad faktorid**: temperatuur, õhuniiskus, sademed, soojuskiirguse allikate olemasolu, tuule kiirus, soojapidavad elamud, soojapidavad riided, konditsioneerid.
+
+**Riietuse tähtsus inimese termoregulatsioonis** 
+
+Riietus toimib soojusisolaatorina ning takistab oluliselt konvektiivset ja konduktiivset soojusvahetust.
+  * tavaline riietus vähendab soojuse äraandmist umbes 2 korda, nn. polaarriietus isegi üle 6 korra.
+  * kui riietus saab märjaks, siis kaotab see oma isoleerivad omadused ning soojuse ülekanne võib kasvada kuni 20 korda.

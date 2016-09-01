@@ -1,0 +1,30 @@
+====== Regular expression ======
+
+In theoretical computer science and formal language theory, a regular expression (sometimes called a rational expression) is a sequence of characters that define a search pattern, mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations. The concept arose in the 1950s, when the American mathematician Stephen Kleene formalized the description of a regular language, and came into common use with the Unix text processing utilities ed, an editor, and grep, a filter.
+
+In modern usage, "regular expressions" are often distinguished from the derived, but fundamentally distinct concepts of regex or regexp, which no longer describe a regular language. See below for details.
+
+Regexps are so useful in computing that the various systems to specify regexps have evolved to provide both a basic and extended standard for the grammar and syntax; modern regexps heavily augment the standard. Regexp processors are found in several search engines, search and replace dialogs of several word processors and text editors, and in the command lines of text processing utilities, such as sed and AWK.
+
+Many programming languages provide regexp capabilities, some built-in, for example Perl, JavaScript, Ruby, AWK, and Tcl, and others via a standard library, for example .NET languages, Java, Python, POSIX C and C++ (since C++11). Most other languages offer regexps via a library.
+
+Näiteks Läti autonumber, mis koosneb kahest tähest, sidekriipsust ning ühest kuni neljast numbrist on pythonis regulaaravaldisena selline: avaldis = "[A-Z]{2}-[0-9][0-9][0-9][0-9]$"
+
+**metacharacter** - is a character that has a special meaning (instead of a literal meaning) to a computer program, like "." means any symbol etc. 
+
+  - Quick, what does this do: /(\/\*?\\/)|\/\/.*?(\r?\n|$)/g?
+  - How to write regexp to match hex color (examples #abc, #f00, #BADA55, #C0FFEE)? <- tekitada selles pythoni programm
+  - 
+
+
+
+===== Seonduvad teemad =====
+
+  * Regulaaravaldiste kasutusvõimalused PL/SQL-is?
+
+===== Viited =====
+
+  * [[http://www.regular-expressions.info/email.html|E-posti aadressi valideerimise regulaaravaldis]].
+  * Wikipedia [[https://en.wikipedia.org/wiki/Regular_expression|Regular Expression]]
+  *[[Demystifying Regular Expressions|Demystifying Regular Expressions]]
+

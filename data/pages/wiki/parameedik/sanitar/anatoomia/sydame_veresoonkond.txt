@@ -1,0 +1,80 @@
+====== Südame-veresoonkond ======
+
+Südame-veresoonkonna ülesandeks on tagada pidev vere ja lümfi liikumine, mille vahendusel toimub kõikide elundite varustamine toitainete ja hapnikuga ning ainevahetuse jääkproduktide eemaldamine, humoraalne regulatsioon, keha erinevate osade temperatuuri regulatsioon ja mitmesugused kaitsereaktsioonid. Südame-veresoonkonna moodustavad süda, arterid, veenid ja kapillaarid. 
+
+Arterid - veresooned, mis algavad südamest ning suunavad vere elunditesse ja kudedesse. Südamest eemaldudes jagunevad nad järjest peenemateks harudeks. Peeni artereid nimetatakse arterioolideks, mis lähevad üle veelgi peenemateks harudeks - verekapillaarideks. 
+
+Veenid - üldiselt suurema läbimõõduga kui arterid, kuid nende seinad on õhemad. Enamasti kulgevad nad paralleelselt samanimeliste arteritega, harvem ka üksikult. Veenide sisekest moodustab klappe, mis on avatud verevoolu suunas. Nad takistavad vere tagasivoolu ja kergendavad vere liikumist südame suunas. 
+
+Kapillaarid - peenikesed, üksteisega võrgustikus anastomoseerunud veresooned, ühendades arteriaalset süsteemi venoossega. Läbi kapillaari seina toimub ainevahetus vere ja koerakkude vahel. 
+
+Südame joonis: 
+<hidden>{{:parameedik:600px-heart_diagram-et.svg.png?nolink|}}</hidden>
+
+
+===== Südame erutusjuhtesüsteem =====
+
+Südame erutusjuhtesüsteem on moodustunud spetsialiseerunud südamelihaskiududest, kus tekib erutus ja levib südame erinevatesse osadesse. Erutusjuhtesüsteemi moodustavad sinuaalsõlm, atrivertikulaarsõlm, Hisi kimp, tema sääred ja lõppharud. Paremas kojas paikneb kaks sõlme: ülemise õõnesveeni suubumise kohal sinuatriaalsõlm ja alumise õõnesveeni sumbumise kohal atrioventikulaarsõlm. Viimasest lähtub Hisi kimp, mis kulgeb vatsakeste vaheseinas ning hargneb paremaks ja vasakuks sääreks. Säärtest moodustub vasaku ja parema vatsakese müokardis erutusjuhtesüsteemi lõppharudena Purkinje kiudude võrgustik. 
+
+===== Suur ja väike vereringe =====
+
+Vere liikumist südamest elunditesse ja kudedesse ning sealt tagasi südamesse nimetatakse vereringeks. Süda on vereringesüsteemi keskne elund. Vereringe jaguneb suureks ja väikeseks vereringeks:
+  - Suureks ehk kehavereringeks nimetatakse vere liikumisteed südamest kehasse ja sealt tagasi südamesse. Suur vereringe algab südame vasakust vatsakeses, mis paiskab hapnikurikka ehk arteriaalse vere inimese keha kõige suuremasse arterisse ehk aorti. Aordist lähtuvad arterid, mis hargnevad kord-korralt aina peenemateks soonteks, kui lähevad üle kapillaaride võrgustikuks. Läbi kapillaaride seinte liiguvad hapnik ja toitained kudedesse, kudedest liiguvad jääkained, sealhulgas ka CO2 verre. Arteriaalne hapnikurikas veri muutub venoosseks vereks. Kapillaare läbiv veri liigub edasi peentesse veenidesse, mis ühinevad järjest suuremateks veenideks. Kogu kehast tulev venoosne veri suundub lõpuks läbi kahe veeni südame paremasse kotta.
+  - Väikeses ehk kopsuvereringes vabanev veri süsihappegaasist ja rikastub hapnikuga. Kopsuvereringe ülesanne on uuendada vere hapnikuvarusid, et varustada keharakke hapnikuga. Veri liigub südamest kopsudesse ja sealt tagasi südamesse. Väike vereringe algab südame paremast vatsakesest, mis kokku tõmbudes paiskab kehast tulnud hapnikuvaese venoosse vere kopsuarteritesse. Kopsudes jagunevad arterid peenikesteks kapillaarideks. Läbi kapillaaride seinte vabaneb veri süsihappegaasist ja rikastub hapnikuga. Järelikult toimub kopsudes venoosse vere muutumine arteriaalseks. Lisaks on kopsuvereringe ülesandeks varustada kopse kui organeid toitainetega. 
+
+Vereringe joonis:
+<hidden>{{:parameedik:vereringe.png.png?nolink|}}</hidden>
+
+Lihtsustatud vereringe joonis:
+<hidden>{{:parameedik:joonis_vereringe.png?nolink|}}</hidden>
+
+
+==== Südame-veresoonkonna ülesanded ====
+
+Südame-veresoonkonnal on järgmised peamised ülesanded: 
+  - kõikide elundite varustamine toitainete ja hapnikuga,
+  - ainevahetuse jääkproduktide eemaldamine,
+  - [[parameedik:sanitar:moisted#humoraalne_regulatsioon|humoraalne regulatsioon]],
+  - keha erinevate osade temperatuuri regulatsioon,
+  - kaitsereaktsioonid
+
+===== Vereringesüsteem =====
+
+Veri voolab kõrgema rõhuga süsteemist väiksema rõhuga süsteemi. Kõrgrõhusüsteemis pumbatakse arteriaalne (hapnikurikas) veri vasakust vatsakesest kehas asuvatesse arteritesse (tuiksoontesse). Kapillaaride süsteemis toimub ainevahetus, hapniku äraandmine ja süsinikdioksiidi vastuvõtt (sisene hingamine).
+Madalrõhusüsteemis koguvad veenid kehast venoosse (hapnikuvaese) vere kokku ja parem vatsake surub selle kopsuarteri kaudu kopsudesse. Kopsudes toimub hapniku vastuvõtt ja süsinikdioksiidi äraandmine (väline hingamine). Arteriaalne veri siirdub kopsuveeni kaudu vasakusse südamepoolde.
+
+Vere liikumine toimub südame töö tulemusena tekkiva rõhkude erinevuse tõttu veresoonestiku eri osades. Venoosse vere tagasivoolu aitavad vältida veeniklapid. Puhkeolekus võtab verel ühe täisringi tegemine aega veidi üle 20 sekundi. Kogu kehas olev veri ei ole korraga kasutuses: kuni 50% sellest võib olla reservis maksas, põrnas ja nahaalustes kudedes, kust see vajadusel vereringesse suunatakse. Inimese vere koguseks võib lugeda umbes 8% kehakaalust. Seega on 70 kg raskuse keskmise inimese käsutuses u 5,6 liitrit verd. 
+
+
+===== Veri =====
+
+Veri koosneb:
+  * vereplasmast (u 56%) 
+  * vereosakestest (u 44%)
+    * punalibled (e //erütrotsüüdid//)
+    * valgelibled (e //leukotsüüdid//)
+    * vereliistakud (e //trombotsüüdid//)
+
+Verel on järgmised peamised funktsioonid: 
+  - Hingamisfunktsioon - keharakkude varustamine hapnikuga, süsinikdioksiidi eemaldamine kudedest, 
+  - Toitefunktsioon - põhitoitainete (süsivesikud, valgud ja rasvad) transport seedetraktist maksa ja rakkudesse,
+  - Jääkainete eemaldamine - jääkainete äraviimine kudedest maksa ja neerudesse,
+  - Kaitse- ja humoraalne funktsioon - veri kannab edasi ka hormoone, ensüüme, vitamiine ja antikehi,
+  - Soojuse edasikanne - kehaosade verevarustuse kaudu kantakse edasi rakkudes glükoosi hapendamisel tekkinud soojus,
+  - Osmoos - vee ja soolade jaotamisega kehas seatakse õigeks kehavedelike osmootne rõhk,
+  - Puhverdus - pH-taseme hoidmine vahemikus 7,38–7,42,
+  - Hüübimine - plasmaosiste ja trombotsüütide abil suleb hüübiv veri vigastuskoha, peatades verejooksu,
+  - Kaitse- ja humoraalne funktsioon - veri kannab edasi hormoone, ensüüme, vitamiine ja antikehi.
+
+===== Lümfisüsteem =====
+
+Lümfisüsteemi ülesandeks on rakkudevahelise vedeliku kogumine ja suunamine, ainevahetusproduktide edasikandmine ning keha kaitsevõime tagamine. Kudedes jäävad rakkude vahele koevedelikuga täidetud ruumid. Enamik sellest vedelikust siirdub verekapillaaridesse, väiksem osa aga liigub lümfikapillaaridesse. Lümfikapillaaridesse kogunenud koevedelikku nimetatakse lümfiks. Lümf osaleb ainevahetusprotsessides, tema kaudu satuvad mitmed ainevahetusproduktid verre. 
+
+Lümfisüsteemi moodustavad erineva läbimõõduga lümfisooned, lümfisõlmed ja lümfoidsed elundid - limaskesta lümfifolliikulid, mandlid, põrn. Lümfisüsteem on lisaäravoolusüsteem, täiendus venoossele süsteemile, kuhu lümfijuhade kaudu valgub elunditest tulev lümf. 
+
+
+===== Viited =====
+
+  * Wikipedia [[https://en.wikipedia.org/wiki/Circulatory_system|Circulatory system]]
+  * Wikipedia [[https://en.wikipedia.org/wiki/Purkinje_fibers|Purkinje fibers]]
+  * Wikipedia [[https://en.wikipedia.org/wiki/Sinoatrial_node|Sinoatrial node]]

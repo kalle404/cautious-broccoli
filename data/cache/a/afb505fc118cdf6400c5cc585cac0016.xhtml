@@ -1,0 +1,371 @@
+
+<h1 class="sectionedit1" id="skriptid">Skriptid</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Skriptid" [1-24] -->
+<h2 class="sectionedit2" id="plsql_to_date_funktsioon">PLSQL to_date funktsioon</h2>
+<div class="level2">
+
+<p>
+Koos kellaajaga: 
+</p>
+<pre class="code">     to_date(&#039;26/01/2015 8:00:00&#039;,&#039;DD/MM/YYYY HH24:MI:SS&#039;)</pre>
+
+<p>
+Ilma kellaajata:
+</p>
+<pre class="code">     to_date(&#039;26/01/2015&#039;,&#039;DD/MM/YYYY&#039;)</pre>
+
+<p>
+Tänase kuupäeva valimine: 
+</p>
+<pre class="code">(select to_date(sysdate,&#039;dd-mm-yy&#039;) from dual)</pre>
+
+</div>
+<!-- EDIT2 SECTION "PLSQL to_date funktsioon" [25-278] -->
+<h2 class="sectionedit3" id="foreign_key_abil_constrainti_leidmine">Foreign key abil constrainti leidmine</h2>
+<div class="level2">
+<pre class="code">     select * 
+     from user_constraints
+     where constraint_name like &#039;%R_STUN_PROF_ART_INV_TYPE%&#039;</pre>
+
+</div>
+<!-- EDIT3 SECTION "Foreign key abil constrainti leidmine" [279-439] -->
+<h2 class="sectionedit4" id="skeemast_ueldiselt_otsimine">Skeemast üldiselt otsimine</h2>
+<div class="level2">
+
+<p>
+Üldiselt skeema-üleselt kõikide funktsioonide, pakettide ja protseduuride otsing käib järgnevalt:
+</p>
+<pre class="code">     select * 
+     from all_objects 
+     where object_name like &#039;%GET_INSURER_CLASS%&#039;</pre>
+
+</div>
+<!-- EDIT4 SECTION "Skeemast üldiselt otsimine" [440-678] -->
+<h2 class="sectionedit5" id="mone_konkreetse_constraint-i_otsimine_baasist">Mõne konkreetse constraint-i otsimine baasist</h2>
+<div class="level2">
+<pre class="code">select *
+     from user_constraints 
+     where constraint_name = &#039;FK_APP_ART_PRICES&#039;</pre>
+
+</div>
+<!-- EDIT5 SECTION "Mõne konkreetse constraint-i otsimine baasist" [679-833] -->
+<h2 class="sectionedit6" id="konkreetse_funktsiooni_otsimine">Konkreetse funktsiooni otsimine</h2>
+<div class="level2">
+
+<p>
+Konkreetse funktsiooni otsimine like-päringuga käib suhteliselt lihtsalt:
+</p>
+<pre class="code">     SELECT * 
+     FROM ALL_OBJECTS 
+     WHERE OBJECT_TYPE IN (&#039;FUNCTION&#039;,&#039;PROCEDURE&#039;,&#039;PACKAGE&#039;)
+     </pre>
+
+<p>
+Sealt edasi, kui antud funktsioon on skeemas olemas, siis vaadata millised on funktsiooni sisendparameetrid ning käivitada koos nendega, näiteks: 
+</p>
+<pre class="code">     select ehl.f_get_insurer_class_dova_code (2,&#039;et&#039;) from dual</pre>
+
+</div>
+<!-- EDIT6 SECTION "Konkreetse funktsiooni otsimine" [834-1283] -->
+<h2 class="sectionedit7" id="plsql_vaeaertuste_jaergi_loendamine">PLSQL väärtuste järgi loendamine</h2>
+<div class="level2">
+
+<p>
+Keskkonna ressursside grupeerimine nende omanikukoodi järgi: 
+</p>
+<pre class="code">select owner_code, count(*) 
+from sys_resource_content 
+group by owner_code</pre>
+
+<p>
+Keskkonna NCSP koodide nimetuste grupeerimine keele järgi: 
+</p>
+<pre class="code">select lang_dova_code, count(*) 
+from ncsp_text
+group by lang_dova_code</pre>
+
+</div>
+<!-- EDIT7 SECTION "PLSQL väärtuste järgi loendamine" [1284-1613] -->
+<h2 class="sectionedit8" id="alampaeringuga_otsimine_ja_vaeaertuste_loendamine">Alampäringuga otsimine ja väärtuste loendamine</h2>
+<div class="level2">
+<pre class="code">     select count(*), month from
+     (select EXTRACT(MONTH FROM sys_modify_time) as month
+     from document_version dv
+     where state_dova_code = &#039;ACCEPTED&#039;
+     and sys_modify_time between to_date(&#039;01/01/2011&#039;,&#039;DD/MM/YYYY&#039;) and 
+     to_date(&#039;01/01/2012&#039;,&#039;DD/MM/YYYY&#039;)) 
+     group by month
+     
+     </pre>
+
+</div>
+<!-- EDIT8 SECTION "Alampäringuga otsimine ja väärtuste loendamine" [1614-2001] -->
+<h2 class="sectionedit9" id="andmebaasi_propagaatorist_konkreetsete_versioonimuudatuste_otsimine">Andmebaasi propagaatorist konkreetsete versioonimuudatuste otsimine</h2>
+<div class="level2">
+<pre class="code">     select * 
+     from sys_db_propagator_sql_log sp 
+     WHERE upper(sp.sql_text) like UPPER(&#039;%ui.treatment.dental_chart%&#039;)       </pre>
+
+</div>
+<!-- EDIT9 SECTION "Andmebaasi propagaatorist konkreetsete versioonimuudatuste otsimine" [2002-2223] -->
+<h2 class="sectionedit10" id="skriptide_jooksutamisel_vaikimisi_kasutaja_maeaeramine">skriptide jooksutamisel vaikimisi kasutaja määramine</h2>
+<div class="level2">
+<pre class="code">     call dbms_session.set_identifier(&#039;kalle&#039;);
+     </pre>
+
+</div>
+<!-- EDIT10 SECTION "skriptide jooksutamisel vaikimisi kasutaja määramine" [2224-2349] -->
+<h2 class="sectionedit11" id="topelkirjete_paeringuga_otsimise_loogika">Topelkirjete päringuga otsimise loogika</h2>
+<div class="level2">
+<pre class="code">     select ls1.id, ls1.display_name, ls1.display_code
+     from living_subject ls1
+     inner join living_subject_link lsl1 on ls1.id = lsl1.living_subject_id
+     where lsl1.status_dova_code = &#039;ACTIVE&#039; and lsl1.end_date is null
+     and not exists 
+         (
+         select * from living_subject_link where living_subject_id = ls1.id
+         and end_date is not null and status_dova_code != &#039;ACTIVE&#039;
+         )
+     and exists 
+     (
+         select * from living_subject_identifier where living_subject_id = ls1.id
+         and identity_code_system = &#039;EST&#039; and is_valid = &#039;Y&#039; and end_date is null
+     )
+     and ls1.display_code in 
+     (
+     select ls2.display_code from living_subject ls2
+     inner join living_subject_link lsl2 on ls2.id = lsl2.living_subject_id
+     where lsl2.status_dova_code = &#039;ACTIVE&#039; and lsl2.end_date is null
+     and ls2.id != ls1.id
+            and not exists 
+         (
+         select * from living_subject_link where living_subject_id = ls2.id
+         and end_date is not null and status_dova_code != &#039;ACTIVE&#039;
+         )
+            and exists 
+       (
+           select * from living_subject_identifier where living_subject_id = ls2.id
+           and identity_code_system = &#039;EST&#039; and is_valid = &#039;UN&#039; and end_date is null
+       )
+     )</pre>
+
+</div>
+<!-- EDIT11 SECTION "Topelkirjete päringuga otsimise loogika" [2350-3750] -->
+<h2 class="sectionedit12" id="sodra_integratsiooni_seadistamine">SODRA Integratsiooni seadistamine</h2>
+<div class="level2">
+
+<p>
+1) Vastava keskkonna sõnumikeskuse skeemasse tuleb lisada sodra konfiguratsioonid järgmistest tabelitest: 
+</p>
+<pre class="code">select * from message_system
+select * from message_agent
+select * from message_agent_interaction
+select * from message_interaction
+select * from message_interaction_group
+select * from message_routing</pre>
+
+<p>
+2) Deployda sõnumikeskuse adapter
+</p>
+
+</div>
+<!-- EDIT12 SECTION "SODRA Integratsiooni seadistamine" [3751-4156] -->
+<h2 class="sectionedit13" id="moodulite_veebirakenduste_reaalsed_url-id">moodulite/veebirakenduste reaalsed url-id</h2>
+<div class="level2">
+<pre class="code">select * from SYS_MODULE_URLS</pre>
+
+</div>
+<!-- EDIT13 SECTION "moodulite/veebirakenduste reaalsed url-id" [4157-4246] -->
+<h2 class="sectionedit14" id="multitenancy_omanik-organisatsioonid">Multitenancy omanik-organisatsioonid</h2>
+<div class="level2">
+
+<p>
+Juhul kui tegemist on multitenancy-keskkonnaga, kuvatakse selle omanik-organisatsioone 
+</p>
+<pre class="code">select *
+from organization o
+where exists (select (1)
+        from organization_property op
+       where op.organization_id = o.id
+         and op.property_dova_code = &#039;TENANT_ORGANIZATION&#039;
+         and op.value = &#039;Y&#039;
+         and sysdate &lt;= coalesce(op.end_date, sysdate))
+     and sysdate &lt;= coalesce(o.end_date, sysdate)
+     and o.sys_delete_status = &#039;N&#039;;</pre>
+
+</div>
+<!-- EDIT14 SECTION "Multitenancy omanik-organisatsioonid" [4247-4766] -->
+<h2 class="sectionedit15" id="julia_saadet_skript_mpi_confi_parandamiseks">Julia saadet skript MPI confi parandamiseks</h2>
+<div class="level2">
+
+<p>
+Näidis süntaks kuidas sql skript näeb välja loop skript. 
+</p>
+<pre class="code">DECLARE
+previousVersion number(18);
+BEGIN
+  FOR MNN IN (SELECT * FROM MPI_CONFIGURATION_COMPONENT WHERE component_code = &#039;MPI.02.12&#039;) LOOP
+     SELECT MAX(mcch.sys_version) into previousVersion FROM MPI_CONFIGURATION_COMPONEN_H mcch where mcch.id = MNN.id and mcch.order_nr is not null and mcch.sys_end_time is not null;
+   UPDATE MPI_CONFIGURATION_COMPONENT set order_nr = 
+    (select mcch.order_nr from MPI_CONFIGURATION_COMPONEN_H mcch where mcch.id = MNN.id and mcch.sys_version = previousVersion) 
+   where id = MNN.id;
+  END LOOP;
+END;</pre>
+
+</div>
+<!-- EDIT15 SECTION "Julia saadet skript MPI confi parandamiseks" [4767-5453] -->
+<h2 class="sectionedit16" id="case_when_kasutamisega">CASE WHEN kasutamisega</h2>
+<div class="level2">
+<pre class="code">select mpr.record_number as &quot;rasedakaardi nr&quot;,
+     sc.case_number as &quot;haigusjuhu nr&quot;,
+     lsn.first as &quot;eesnimi&quot;,
+     lsn.last as &quot;perenimi&quot;,
+     mpr.start_date as &quot;rasedakaardi algus&quot;,
+     mpr.end_date as &quot;rasedakaardi lõpp&quot;,
+     mpd.duration_basis_date as &quot;raseduse arvutuse algus&quot;, 
+     mpr.start_date - mpd.duration_basis_date as &quot;vahe&quot;,
+     
+     -- kas rasedakaardi haigusjuhu alguse ja lõpu vahemikus on pt olnud mõni sünnituse algusaeg?
+     case when exists (select * from mat_labor ml where lsl.correct_living_subject_id = ml.patient_id
+                              and ml.labor_start_time between sc.start_date and sc.end_date)
+          then &#039;jah&#039;
+          else &#039;ei&#039;
+     end as &quot;sünnitus&quot;,
+     
+     -- kas rasedakaardi haigusjuhu alguse ja lõpu vahemikus on pt olnud mõni abordi algusaeg?
+     case when exists (select * from mat_abortion ma where lsl.correct_living_subject_id = ma.patient_id
+                              and ma.start_time between sc.start_date and sc.end_date)
+          then &#039;jah&#039;
+          else &#039;ei&#039;
+     end as &quot;abort&quot;
+     
+    -- kas rasedust või aborti pole teada?
+     from mat_pregnancy_record mpr
+     join sickness_case sc on mpr.sickness_case_id = sc.id
+     join living_subject_link lsl on mpr.patient_id = lsl.living_subject_id 
+          and lsl.end_date is null and lsl.status_dova_code = &#039;ACTIVE&#039;
+     join living_subject_name lsn on lsl.correct_living_subject_id = lsn.living_subject_id 
+          and lsn.end_date is null
+     join mat_pregnancy_duration mpd on mpr.id = mpd.mat_pregnancy_record_id
+     left join mat_labor ml on mpr.patient_id = ml.patient_id
+     where mpr.start_date between to_date(&#039;01/01/2015&#039;,&#039;DD/MM/YYYY&#039;) 
+           and to_date(&#039;31/12/2015&#039;,&#039;DD/MM/YYYY&#039;)
+     and mpd.is_duration_calculation_basis = &#039;Y&#039;
+   </pre>
+
+</div>
+<!-- EDIT16 SECTION "CASE WHEN kasutamisega" [5454-7372] -->
+<h2 class="sectionedit17" id="enda_esimene_isetehtud_funktsioon">Enda esimene isetehtud funktsioon</h2>
+<div class="level2">
+<pre class="code">DECLARE
+sc_id number(18);
+sc_type VARCHAR2(30 CHAR);
+BEGIN
+ select id into sc_id from sickness_case where case_number = &#039;20160119-0026&#039;;
+ select sc.sickness_case_type_dova_code into sc_type from sickness_case sc where sc.id = sc_id; 
+  dbms_output.put_line(&#039;HJ id: &#039; || sc_id);
+  dbms_output.put_line(&#039;HJ tüüp on: &#039; || sc_type);
+END;</pre>
+
+</div>
+<!-- EDIT17 SECTION "Enda esimene isetehtud funktsioon" [7373-7781] -->
+<h2 class="sectionedit18" id="naeide_lihtsast_case-i_kasutamisest">Näide lihtsast case-i kasutamisest</h2>
+<div class="level2">
+<pre class="code">/*kas arve saaja peaks suunama isikuandmete kontrolli? */
+  select ls.display_name as &quot;nimi&quot;,
+         ls.display_code as &quot;isikukood&quot;,
+         ls.user_modify_time,
+         case when ls.user_modify_time &lt; 
+                   (select sysdate - (select value 
+                   from sys_parameter_value 
+                   where parameter_code = &#039;MPI_DATA_CHECK_INTERVAL&#039;
+                   and end_date is null)
+                   from dual)
+              then &#039;jah&#039;
+              else &#039;ei&#039;
+                end as &quot;kontroll peaks käivituma?&quot;
+         from living_subject ls 
+         where display_code = &#039;47312220241&#039; 
+         </pre>
+
+</div>
+<!-- EDIT18 SECTION "Näide lihtsast case-i kasutamisest" [7782-8494] -->
+<h2 class="sectionedit19" id="sequence_jaergmise_vaeaertuse_leidmine">Sequence järgmise väärtuse leidmine</h2>
+<div class="level2">
+
+<p>
+Juhul kui on vajalik näiteks INSERT skripti juurde mõne sequence järgmist väärtust, siis selle saab järgnevaga:
+</p>
+<pre class="code">select s_stat_registration.nextval from dual </pre>
+
+</div>
+<!-- EDIT19 SECTION "Sequence järgmise väärtuse leidmine" [8495-8712] -->
+<h2 class="sectionedit20" id="vaeaertuste_grupeerimine_suuremateks_gruppideks">Väärtuste grupeerimine suuremateks gruppideks</h2>
+<div class="level2">
+<pre class="code">select
+  case name
+    when &#039;kale-smoothie&#039;    then &#039;smoothie&#039;
+    when &#039;banana-smoothie&#039;  then &#039;smoothie&#039;
+    when &#039;orange-juice&#039;     then &#039;drink&#039;
+    when &#039;soda&#039;             then &#039;drink&#039;
+    when &#039;blt&#039;              then &#039;sandwich&#039;
+    when &#039;grilled-cheese&#039;   then &#039;sandwich&#039;
+    when &#039;tikka-masala&#039;     then &#039;dinner&#039;
+    when &#039;chicken-parm&#039;     then &#039;dinner&#039;
+    else &#039;other&#039;
+  end as category, round(1.0 * sum(amount_paid) /
+    (select sum(amount_paid) from order_items) * 100, 2) as pct
+from order_items
+group by 1
+order by 2 desc;</pre>
+
+</div>
+<!-- EDIT20 SECTION "Väärtuste grupeerimine suuremateks gruppideks" [8713-9346] -->
+<h2 class="sectionedit21" id="paeringuga_topelt_grupeerimine">Päringuga topelt grupeerimine</h2>
+<div class="level2">
+<pre class="code">select
+  date(created_at), 
+  platform,
+  count(distinct(user_id)) as dau
+from gameplays
+group by 1, 2
+order by 1, 2;</pre>
+
+</div>
+<!-- EDIT21 SECTION "Päringuga topelt grupeerimine" [9347-9526] -->
+<h2 class="sectionedit22" id="with_paeringu_naeide">WITH päringu näide</h2>
+<div class="level2">
+
+<p>
+The WITH clause may be processed as an inline view or resolved as a temporary table. The advantage of the latter is that repeated references to the subquery may be more efficient as the data is easily retrieved from the temporary table, rather than being requeried by each reference. You should assess the performance implications of the WITH clause on a case-by-case basis.
+</p>
+
+<p>
+Even when there is no repetition of SQL, the WITH clause can simplify complex queries, like the following example that lists those departments with above average wages.
+</p>
+<pre class="code">with daily_revenue as (
+  select
+    date(created_at) as dt,
+    round(sum(price), 2) as rev
+  from purchases
+  where refunded_at is null
+  group by 1
+), 
+daily_players as (
+  select
+    date(created_at) as dt,
+    count(distinct user_id) as players
+  from gameplays
+  group by 1
+)
+select
+  daily_revenue.dt,
+  daily_revenue.rev / daily_players.players
+from daily_revenue
+  join daily_players using (dt);</pre>
+
+</div>
+<!-- EDIT22 SECTION "WITH päringu näide" [9527-] -->

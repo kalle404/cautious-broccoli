@@ -1,0 +1,78 @@
+====== Parameediku meditsiinivarustus ======
+
+===== Piiratud juurdepääsu teavitus =====
+
+
+  KAITSEVÄGI
+  ASUTUSESISESEKS KASUTAMISEKS
+  Märge tehtud 16.09.2014
+  Juurdepääsupiirang kehtib kuni 16.09.2019
+  Alus: avaliku teabe seadus § 35 lg 1 p 4
+
+===== MK3 - Parameediku meditsiinivarustus =====
+
+^ Nimetus      ^  Ühik      ^  Kogus          ^
+| **Üldtöövahendid** |||
+| MK 3 sisu nimekiri |  tk  |  1  | 
+| Parameediku seljakott |  tk  |  1  | 
+| Märkmik |  tk  |  1  |
+| Pliiats |  tk  |  1  |
+| Käärid (riiete lõikamiseks) |  tk  |  1  |
+| Permanentne marker 3-5 mm, must |  tk  |  1  |
+| Otsmikulamp |  tk  |  1  |
+| Välimeditsiini kaart |  tk  |  10  |
+| Triaažikaart |  tk  |  10  |
+| Kindad, mittesteriilsed |  paar  |  10  |
+| **Immobilisatsioonivahendid** |||
+| Kolmnurkrätik |  tk  |  5  | 
+| Arteriaalne žgutt |  tk  |  2  |
+| Alumiiniumlahas |  tk  |  2  |
+| Haaknõelte komplekt  N10 |  tk  |  1  |
+| Kandetekk |  tk  |  1  |
+| Kaelalahas |  tk  |  1  |
+| Jäseme lahaste komplekt |  kompl  |  1  |
+| Vaagnalahas |  tk  |  1  |
+| **Ventilatsioonivahendid** |||
+| Nasofarüngeaaltoru koos libestusgeeliga |  tk  |  1  |
+| S-toru nr  3 |  tk  |  1  |
+| S-toru nr  5 |  tk  |  1  |
+| Hingamiskott manuaalseks ventileerimiseks |  tk  |  1  |
+| Mask kunstlikuks ventilatsiooniks nr 4/5 |  tk  |  1  |
+| Bakterfilter hingamiskotile |  tk  |  1  |
+| **Intubatsioonivahendid** |||
+| Kõritoru nr 4 |  tk  |  1  |
+| **Diagnostikavahendid** |||
+| Stetoskoop |  tk  |  1  |
+| Termomeeter |  tk  |  1  |
+| **Infusiooni- ja süstevahendid** |||
+| Kanüül G14 |  tk  |  2  |
+| Kanüül G18 |  tk  |  4  |
+| Infusioonsüsteem |  tk  |  3  |
+| Luunõel |  tk  |  1  |
+| Kolmik pikendusega |  tk  |  1  |
+| Süstal 10 ml nõelaga |  tk  |  10  | 
+| Venoosne žgutt |  tk  |  1  |
+| **Sidumis- ja põetusvahendid** |||
+| Esmaabiside 10 cm |  tk  |  3  |
+| Esmaabiside 15 cm |  tk  |  2  |
+| Side 6 cm |  rull  |  3  |
+| Side 12 cm |  rull  |  3  |
+| Elastikside 10 cm |  tk  |  2  | 
+| Haavapadjaga plaaster 10x6 cm |  tk  |  10  |
+| Tekstiilist rullplaaster 2,5 cm |  tk  |  1  |
+| Esmaabiside suurele pinnale (kõhule) |  tk  |  1  |
+| Haavatampoon 10x10 cm N5, steriilne |  tk  |  10  |
+| Haavatampoon 20x40 cm, steriilne |  tk  |  2  |
+| Põletusgeel 125 ml |  tk  |  2  |
+| Termolina |  tk  |  2  |
+| Silmakate |  tk  |  2  |
+| Desinfektsioonivahend nahale 50 ml |  tk  |  1  |
+| **Ravimid** |||
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=12794|Infusioonilahus NaCl 0,9% 500 ml]] |  tk  |  3  |
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=30937|Paracetamol tbl 500 mg]] |  tbl  |  20  | 
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=12687|Rennie närimistbl 680 mg+80 mg]] |  tbl  |  24  |
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=23431|Cetirizinum tbl 10 mg]] |  tbl  |  10  |
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=27085|Ciprofloxacin tbl 500 mg]] |  tbl  |  10  |
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=13233|Braunovidon salv 20 g]] |  orig  |  1  |
+| NaCl süstelahus 0,9% 10 ml |  amp  |  5  |
+| [[http://193.40.10.165/register/register.php?keel=est&inim_vet=inim&lk=2&id=12137|Morphinum inj 10 mg/ml 1 ml plastampullis]] |  amp  |  10  |

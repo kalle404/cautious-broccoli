@@ -1,0 +1,117 @@
+====== Sanitari funktsioonikirjeldus (projekt) ======
+
+
+**Revalveerimine**
+
+Funktsioonikirjeldust revalveeritakse vastavalt vajadusele, kuid mitte harvemini kui iga 5 aasta järel. Revalveerimisvajadust jälgib ja annab sellest teada Naiskodukaitse väljaõppe arendusspetsialist. Revalveerimistöögrupp kutsutakse kokku Kaitseliidu kooli teadmus- ja arendusjaoskonna juhtimisel.
+
+
+===== Koosseisuline kuulumine =====
+Sanitar kuulub Kaitseliidu sõjaaja üksuste koosseisu. Sanitar allub erialaselt rühmaparameedikule ja kompaniimeedikule. Vajadusel nõustab sanitar erialaselt jao ülemat.
+
+===== Eeldused =====
+
+**Formaalhariduslikud:**
+  * Sanitar omab vähemalt keskharidust
+**Erialased:**
+  * Sanitar on läbinud Sõduri baaskursuse (TSOBKkl või SBK) ning Sanitari erialakursuse/mooduli.
+  * Erialase taseme säilitamiseks on läbitud iga 3 aastase perioodi jooksul täiendõpe ja sooritada praktiline test hindele „arvestatud“.
+**Hoiakulised:**
+  * Sanitar on motiveeritud ja positiivse ellusuhtumisega.
+**Isiksuslikud:**
+  * Sanitar on kõrge empaatiavõime ja hea suhtlemisoskusega, kõrge pingetaluvuse ning vastutusvõimega. Sanitar on valmis töötama erinevates ettearvamatutes ja ülipingelistes olukordades nii meeskonnas kui iseseisvalt. On vaimselt ja füüsiliselt terve.
+
+
+===== Eesmärk =====
+
+Sanitari ametikoha eesmärk on osutada esmaabi ning parameediku või õe juhendamisel esmatasandi meditsiinilist abi oma pädevuse piirides  Kaitseliidus nii rahu- kui sõjaajal, aidates seeläbi säilitada üksuste võitlusvõimelisust ning suurendada Kaitseliidu võimekust abistada vajadusel tsiviilstruktuure suurõnnetuste ja katastroofide korral.
+
+
+===== Põhiülesanded =====
+
+**A.1. Osutab esmaabi ning abistab oma pädevuse piirides parameedikut või tervishoiutöötajat meditsiinilise esmaabi osutamisel nii rahu- kui ka sõjaajal**
+<hidden>
+  B.1. Hindab olukorda sündmuskohal
+      C.1. Jälgib turvataktikat ohutuse tagamiseks iseendale ja kannatanule 
+      C.2. Lahingolukorras järgib TCCC põhimõtteid
+      C.3. Hindab abiandmiseks vajaminevaid ressursse
+  B.2. Viib pädevama meediku puudumisel läbi triaaži
+  B.3. Annab esialgse hinnangu  kannatanu seisundile
+      C.1. Viib läbi trauma-/ lahingkannatanu esmase ülevaatuse
+      C.2. Viib läbi objektiivsed uuringud
+          D.1. Määrab teadvusetaset (AVPU)
+          D.2. Hindab kannatanu hingamist 
+          D.3. Hindab kannatanu vereringet (a.radialis, a.carotis)
+          D.4. Mõõdab saturatsiooni
+          D.5. Mõõdab vererõhku
+          D.6. Mõõdab temperatuuri
+          D.7. Mõõdab veresuhkrut
+      C.3. Jälgib kannatanu seisundit (alapunktid C1,C2)
+  B.4. Annab meditsiinilist esmaabi traumade ja äkkhaigestumiste korral
+      C.1. Sulgeb verejooksu/-d
+          D.1. Kasutab rõhksidet (sidemerullid, nn Iisraeli side, käepärased vahendid)
+          D.2. Kasutab žgutti (CAT, käepärased vahendid)
+          D.3. Kasutab hemostaatilisi vahendeid 
+      C.2. Rakendab võtteid  organismi üldise mahajahtumise või kuumakahjustuste vältimiseks/ leevendamiseks, sh termolina.
+      C.3. Teeb lihtsamat haavahooldust (haavaloputus, sidumine)
+      C.4. Teostab muid traumavõtteid pädevama meediku juuresolekul
+          D.1. Kasutab  jäsemete lahaseid (alumiinium-, vaakumlahased, käepärased vahendid)
+          D.2. Kasutab kaelalahast
+          D.3. Kasutab seljalauda
+      C.5. Tagab vabad hingamisteed
+          D.1. Avab kannatanu hingamisteed korrektse võttega 
+          D.2. Paigaldab oro- ja/või  nasofarüngeaaltoru
+      C.6. Teostab nõeltorakotsenteesi ventiilpingelise õhkrinna korral (nõeldekompressioon 2 roidevahemikus medioklavikulaarjoonel)
+      C.7. Kasutab erinevaid ravimite manustamisviise parameediku/õe korraldusel
+          D.1. Teostab intramuskulaarse süstimise 
+          D.2. Rajab perifeerse veenitee
+          D.3. Alustab infusiooni
+      C.8. Teostab elustamist (BLS)
+          D.1. Teostab kaudset südamemassaaži
+          D.2. Teostab kopsude kunstlikku ventilatsiooni, sh käsiventilatsioonimaskiga
+          D.3. Kasutab täisautomaatset defibrillaatorit
+      C.9. Asetab kannatanu sobivasse asendisse vastavalt tema seisundile
+      C.10. Transpordib kannatanut võimalikult säästvalt ning järgides ergonoomika põhimõtteid
+      C.11. Järgib psühhosotsiaalse esmaabi põhimõtteid ja patsiendi eetilise kohtlemise põhiprintsiipe 
+</hidden>
+**A.2. Korraldab sõjaajal jao meditsiinilist toetust oma pädevuse piires**
+<hidden>
+  B.1. Vastavalt üksuse ülema või parameediku käsule organiseerib haavatute kogumispunkti rajamist 
+  B.2. Vastavalt üksuse ülema või parameediku käsule viib läbi haavatute otsinguid lahinguväljal
+  B.3. Teostab või vajadusel juhib triaaži
+  B.4. Organiseerib haavatute evakuatsiooni 
+      C.1. Valmistab kannatanud ette transpordiks/evakuatsiooniks
+      C.2. Määrab kannatanute transpordi järjekorra
+      C.3. Annab operatiivset infot vahetule ülemale 
+      C.4. Koostab MIST-raporti
+      C.5. Juhib ja viib läbi kannatanute ohutu pealelaadimise transpordivahenditesse oma erialase pädevuse piires
+      C.6. Tagab kannatanule terviseseisundit arvestava transpordiasendi 
+      C.7. Vajadusel valib evakuatsiooni marsruudi vastavalt vahetu ülema käsule ja taktikalisele olukorrale 
+      C.8. Teostab evakueeritavate kannatanute üleandmist-vastuvõtmist  (dokumentatsioon ja suulised selgitused)
+  B.5. Konsulteerib jaoülemat tervisekaitsealastes küsimustes
+  B.6. Jaoülema käsul korraldab  isikkoosseisu tervisekaitsealast tegevust
+          D.1. Korraldab ja jälgib üksuse hügieeninõuete täitmist
+          D.2. Vastavalt situatsioonile annab haigestumist ennetavaid soovitusi
+  B.7. Teostab jao isikkoosseisu tervisliku seisundi meditsiinilist, k.a psühhosotsiaalset järelvalvet
+  B.8. Vastutab enda ja talle määratud jao meditsiinivarustuse eest ja tagab selle olemasolu ja komplektsuse
+</hidden>
+
+
+**Erilised töötingimused**
+
+Töötamine erinevates ettearvamatutes olukordades nii sõja- kui rahu ajal.
+
+
+**Märkused**
+
+Sanitari kvalifikatsiooni omistamisel on teda võimalik rakendada  sanitari ametikohtadel Kaitseliidu sõjaajaüksustes. Instruktoriõppe ja Esmaabiinstruktori kursuse Kaitseliidus läbinuna võib sanitari rakendada Kaitseliidu esmaabi- ja meditsiiniväljaõppes abikoolitaja või koolitajana.
+
+
+===== Viited =====
+
+  * Erakorralise meditsiini tehnik I, Tervishoiu ja Sotsiaaltöö Kutsenõukogu kutsestandard. Kinnitatud Tervishoiu ja Sotsiaaltöö Kutsenõukogu otsusega 04.12.2008 nr 36.
+  * Erakorralise meditsiini tehniku eriala riiklik õppekava, Vastu võetud 03.03.2010 nr 8, RTL 2010, 11, 195. Jõustumine 14.03.2011.
+  * Jalaväekompanii lahingutegevus, (KVÜÕA 2013).  
+  * Jalaväerühma lahingutegevus, (KVÜÕA 2009).
+  * Rühmaparameediku erialakursuse õppekava, (Kaitseväe Logistikakeskuse tervisekeskuse meditsiiniväljaõppekeskus, 2005). Kinnitatud Kaitseväe juhataja käskkirjaga 01.06.2005 nr 113.
+

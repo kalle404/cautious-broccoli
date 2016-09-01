@@ -1,0 +1,55 @@
+====== Nahk ======
+
+Nahk on keha väliskate ning täiskasvanud inimese naha pindala on ligikaudu 1,5-2m² - inimese suurim elund. Naha paksus erinevates kehaosades on 1-4mm. Nahal on mitu erinevat ülesannet: ta kaitseb keha sisemisi kudesid, osaleb soojaregulatsiooniss, on veredepoo, nahas moodustub päikesevalguse toimel D-vitamiin. 
+
+===== Naha ehitus =====
+
+Nahas eristatakse 2 põhilist kihti:
+  * **epidermis e marrasknahk**, moodustuvad mitmesugused sarvmoodustised: karvad, küüned ja juuksed, ta jaguneb omakorda:
+    * **sarvkiht** koosneb sarvestunud surnud rakkude kihtidest. Sarvkiht koosneb sarvestunud surnud naharakkudest, mis irduvad pidevalt (10-15 g iga päev). Kasvukiht aga koosneb mitmes kihis asuvatest elusatest rakkudest, kusjuures alumised kasvukihi rakud toodavad pidevalt uusi rakke.
+    * **alumine kasvukiht** koosneb omakorda mitmes kihis asetsevatest elusatest rakkudest. Kasvukihi rakud sisaldavad pruuni pigmenti – melaniini, mis annab nahale värvuse.
+  * **pärisnahk** on naha süva kiht, mis sisaldab rohkesti kollageenseid ja elastseid sidekoe kiude. Need annavad nahale tugevuse ja elastsuse. Pärisnahk jaguneb omakorda:
+    * **pindmine näsakiht** omab arvukalt vere-ja lümfisooni ning varustatud närvilõpmetega, moodustab oma välispinnal tillukesi näsasid, mis asetsevad laialipillutatult või ridadena. Näsade read moodustavad harjasid, mille kohal tõuseb epidermis kõrgemale, tekitades papillaarkurde. Eriti hästi on papillaarkurrud nähtavad sõrmenahas (sõrmejäljed). 
+    * **alumine võrkkiht** on suhteliselt paks ning koosneb peamiselt sassiskiulisest tihedast sidekoest. Selles asuvad rasu- ja higinäärmed ning karvade juured. 
+
+ 
+
+==== Nahaaluskude ====
+
+Koosneb kohevast sidekoest, mille kiudude vahel paikneb sagaratena nahaalune rasvkude. Nahaaluskude annab kehale kuju ja kaitseb:
+  * põrutuste eest
+  * külma eest 
+Ühtlasi on ka organismi varuainete talletuspaigaks.
+
+==== Rasu- ja higinäärmed ====
+
+Rasunäärmed paiknevad naha näsa-ja võrkkihi piiril ning avanevad üldjuhul karvalehtrisse. 
+Rasunäärmed eritavad rasvarikast nõret, mida nimetatakse rasuks, mis võiab nahka ja karvu ning on ka bakteritsiidse toimega. 
+Higinäärmete koosneb pärisnahas asuvast tihedalt kokkukeerdunud torukesest ja viimajuhast, mis avaneb naha pinnal.
+	
+Naha ülesanded: 
+  - kaitseb (väliste vigastuste; haigustekitajate, kiirguste, veekao eest),
+  - sünteesib erinevaid ühendeid,
+  - säilitab kehatemperatuuri,
+  - meeleelund,
+  - eritusorgan;
+
+**Nahk kaitseb UV-kiirguse eest** - inimese nahas sünteesitakse päikesekiirguse mõjul pigmenti __melaniin__. Melaniin annab nahale värvuse ja takistab ultraviolettkiirguse tungimist nahaalustesse kudedesse.
+
+**Nahk kaitseb haigustekitajate eest** - nahal elab mitmesuguseid baktereid, enamik neist on hädavajalikud kuna kaitsevad haigustekitajate eest. Inimese nahk on nn bakterite loomaaed. Nahalt on leitud üle 200 erineva bakteri.
+
+**Nahas sünteesitakse D-vitamiini** - D-vitamiin on väga vajalik luude ja hammaste jaoks, kaltsiumi imendumisel, vere hüübimisel, stabiilse närvisüsteemi säilitamisel.
+
+**Nahk säilitab kehatemperatuuri** - nahas on hulgaliselt väikeseid veresooni ja kapillaare. Kui õhutemperatuur langeb juhitakse ajust veresoonte seintesse erutus, mille tulemusena viimased ahenevad. Kui õhutemperatuur tõuseb, siis veresooned laienevad.
+
+**Nahk kui meeleelund** - nahas on palju erinevaid sensoorseid närvilõpmeid ehk retseptoreid, mis võtavad väliskeskkonnast vastu - valu-, temperatuuri- ja puuteärritusi.
+
+**Nahk kui erituselund** - läbi naha vabaneb inimene mitmesugustest jääkainetest. Higistamine aitab säilitada inimese kehatemperatuuri ja väldib ülekuumenemist.
+
+
+Naha joonis 
+
+<hidden>{{:parameedik:nahk-11-728.jpg?nolink|}}</hidden>
+===== Viited =====
+
+  * Wikipedia [[https://en.wikipedia.org/wiki/Human_skin|Human skin]]

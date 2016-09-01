@@ -1,0 +1,32 @@
+====== Seedeelundkond ======
+
+Seedeelundkond koosneb elunditest, mis töötlevad mehaaniliselt ja keemiliselt toitu ning imendavad ja väljutavad mitteseeditavad jäägid. Eristatakse seedekanalit ja sellega viimajuhade abil ühenduses olevaid seedenäärmeid. 
+
+Seedeelundkonna joonis:
+<hidden>{{:parameedik:seedeelundkond.jpeg?nolink|}}</hidden>
+
+
+Seedeelundkonna moodustab:
+  - **suuõõs**
+  - **neel** - seedekanali ja hingamisteede ühisosa, kus ristuvad õhu ja toidu teed. 
+  - **söögitoru** - 25-30cm pikkune sagitaalsuunas lamenenud silindriline moodustis, mille ülesandeks on lihaskesta kontraktsioonide abil toidukämbu toimetamine neelust makku. 
+  - **magu** - toidukördi läbisegamine, selle keemiline lõhustamine ja edasitoimetamine soolde. 
+  - **kõhunääre**
+  - **maks** - inimese suurim nääre
+    - talletab varuained
+    - toodab sappi
+    - lagundab jääkaineid ja vanu vererakke
+    - toodab verevalkusid
+    - lagundab üleliigseid aminohapped ja hormoone
+  - **sapipõis** - peale söömist, kui eelseedinud toidumass kaksteistsõrmikusse liigub, hakkab sapipõis hormooni koletsüstokiniin-pankreosümiini toimel perioodiliselt kokku tõmbuma ning ühissapijuha kaudu sappi kaksteistsõrmikusse pritsima.
+  - **kaksteistsõrmik**
+  - **peensool** - toidu peamine seedimine ja toitainete imendumine lümfi ja verre. 
+  - **jämesool** - vee ja mineraalsoolade imendumine, väljaheite moodustumine. 
+  - **ussripik**
+  - **umbsool**
+  - **pärasool**
+  - **pärak**
+
+===== Viited =====
+
+  * Wikipedia [[https://en.wikipedia.org/wiki/Human_digestive_system|Human digestive system]]

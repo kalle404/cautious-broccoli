@@ -1,0 +1,335 @@
+
+<h1 class="sectionedit1" id="egov_maerkmed">eGov märkmed</h1>
+<div class="level1">
+
+<p>
+Alates 21.03.2016 
+</p>
+
+<p>
+Igapäevane skype grupp (sh kuu kavandatud aja raporteerimiseks): TETRIS QA
+</p>
+
+<p>
+üldised taskid:
+</p>
+<ul>
+<li class="level1"><div class="li"> eGov üldkoosoleku aja logimise task EGOVERNMENTEE-1</div>
+</li>
+<li class="level1"><div class="li"> Igapäevase SCRUM-i aja logimise task TETRIS-2</div>
+</li>
+<li class="level1"><div class="li"> Koosolekute aja logimise task TETRIS-4</div>
+</li>
+<li class="level1"><div class="li"> Tetrise support task TETRIS-1370</div>
+</li>
+<li class="level1"><div class="li"> Kalle sisseelamise task TETRIS-1626</div>
+</li>
+<li class="level1 node"><div class="li"> arendajate korrapidamise üldine task - (nb! nädalate kaupa on eraldi subtaskid) - TETRIS-1602</div>
+<ul>
+<li class="level2"><div class="li"> korrapidaja arendaja ülesanded <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=137993729" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=137993729" rel="nofollow">confus</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Üldine töövoog:
+</p>
+<pre class="code">üldine töövoog keskkondade vahel: 
+TVH - &quot;meie&quot; töövõimehindamise taotlus 
+* EMPIS
+* TETRIS
+* REDIS
+* EMPIS </pre>
+<pre class="code">TVT - &quot;kõrvaltoas&quot; töövõime taotlus
+* Unordered List Itempuhtalt TETRIS-es</pre>
+
+</div>
+<!-- EDIT1 SECTION "eGov märkmed" [1-826] -->
+<h2 class="sectionedit2" id="kasutatud_akronueuemid">Kasutatud akronüümid</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> TVH - TööVõimeHindamine</div>
+</li>
+<li class="level1"><div class="li"> TVT - TööVõimeTaotlus</div>
+</li>
+<li class="level1"><div class="li"> MVM - MakseViisiMuutmine</div>
+</li>
+<li class="level1"><div class="li"> TKO - TöötuKassaOsakond</div>
+</li>
+<li class="level1"><div class="li"> TSK - TerviseSeisundiKirjeldus</div>
+</li>
+<li class="level1"><div class="li"> TÖR - TÖötamiseRegister</div>
+</li>
+<li class="level1"><div class="li"> ITP - IseTeenindusPortaal</div>
+</li>
+<li class="level1"><div class="li"> CAS - CentralAuthenticationService</div>
+</li>
+<li class="level1"><div class="li"> TST - ToetuseSaamiseTingimused</div>
+</li>
+<li class="level1"><div class="li"> TTO - TeenuseOsutaja</div>
+</li>
+<li class="level1"><div class="li"> TVR - TööVõimeReform</div>
+</li>
+<li class="level1"><div class="li"> NK - NõueteKohane</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Kasutatud akronüümid" [827-1230] -->
+<h2 class="sectionedit3" id="keskkonnad">Keskkonnad</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://empis.webmedia.int/empis-latest/" class="urlextern" title="https://empis.webmedia.int/empis-latest/" rel="nofollow">https://empis.webmedia.int/empis-latest/</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://tk-cas.webmedia.int/tetris/" class="urlextern" title="https://tk-cas.webmedia.int/tetris/" rel="nofollow">https://tk-cas.webmedia.int/tetris/</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://tk-cas.webmedia.int/redis/" class="urlextern" title="https://tk-cas.webmedia.int/redis/" rel="nofollow">https://tk-cas.webmedia.int/redis/</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Keskkonnad" [1231-1379] -->
+<h2 class="sectionedit4" id="andmebaasid">Andmebaasid</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> empis_latest@TTKORA</div>
+</li>
+<li class="level1"><div class="li"> tetris_test@TTKORA</div>
+</li>
+<li class="level1"><div class="li"> empis_to_tetris@TTKORA</div>
+</li>
+<li class="level1"><div class="li"> empis / testEmp1s @ TEMPIS</div>
+</li>
+<li class="level1"><div class="li"> TETRIS / KL9u4jjSTK4la @ TEMPIS</div>
+</li>
+<li class="level1"><div class="li"> EMPIS_TO_TETRIS / KL8jfjnb2V6rk @ TEMPIS</div>
+</li>
+<li class="level1"><div class="li"> TETRIS / KL9u4jjSTK4la @ TOOTUKASSA_LIVE3</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "Andmebaasid" [1380-1637] -->
+<h2 class="sectionedit5" id="ssh">SSH</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> int mooduli restart: service int restart</div>
+</li>
+</ul>
+
+<p>
+mõned sagedamini kasutatavad käsud:
+</p>
+<ul>
+<li class="level1"><div class="li"> vi int/config/xtee.properties</div>
+</li>
+<li class="level1"><div class="li"> tail -f tomcat8/logs/tetris.log</div>
+</li>
+<li class="level1"><div class="li"> tail -f tomcat8/logs/redis.log</div>
+</li>
+<li class="level1"><div class="li"> tail -f int/logs/int.log</div>
+</li>
+<li class="level1"><div class="li"> tail -f int/logs/int-xtee.log</div>
+</li>
+<li class="level1"><div class="li"> tail -f int/logs/int.log | grep ServiceCheck.check</div>
+</li>
+<li class="level1"><div class="li"> tail -f tomcat8/logs/tetris.log | grep 1000011563</div>
+</li>
+</ul>
+
+<p>
+turvakonfi asukoht
+</p>
+<ul>
+<li class="level1"><div class="li">  vi /home/cas/tomcat8/tetris-conf/proxy-security.properties</div>
+</li>
+</ul>
+
+<p>
+rakenduse restartimiseks
+</p>
+<ul>
+<li class="level1"><div class="li"> tomcat8/restart.sh</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "SSH" [1638-2149] -->
+<h2 class="sectionedit6" id="viited">Viited</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> TETRISES kasutatavad REST-teenused (<a href="https://tk-cas.webmedia.int/swagger/" class="urlextern" title="https://tk-cas.webmedia.int/swagger/" rel="nofollow">https://tk-cas.webmedia.int/swagger/</a>) </div>
+</li>
+<li class="level1"><div class="li"> Issue lisamisel silmas pidada (<a href="https://confluence.nortal.com/pages/viewpage.action?pageId=130128116" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=130128116" rel="nofollow">https://confluence.nortal.com/pages/viewpage.action?pageId=130128116</a>)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "Viited" [2150-2354] -->
+<h2 class="sectionedit7" id="scrum_ettekanne">SCRUM ettekanne</h2>
+<div class="level2">
+
+<p>
+<strong>SCRUM ettekanne:</strong>
+</p>
+<ol>
+<li class="level1"><div class="li"> Mis eile tegid?</div>
+</li>
+<li class="level1"><div class="li"> Mis täna?</div>
+</li>
+<li class="level1"><div class="li"> Kas takistusi on?</div>
+</li>
+</ol>
+<div class="table sectionedit8"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Eilne tegevus </th><th class="col1"> Tänane tegevus </th><th class="col2"> Takistused </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 1. kolimine II → IV, istumine Kaiduriga, istumine Arliga, eHealth taskide lõpetamine/ delegeerimine, keskkondadele ligipääsude seadistamine ja confuga tutvumine </td><td class="col1"> 2. andmebaasiga tutvumine (empis_latest@TTKORA), Äriobjektid, TVH (hindamise) tervikprotsess, tetrises töövoo läbimine </td><td class="col2 leftalign"> 3. -  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 1. andmebaasiga tutvumine, äriobjektid, TVH protsessi, TETRISes exploratory  </td><td class="col1 leftalign"> 2. Töövoogudega tutvumine, seosed andmemudeliga  </td><td class="col2 leftalign"> 3. OOF, haige  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 1. kolleegi tagasisidevormide täitmine, keskkondadega tutvumine, CAS-üldine loogika </td><td class="col1"> 2. 16.4 tutvustus, arenguvestlus, projektijuhiga vestlus, keskkondadega tutvumine </td><td class="col2"> 3. - </td>
+	</tr>
+</table></div>
+<!-- EDIT8 TABLE [2465-3149] -->
+<p>
+<strong>TK-CAS</strong>
+</p>
+
+<p>
+ajutine sisselogimine hetkel arli/Parool123
+</p>
+
+<p>
+central authentication service kohta <a href="https://en.wikipedia.org/wiki/Central_Authentication_Service" class="urlextern" title="https://en.wikipedia.org/wiki/Central_Authentication_Service" rel="nofollow">wiki</a>
+</p>
+
+</div>
+<!-- EDIT7 SECTION "SCRUM ettekanne" [2355-3315] -->
+<h2 class="sectionedit9" id="ip_seadistamine">IP seadistamine</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> ipconfig /release</div>
+</li>
+<li class="level1"><div class="li"> ipconfig /renew</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "IP seadistamine" [3316-3386] -->
+<h2 class="sectionedit10" id="cron">Cron</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Cron format is a simple, yet powerful and flexible way to define time and frequency of various actions.</div>
+</li>
+<li class="level1"><div class="li"> Cron vormindusest saab täpsemalt lugeda <a href="http://www.nncron.ru/help/EN/working/cron-format.htm" class="urlextern" title="http://www.nncron.ru/help/EN/working/cron-format.htm" rel="nofollow">siin</a>.</div>
+</li>
+<li class="level1"><div class="li"> Cron kalkulaator asub <a href="http://www.cronmaker.com/" class="urlextern" title="http://www.cronmaker.com/" rel="nofollow">siin</a>.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT10 SECTION "Cron" [3387-3686] -->
+<h2 class="sectionedit11" id="skriptid_ja_seosed">Skriptid ja seosed</h2>
+<div class="level2">
+
+<p>
+<strong>Taotluse ja rakenduse kasutaja omavaheline seos</strong>
+</p>
+<pre class="code">TETRIS_TEST.TAOTLUS.ID
+TETRIS_TEST.TAOTLUS_MENETLEJA_AJALUGU.KASUTAJAKONTO_ID
+EMPIS_LATEST.OS_KASUTAJAKONTO
+EMPIS_LATEST.OS_KASUTAJA</pre>
+
+<p>
+<strong>Taotluse ja makseviisi seosed TETRIS_TEST-is</strong>
+</p>
+<pre class="code">select m.makseviis_kood, k.kojukanne_kood
+       from taotlus t 
+       left join tvt_taotlus tt on t.id = tt.taotlus_id
+       left join mvm_taotlus mt on tt.taotlus_id = mt.tvt_taotlus_id
+       left join makseviis m on mt.makseviis_id = m.id
+       left join pangakonto p on m.id = p.makseviis_id
+       left join kojukanne k on m.id = k.makseviis_id
+       left join kojukanne_aadress ka on k.id = ka.kojukanne_id
+       where t.id = 1011008   </pre>
+
+<p>
+<strong>Taotluse kontrollid ja tulemused</strong>
+</p>
+<pre class="code">select ktl.* 
+       from taotlus t 
+       join kontroll k on t.id = k.taotlus_id
+       join kontroll_tulemus kt on k.id = kt.kontroll_id
+       join kontroll_tulemus_lisaandmed ktl on kt.id = ktl.kontroll_tulemus_id
+       where t.id = 1010972
+       and k.liik_kood = &#039;KASVATAB_LAST&#039;
+       and (ktl.tyyp_kood = &#039;RR_HOOLDUS_TYYP&#039; or ktl.tyyp_kood = &#039;RR_HOOLDUS_STAATUS&#039;);</pre>
+
+<p>
+<strong>Konkreetse privileegi ja seda omavate kasutajate seos</strong>
+</p>
+<pre class="code">	-- tetrise schemast id-d
+	select * from sec_roll_privileeg where privileeg_kood = &#039;tvh.menetleja.roll&#039;</pre>
+<pre class="code">	-- empise schemast kasutajad
+select kasutaja.*
+     from os_roll r
+     join os_kasutajakonto_roll kr on kr.roll_id = r.id 
+     join os_kasutajakonto k on kr.kasutajakonto_id = k.id
+     join os_kasutaja kasutaja on k.kasutaja_id = kasutaja.id 
+     where (r.kehtiv_kuni &gt; sysdate or r.kehtiv_kuni is null)
+     and (kr.kehtiv_kuni &gt; sysdate or kr.kehtiv_kuni is null)
+     and (k.kehtiv_kuni &gt; sysdate or k.kehtiv_kuni is null)
+     and (kasutaja.kehtiv_kuni &gt; sysdate or kasutaja.kehtiv_kuni is null)
+     and r.id in (
+     1000000741,
+     1000000738,
+     1000000740,
+     1000000758,
+     1000000739,
+     1000000640
+     )</pre>
+
+<p>
+<strong>Integratsiooniteenuse päringud kirjutatakse järgmisesse tabelisse: </strong>
+</p>
+<pre class="code">select *
+       from INT_SERVICE_REQUEST</pre>
+
+<p>
+<strong>Baasist konkreetse muudatuse teinud taski leidmine</strong>
+TÄIENDADA SEOST!!! 
+</p>
+<pre class="code">select * from sys_db_change_history
+select * from sys_db_change_history_log where sql_text like &#039;%SAAB_PAASTETOETUS%&#039;;</pre>
+
+</div>
+<!-- EDIT11 SECTION "Skriptid ja seosed" [3687-6016] -->
+<h2 class="sectionedit12" id="ajutine_lahendus_tetris_live_logide_juurdepaeaesuks">Ajutine lahendus TETRIS live logide juurdepääsuks</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://redis.tootukassa.ee:9009/redis_logs/" class="urlextern" title="https://redis.tootukassa.ee:9009/redis_logs/" rel="nofollow">https://redis.tootukassa.ee:9009/redis_logs/</a> anti/ orgla</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://tetris.tootukassa.ee:9009/tetris_logs/" class="urlextern" title="https://tetris.tootukassa.ee:9009/tetris_logs/" rel="nofollow">https://tetris.tootukassa.ee:9009/tetris_logs/</a> anti/ orgla</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://int.tootukassa.ee:9009/int_logs/" class="urlextern" title="https://int.tootukassa.ee:9009/int_logs/" rel="nofollow">https://int.tootukassa.ee:9009/int_logs/</a> anti/ orgla</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT12 SECTION "Ajutine lahendus TETRIS live logide juurdepääsuks" [6017-6264] -->
+<h2 class="sectionedit13" id="rakenduse_tomcat_ligipaeaesud">Rakenduse TOMCAT ligipääsud</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://tk-cas.webmedia.int:8081/manager/html" class="urlextern" title="http://tk-cas.webmedia.int:8081/manager/html" rel="nofollow">http://tk-cas.webmedia.int:8081/manager/html</a> tomcat/ tomcat</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT13 SECTION "Rakenduse TOMCAT ligipääsud" [6265-] -->

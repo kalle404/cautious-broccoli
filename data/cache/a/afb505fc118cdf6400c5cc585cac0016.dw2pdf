@@ -1,0 +1,183 @@
+<a name="nortalskriptid__"></a>
+<h1><bookmark content="Skriptid" level="0" /><a name="nortalskriptid__skriptid">Skriptid</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><bookmark content="PLSQL to_date funktsioon" level="1" /><a name="nortalskriptid__plsql_to_date_funktsioon">PLSQL to_date funktsioon</a></h2>
+<div class="level2">
+
+<p>
+Koos kellaajaga: 
+</p>
+<pre class="code">     to_date(&#039;26/01/2015 8:00:00&#039;,&#039;DD/MM/YYYY HH24:MI:SS&#039;)</pre>
+
+<p>
+Ilma kellaajata:
+</p>
+<pre class="code">     to_date(&#039;26/01/2015&#039;,&#039;DD/MM/YYYY&#039;)</pre>
+
+</div>
+
+<h2><bookmark content="Foreign key abil constrainti leidmine" level="1" /><a name="nortalskriptid__foreign_key_abil_constrainti_leidmine">Foreign key abil constrainti leidmine</a></h2>
+<div class="level2">
+<pre class="code">     select * 
+     from user_constraints
+     where constraint_name like &#039;%R_STUN_PROF_ART_INV_TYPE%&#039;</pre>
+
+</div>
+
+<h2><bookmark content="Foreign key abil constrainti leidmine" level="1" /><a name="nortalskriptid__foreign_key_abil_constrainti_leidmine1">Foreign key abil constrainti leidmine</a></h2>
+<div class="level2">
+
+<p>
+Üldiselt skeema-üleselt kõikide funktsioonide, pakettide ja protseduuride otsing käib järgnevalt:
+</p>
+<pre class="code">     select * 
+     from all_objects 
+     where object_name like &#039;%GET_INSURER_CLASS%&#039;</pre>
+
+</div>
+
+<h2><bookmark content="Mõne konkreetse constraint-i otsimine baasist" level="1" /><a name="nortalskriptid__mone_konkreetse_constraint-i_otsimine_baasist">Mõne konkreetse constraint-i otsimine baasist</a></h2>
+<div class="level2">
+<pre class="code">select *
+     from user_constraints 
+     where constraint_name = &#039;FK_APP_ART_PRICES&#039;</pre>
+
+</div>
+
+<h2><bookmark content="Konkreetse funktsiooni otsimine" level="1" /><a name="nortalskriptid__konkreetse_funktsiooni_otsimine">Konkreetse funktsiooni otsimine</a></h2>
+<div class="level2">
+
+<p>
+Konkreetse funktsiooni otsimine like-päringuga käib suhteliselt lihtsalt:
+</p>
+<pre class="code">     SELECT * 
+     FROM ALL_OBJECTS 
+     WHERE OBJECT_TYPE IN (&#039;FUNCTION&#039;,&#039;PROCEDURE&#039;,&#039;PACKAGE&#039;)
+     </pre>
+
+<p>
+Sealt edasi, kui antud funktsioon on skeemas olemas, siis vaadata millised on funktsiooni sisendparameetrid ning käivitada koos nendega, näiteks: 
+</p>
+<pre class="code">     select ehl.f_get_insurer_class_dova_code (2,&#039;et&#039;) from dual</pre>
+
+</div>
+
+<h2><bookmark content="PLSQL väärtuste järgi loendamine" level="1" /><a name="nortalskriptid__plsql_vaeaertuste_jaergi_loendamine">PLSQL väärtuste järgi loendamine</a></h2>
+<div class="level2">
+<pre class="code">     select owner_code, count(*) 
+     from sys_resource_content 
+     group by owner_code</pre>
+
+</div>
+
+<h2><bookmark content="Alampäringuga otsimine ja väärtuste loendamine" level="1" /><a name="nortalskriptid__alampaeringuga_otsimine_ja_vaeaertuste_loendamine">Alampäringuga otsimine ja väärtuste loendamine</a></h2>
+<div class="level2">
+<pre class="code">     select count(*), month from
+     (select EXTRACT(MONTH FROM sys_modify_time) as month
+     from document_version dv
+     where state_dova_code = &#039;ACCEPTED&#039;
+     and sys_modify_time between to_date(&#039;01/01/2011&#039;,&#039;DD/MM/YYYY&#039;) and 
+     to_date(&#039;01/01/2012&#039;,&#039;DD/MM/YYYY&#039;)) 
+     group by month
+     
+     </pre>
+
+</div>
+
+<h2><bookmark content="Andmebaasi propagaatorist konkreetsete versioonimuudatuste otsimine" level="1" /><a name="nortalskriptid__andmebaasi_propagaatorist_konkreetsete_versioonimuudatuste_otsimine">Andmebaasi propagaatorist konkreetsete versioonimuudatuste otsimine</a></h2>
+<div class="level2">
+<pre class="code">     select * 
+     from sys_db_propagator_sql_log sp 
+     WHERE upper(sp.sql_text) like UPPER(&#039;%ui.treatment.dental_chart%&#039;)       </pre>
+
+</div>
+
+<h2><bookmark content="skriptide jooksutamisel vaikimisi kasutaja määramine" level="1" /><a name="nortalskriptid__skriptide_jooksutamisel_vaikimisi_kasutaja_maeaeramine">skriptide jooksutamisel vaikimisi kasutaja määramine</a></h2>
+<div class="level2">
+<pre class="code">     call dbms_session.set_identifier(&#039;kalle&#039;);
+     </pre>
+
+</div>
+
+<h2><bookmark content="Topelkirjete päringuga otsimise loogika" level="1" /><a name="nortalskriptid__topelkirjete_paeringuga_otsimise_loogika">Topelkirjete päringuga otsimise loogika</a></h2>
+<div class="level2">
+<pre class="code">     select ls1.id, ls1.display_name, ls1.display_code
+     from living_subject ls1
+     inner join living_subject_link lsl1 on ls1.id = lsl1.living_subject_id
+     where lsl1.status_dova_code = &#039;ACTIVE&#039; and lsl1.end_date is null
+     and not exists 
+         (
+         select * from living_subject_link where living_subject_id = ls1.id
+         and end_date is not null and status_dova_code != &#039;ACTIVE&#039;
+         )
+     and exists 
+     (
+         select * from living_subject_identifier where living_subject_id = ls1.id
+         and identity_code_system = &#039;EST&#039; and is_valid = &#039;Y&#039; and end_date is null
+     )
+     and ls1.display_code in 
+     (
+     select ls2.display_code from living_subject ls2
+     inner join living_subject_link lsl2 on ls2.id = lsl2.living_subject_id
+     where lsl2.status_dova_code = &#039;ACTIVE&#039; and lsl2.end_date is null
+     and ls2.id != ls1.id
+            and not exists 
+         (
+         select * from living_subject_link where living_subject_id = ls2.id
+         and end_date is not null and status_dova_code != &#039;ACTIVE&#039;
+         )
+            and exists 
+       (
+           select * from living_subject_identifier where living_subject_id = ls2.id
+           and identity_code_system = &#039;EST&#039; and is_valid = &#039;UN&#039; and end_date is null
+       )
+     )</pre>
+
+</div>
+
+<h2><bookmark content="SODRA Integratsiooni seadistamine" level="1" /><a name="nortalskriptid__sodra_integratsiooni_seadistamine">SODRA Integratsiooni seadistamine</a></h2>
+<div class="level2">
+
+<p>
+1) Vastava keskkonna sõnumikeskuse skeemasse tuleb lisada sodra konfiguratsioonid järgmistest tabelitest: 
+</p>
+<pre class="code">select * from message_system
+select * from message_agent
+select * from message_agent_interaction
+select * from message_interaction
+select * from message_interaction_group
+select * from message_routing</pre>
+
+<p>
+2) Deployda sõnumikeskuse adapter
+</p>
+
+</div>
+
+<h2><bookmark content="moodulite/veebirakenduste reaalsed url-id" level="1" /><a name="nortalskriptid__moodulite_veebirakenduste_reaalsed_url-id">moodulite/veebirakenduste reaalsed url-id</a></h2>
+<div class="level2">
+<pre class="code">select * from SYS_MODULE_URLS</pre>
+
+</div>
+
+<h2><bookmark content="Multitenancy omanik-organisatsioonid" level="1" /><a name="nortalskriptid__multitenancy_omanik-organisatsioonid">Multitenancy omanik-organisatsioonid</a></h2>
+<div class="level2">
+
+<p>
+Juhul kui tegemist on multitenancy-keskkonnaga, kuvatakse selle omanik-organisatsioone 
+</p>
+<pre class="code">select *
+from organization o
+where exists (select (1)
+        from organization_property op
+       where op.organization_id = o.id
+         and op.property_dova_code = &#039;TENANT_ORGANIZATION&#039;
+         and op.value = &#039;Y&#039;
+         and sysdate &lt;= coalesce(op.end_date, sysdate))
+     and sysdate &lt;= coalesce(o.end_date, sysdate)
+     and o.sys_delete_status = &#039;N&#039;;</pre>
+
+</div>

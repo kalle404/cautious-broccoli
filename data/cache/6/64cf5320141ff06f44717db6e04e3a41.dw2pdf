@@ -1,0 +1,485 @@
+<a name="nortalplsql__"></a>
+<h1><bookmark content="PL/SQL Tutorial" level="0" /><a name="nortalplsql__pl_sql_tutorial">PL/SQL Tutorial</a></h1>
+<div class="level1">
+
+<p>
+Originaal asub <a href="http://www.tutorialspoint.com/plsql/index.htm" class="urlextern" title="http://www.tutorialspoint.com/plsql/index.htm"  rel="nofollow">siin</a>. 
+</p>
+
+<p>
+PL/SQL is a combination of SQL along with the procedural features of programming languages. It was developed by Oracle Corporation in the early 90&#039;s to enhance the capabilities of SQL.
+</p>
+
+<p>
+PL/SQL is one of three key programming languages embedded in the Oracle Database, along with SQL itself and Java.
+</p>
+
+<p>
+This tutorial will give you great understanding on PL/SQL to proceed with Oracle database and other advanced RDBMS concepts.
+</p>
+
+</div>
+
+<h3><bookmark content="Audience" level="1" /><a name="nortalplsql__audience">Audience</a></h3>
+<div class="level3">
+
+<p>
+This tutorial is designed for Software Professionals, who are willing to learn PL/SQL Programming Language in simple and easy steps. This tutorial will give you great understanding on PL/SQL Programming concepts, and after completing this tutorial, you will be at intermediate level of expertise from where you can take yourself to higher level of expertise.
+</p>
+
+</div>
+
+<h3><bookmark content="Prerequisites" level="1" /><a name="nortalplsql__prerequisites">Prerequisites</a></h3>
+<div class="level3">
+
+<p>
+Before proceeding with this tutorial, you should have a basic understanding of software basic concepts like what is database, source code, text editor and execution of programs, etc. If you already have understanding on SQL and other computer programming language then it will be an added advantage to proceed.
+</p>
+
+</div>
+
+<h2><bookmark content="PL/SQL - Overview" level="0" /><a name="nortalplsql__pl_sql_-_overview">PL/SQL - Overview</a></h2>
+<div class="level2">
+
+<p>
+The PL/SQL programming language was developed by Oracle Corporation in the late 1980s as procedural extension language for SQL and the Oracle relational database. Following are notable facts about PL/SQL:
+</p>
+<ul>
+<li class="level1"><div class="li"> SQL is a completely portable, high-performance transaction-processing language.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides a built-in interpreted and OS independent programming environment.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL can also directly be called from the command-line SQL*Plus interface.</div>
+</li>
+<li class="level1"><div class="li"> Direct call can also be made from external programming language calls to database.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL&#039;s general syntax is based on that of ADA and Pascal programming language.</div>
+</li>
+<li class="level1"><div class="li"> Apart from Oracle, PL/SQL is available in TimesTen in-memory database and IBM DB2.</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="Features of PL/SQL" level="1" /><a name="nortalplsql__features_of_pl_sql">Features of PL/SQL</a></h3>
+<div class="level3">
+
+<p>
+PL/SQL has the following features:
+</p>
+<ul>
+<li class="level1"><div class="li"> PL/SQL is tightly integrated with SQL.</div>
+</li>
+<li class="level1"><div class="li"> It offers extensive error checking.</div>
+</li>
+<li class="level1"><div class="li"> It offers numerous data types.</div>
+</li>
+<li class="level1"><div class="li"> It offers a variety of programming structures.</div>
+</li>
+<li class="level1"><div class="li"> It supports structured programming through functions and procedures.</div>
+</li>
+<li class="level1"><div class="li"> It supports object-oriented programming.</div>
+</li>
+<li class="level1"><div class="li"> It supports developing web applications and server pages.</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="Advantages of PL/SQL" level="1" /><a name="nortalplsql__advantages_of_pl_sql">Advantages of PL/SQL</a></h3>
+<div class="level3">
+
+<p>
+PL/SQL has the following advantages:
+</p>
+<ul>
+<li class="level1"><div class="li"> SQL is the standard database language and PL/SQL is strongly integrated with SQL. PL/SQL supports both static and dynamic SQL. Static SQL supports DML operations and transaction control from PL/SQL block. Dynamic SQL is SQL allows embedding DDL statements in PL/SQL blocks.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL allows sending an entire block of statements to the database at one time. This reduces network traffic and provides high performance for the applications.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL gives high productivity to programmers as it can query, transform, and update data in a database.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL saves time on design and debugging by strong features, such as exception handling, encapsulation, data hiding, and object-oriented data types.</div>
+</li>
+<li class="level1"><div class="li"> Applications written in PL/SQL are fully portable.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides high security level.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides access to predefined SQL packages.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides support for Object-Oriented Programming.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides support for Developing Web Applications and Server Pages.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="PL/SQL - Basic Syntax" level="0" /><a name="nortalplsql__pl_sql_-_basic_syntax">PL/SQL - Basic Syntax</a></h2>
+<div class="level2">
+
+<p>
+PL/SQL is a block-structured language, meaning that PL/SQL programs are divided and written in logical blocks of code. Each block consists of three sub-parts:
+</p>
+<ol>
+<li class="level1"><div class="li"> <strong>Declarations</strong> - This section starts with the keyword <strong>DECLARE</strong>. It is an optional section and defines all variables, cursors, subprograms, and other elements to be used in the program.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Executable Commands</strong> - This section is enclosed between the keywords <strong>BEGIN</strong> and <strong>END</strong> and it is a mandatory section. It consists of the executable PL/SQL statements of the program. It should have at least one executable line of code, which may be just a NULL command to indicate that nothing should be executed.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Exception handling</strong> - This section starts with the keyword <strong>EXCEPTION</strong>. This section is again optional and contains exception(s) that handle errors in the program.</div>
+</li>
+</ol>
+
+<p>
+Every PL/SQL statement ends with a semicolon <strong>(;)</strong>. PL/SQL blocks can be nested within other PL/SQL blocks using <strong>BEGIN</strong> and <strong>END</strong>. Here is the basic structure of a PL/SQL block:
+</p>
+<pre class="code">DECLARE
+   &lt;declarations section&gt;
+BEGIN
+   &lt;executable command(s)&gt;
+EXCEPTION
+   &lt;exception handling&gt;
+END;</pre>
+
+</div>
+
+<h3><bookmark content="The &quot;Hello World!&quot; example:" level="1" /><a name="nortalplsql__the_hello_world_example">The &quot;Hello World!&quot; example:</a></h3>
+<div class="level3">
+<pre class="code">DECLARE
+   message  varchar2(20):= &#039;Hello, World!&#039;;
+BEGIN
+   dbms_output.put_line(message);
+END;
+\</pre>
+
+<p>
+The <strong>end;</strong> line signals the end of the PL/SQL block. To run the code from SQL command line, you may need to type / at the beginning of the first blank line after the last line of the code. When the above code is executed at SQL prompt, it produces the following result:  
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+
+<h3><bookmark content="The PL/SQL Identifiers" level="1" /><a name="nortalplsql__the_pl_sql_identifiers">The PL/SQL Identifiers</a></h3>
+<div class="level3">
+
+<p>
+PL/SQL identifiers are constants, variables, exceptions, procedures, cursors, and reserved words. The identifiers consist of a letter optionally followed by more letters, numerals, dollar signs, underscores, and number signs and should not exceed 30 characters.
+</p>
+
+<p>
+By default, identifiers are not case-sensitive. So you can use <strong>integer</strong> or <strong>INTEGER</strong> to represent a numeric value. You cannot use a reserved keyword as an identifier.
+</p>
+
+</div>
+
+<h3><bookmark content="The PL/SQL Delimiters" level="1" /><a name="nortalplsql__the_pl_sql_delimiters">The PL/SQL Delimiters</a></h3>
+<div class="level3">
+
+<p>
+A delimiter is a symbol with a special meaning. Following is the list of delimiters in PL/SQL:
+</p>
+<div class="table sectionedit1"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Delimiter      </th><th class="col1 leftalign"> Description       </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> +, -, *, /    </td><td class="col1 leftalign"> Addition, subtraction/negation, multiplication, division  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> %  </td><td class="col1 leftalign"> Attribute indicator  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> &#039;  </td><td class="col1"> Character string delimiter </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> .  </td><td class="col1 leftalign"> Component selector  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> (,)  </td><td class="col1 leftalign"> Expression or list delimiter  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> :  </td><td class="col1 leftalign"> Host variable indicator  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> ,  </td><td class="col1 leftalign"> Item sepparator  </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> “  </td><td class="col1 leftalign"> Quoted 	identifier delimiter  </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> =  </td><td class="col1 leftalign"> Relational operator  </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> @  </td><td class="col1 leftalign"> Remote access indicator  </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> ;  </td><td class="col1 leftalign"> Statement terminator  </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> :=  </td><td class="col1 leftalign"> Assignment operator  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> ⇒ </td><td class="col1 leftalign"> Association operator  </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> <em>||</em> </td><td class="col1 leftalign"> Concatenation operator  </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"> <em>*</em><em>*</em>  </td><td class="col1 leftalign"> Exponentiation operator  </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 leftalign"> «, »  </td><td class="col1 leftalign"> Label delimiter (begin and end)  </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> /*, */  </td><td class="col1 rightalign">  Multi-line comment delimiter (begin and end) </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> – </td><td class="col1 leftalign"> Single-line comment indicator  </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> .. </td><td class="col1 leftalign"> Range operator  </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"> &lt;, &gt;, ⇐, &gt;=  </td><td class="col1 leftalign"> Relational operators  </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign"> &lt;&gt;, &#039;=, ~=, <em>^=</em>  </td><td class="col1 leftalign"> Different versions of NOT EQUAL  </td>
+	</tr>
+</table></div>
+<!-- EDIT1 TABLE [5766-6629] -->
+</div>
+
+<h3><bookmark content="The PL/SQL Comments" level="1" /><a name="nortalplsql__the_pl_sql_comments">The PL/SQL Comments</a></h3>
+<div class="level3">
+
+<p>
+Program comments are explanatory statements that you can include in the PL/SQL code that you write and helps anyone reading its source code. All programming languages allow for some form of comments.
+</p>
+
+<p>
+The PL/SQL supports single-line and multi-line comments. All characters available inside any comment are ignored by PL/SQL compiler. The PL/SQL single-line comments start with the delimiter – (double hyphen) and multi-line comments are enclosed by /* and */.
+</p>
+<pre class="code">DECLARE
+   -- variable declaration
+   message  varchar2(20):= &#039;Hello, World!&#039;;
+BEGIN
+   /*
+    *  PL/SQL executable statement(s)
+    */
+   dbms_output.put_line(message);
+END;
+/</pre>
+
+<p>
+When the above code is executed at SQL prompt, it produces the following result:
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+
+<h3><bookmark content="PL/SQL Program Units" level="1" /><a name="nortalplsql__pl_sql_program_units">PL/SQL Program Units</a></h3>
+<div class="level3">
+
+<p>
+A PL/SQL unit is any one of the following:
+</p>
+<ul>
+<li class="level1"><div class="li"> PL/SQL block</div>
+</li>
+<li class="level1"><div class="li"> Function</div>
+</li>
+<li class="level1"><div class="li"> Package</div>
+</li>
+<li class="level1"><div class="li"> Package body</div>
+</li>
+<li class="level1"><div class="li"> Procedure</div>
+</li>
+<li class="level1"><div class="li"> Trigger</div>
+</li>
+<li class="level1"><div class="li"> Type</div>
+</li>
+<li class="level1"><div class="li"> Type body</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="PL/SQL - Variables" level="0" /><a name="nortalplsql__pl_sql_-_variables">PL/SQL - Variables</a></h2>
+<div class="level2">
+
+<p>
+A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in PL/SQL has a specific data type, which determines the size and layout of the variable&#039;s memory; the range of values that can be stored within that memory and the set of operations that can be applied to the variable.
+</p>
+
+<p>
+The name of a PL/SQL variable consists of a letter optionally followed by more letters, numerals, dollar signs, underscores, and number signs and should not exceed 30 characters. By default, variable names are not case-sensitive. You cannot use a reserved PL/SQL keyword as a variable name.
+</p>
+
+<p>
+PL/SQL programming language allows to define various types of variables, which we will cover in subsequent chapters like date time data types, records, collections, etc. For this chapter, let us study only basic variable types.
+</p>
+
+</div>
+
+<h3><bookmark content="Variable Declaration in PL/SQL" level="1" /><a name="nortalplsql__variable_declaration_in_pl_sql">Variable Declaration in PL/SQL</a></h3>
+<div class="level3">
+
+<p>
+PL/SQL variables must be declared in the declaration section or in a package as a global variable. When you declare a variable, PL/SQL allocates memory for the variable&#039;s value and the storage location is identified by the variable name.
+</p>
+
+<p>
+The syntax for declaring a variable is:
+</p>
+<pre class="code">variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]</pre>
+
+<p>
+Where, variable_name is a valid identifier in PL/SQL, datatype must be a valid PL/SQL data type or any user defined data type which we already have discussed in last chapter. Some valid variable declarations along with their definition are shown below:
+</p>
+<pre class="code">sales number(10, 2);
+pi CONSTANT double precision := 3.1415;
+name varchar2(25);
+address varchar2(100);</pre>
+
+<p>
+When you provide a size, scale or precision limit with the data type, it is called a <strong>constrained declaration</strong>. Constrained declarations require less memory than unconstrained declarations. For example:
+</p>
+<pre class="code">sales number(10, 2);
+name varchar2(25);
+address varchar2(100);</pre>
+
+</div>
+
+<h3><bookmark content="Initializing Variables in PL/SQL" level="1" /><a name="nortalplsql__initializing_variables_in_pl_sql">Initializing Variables in PL/SQL</a></h3>
+<div class="level3">
+
+<p>
+Whenever you declare a variable, PL/SQL assigns it a default value of NULL. If you want to initialize a variable with a value other than the NULL value, you can do so during the declaration, using either of the following:
+</p>
+<ul>
+<li class="level1"><div class="li"> The DEFAULT keyword</div>
+</li>
+<li class="level1"><div class="li"> The assignment operator</div>
+</li>
+</ul>
+
+<p>
+For example: 
+</p>
+<pre class="code">counter binary_integer := 0;
+greetings varchar2(20) DEFAULT &#039;Have a Good Day&#039;;</pre>
+
+<p>
+You can also specify that a variable should not have a <strong>NULL</strong> value using the <strong>NOT NULL</strong> constraint. If you use the NOT NULL constraint, you must explicitly assign an initial value for that variable.
+</p>
+
+<p>
+It is a good programming practice to initialize variables properly otherwise, sometimes program would produce unexpected result. Try the following example which makes use of various types of variables:  
+</p>
+<pre class="code">DECLARE
+ a integer := 10;
+ b integer := 20;
+ c integer;
+ f real;
+BEGIN
+ c := a + b;
+ dbms_output.put_line(&#039;Value of c: &#039; || c);
+ f := 70.0/3.0;
+ dbms_output.put_line(&#039;Value of f: &#039; || f);
+END;</pre>
+
+</div>
+
+<h3><bookmark content="Variable Scope in PL/SQL" level="1" /><a name="nortalplsql__variable_scope_in_pl_sql">Variable Scope in PL/SQL</a></h3>
+<div class="level3">
+
+<p>
+PL/SQL allows the nesting of Blocks, i.e., each program block may contain another inner block. If a variable is declared within an inner block, it is not accessible to the outer block. However, if a variable is declared and accessible to an outer Block, it is also accessible to all nested inner Blocks. There are two types of variable scope:
+</p>
+<ul>
+<li class="level1"><div class="li"> Local variables - variables declared in an inner block and not accessible to outer blocks.</div>
+</li>
+<li class="level1"><div class="li"> Global variables - variables declared in the outermost block or a package.</div>
+</li>
+</ul>
+
+<p>
+Following example shows the usage of Local and Global variables in its simple form:
+</p>
+<pre class="code">DECLARE
+ -- Global variables 
+ num1 number := 95; 
+ num2 number := 85; 
+BEGIN 
+ dbms_output.put_line(&#039;Outer Variable num1: &#039; || num1);
+ dbms_output.put_line(&#039;Outer Variable num2: &#039; || num2);
+ DECLARE 
+    -- Local variables
+    num1 number := 195; 
+    num2 number := 185; 
+ BEGIN 
+    dbms_output.put_line(&#039;Inner Variable num1: &#039; || num1);
+    dbms_output.put_line(&#039;Inner Variable num2: &#039; || num2);
+ END; 
+END;</pre>
+
+</div>
+
+<h3><bookmark content="Assigning SQL Query Results to PL/SQL Variables" level="1" /><a name="nortalplsql__assigning_sql_query_results_to_pl_sql_variables">Assigning SQL Query Results to PL/SQL Variables</a></h3>
+<div class="level3">
+
+<p>
+You can use the SELECT INTO statement of SQL to assign values to PL/SQL variables. For each item in the SELECT list, there must be a corresponding, type-compatible variable in the INTO list. The following example illustrates the concept: Let us create a table named CUSTOMERS:
+</p>
+
+<p>
+(For SQL statements please look at the <a href="http://www.tutorialspoint.com/sql/index.htm" class="urlextern" title="http://www.tutorialspoint.com/sql/index.htm"  rel="nofollow">SQL tutorial</a>)
+</p>
+<pre class="code">CREATE TABLE CUSTOMERS(
+ ID   INT NOT NULL,
+ NAME VARCHAR (20) NOT NULL,
+ AGE INT NOT NULL,
+ ADDRESS CHAR (25),
+ SALARY   DECIMAL (18, 2),       
+ PRIMARY KEY (ID)
+);</pre>
+
+<p>
+Next, let us insert some values in the table:
+</p>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, &#039;Ramesh&#039;, 32, &#039;Ahmedabad&#039;, 2000.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, &#039;Khilan&#039;, 25, &#039;Delhi&#039;, 1500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, &#039;kaushik&#039;, 23, &#039;Kota&#039;, 2000.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, &#039;Chaitali&#039;, 25, &#039;Mumbai&#039;, 6500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, &#039;Hardik&#039;, 27, &#039;Bhopal&#039;, 8500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, &#039;Komal&#039;, 22, &#039;MP&#039;, 4500.00 );</pre>
+
+<p>
+The following program assigns values from the above table to PL/SQL variables using the SELECT INTO clause of SQL:
+</p>
+<pre class="code">DECLARE
+   c_id customers.id%type := 1;
+   c_name  customers.name%type;
+   c_addr customers.address%type;
+   c_sal  customers.salary%type;
+BEGIN
+   SELECT name, address, salary INTO c_name, c_addr, c_sal
+   FROM customers
+   WHERE id = c_id;</pre>
+<pre class="code">   dbms_output.put_line
+   (&#039;Customer &#039; ||c_name || &#039; from &#039; || c_addr || &#039; earns &#039; || c_sal);
+END;
+
+====== PLSQL programming ======</pre>
+
+</div>

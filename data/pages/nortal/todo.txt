@@ -1,0 +1,49 @@
+====== Todo list ======
+
+===== 2016 aprill - juuni =====
+1.04.2016 - 30.06.2016
+
+  * <todo>udemy - AngularJS: From Zero to Hero kursus</todo>
+  * <todo>udemy - SQL - Beyond The Basics kursus</todo>
+  * <todo>udemy - The Complete Java Developer Course kursus</todo>
+  * <todo>udemy - Programming Java for Beginners - The Ultimate Java Tutorial kursus</todo>
+  * <todo>udemy - SQL Tuning kursus</todo>
+  * <todo #admin:2016-04-11>codecademy angular kursus</todo>
+  * <todo #admin:2016-04-12>plsql materjalid wikisse kanda</todo>
+  * <todo>õppida jaani kodulehe template selgeks</todo>
+  * <todo>lugeda "Introducing Windows 10 for  IT Professionals"</todo>
+  * <todo>hankida "windows 10 in depth"</todo>
+  * <todo>uurida confus "EMPIS Tips & Tricks" lehekülge</todo>
+  * <todo>projekti kood arvuti eclipse</todo>
+  * <todo>mercurial tutorial</todo>
+  * <todo>tortoiseHG tutorial</todo>
+  * <todo>uurida mingit Bamboo tutooriali</todo>
+  * <todo #admin:2016-05-04>soapui tutorial</todo>
+  * <todo>panna testbashi confu lehele video viited külge</todo>
+  * <todo>kas "The Lone Tester with Jess Ingrassellino" saab midagi enda qa artiklisse üle tõsta?</todo>
+  * <todo>uurida bitcoini ja block chain distributiivset andmebaasi</todo>
+
+
+===== 2016 jaanuar - märts =====
+1.01.2016 - 31.03.2016
+
+  * <todo #admin:2016-02-29>codecademy sql kursused</todo>
+  * <todo #admin:2016-02-29>codecademy java kursus</todo>
+  * <todo #admin:2016-02-29>codecademy git kursus</todo>
+  * <todo #admin:2016-02-29>codecademy command line</todo>
+  * <todo #admin:2016-02-29>windows under the hood materjalid läbi vaadata</todo>
+  * <todo #admin:2016-02-29>irinale tagasiside koostada</todo>
+  * <todo #admin:2016-03-03>av ankeet ära täita</todo>
+  * <todo #admin:2016-02-29>parawikile kasutusjuhend ja moderaatorkasutaja</todo>
+  * <todo #admin:2016-02-29>tekitada EHEALTHBIL-973 skriptist muutujaga skript</todo>
+  * <todo #admin:2016-02-29>jaani koduleht osta</todo>
+  * <todo #admin:2016-02-29>paigaldada win10 läpakasse</todo>
+  * <todo #admin:2016-03-13>koostada twitteri sõnum</todo>
+  * <todo #admin:2016-03-13>tutvuda QA raamatuklubi materjalidega</todo>
+  * <todo #admin:2016-03-20>testbash2016 kokkuvõte QA-le</todo>
+  * <todo #admin:2016-03-28>ringkiri kokku panna ja kellegile saata</todo>
+  * <todo #admin:2016-03-28>järjekorrasüsteemi confluence leht üle vaadata</todo>
+  * <todo #admin:2016-03-28>jiras tööajad korrastada enne 1.aprilli</todo>
+  * <todo #admin:2016-03-28>Sanderi ja Atsi tagasisidevormid koostada</todo> 
+  * <todo #admin:2016-03-31>koostada confusse TestBashi leht</todo>
+  * <todo #admin:2016-03-31>panna aasta puhkuseplaanid paika</todo>

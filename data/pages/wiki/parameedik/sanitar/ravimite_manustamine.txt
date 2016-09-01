@@ -1,0 +1,85 @@
+====== Ravimite manustamine ======
+
+===== Intravenoosne =====
+
+Veresoone kanüülimist tehakse tänapäeval haiglaravil mingil etapil peaaegu igale patsiendile. Kanüüli olemasolu teeb patsiendile igapäeva toimingud pisut keerukamaks. Ettevaatlik tasub olla isikliku hügieeni toimingutel. 
+
+**Veenikanüüli valik kanüüli suuruse järgi (G)**
+^ Kasutuse eesmärk  ^ 12  ^ 14  ^ 16  ^ 18  ^ 20  ^ 22  ^ 24  ^
+| Vereasendus  | X | X ||||||
+| Vedelikuülekanne  | | X | X |||||
+| Vedelike asendamine  | | | X | X ||||
+| Fakultatiivne vereülekanne  | | | | X | X |||
+| Ravim veenisiseselt  | | | | X | X |||
+| Imikud ja lapsed  | | | | | X | X ||
+| Vastsündinud  | ||||| X | X |
+
+**Näidustused** - Veenikanüül on vajalik veresoonesisese vedelikravi, vereülekande ja/või ravimite manustamiseks.
+
+**Torkekoha valik** - Torkekoha valikul arvestatakse võimalusel patsiendi soovidega (kas parem või vasak käsi). Esmased kanüleerimise kohad on patsiendi selgmised käeveenid ja küünarvarre veenid. Torkekoha valikut mõjutavad ka veresoonte suurus ja kanüüli kasutamise otstarve (vedelikravi kestvus, erinevate ravimite koosmõju), samuti patsiendile määratud protseduurid. 
+
+**Teostamine** - Patsiendi käele asetatakse rõhkmansett (žgutt). Vahel võib torkekohta soojendada ja veresoont „patsutada“ nähtavaks. Torkekoha nahk puhastatakse. Torkamine teeb valu. Kanüül viiakse veeni ja tõmmatakse metallosa välja, kanüüli plastmassosa lükatakse aga veenis edasi. Rõhkmansett eemaldatakse, kanüül kinnitatakse fikseerimisplaastriga naha külge ja võib alustada vedeliku ülekannet. Perifeerse veresoone kanüüli tuleb vahetada kahe või kolme päeva tagant. Kanüüli eemaldamise järgselt asetatakse peale plaaster või seotakse torkekoht rõhksidemega. Sidet hoitakse peal ~2 tundi. 
+
+**Võimalikud tüsistused ja ohud**
+
+  * Veresoone põletik
+  * Kohalik põletik (punetus, turse, valulikkus kanüüli paigaldamise kohas)
+  * Hematoom (kanüüli paigaldamise käigus on veen purunenud)
+  * Kanüüli ummistumine: kanüül tuleb vahetada uue vastu mõnes teises kohas
+  * [[parameedik:sanitar:moisted#sepsis|Sepsis]]
+
+**Hindamiskriteeriumid**
+
+  *   kindad käes
+  *   desinfektsioonivahendil lastakse mõjuda
+  *   süstekohta ei puututa pärast puhastamist
+  *   kanüüli mittesaastumine
+  *   kanüüli plastosa ei painutata liigselt
+  *   žgutt vabastatakse enne kanüüli fikseerimist
+  *   kanüül piisavalt tugevalt nahapinnale kinnitatud
+  *   kanüül asub veenis
+  *   NaCl loputamisel ei tehta puhtuse vigu
+  *   infusioonsüsteem ei ole saastunud
+  *   kanüülplaaste katab sisenemiskoha
+  *   infusioonisüsteem on üleval
+  *   infusioonisüsteem on õhutatud
+  *   infusioonsüsteem lingudena kinnitatud (2tk) 
+
+**Näidisvideod**
+
+  * [[https://www.youtube.com/watch?v=7XUIjvIGsag|i/v süstimine, RPEK 2007]]
+  * [[https://www.youtube.com/watch?v=DHuOIcxJTIY|Venipuncture Skill: Learning how to start an IV]]
+  * [[https://www.youtube.com/watch?v=NuQzHwkP8bg|Cannulation- How to gain IV access]]
+	
+
+===== Intramuskulaarne =====
+
+Lihasesisesed ravimid on kiiremini imenduvad, kui suu kaudu manustatavad ravimid. Lihaskoes on vähe sensoorseid närve ja lihased on hea verevarustusega. Lihassisene süste võimaldab ärritavate ravimite valutumat manustamist ja ravim omastatakse organismi poolt kiiremini. Süstitava ravimi koguseks soovitatakse maksimaalselt 5 ml. 
+
+**Teostamine** 
+  * Puhasta süstepiirkond naha antiseptikumiga alustades puhastamist keskelt ning suundudes ringjalt kaugemale. Kui piirkond on nähtavalt määrdunud, tuleb nahka korduvalt töödelda. Viimasena pihustatud antiseptikumi kogust ei pühita nahalt ära, vaid lastakse nahal kuivada 30 sekundi jooksul. 
+  * Hoiata patsienti torke eest.
+  * Pinguta nahka vasaku käe nimetissõrme ja pöidlaga, kui lihaskude on vähe, võta lihas voldina pöidla ja sõrmede vahel. 
+  * Aseta süstal 90-kraadise nurga all naha pinna kohale, nõel paari sentimeetri kaugusele nahast.
+  * Vii nõel 90-kraadise nurga all läbi naha nii, et nõelast 2/3 läheb sisse.
+  * Aspireeri - Kontrolli enne ravimi süstimist, et nõel ei ole veresoones, tõmmates süstla kolbi tagasi. Kui süstlasse tuleb verd, vaheta nõel ja tee torge teise kohta.
+  * Süsti ravimit ettenähtud kiirusel.
+  * Tõmba süstal koos nõelaga kiire liigutusega lihasest välja ning masseeri süstekohta kuiva tupsutiga.
+
+**Hindamiskriteeriumd**
+  *   kontrollib ravimi kehtivust/ vastavust
+  *   võtab õige koguse (õige annus)
+  *   ei puutu süstekohta peale puhastamist
+  *   õige koht lihasel
+  *   nõel õigel sügavusel (välja peab jääma 1/4)
+  *   aspireerib (...)
+  *   süstimine otse, mitte nurga all
+  *   süstal ei ole kontamineerunud (vastu kätt, esemeid, lauda jne) 
+  *   süstlas pole õhku
+  *   nõel ei paindu vastu lahusepudelit, ei kriibi seda
+  *   ohutu nõela käsitlemine
+  *   toetab nõela vastu korki/ toetab käsi omavahel
+
+**Näidisvideod**
+  * [[https://www.youtube.com/watch?v=A-EY_4P67Hs|IVF Medication Injections - Intramuscular Injection]]
+  * [[https://www.youtube.com/watch?v=Spoz3T5D_SU|How to Give an Intramuscular Injection]]

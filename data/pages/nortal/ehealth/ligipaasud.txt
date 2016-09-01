@@ -1,0 +1,121 @@
+====== Ligipääsud ======
+
+2879
+
+4152\\
+25710
+===== LT admin serveritele ligipääs =====
+
+    ssh ehealth@tstapp01 // rakenduste tomcat
+    ssh messageforwarder@tst // sõnumikeskuse tomcat 
+    ssh logs@tstlog01 // logifailid
+    
+    
+===== Ligipääsud keskkondadele =====
+
+    KJLHIS2: kalle.jagula/ K1loJuliett
+    KJL: lükka openVPN ühendus püsti ning logi siis
+
+
+
+===== Ligipääsud baasidesse =====
+    ITK-LIVE baas: kalle/ Ytrewq123
+    TYK-LIVE baas: kalle/ Ytrewq123
+    KK-PROD baas: kalle/ Ytrewq123
+    SESK-PROD baas: kalle/ Ytrewq123
+    KJL-PROD baas: kalle/ Ytrewq123
+    ZK-PROD baas: kalle/ Ytrewq123
+
+===== Ligipääsud live weblogicutele =====
+
+  TYK:
+  WL admin konsool: 
+  tunnel 9999 (valige ise sobiv port) >cedar.kliinikum.ee:9001
+  http://localhost:9999/console
+
+  wls@cedar
+  wlsnode@cedar,spruce
+
+  kalle / Kalle123 
+  jyrgen / Jyrgen 123
+
+
+  ITK:
+  WL admin konsool:
+  tunnel 9006 (valige ise sobiv port) > wlsprd01-priv:9001
+  http://localhost:9006/console/
+
+  wls@wlsprd01
+  wlsnode@wlsprd01/wlsprd02
+
+  kalle / Kalle123
+
+
+===== Ligipääsud teistesse baasidesse =====
+
+    TYK DEMO (EHL_DEMO): ehl_demo/ehl_demo
+    TYK TEST: ehealth_demo/ehealth_demo
+    TYK PREDEMO: ehl/ehl
+    LATEST (EHEALTHORA): ehealth_latest/ ehealth_latest
+    ITK TEST (ITK_TEST): test/ test
+    ITK EDU (ITK_TEST): education/ education
+    ITK DEMO (ITK_ORATST02): kalle/ Ytrewq123
+    DEMO2 (AMAZON_TEST_12C): kjlhis2/ kjlhis2
+    LT TEST (AMAZON_TEST_12C): lt_test/ lt_test
+
+
+===== Ligipääsus protodele =====
+  viit:
+  http://demo3.webmedia.ee/eHL/proto/index.php?id=2984
+  juurdepääs: demo/ kavals6na
+
+
+===== Ligipääsud message fabricutele =====
+    LT_TEST (AMAZON_TEST_12C): lt_message_fabric/ lt_message_fabric
+    KR_TEST (KRTEST): message_fabric/ message_fabric
+    
+
+===== Varia =====
+
+    Arminia eenet juhtpaneel ([[https://haldaja.eenet.ee/]]):  arminia/ geeFa1ohf
+        Demo baas: arminiam29/ tU3hucue
+        Demo admin: admin/ V3(^k^O$)uCy)K%AYyz6Y&%(
+  ([[https://haldaja.eenet.ee/]])
+  
+    Nutipesu zone: Nutipesu1/ Z37TEyrc
+    Nutipesu ftp: kalle.nutipesu.ee/ KzpTbmCT3VAV
+    Nutipesu phpmyadmin: d46776sa102987/ KzpTbmCT3VAV
+    
+    parameediku wiki admin: admin/ EzSw86es
+    parameediku wiki haldaja: haldaja/ Q8NYQ3E3
+    parameediku wiki kursus: kursus2015/ GjHZL4et
+    parameediku wiki kursus: kursus2016/ 5TbWDhsL
+
+    kalleja wiki admin: admin/ K1loJuliett
+    		lugeja: reader/ K1loJuliett  
+
+===== Ebay ja Amazon =====
+
+  ebay.co.uk ja ebay.de
+  kalle.jagula@gmail.com/ K1loJuliett
+
+  amazon.com
+  kjagula@gmail.com/ K1loJuliett
+  K1loPapa
+
+===== Online õpingud =====
+
+  Udemy
+  kjagula@gmail.com/ 
+  
+  Codecademy
+  kjagula@gmail.com/ K1loJuliett
+
+
+===== Gmail ligipääsud =====
+
+	kalle.jagula / KiloJuliett
+	kjagula / MikeNovember
+
+
+    

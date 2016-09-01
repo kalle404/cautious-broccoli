@@ -1,0 +1,299 @@
+====== Skriptid ======
+
+===== PLSQL to_date funktsioon =====
+Koos kellaajaga: 
+       to_date('26/01/2015 8:00:00','DD/MM/YYYY HH24:MI:SS')
+
+Ilma kellaajata:
+       to_date('26/01/2015','DD/MM/YYYY')
+
+Tänase kuupäeva valimine: 
+	(select to_date(sysdate,'dd-mm-yy') from dual)
+===== Foreign key abil constrainti leidmine =====
+
+       select * 
+       from user_constraints
+       where constraint_name like '%R_STUN_PROF_ART_INV_TYPE%'
+
+===== Skeemast üldiselt otsimine =====
+Üldiselt skeema-üleselt kõikide funktsioonide, pakettide ja protseduuride otsing käib järgnevalt:
+       select * 
+       from all_objects 
+       where object_name like '%GET_INSURER_CLASS%'
+
+
+===== Mõne konkreetse constraint-i otsimine baasist =====
+  select *
+       from user_constraints 
+       where constraint_name = 'FK_APP_ART_PRICES'
+
+
+
+
+===== Konkreetse funktsiooni otsimine =====
+Konkreetse funktsiooni otsimine like-päringuga käib suhteliselt lihtsalt:
+       SELECT * 
+       FROM ALL_OBJECTS 
+       WHERE OBJECT_TYPE IN ('FUNCTION','PROCEDURE','PACKAGE')
+       
+Sealt edasi, kui antud funktsioon on skeemas olemas, siis vaadata millised on funktsiooni sisendparameetrid ning käivitada koos nendega, näiteks: 
+       select ehl.f_get_insurer_class_dova_code (2,'et') from dual
+
+===== PLSQL väärtuste järgi loendamine =====
+
+Keskkonna ressursside grupeerimine nende omanikukoodi järgi: 
+	select owner_code, count(*) 
+	from sys_resource_content 
+	group by owner_code
+
+
+Keskkonna NCSP koodide nimetuste grupeerimine keele järgi: 
+	select lang_dova_code, count(*) 
+	from ncsp_text
+	group by lang_dova_code
+
+===== Alampäringuga otsimine ja väärtuste loendamine =====
+       select count(*), month from
+       (select EXTRACT(MONTH FROM sys_modify_time) as month
+       from document_version dv
+       where state_dova_code = 'ACCEPTED'
+       and sys_modify_time between to_date('01/01/2011','DD/MM/YYYY') and 
+       to_date('01/01/2012','DD/MM/YYYY')) 
+       group by month
+       
+       
+===== Andmebaasi propagaatorist konkreetsete versioonimuudatuste otsimine =====
+       select * 
+       from sys_db_propagator_sql_log sp 
+       WHERE upper(sp.sql_text) like UPPER('%ui.treatment.dental_chart%')       
+
+
+===== skriptide jooksutamisel vaikimisi kasutaja määramine =====
+       call dbms_session.set_identifier('kalle');
+       
+
+===== Topelkirjete päringuga otsimise loogika =====
+       select ls1.id, ls1.display_name, ls1.display_code
+       from living_subject ls1
+       inner join living_subject_link lsl1 on ls1.id = lsl1.living_subject_id
+       where lsl1.status_dova_code = 'ACTIVE' and lsl1.end_date is null
+       and not exists 
+           (
+           select * from living_subject_link where living_subject_id = ls1.id
+           and end_date is not null and status_dova_code != 'ACTIVE'
+           )
+       and exists 
+       (
+           select * from living_subject_identifier where living_subject_id = ls1.id
+           and identity_code_system = 'EST' and is_valid = 'Y' and end_date is null
+       )
+       and ls1.display_code in 
+       (
+       select ls2.display_code from living_subject ls2
+       inner join living_subject_link lsl2 on ls2.id = lsl2.living_subject_id
+       where lsl2.status_dova_code = 'ACTIVE' and lsl2.end_date is null
+       and ls2.id != ls1.id
+              and not exists 
+           (
+           select * from living_subject_link where living_subject_id = ls2.id
+           and end_date is not null and status_dova_code != 'ACTIVE'
+           )
+              and exists 
+         (
+             select * from living_subject_identifier where living_subject_id = ls2.id
+             and identity_code_system = 'EST' and is_valid = 'UN' and end_date is null
+         )
+       )
+
+
+===== SODRA Integratsiooni seadistamine =====
+
+1) Vastava keskkonna sõnumikeskuse skeemasse tuleb lisada sodra konfiguratsioonid järgmistest tabelitest: 
+  select * from message_system
+  select * from message_agent
+  select * from message_agent_interaction
+  select * from message_interaction
+  select * from message_interaction_group
+  select * from message_routing
+2) Deployda sõnumikeskuse adapter
+
+
+===== moodulite/veebirakenduste reaalsed url-id =====
+
+
+  select * from SYS_MODULE_URLS
+
+
+===== Multitenancy omanik-organisatsioonid =====
+Juhul kui tegemist on multitenancy-keskkonnaga, kuvatakse selle omanik-organisatsioone 
+
+  select *
+  from organization o
+  where exists (select (1)
+          from organization_property op
+         where op.organization_id = o.id
+           and op.property_dova_code = 'TENANT_ORGANIZATION'
+           and op.value = 'Y'
+           and sysdate <= coalesce(op.end_date, sysdate))
+       and sysdate <= coalesce(o.end_date, sysdate)
+       and o.sys_delete_status = 'N';
+
+
+===== Julia saadet skript MPI confi parandamiseks =====
+Näidis süntaks kuidas sql skript näeb välja loop skript. 
+  DECLARE
+  previousVersion number(18);
+  BEGIN
+    FOR MNN IN (SELECT * FROM MPI_CONFIGURATION_COMPONENT WHERE component_code = 'MPI.02.12') LOOP
+       SELECT MAX(mcch.sys_version) into previousVersion FROM MPI_CONFIGURATION_COMPONEN_H mcch where mcch.id = MNN.id and mcch.order_nr is not null and mcch.sys_end_time is not null;
+     UPDATE MPI_CONFIGURATION_COMPONENT set order_nr = 
+      (select mcch.order_nr from MPI_CONFIGURATION_COMPONEN_H mcch where mcch.id = MNN.id and mcch.sys_version = previousVersion) 
+     where id = MNN.id;
+    END LOOP;
+  END;
+  
+  
+===== CASE WHEN kasutamisega =====
+  
+
+  select mpr.record_number as "rasedakaardi nr",
+       sc.case_number as "haigusjuhu nr",
+       lsn.first as "eesnimi",
+       lsn.last as "perenimi",
+       mpr.start_date as "rasedakaardi algus",
+       mpr.end_date as "rasedakaardi lõpp",
+       mpd.duration_basis_date as "raseduse arvutuse algus", 
+       mpr.start_date - mpd.duration_basis_date as "vahe",
+       
+       -- kas rasedakaardi haigusjuhu alguse ja lõpu vahemikus on pt olnud mõni sünnituse algusaeg?
+       case when exists (select * from mat_labor ml where lsl.correct_living_subject_id = ml.patient_id
+                                and ml.labor_start_time between sc.start_date and sc.end_date)
+            then 'jah'
+            else 'ei'
+       end as "sünnitus",
+       
+       -- kas rasedakaardi haigusjuhu alguse ja lõpu vahemikus on pt olnud mõni abordi algusaeg?
+       case when exists (select * from mat_abortion ma where lsl.correct_living_subject_id = ma.patient_id
+                                and ma.start_time between sc.start_date and sc.end_date)
+            then 'jah'
+            else 'ei'
+       end as "abort"
+       
+      -- kas rasedust või aborti pole teada?
+       from mat_pregnancy_record mpr
+       join sickness_case sc on mpr.sickness_case_id = sc.id
+       join living_subject_link lsl on mpr.patient_id = lsl.living_subject_id 
+            and lsl.end_date is null and lsl.status_dova_code = 'ACTIVE'
+       join living_subject_name lsn on lsl.correct_living_subject_id = lsn.living_subject_id 
+            and lsn.end_date is null
+       join mat_pregnancy_duration mpd on mpr.id = mpd.mat_pregnancy_record_id
+       left join mat_labor ml on mpr.patient_id = ml.patient_id
+       where mpr.start_date between to_date('01/01/2015','DD/MM/YYYY') 
+             and to_date('31/12/2015','DD/MM/YYYY')
+       and mpd.is_duration_calculation_basis = 'Y'
+     
+
+
+
+===== Enda esimene isetehtud funktsioon =====
+  
+  DECLARE
+  sc_id number(18);
+  sc_type VARCHAR2(30 CHAR);
+  BEGIN
+   select id into sc_id from sickness_case where case_number = '20160119-0026';
+   select sc.sickness_case_type_dova_code into sc_type from sickness_case sc where sc.id = sc_id; 
+    dbms_output.put_line('HJ id: ' || sc_id);
+    dbms_output.put_line('HJ tüüp on: ' || sc_type);
+  END;
+  
+  
+===== Näide lihtsast case-i kasutamisest =====
+
+  /*kas arve saaja peaks suunama isikuandmete kontrolli? */
+    select ls.display_name as "nimi",
+           ls.display_code as "isikukood",
+           ls.user_modify_time,
+           case when ls.user_modify_time < 
+                     (select sysdate - (select value 
+                     from sys_parameter_value 
+                     where parameter_code = 'MPI_DATA_CHECK_INTERVAL'
+                     and end_date is null)
+                     from dual)
+                then 'jah'
+                else 'ei'
+                  end as "kontroll peaks käivituma?"
+           from living_subject ls 
+           where display_code = '47312220241' 
+           
+===== Sequence järgmise väärtuse leidmine =====
+
+Juhul kui on vajalik näiteks INSERT skripti juurde mõne sequence järgmist väärtust, siis selle saab järgnevaga:
+	select s_stat_registration.nextval from dual 
+
+===== Väärtuste grupeerimine suuremateks gruppideks =====
+
+  select
+    case name
+      when 'kale-smoothie'    then 'smoothie'
+      when 'banana-smoothie'  then 'smoothie'
+      when 'orange-juice'     then 'drink'
+      when 'soda'             then 'drink'
+      when 'blt'              then 'sandwich'
+      when 'grilled-cheese'   then 'sandwich'
+      when 'tikka-masala'     then 'dinner'
+      when 'chicken-parm'     then 'dinner'
+      else 'other'
+    end as category, round(1.0 * sum(amount_paid) /
+      (select sum(amount_paid) from order_items) * 100, 2) as pct
+  from order_items
+  group by 1
+  order by 2 desc;
+  
+
+===== Päringuga topelt grupeerimine  =====
+
+  select
+    date(created_at), 
+    platform,
+    count(distinct(user_id)) as dau
+  from gameplays
+  group by 1, 2
+  order by 1, 2;
+  
+===== WITH päringu näide =====
+
+The WITH clause may be processed as an inline view or resolved as a temporary table. The advantage of the latter is that repeated references to the subquery may be more efficient as the data is easily retrieved from the temporary table, rather than being requeried by each reference. You should assess the performance implications of the WITH clause on a case-by-case basis.
+
+Even when there is no repetition of SQL, the WITH clause can simplify complex queries, like the following example that lists those departments with above average wages.
+
+  with daily_revenue as (
+    select
+      date(created_at) as dt,
+      round(sum(price), 2) as rev
+    from purchases
+    where refunded_at is null
+    group by 1
+  ), 
+  daily_players as (
+    select
+      date(created_at) as dt,
+      count(distinct user_id) as players
+    from gameplays
+    group by 1
+  )
+  select
+    daily_revenue.dt,
+    daily_revenue.rev / daily_players.players
+  from daily_revenue
+    join daily_players using (dt);
+    
+===== Kahe stringi kokkupanemine =====
+
+  select ok.kasutajanimi, 
+       (select i2.eesnimi || ' ' || i2.perenimi from isik i2 where i2.id = i.id), 
+       ie.* 
+       from os_kasutaja ok
+       join isik i on ok.isik_id = i.id
+       left join isik_elamisluba ie on i.id = ie.isik_id;       
+    

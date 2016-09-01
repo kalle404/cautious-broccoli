@@ -1,0 +1,103 @@
+====== Patsiendi esmane ja teisene ülevaatus ======
+
+Üldine tegevuste algoritm: 
+  - Kiire esmane ülevaatus
+  - Vitaalparameetrite stabiliseerimine
+  - Teisene ülevaatus
+  - Lõplik ravi
+
+===== Patsiendi esmane ülevaatus =====
+Patsiendi kiire ülevaatus 60 sekundi jooksul, kiire ja süstemaatiline elutähtsate funktsioonide hindamine
+  * **<C>**atastrophic Haemorrhage Control / katastroofiline verejooks
+  * **A**irway / hingamisteede avamine
+  * **B**reathing and Ventilation / hingamine
+  * **C**irculation and Haemorrhage Control / vereringe
+  * **D**isability or Neurological Deficit / teadvus
+  * **E**xtremity, Environment, Exposure / keskkond
+
+==== Hindamiskriteeriumid ====
+
+^ Tegevus     ^ Kriteerium      ^ 
+| **c** | verejooksu peatamist alustatakse 5 sekundi jooksul \\ suur verejooks on peatatud 30 sekundi jooksul \\ verejooksude kontroll \\ teadvuse kontroll \\    | 
+| **A** | hingmisteede avatus (alalõug, pea asend) |
+| **B** | hingamise kontroll |
+| **C** | vereringe kontroll |
+| **D** | seljaaju kaitse (kaelalahas, hoitakse) \\ kaelalahase korrektne paigaldus \\ neuroloogiline defitsiit (AVPU, pupill, küsitlus, käed) |
+| **E** | soojus |
+| + traumavõtted | korrektne lahastamine |
+| + liigutamine | võimalikult vähene ja säästev |
+| + asend | vastavalt seisundile või kuidas mugavam |
+
+==== MIST raport ====
+Korrektne info liikumine kiirabi ja haigla vahel on üks osa kannatanu käsitlusest.
+  * **M** – Mechanism of injury (vigastusmehhanism - kuul, plahvatus, kukkumine jne)
+  * **I** – Injuries (leitud ja kahtlustatavad)
+  * **S** – Signs (hingamissagedus,vererõhk, teadvusseisund - jaguneb: Alert (ärkvel) -> Voice (reageerib häälele) -> Pain (reageerib valule) -> Unresponsive (ei reageeri)
+  * **T** - Treatment 
+
+  
+===== Patsiendi teisene ülevaatus =====
+
+  * Eesmärgiks leida ülejäänud e. elu mitte ohustavad vigastused ning nendega tegelemine
+  * Nb! Teisest ülevaatust ei alusta enne kui on korrektselt ja edukalt (e. Kannatanu on stabiliseeritud) lõpetatud esmane ülevaatus!
+
+**AMPLE anamnees**
+  * **A**llergies
+  * **M**edications
+  * **P**ast illnesses / Pregnancy
+  * **L**ast meal
+  * **E**vents / Environment / Mechanism
+
+**Pealaest jalatallani**
+  * Pea, kael
+  * Verejooksud e. välised vigastused
+  * Võimalik liikvori leke kõrvadest, ninast
+  * Prillhematoom
+  * Lõualuude vigastused
+  * Rindkere
+  * Välised vigastused
+  * Valu katsumisel
+  * Krepitatsioon
+**Kõht**
+  * Palpeerida neljast sektorist
+  * Valu
+  * Kõhulihaste pinge
+**Vaagen**
+  * Võimalik ebastabiilsus – võib kaasneda massiivne verekaotus (Välisfiksaatori kasutamine)
+**Jäsemed**
+  * Hulgimurdude korral verekaotus (Murdude korrektne lahastamine)
+**Eest taha**
+  * Selja kontroll
+      * Kannatanu keeramine võimalusel neljakesi nn. ühe tüki meetodiga
+  * Võimalikud verejooksud
+  * Lülisamba kontroll
+      * Iga lüli ükshaaval üle palpeerida – NB! Mitte läbi riiete selga silitada!
+  * Tuharate ja lahkliha kontroll
+**Näpud igasse auku**
+  * Suu kontroll
+      * Lahtised hambad
+      * Hambakaarte (ülemine, alumine) kontroll – võimalikud astangud
+  * Rektaalne palpatsioon
+      * Sulgurlihase toonuse kontroll
+      * Võimalike sisemiste verejooksude avastamine
+
+===== Patsiendi uurimisprotseduurid =====
+
+^ Mõõdetav      ^ Lühend       ^ Normväärtused          ^
+| Pulss || 60-90 korda minutis |
+| Hingamine || 12-18 korda minutis |
+| Saturatsioon | [[https://en.wikipedia.org/wiki/Oxygen_saturation_(medicine)|Sp02]] | 96%-100% |
+| Temperatuur || 35c < x < 37c |
+| Vererõhk | [[https://en.wikipedia.org/wiki/Scipione_Riva-Rocci|RR]]   | [[parameedik:sanitar:moisted#systoolne|Süstoolne]]: 110-140; [[parameedik:sanitar:moisted#diastoolne|Diastoolne]] 60-90 |
+| Veresuhkur || 3,5 - 5,5 mmol/L  |
+| Teadvustase || AVPU (Alert -> Voice -> Pain -> Unresponsive) |
+
+
+**Pulsi mõõtmise kohad**
+
+  * Unearter ehk a.carotis (RR vähemalt 50-60 mmHg)
+  * Reiearter ehk a.femoralis (RR vähemalt 70 mmHg)
+  * Randmearter ehk a.radialis (RR vähemalt 80-90 mmHg)
+  * Õlavarreater ehk a.brachialis (RR vähemalt 70 mmHg)
+
+

@@ -1,0 +1,418 @@
+
+<h1 class="sectionedit1" id="tetris_vaide_protsessid">TETRIS vaide protsessid</h1>
+<div class="level1">
+
+<p>
+Kirjeldatud äriobjektid asuvad <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=117344852" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=117344852" rel="nofollow">siin</a>. 
+</p>
+
+<p>
+Eesmärk: kirjeldada vaietega kaasnevad protsessid kompaktselt ühes kohas. 
+</p>
+
+</div>
+<!-- EDIT1 SECTION "TETRIS vaide protsessid" [1-230] -->
+<h2 class="sectionedit2" id="vaide_protsess">Vaide protsess</h2>
+<div class="level2">
+
+<p>
+<strong>Vaide alustamine</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> “Lisa vaie” nupp asub <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=125252828#TVH_OTS_2.0TVHotsuseüldisedtegevused(nupud-lingid)-Nupp%22Lisavaie%22" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=125252828#TVH_OTS_2.0TVHotsuseüldisedtegevused(nupud-lingid)-Nupp&quot;Lisavaie&quot;" rel="nofollow">TVH_OTS_2.0 TVH otsuse üldised tegevused</a>. Tegemist on alamkomponendiga, mis omakorda asub konteinerkomponendis <a href="https://confluence.nortal.com/display/TVHTVT/TVH_2.12+TAB12%3A++TVH+otsused" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVH_2.12+TAB12%3A++TVH+otsused" rel="nofollow">TVH_2.12 TAB12: TVH otsused</a></div>
+</li>
+<li class="level1"><div class="li"> Nupp kuvatakse kui seotud TVH otsus on kinnitatud, kasutajal on privileeg tvh.otsus.vaie ning TVH otsusel pole ühtegi seotud pooleliolevat vaiet. </div>
+</li>
+<li class="level1"><div class="li"> Nupule vajutades kuvatakse <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=143820379" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=143820379" rel="nofollow">VAIE_YLD_1 - Vaide lisamine/muutmine</a></div>
+</li>
+<li class="level1 node"><div class="li"> Täites väljad ja vajutades “Algata vaidemenetlus”:</div>
+<ul>
+<li class="level2 node"><div class="li"> kui vaidemenetlus eeldab TK arsti vastust, valikud EKSPERTIIS (Hindamise tulemus), MENETLUSE_UUENDAMINE (Menetluse uuendamine).</div>
+<ul>
+<li class="level3"><div class="li"> Vaie.staatusKood=&#039;HINNANGU_OOTEL&#039;</div>
+</li>
+<li class="level3"><div class="li"> Lisatakse uus menetlustegevus VAIE_TK_ARSTI_HINNANG (Esitatud vaie. Anna hinnang hindamise tulemusele.)</div>
+</li>
+</ul>
+</li>
+<li class="level2 node"><div class="li"> kui vaidemenetlus ei eelda TK arsti vastust, valik MUU (Otsuse muu õiguspärasus).</div>
+<ul>
+<li class="level3"><div class="li"> Vaie.staatusKood=&#039;VAIDEOTSUSE_OOTEL&#039;</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Hindamisjuhtumi staatuseks märgitakse Vaidemenetlus algatatud (Taotlus::HindamisJuhtum::KehtivStaatus.Staatus=&#039;VAIE_ALGATATUD&#039;).</div>
+</li>
+<li class="level1"><div class="li"> Avatakse <a href="https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab" rel="nofollow">TVH_1.14 - TVH vaiete tab</a> (sisendiks lisatud vaide id) ja kasutajale kuvatakse teade edukast toimingust “Vaidemenetlus algatatud.”</div>
+</li>
+</ul>
+
+<p>
+<strong>Kui vaie eeldab TK arsti vastust</strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="https://confluence.nortal.com/display/TVHTVT/TVH_2.11+TAB11%3A+Eksperthinnang" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVH_2.11+TAB11%3A+Eksperthinnang" rel="nofollow">TVH Eksperthinnangu tab-ile</a> kuvatakse nupud: </div>
+<ul>
+<li class="level2 node"><div class="li"> “Ekspertiis korrektne”</div>
+<ul>
+<li class="level3"><div class="li"> kuvatakse kui juhtumiga on seotud arsti vastust eeldav lõpetamata vaie. </div>
+</li>
+<li class="level3"><div class="li"> nupule vajutades salvetatakse vaidele vaie::spetsiifika::tkArstVastused.vastusTyyp =&#039;HINDAMINE_KORREKTNE&#039;</div>
+</li>
+</ul>
+</li>
+<li class="level2 node"><div class="li"> “TTO-le vaide ülevaatusesse” </div>
+<ul>
+<li class="level3"><div class="li"> kuvatakse kui tegemist on taotluse esimese ekspertiisiga ja juhtumiga on seotud arsti vastust eeldav lõpetamata vaie</div>
+</li>
+<li class="level3 node"><div class="li"> nupule vajutades: </div>
+<ul>
+<li class="level4"><div class="li"> kui ekspertiis on teostatud välistavate seisundite alusel, kuvatakse kasutajale veateade: “<em>Välistavate seisundite alusel teostatud ekspertiisi tulemust ei ole võimalik vaide raames muuta. Kui on vaja parandada ekspertiisi sõnastust, siis palun seda teha ekspertiisi täiendamata.</em>”</div>
+</li>
+<li class="level4 node"><div class="li"> vastasel juhul kuvatakse modaalaken, kus väljade täitmise järel vajutades “Saada TTO-le”:</div>
+<ul>
+<li class="level5"><div class="li"> lisatakse vaidele vaie::spetsiifika::tkArstVastused.vastusTyyp =&#039;EKSPERTIIS_YLEVAATUS&#039; ja vaie.staatusKood=EKSPERTHINNANGU_OOTEL</div>
+</li>
+<li class="level5"><div class="li"> lisatakse menetlustegevus VAIE_TTO_ARSTI_HINNANG (Esitatud vaie. TTO-l anda hinnang hindamise tulemusele.)</div>
+</li>
+<li class="level5"><div class="li"> peatatakse menetlustegevus VAIE_TK_ARSTI_HINNANG (Esitatud vaie. Anna hinnang hindamise tulemusele.)</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code">Kui tegemist on MUU (&quot;Otsuse muu õiguspärasus&quot;) vaidega, siis tegevusi TVH eksperthinnang tabile ei teki</pre>
+
+<p>
+<strong>Tegevused TVH vaiete tab-il</strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVH_1.14+-+TVH+vaiete+tab" rel="nofollow">Konteinerkomponent</a> sisaldab järgnevaid vaiete komponente: </div>
+<ul>
+<li class="level2 node"><div class="li"> <a href="https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_4.3+-+Vaiete+nimekiri" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_4.3+-+Vaiete+nimekiri" rel="nofollow">Vaiete nimekiri</a></div>
+<ul>
+<li class="level3"><div class="li"> kuvatakse TVH otsusega seotud vaideid</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> <a href="https://confluence.nortal.com/pages/viewpage.action?pageId=143820277" class="urlextern" title="https://confluence.nortal.com/pages/viewpage.action?pageId=143820277" rel="nofollow">Vaide üldandmed</a></div>
+</li>
+<li class="level2 node"><div class="li"> <a href="https://confluence.nortal.com/display/TVHTVT/TVH_VAIE_1.2+TK+arsti+hinnang+vaidele" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/TVH_VAIE_1.2+TK+arsti+hinnang+vaidele" rel="nofollow">TK arsti hinnang vaidele</a></div>
+<ul>
+<li class="level3"><div class="li"> kuvatakse, kui vaidemenetlus eeldab TK arsti vastust. </div>
+</li>
+<li class="level3 node"><div class="li"> täites väljad ning vajutades “Esita vastus”:</div>
+<ul>
+<li class="level4"><div class="li"> kuvatakse vastuse kinnitamise dialoogiaken, sellel valiku kinnitamisel</div>
+</li>
+<li class="level4 node"><div class="li"> kui vaideotsus eeldab juristi vastust, hetkel EKSPERTIIS ja MUU </div>
+<ul>
+<li class="level5"><div class="li"> muudetakse vaie.staatusKood=&#039;VAIDEOTSUSE_OOTEL&#039;</div>
+</li>
+<li class="level5"><div class="li"> muudetakse hindamisjuhtum.kehtivStaatus=&#039;VAIDEOTSUSE_OOTEL&#039; ja teostatakse <a href="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" rel="nofollow">&quot;Juhtumi staatuste muutumisega kaasnevad tegevused&quot;</a> kirjeldatud tegevused</div>
+</li>
+</ul>
+</li>
+<li class="level4 node"><div class="li"> kui vaideotsus ei eelda juristi vastust, hetkel MENETLUSE_UUENDAMINE</div>
+<ul>
+<li class="level5 node"><div class="li"> muudetakse hindamisjuhtum.kehtivStaatus=&#039;LOPETATUD&#039; ja teostatakse <a href="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" rel="nofollow">&quot;Juhtumi staatuste muutumisega kaasnevad tegevused&quot;</a> kirjeldatud tegevused</div>
+<ul>
+<li class="level6 node"><div class="li"> kui kasutaja on valinud “Menetluse uuendamise otsus” väärtuse “Menetlust mitte uuendada”:</div>
+<ul>
+<li class="level7"><div class="li"> muudetakse vaie.staatusKood=&#039;MENETL_UUENDAMISE_LOPET_OOTEL&#039;</div>
+</li>
+<li class="level7"><div class="li"> lisatakse uus menetlustegevus TyypKood = &#039;VAIE_MENETL_UUENDAMINE_MITTE&#039;</div>
+</li>
+</ul>
+</li>
+<li class="level6 node"><div class="li"> kui kasutaja on valinud “Menetluse uuendamise otsus” väärtuse “Menetlust uuendada” </div>
+<ul>
+<li class="level7"><div class="li"> muudetakse vaie.staatusKood=&#039;MENETL_UUENDAMISE_OOTEL&#039;</div>
+</li>
+<li class="level7"><div class="li"> lisatakse uus menetlustegevus TyypKood = &#039;VAIE_MENETL_UUENDAMINE&#039;</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level5"><div class="li"> suletakse dialoog, komponent kuvatakse mittemuudetaval kujul ja kuvatakse edukusteade “Vastus esitatud.” </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2 node"><div class="li"> <a href="https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_3+-+Vaideotsus" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/VAIE_YLD_3+-+Vaideotsus" rel="nofollow">Vaideotsus</a></div>
+<ul>
+<li class="level4"><div class="li"> kuvatakse, kui vaidemenetlus eeldab juristi vaideotsust (Vaie.vaidlustusTyypKood = EKSPERTIIS, MUU)</div>
+</li>
+<li class="level4"><div class="li"> vaie on vaideotsuse ootel või lõpetatud (Vaie.staatusKood=&#039;VAIDEOTSUSE_OOTEL&#039;, &#039;LOPETATUD&#039;)</div>
+</li>
+<li class="level4"><div class="li"> täites väljad ja vajutades nuppu “Lõpeta”:</div>
+</li>
+<li class="level4"><div class="li"> Vaie.staatusKood = &#039;LOPETATUD&#039;.</div>
+</li>
+<li class="level4"><div class="li"> Hindamisjuhtumi staatuseks märgitakse Lõpetatud (Taotlus::HindamisJuhtum::KehtivStaatus.Staatus=&#039;LOPETATUD&#039;).</div>
+</li>
+<li class="level4"><div class="li"> Tehakse tegevused menetlustegevustega vastavalt <a href="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" rel="nofollow">&quot;Juhtumi staatuste muutumisega kaasnevad tegevused&quot;</a></div>
+</li>
+<li class="level4"><div class="li"> Kasutajale kuvatakse teade edukast toimingust “Vaie lõpetatud.”</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Vaide protsess" [231-6212] -->
+<h2 class="sectionedit3" id="seotud_aeriobjektid">Seotud äriobjektid</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "Seotud äriobjektid" [6213-6245] -->
+<h3 class="sectionedit4" id="hindamisjuhtum">Hindamisjuhtum</h3>
+<div class="level3">
+<div class="hiddenGlobal  hiddenActive"><div class="hiddenElements"></div><div class="hiddenHead  hiddenSinceBeginning"><div class="hiddenOnHidden">
+<p>
+Kuva
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+Peida
+</p>
+</div></div> <!-- .hiddenHead --><div class="hiddenBody">
+<p>
+Hindamisjuhtum äriobjekti väljad:
+</p>
+<ul>
+<li class="level1"><div class="li"> taotlusID</div>
+</li>
+<li class="level1 node"><div class="li"> leping</div>
+<ul>
+<li class="level2"><div class="li"> Id</div>
+</li>
+<li class="level2"><div class="li"> lepingNumber</div>
+</li>
+<li class="level2"><div class="li"> summa</div>
+</li>
+<li class="level2"><div class="li"> AdsTase1Kood - viide maakonnale</div>
+</li>
+<li class="level2"><div class="li"> AdsTase2Kood - viide linnale või vallale</div>
+</li>
+<li class="level2"><div class="li"> mahtAastas - maksimaalne tellitud hindamiste arv aastas</div>
+</li>
+<li class="level2"><div class="li"> lepingMaht - maksimaalne tellitud hindamiste arv kogu lepingu perioodis</div>
+</li>
+<li class="level2"><div class="li"> algusKp</div>
+</li>
+<li class="level2"><div class="li"> loppKp</div>
+</li>
+<li class="level2"><div class="li"> lihtsustatudHind - lihtsustatud hindamise hind</div>
+</li>
+<li class="level2"><div class="li"> dokumendipohineHind - dokumendipõhise hindamise hind</div>
+</li>
+<li class="level2"><div class="li"> visiidipohineHind - visiidpõhise hindamise hind</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> kehtivStaatus</div>
+</li>
+<li class="level1 node"><div class="li"> tegevused</div>
+<ul>
+<li class="level2"><div class="li"> Id</div>
+</li>
+<li class="level2"><div class="li"> ekspertiisId - kasutatakse, kui tegevusi lisatakse vaidemenetluse raames mingi konkreetse ekspertiisi kohta</div>
+</li>
+<li class="level2"><div class="li"> lepingId - kasutatakse Redisega jagatavate tegevuste defineerimiseks </div>
+</li>
+<li class="level2"><div class="li"> TyypKood</div>
+</li>
+<li class="level2"><div class="li"> LisamiseAeg</div>
+</li>
+<li class="level2"><div class="li"> TahtaegKp</div>
+</li>
+<li class="level2"><div class="li"> StaatusKood - TVR_TEGEVUS_STAATUS</div>
+</li>
+<li class="level2"><div class="li"> LoppAeg</div>
+</li>
+<li class="level2"><div class="li"> Lisainfo</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> visiidikulu</div>
+<ul>
+<li class="level2"><div class="li"> Id</div>
+</li>
+<li class="level2"><div class="li"> HindamisJuhtum</div>
+</li>
+<li class="level2"><div class="li"> TyypKood - loendi VISIIDIKULU_TYYP väärtus</div>
+</li>
+<li class="level2"><div class="li"> HyvitajaKood - loendi VISIIDIKULU_HYVITAJA väärtus</div>
+</li>
+<li class="level2"><div class="li"> OnPohjendatud </div>
+</li>
+<li class="level2"><div class="li"> Pohjendus</div>
+</li>
+<li class="level2"><div class="li"> Lisainfo</div>
+</li>
+<li class="level2"><div class="li"> KoguSumma - visiidikulu kogusumma (sh käibemaks kui on asutusele)</div>
+</li>
+<li class="level2"><div class="li"> StaatusKood - loendi VISIIDIKULU_STAATUS väärtus</div>
+</li>
+<li class="level2"><div class="li"> HyvitamineKinnitajaID - viide menetlejale kes vastava visiidikulu hüvitamise/mittehüvitamise kinnitas</div>
+</li>
+<li class="level2"><div class="li"> HyvitamineKinnitamiseKp - visiidikulu hüvitamise/mittehüvitamise kp</div>
+</li>
+<li class="level2"><div class="li"> KuludokumendiLisainfo - kuludokumentidele märgitud lisainfo</div>
+</li>
+<li class="level2"><div class="li"> LopetamisePohjendus - maksmiseta lõpetamise põhjendus</div>
+</li>
+<li class="level2"><div class="li"> LopetamineKinnitajaID - viide menetlejale, kes vastava kinnitatud hüvitamisega visiidikulu maksmata jätmise kinnitas.</div>
+</li>
+<li class="level2"><div class="li"> LopetamineKinnitamiseKp - visiidikulu maksmiseta lõpetamise kinnitamise kp</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> ekspertArst</div>
+<ul>
+<li class="level2"><div class="li"> redisIsikId - viide redises olevale isikule</div>
+</li>
+<li class="level2"><div class="li"> arstKood - arsti kood</div>
+</li>
+<li class="level2"><div class="li"> arstEriala - arsti eriala</div>
+</li>
+<li class="level2"><div class="li"> lepingId - viide ekspertiisile mida arst teostas</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> visiidikuludHinnang - Juhtumikorraldaja hinnang, mis on abistavaks infoks menetlejale</div>
+</li>
+</ul>
+</div></div>
+</div>
+<!-- EDIT4 SECTION "Hindamisjuhtum" [6246-8293] -->
+<h3 class="sectionedit5" id="vaie">Vaie</h3>
+<div class="level3">
+<div class="hiddenGlobal  hiddenActive"><div class="hiddenElements"></div><div class="hiddenHead  hiddenSinceBeginning"><div class="hiddenOnHidden">
+<p>
+Kuva
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+Peida
+</p>
+</div></div> <!-- .hiddenHead --><div class="hiddenBody">
+<p>
+Vaide äriobjekti väljad:
+</p>
+<ul>
+<li class="level1"><div class="li"> otsusId - viide vaide alusdokumendile otsus</div>
+</li>
+<li class="level1"><div class="li"> regNr - vaide registreerimise number (kasutaja kirjutab käsitsi <a href="https://confluence.nortal.com/display/EMPIS/Alfresco" class="urlextern" title="https://confluence.nortal.com/display/EMPIS/Alfresco" rel="nofollow">Alfresco</a> reg.numbri) </div>
+</li>
+<li class="level1"><div class="li"> saabumiseKp - vaide saabumise kp</div>
+</li>
+<li class="level1"><div class="li"> vaidlustusTyypKood - näitab mida vaidlustatakse, loendi VAIDLUSTUS_TYYP väärtus</div>
+</li>
+<li class="level1"><div class="li"> sisu - vaide sisu kokkuvõte</div>
+</li>
+<li class="level1"><div class="li"> menetlustahtaeg - vaide menetlustähtaeg</div>
+</li>
+<li class="level1"><div class="li"> vastus - kokkuvõttev vastus vaide sisule vaide konsultandilt (TK arst, menetleja vmt), mida jurist kasutab vaideotsuse koostamisel</div>
+</li>
+<li class="level1"><div class="li"> vaideotsusRegNr - vaideotsuse registreerimise number (kasutaja kirjutab käsitsi <a href="https://confluence.nortal.com/display/EMPIS/Alfresco" class="urlextern" title="https://confluence.nortal.com/display/EMPIS/Alfresco" rel="nofollow">Alfresco</a> reg numbri</div>
+</li>
+<li class="level1"><div class="li"> vaideotsusKp - vaideotsuse kuupäev</div>
+</li>
+<li class="level1"><div class="li"> vaideotsusTulemus - vaide tulemus (rahuldada, tagastada, mitte rahuldada jmt) loendi VAIE_RESOLUTSIOON väärtus</div>
+</li>
+<li class="level1"><div class="li"> vaideotsusTulemusSisu - vaide tulemuse sisuline selgitus (mida edasi teha) </div>
+</li>
+<li class="level1"><div class="li"> sisetajaKontoId - viide vaide lisanud isikule</div>
+</li>
+<li class="level1"><div class="li"> sisestamiseAeg - vaide lisamise aeg</div>
+</li>
+<li class="level1"><div class="li"> juristKontoId - viide vaidega tegelevatele juristidele</div>
+</li>
+<li class="level1"><div class="li"> menetlejaKontoId - viide vaidega tegelevale menetlejale</div>
+</li>
+<li class="level1"><div class="li"> staatusKood - vaide staatus, loendi TVR_VAIE_STAATUS väärtus</div>
+</li>
+<li class="level1"><div class="li"> dokumendid - vaide juurde laetud dokumendid</div>
+</li>
+</ul>
+
+<p>
+TVH vaide spetsiifika (seostabel TVH_VAIE):
+</p>
+<ul>
+<li class="level1"><div class="li"> infoTkArstile - info TK arstile</div>
+</li>
+<li class="level1"><div class="li"> menetlustahtaegTkArstile - TK arsti hinnangu tähtaeg</div>
+</li>
+<li class="level1"><div class="li"> ekspertiisVersioon - viide ekspertiisi versioonile, millest lähtudes tehakse edasised tegevused</div>
+</li>
+<li class="level1"><div class="li"> tkArstVastused - TK arsti poolt vastu võetud otsused vaide lahendamiseks (nb! arsti vastuseid saab olema mitu!) </div>
+</li>
+<li class="level1"><div class="li"> tkArstKontoId - viide vaidega tegelevale TK arstile</div>
+</li>
+<li class="level1"><div class="li"> vastuseEsitamiseKp</div>
+</li>
+</ul>
+</div></div>
+</div>
+<!-- EDIT5 SECTION "Vaie" [8294-10051] -->
+<h2 class="sectionedit6" id="seotud_skriptid">Seotud skriptid</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> TK arsti vastust eeldavad vaidemenetlused</div>
+</li>
+</ul>
+<pre class="code">select *  
+from empis_domain_value_criterion edvc
+where edvc.domain_code = &#039;VAIDLUSTUS_TYYP&#039;
+and edvc.criterion = &#039;TK_ARST&#039;;</pre>
+<ul>
+<li class="level1"><div class="li"> rakenduses kasutatava vaide nimetuse leidmiseks</div>
+</li>
+</ul>
+<pre class="code">select * 
+from empis_domain_value edv
+where edv.domain_code = &#039;VAIDLUSTUS_TYYP&#039;
+and edv.code = &#039;EKSPERTIIS&#039;;</pre>
+<ul>
+<li class="level1"><div class="li"> TVR menetlustegevuste nimetuse leidmine</div>
+</li>
+</ul>
+<pre class="code">select *
+from empis_domain_value
+where domain_code = &#039;TVR_TEGEVUS_TYYP&#039;
+and code = &#039;VAIE_TK_ARSTI_HINNANG&#039;;</pre>
+<ul>
+<li class="level1"><div class="li"> TVR vaideotsused, mille on kriteerium KORRAS</div>
+</li>
+</ul>
+<pre class="code">select *
+from empis_domain_value_criterion edvc
+where edvc.domain_code = &#039;VAIE_RESOLUTSIOON&#039;
+and edvc.criterion = &#039;KORRAS&#039;;</pre>
+<ul>
+<li class="level1"><div class="li"> rakenduses kasutatava vaideotsuse nimetuse leidmiseks</div>
+</li>
+</ul>
+<pre class="code">select * 
+from empis_domain_value edv
+where edv.domain_code = &#039;VAIE_RESOLUTSIOON&#039;
+and edv.code = &#039;MENETL_UUENDAMINE&#039;;</pre>
+
+</div>
+<!-- EDIT6 SECTION "Seotud skriptid" [10052-] -->

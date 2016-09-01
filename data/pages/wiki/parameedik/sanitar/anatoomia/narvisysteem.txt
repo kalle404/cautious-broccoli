@@ -1,0 +1,78 @@
+====== Närvisüsteem ======
+
+Närvisüsteem reguleerib kõikide elundite tööd ja koordineerib erinevate elundkondade talitlust, kohandades seda pidevalt muutuvatele tingimustele, milles inimene viibib. Selleks saab närvisüsteem lakkamatult informatsiooni närviimpulsside kujul nii organismist enesest kui ka väliskeskkonnast. Teave saabub retseptorite kaudu siseelundeist, veresoontest, südamest, lihastest, nendes toimuvatest protsessidest ja organismi sisekeskkonna seisundist (kehatemperatuur, vererõhk, hormoonide sisaldus veres jms). Väliskeskkonnast jõuab informatsioon närvisüsteemi meeleelundite kaudu. Saadud info analüüsi ja sünteesi tulemusena aju keskustes saadetakse neist elunditesse eferentsed impulsid, mis muudavad organismi üksikosade taliltust ja tema kui terviku käitumist vastavuses väliskeskkonnas toimuvate muutustega. 
+
+Närvisüsteemi jaotus:
+  * Somaatiline NS - juhib inimese skeletilihase liigutusi ja saab infot meeleelunditest.
+    * Kesknärvisüsteem
+      * Peaaju 
+      * Seljaaju (//medulla spinalis//) - lamendunud väätjas moodustis, mis asetseb lülisambakanalis.
+    * Piirdenärvisüsteem
+      * Peaajunärvid
+      * Seljaajunärvid
+  * Autonoomne NS - kohandab inimese organismi talitlust vastavalt keskkonna muutuvatele tingimustele. 
+    * Sümpaatiline NS - peetakse sageli "võitle-või-põgene" süsteemiks, füsioloogiliseks reaktsioon ootamatule eluohtlikule sündmusele. 
+      * Tsentraalne osa
+      * Perifeerne osa
+    * Parasümpaatiline NS - "puhka ja seedi", "toitu ja sigi" süsteem. 
+      * Tsentraalne osa
+      * Perifeerne osa
+===== Peaaju =====
+
+Peaaju piirkonnad:
+<hidden>{{:parameedik:inimaju.jpg?nolink|}}</hidden>
+
+**Peaaju** - koosneb viiest osast (suuraju, väikeaju, vaheaju, keskaju, piklikaju) ja juhib kogu organismi tegevust.
+  * **Suuraju vasak ja parem ajupoolkera** - Vasak aju pool juhib parema kehapoole tegevust ja parem aju pool vasaku kehapoole tegevust. Selle põhjuseks on ajusse saabuvate närvikiudude omavaheline ristumine. Enamasti on juhtivaks vasak ajupoolkera ja seetõttu on enamasti inimesed paremakäelised.
+  * **Väikeaju** - reguleerib lihaste koostööd ja tasakaalu.
+  * **Piklikaju** - reguleerib tahtele allumatuid tegevusi (hingamine, südametegevus).
+  * **Keskaju** - närviimpulsside liikumine pea- ja seljaaju vahel ning tagab lihase pingeseisundi ehk toonuse.
+  * **Vaheaju** - reguleerib ainevahetust, paljunemist, kehatemperatuuri.
+
+**Mäluvormid**
+
+Ajukoores kujuneb mälu. Mälu on võime salvestada, säilitada ja taasesitada informatsiooni. Mälu jaguneb lühi- ja püsimäluks.
+
+===== Seljaaju =====
+
+Seljaaju ülesandeks on vahendada informatsiooni peaaju ja keha vahel ning juhtida tingimatuid reflekse (liigutusi). Seljaaju asub selgroo lülisambakanalis. 
+
+Selgroog ehk lülisammas on keha telg, mille ülesandeks on kanda koljut ja püsti hoida keha. Ta hoiab rinnakorvi kaitsvaid roideid ning sisaldab ja kaitseb seljaaju.
+Lülisammas koosneb 33–34 selgroolülist. Kõik lülid on enam-vähem sarnase ehitusega. Siiski on kaks erandit: esimene (atlas = kandelüli) ja teine lülisambalüli (axis = telglüli = pööraja). Esimesele lülisambalülile toetub kolju kuklaluu kaudu. Ülemisel lülil puudub oma lülikeha, ta kaks lohku sobivad kuklaluu liigespõntadega (jaatamisliigutus), axise hammas seob atlase enda külge ja võimaldab selle ümber pöörelda (eitamisliigutus). Lülisamba murd selles piirkonnas on eriti ohtlik, sest lähedalasuvas seljaajus paikneb mitu tähtsat keskust, mis võivad sel juhul viga saada. Mida kaugemal allpool asub lülisambalüli, seda suuremat koormust peab see kandma ja seda tugevam peab ta olema.
+
+Närvirakud e neuronid - on elektrilaenguga erutatavad keharakud, mis töötlevad ja edastavad informatsiooni elektriliste ja keemiliste signaalide abil. Signaalid liiguvad neuronite vahel nn sünapside, rakkude vaheliste ühenduste, kaudu. Neuronid võivad olla üksteisega ühenduses moodustades nii võrgustikke. Neuronid on pea- ja seljaaju põhikomponendid ning perieerse närvisüsteemi närvisõlmed. Ehk siis neuronid moodustavad närvisüsteemi funktsionaalse üksuse, mis koosneb kehast ja jätketest. Info liigub närvisüsteemis nõrkade elektriliste signaalidena kiirusel 100 m/sek.
+
+
+====== Perifeerne e. piirdenärvisüsteem ======
+
+Närvikiud, mis paiknevad väljaspool pea- ja seljaaju koonduvad närvideks ning moodustavad piirdenärvisüsteemi, mis jaguneb:
+  * kehaline ehk somaatiline - juhib tahtele alluvaid tegevusi (skeletilihased)
+  * vegetatiivne - tahtele allumatud tegevused (siseelundkonna näärmed) 
+
+Pea piirkonnast otse lähtuvad närvid näo piirkonda (e. kraniaalnärvid). Ülejäänud keha puhul liigutamist koordineerivad rakud paiknevad aju hallkoores ja närvikiud liiguvad seljaajusse, sealt lihasteni, organiteni. Perifeersed närvid liiguvad koos suuremate arterite ja närvidega. Sageli ka luude läheduses. Seetõttu luumurdude puhul on alati võimalus kahjustada nii närve kui suuremaid veresooni. Närvi kahjustuse puhul närvi taastumine on väga-väga aeglane.
+
+===== Refleksid =====
+
+  * tingimatud - kaasasündinud nagu neelamis- ja imemisrefleks
+  * tingitud - omandatakse elu jooksul nagu kaitse- ja käitumisrefleksid
+
+**Refleksikaar**
+
+Erutuse kulgemise tee:
+  - erutust vastuvõttev närvirakk;
+  - närvikiud, mis juhivad erutuse kesknärvisüsteemi;
+  - kesknärvisüsteemi piirkonnad, mis analüüsivad erutust;
+  - närvikiud, mis juhivad erutuse edasi vastavasse organisse või elundisse;
+  - organ või elund, mis erutusele reageerib.
+
+**Närvisüsteemi ülesanded**
+
+  * reguleerib organismi elundite talitlust
+  * kooskõlastab organismi kõikide elundite tööd
+  * kohandab organismi vastavalt väliskeskkonna muutustele
+
+===== Viited =====
+
+  * Wikipedia [[https://en.wikipedia.org/wiki/Human_brain|Human brain]]
+  * Wikipedia [[https://en.wikipedia.org/wiki/Nervous_system|Nervous system]]
+

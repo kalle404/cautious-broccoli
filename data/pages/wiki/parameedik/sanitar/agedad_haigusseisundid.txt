@@ -1,0 +1,548 @@
+====== Ägedad haigusseisundid ======
+
+===== 1. Bronhiaalastma =====
+
+**1.1 Tekkemehhanismid**
+
+Tegemist on hingamisteede kroonilise põletikulise haigusega, mille erakorralisus avaldub nö äkki alanud hingamisraskuses. Tingitud bronhi ahenemisest ehk bronhiseinte silelihaste spasmist, limaskest tursub bronhiaalpuus põletiku tagajärjel ja hakkab erituma sekreeti (lima). Nende koosmõjul bronhid ummistuvad ning on hapnikuvahetus pärsitud. 
+
+NB! Krooniline haigus on olemas koguaeg, akuutne faas ehk atakk tekib järsku (tihtipeale on algatajaks allergiline faktor).
+
+**1.2 Tunnused**
+
+  * algab järsku
+  * hingamine raskendatud, eriti on pikenenud väljahingamisefaas ehk ekspiirium,
+  * köhaärritus (varajane sümptom)
+  * lämbumistunne
+  * häälekähedus, 
+  * raskendatud rääkimine
+  * rahutus seoses lämbumisega, vahel paanikahoog
+  * sundasend (ettepoole kummardunud)
+  * auskultatsioonil (eriti ekspiiriumis) kuulda kiuned ja räginad
+  * abilihaste kasutamine
+  * tahhükardia
+
+**Ähvardava hingamisteede sulguse tunnused:**
+  * SpO2 väiksem kui 92%(isegi all 85%)
+  * RR ↓ (vererõhu langus)
+  * hingamissagedus suurem kui 30x min
+  * ebaefektiivsed hingamisliigutused: kõhu ning rindkere vaheline sünkroonsus puudub – paradoksaalne torakoabdominaalne liikumine hingamisel, sissehingamisfaasis naha
+  * kagiaugu ja interkostaalvahemike sissetombumine
+  * hingamiskahina nõrgenemine
+  * hüpokseemiast tingituna bradükardia või hüpotensioon, südamerütmihäired, 
+  * tsüanoos: tsentraalne tsüanoos kui SpO2 on 70-80%
+  
+**1.3 Objektiivsed uuringud**
+
+  * üldseisund
+  * teadvus
+  * kopsude auskultatsioon
+  * hingamissagedus,
+  * hingamistöö efektiivsus,
+  * SpO2
+  * RR (vererõhk)
+  * EKG
+
+**1.4 Meditsiiniline esmaabi**
+
+  * Istuv asend - mugav, selga toetades
+  * Rahustada kannatanut ja tagada soojus 
+  * Hapnik esmaselt 3-4 l/min (5-8 l/min) ehk SpO2 hoida vähemalt 90% /üliraske hoo puhul tagada 100% O2
+  * NB! Võimalusel O2 niisutatud: hapnikumask+ füsioloogilise lahusega immutatud marlilapp/ või nebulisaator füsioloogilise lahusega
+  * Üks põhireeglitest: O2 manustada esmalt maskiga, ent kui patsientt ei talu maski, siis „ninakanüül“
+  * Veenitee 
+  * Haige enda ravim inhalaatoriga (näit Eufelin – mõju alles 30 min pärast, salbutamol, Prednisoloon)
+**NB! Ca  80% juhtudest saab ravida atakki platseeboefektiga: tõhus rahustamine ja O2!**
+
+**1.5 Ravimid**
+
+  * Esmase ravina salbutamool (Ventolin) nebulisaatoriga 2,5-5 mg ad 3 ml p.i 5-15 minuti jooksul; O2 6-8 l/min
+  * Inhalaatori kasutamisel 2 d p.i, vajadusel 3-6 h järel.
+  * Rasketel juhtudel (teiste võimaluste puudumisel) 4-6 d 10-20 min intervallidega.
+  * Raske bronhospasmi korral: 0,5 mg i.m või ad 20 ml (25mikrogr/ml) 250-500mikrogr aeglaselt i.v – i.v kasutamisek EKG ja RR monitooring!!
+  * NB! Eelistada inhalatsioonilahust (ehk nebulisaatoriga manustamist) inhalaatorile!
+  * Prednisoloon 5-10 mg p.o; 25—50 mg i.m
+  * Raske või üliraske hoo korral NaCl 0,9 % i.v
+  * Erandjuhul ja üliraske seisundi korral kasutada adrenaliini 0,3-0,5 mg  i.m (s.c) – aitab samuti lõõgastada kokkutõmbunud bronhe, ent mõjutab ka  südametööd: RR ↑ ja südametöö kiirenemine, mistõttu pole astma korral esmavalik .
+
+
+===== 2. Kopsuturse =====
+
+**2.1 Tekkemehhanism**
+
+Kui süda ei suuda vajalikul hulgal verd suurde vereringesse pumbata, kuhjub see väiksesse ehk kopsuvereringesse. Selle tagajärjel surutakse liigne vedelik kõrge rõhu tõttu kopsualveoolidesse (tekib turse)  ning normaalne O2 ja CO2 transport häirub (veresoonte ja alveoolide vahel) -> organismi O2 varustatus on puudulik ja CO2 kuhjub.
+
+**Sagedasemad põhjused on:**
+  - kardiaalsed – südamepuudulikkused, südameklappide puudulikkused 
+  - mittekardiaalsed - uppumine, põletused, vedeliku ülekoormus, kopsutrauma, kõrgmäestiku sündroom
+  
+**2.2 Tunnused**
+
+  * hingeldus (ehk tahhüpnoe- hing sagedus üle 30x)
+  * hingeldus lamavas asendis (ortopnoe)
+  * lämbumistunne
+  * tursed jalgadel/jalalabadel
+  * nahk kahvatu ja tsüanootiline,
+  * jahe ja niiske nahk,
+  * vahutav või roosa röga köhimisel,
+  * rahutus, surmahirm,
+  * teadvusehäired,
+  * kuulatamisel märjad mulinad ja räginad
+
+
+**2.3 Objektiivsed uuringud**
+
+  * kopsude auskultatsioon
+  * EKG (ei pruugi olla muutusi)
+  * Kardiomonitooring
+  * SpO2 
+  * RR
+
+//Kas lämbumistunne on on tingitud astmast või kopsutursest? Kui ei suuda eristada, siis pole hullu, kuna raviskeem väga sarnane :)//
+
+**2.4 Meditsiiniline esmaabi**
+
+  * istuv või poolistuv asend, jalad allapoole kehatüve
+  * rahustamine
+  * hapnik 8 l/min (võimalusel CPAP- maskiga – continues positive airway pressure; tekitab ülerõhu alveoolides, surudes liigse vedeliku välja)
+  * veenitee
+
+**2.5 Ravimid**
+
+  * Furosemiid 20-40 mg p.o./i.m./ i.v – mitte kiiremini kui 20 mg/min; leeliseline, seega i.v eelistatum i.m-ele. Doosi mitte korrata varem kui 2 h pärast. 
+  * Nitroglütseriin 1-3 doosi s.l. (ehk 0,4 -1,2 mg) Üle 3 d 15 min jooksul ei manustata!EKG ja RR monitooring!Tilkinfusioon! – NB!! Nitroglütseriini aersoooli ei raputata!! – doseerimise viga!
+  * algannus Morfiin 2-4 mg i.v aeglaselt! (lahuse valmistamine 10mg ad 10 ml (1 mg/ml) – alati EKG, RR, teadvuse ja hingamise monitooring manustamisel! Soovitav on ette manustada metoklopramiidi (10 mg p.o/i.m/ aeglaselt i.v –ei vaja lahjendamist) vältimaks iiveldust, oksendamist.
+  * Keemilisest ärritajast tingitud kopsuturse korral morfiini ei kasutata!
+
+
+===== 3. Allergiline reaktsioon =====
+
+**3.1 Tekkemehhanism**
+
+**Allergia** tähendab organismi immuunsüsteemi liiga tugevat vastureaktsiooni mingi tegelikult ohutu aine või teguri (antigeeni) suhtes, mida nimetatakse sel puhul allergeeniks.
+
+**Allergilise** reaktsiooni põhjustajaks ongi allergeen, mis on organismile võõras valk või keemiline ühend, mis kutsub esmakordsel sattumisel organismi  esile sensibiliseerumise (tundlikuks muutumise). Allergeeni vastu tekivad organismi immuunsüsteemis antikehad (enamasti immunoglobuliin E tüüpi) või sensibiliseeritud (tundlikuks muutunud) lümfotsüüdid. Antikehad kinnituvad nn nuumrakule. 
+Sama allergeeni korduval sattumisel organismi vallandubki reaktsioon – allergeen ühineb antikehaga nuumraku pinnal, mille tulemusena purustatakse nuumraku kest ning vabanevad omakorda teatud bioloogiliselt aktiivsed ained, mis põhjustavad kudedes kahjustusi (allergianähtude ilmnemise). Põhimõtteliselt võib seda reaktsiooni kirjeldada ka kui antikehade poolt koos teiste kaitsemehhanismidega esilekutsutud põletikuks allergeeni hävitamiseks.
+
+**3.2 Tunnused**
+
+(sõltuvad allergiatüübist ehk kas allergia avaldub nahanähtudena, hingamisteede ärritusena vms):
+  * Lööve nahal, kublad (urtikaaria), tursed
+  * sügelus
+  * Punetus, 
+  * nohu e. riniit 
+  * silmade ärritus
+  * hingamisteede ärritus 
+  * palavik
+  * üldine halb enesetunne, liigesevalud
+  * peavalu (võib esineda kõikide allergiatüüpide puhul)
+  * iiveldus, kõhuvalu, -lahtisus (üldjuhul toiduallergia puhul)
+	
+**3.3 Objektiivsed uuringud**
+
+  * EKG
+  * SpO2
+  * RR
+
+**3.4 Meditsiiniline esmaabi**
+
+  * Põhjusliku allergeeniga kokkupuute lõpetamine!
+  * Rahustamine
+  * Hingamist toetav asend
+  * Vajadusel veenitee
+
+**3.5 Ravimid**
+
+  * Kannatanu enda ravimid: allergiavastased käsimüügiravimid (Claritin, Zyrtec, Kestine)
+
+
+===== 4. Anaflüaksia =====
+
+**4.1 Tekkemehhanismid**
+ 
+kiiresti arenevate üldnähtudega allergiline reaktsioon, kus kannatanu seisund muutub järsult eluohtlikuks. Võrreldes  lihtsalt allergilise reaktsiooniga puudub anafülaksia korral antikehade ja teiste kaitsemehhanismide vahel kooskõla ja seetõttu saab vallanduda kontrollimatu põletikureaktsioon, mis haarab kogu organismi.
+
+Kõige sagedastemaks anafülaksiat põhjustavateks aineteks ehk antigeenideks on toiduained (pähklid, koorikloomad, tsitrusviljad); ravimid (penitsilliin, veenisisesi süstitavad ravimid, aspiriin jt valuvaigistid, osad südameravimid); lateks; herilase- või mesilase nõelamine.
+
+**4.2 Tunnused**
+
+  * Alguses (sek-min):
+    * Kuumatunne
+    * Nahapunetus,turse
+    * Nn klomp kurgus ja hirmutunne
+  * Järgneb:
+    * Tugevnev punetus
+    * Sügelus
+    * Üle keha paistetus (hästi jälgitav näol, huultel, silmade ümbruses, kõris)
+
+
+**Üldised sümptomid**
+  * lämbumistunne turse tõttu ülemistes hingamisteedes
+  * angioödeem kurgupiirkonna pehmetes kudedes ja raske turse (lämbumiseoht!)
+  * järsk vererõhu langus
+  * teadvusekadu
+  * iiveldus,oksendamine (lämbumisoht!), krambid kõhus, kõhulahtisus 
+  * tahhükardia 
+
+**Ohusümptomid**
+  * äge algus,
+  * teadvusehäire
+  * hingamisteede turse
+  * düspnoe, tsüanoos (SpO2 alla 92%)
+  * RR alla 90mmHg
+  * Shokitunnused (kahvatu,külm higi, tsüanootilisus)
+
+**4.3 Objektiivsed uuringud**
+
+  * EKG, kardiomonitooring
+  * RR
+  * SpO2
+
+**4.4 Meditsiiniline esmaabi**
+
+  * Põhjusliku allergeeniga kokkupuute lõpetamine!!
+  * Veenitee (kiire!)
+  * Vabad hingamisteed
+  * hapnikuravi (8-10 l/min)
+  * Lamav asend: juhul kui hüpotensioon põhiline, siis shokiasend, kui aga hingamispuuduslikkus, siis hingamist toetav asend )
+  * Rahustamine 
+  * Kiire transport haiglasse!
+
+**4.5 Ravimid**
+
+  * Adrenaliin 1 mg ad 20 ml 0,5-1 ml kaupa  i.v 
+  * või kui veenitee viibib:  0,5 mg i.m. /õlavarde (kui olemas, siis Epipen)
+  * NaCl 0,9% 250- 500 ml joana, edasi vastavalt RR väärtustele
+  * Kõriturse korral: adrenaliin 5 mg p.i (inhalatsioon nebulisaatoriga)
+  * Ksimüügi antihistamiinikumid
+
+
+===== 5. Insult =====
+
+**5.1 Tekkemehhanism**
+
+insult ehk ajurabandus on äkki tekkiv aju veresoonte ummistus või lõhkemine, mille tõttu on häiritud aju verevarustus ning aju ei saa piisavalt hapnikku ja toitaineid. 
+
+2 peamist alaliiki on järgnevad:
+**Isheemiline insult e ajuinfarkt** – tekib ajuveresoone sulgumise, ummistuse tagajärjel. Peaaju veresoone sulgumist võivad põhjustada: 
+  * peaaju tuiksoones e arteris tekkinud tromb e verehüüve; 
+  * keha mõnes teises veresoones tekkinud tromb, õhumull või rasvaosake, mis kantakse verevooluga peaaju arteritesse – sellist liikuvat takistust kutsutakse emboliks. 
+  * Protsentuaalselt on kõige enam isheemilist insulti
+
+**Hemorraagiline insult** – tekib ajuveresoone lõhkemise tõttu tekkinud verejooksu tagajärjel. Ajuverejooksu võivad tekitada: 
+  * veresoone lõhkemine peaaju sees, mille korral tekib ajusisene verejooks ehk intratserebraalne hemorraagia, mis kutsub esile ajukahjustuse verevalumi ja seda ümbritseva turse tõttu; 
+  * veresoone lõhkemine peaaju pinnal, mille korral tekib verejooks peaaju ümbritsevate kestade vahele – seda nimetatakse ämblikvõrkkesta aluseks verejooksuks ehk subarahnoidaalseks hemorraagiaks. Tavaliselt lõhkeb veresoon kohas, kus juba esineb ajuarteri seina kaasasündinud kotjas väljasopistis ehk aneurüsm. Sellele seisundile iseloomulikke sümptomeid (äkki tekkinud väga tugev peavalu, teadvushäire) suudavad arstid teistest insuldi liikidest üldiselt kiiresti eristada.
+
+**Kokkuvõtvalt**: haiguse olemus on selles, et ajuveresoon muutub verd kas vähe läbilaskvaks või täiesti ummistunuks,,
+
+**5.2 Tunnused**
+
+  * Üldjuhul ei teki 1 päevaga, vaid on hoiatavad eelnähud: pearinglus, tasakaalu-, nägemishäired, käe(jäsemenõrkus), ka iiveldus.
+  * Insuldi konkreetsed tunnused on: 
+    * nägemishäire, 
+    * mingi kehaosa või  1 kehapoole halvatus (hemiparees), 
+    * näolihaste toonuse langus: näoilme muutub, suunurk vajub alla, huuletoonusest mõjutatuna ninaalune vajub alla,
+    * jäsemete nõrkus,
+    * kõnehäired (afaasia, düsfaasia)
+    * hemorraagilise isheemia korral ka äkki tekkiv tugev peavalu (kuna nö lahtine veri surub ajukelmetele)
+    * lisanduvad nähud: tasakaalu häired, mäluhäired, krambid, iiveldus, seedetegevuse häired
+
+**5.3 Objektiivsed uuringud**
+
+  * teadvuse hinnang,
+  * RR, 
+  * SpO2, 
+  * Veresuhkur (juhul kui teadvusehäired),
+  * EKG,
+  * Palaviku kahtluse korral temperatuur
+
+**5.4 Meditsiiniline esmaabi**
+
+  * Kiire transport haiglasse raamil tõstetud peaalusega või koomaasendis ( aeg, mille jooksul saab kannatanut aidata on kuni 4,5 h!!) NB! Oluline fikseerida insuldi tekkimise aeg!!
+  * Veenitee, kanüüli lahtihoidvas koguses NaCl 0,9 %
+  * Hapnikravi tuleks alustada igal patsiendil, kelle SpO2 < 95%. 
+  * Hapniku pealevool maskiga (vahemalt 6 l/min) või ninasondiga 3-4 l/minalustada igal juhul mõõdukalt O2 manustamist!
+  * Transpordil trepist alla: jalad ees, 
+  * Katta soojalt,
+  * Kui transportida ei saa, siis küliliasend oksendamise puhuks 
+
+**5.5 Ravimid**
+
+  * Oksendamise puhul metoklpopramiid (Cerucal) 10mg i/v
+  * Krampide puhul ravimid krambihoo kupeerimiseks
+  * Vajadusel ravida RR: optimaalne  RR on mittehüpertoonikul (160-180) /(90-100) mmHg, hüpertoonikul 180/100mmHg.Ettevaatlik ravi vajlik kui RR on üle 220/120mmHg  
+  * Kui RR jääb alla 90 mmHg, siis kiire infusioonravi, kui see vastuseta, siis vasopressorid.
+  * Palaviku korral Paracetamol 
+  * Valu korral vajadusel ettevaatlik valu kupeerimine
+
+
+===== 6. Stenokardia=====
+
+nimetatakse ka rinnaangiiniks
+
+**6.1 Tekkemehhanism**
+ 
+Tegemist on südame isheemiatõve ühe levinuima kliinilise vormiga.
+Pärgarterid ehk koronaarid ahenevad (ateroskleroosi e veresoonte lubjastumise tagajärjel). 
+Koronaari valendiku ahenemise tõttu ei varustata südamelihast küllaldase vere ja hapnikuga, tekib valu. 
+Valu tekib eelkõige füüsilise või psüühhilise koormuse tõttu ja rahuolekus taandub (kui valud tekivad rahuolekus, siis on isheemiline haigus juba väga progresseerunud)
+Valuhoo teket soodustavad külm ilm, vastutuul, rohke söömine, psüühiline pinge, töötamine ülestõstetud kätega, hirm suurendab valu.
+
+**6.2 Tunnused**
+
+  * Rinnaku ja südame piirkonna valu või rõhuv pigistus-, ängistustunne (tekib järsku)
+  * Valu ei ole alati tugev, kuid põhjustab ebameeldiva tunde. 
+  * Valu võib kiirata vasakusse õlga ja kätte, vasaku abaluu alla , harvem kaela, alalõuga, paremale rindkeresse või kätte, ülakõhtu,
+  * Valuataki ajal kiireneb pulss ja RR
+
+**6.3 Objektiivsed uuringud**
+ 
+  * EKG!!, 
+  * RR, 
+  * SpO2 
+
+**6.4 Meditsiiniline esmaabi**
+
+  * Füüsiline koormus viia miinimumi, lamavasse asendisse (juhul kui hingamispuudulikkus poolistuv asend),
+  * Hapnik: esmaselt ninasond 1-2 l/min, vajadusel 4-6 l/min maskiga,
+  * Veenitee,
+  * Rahustada (hirm süvendab valu)
+  * Transport vajadusel poolistuvas asendis
+
+**6.5 Ravimid**
+
+  * Nitroglütseriin 0,4 mg s/l ehk 1 doos, maksimaalne 1,2 mg ehk 3 doos;  NB!! üle 3 doosi 15 min jooksul ei tohi. 
+  * Aerosooli ei raputata!
+
+
+===== 7. Müokardiinfarkt =====
+
+**7.1 Tekkemehhanism**
+
+Südamelihaseinfarkt on äkki tekkiv haigus, mille põhjustab tavaliselt ühe veresoone või selle haru sulgus trombi, harvem emboli või veresoone spasmi tõttu, mistõttu ei  varustata ummistuse järgnevat piirkonda verega ning tekib antud piirkonna nekroos (kärbumine).
+
+**7.2 Tunnused**
+ 
+  * Intensiivne kauapüsiv stenokardia, mis ei vaibu rahuolekus ja nitroglütseriini manustamisel (5 minuti jooksul)
+  * valu asemel võib olla surve- või pigistustunne südamepiirkonnas (ca 10%-l valu puudub)
+  * surmahirm, 
+  * nõrkustunne, teadvusekaotus,-häire
+  * iiveldus, oksendamine,
+  * šokitunnused (higistamine, kahvatus, tsüanootilisus)
+  * hingamisraskus (kardiogeenne kopsuturse!)
+  * südamerütmihäired, 
+  * võib esineda segasust
+  * RR langenud või tõusnud,
+  * Pulss: normaalne, tahhükardia või bradükardia.
+  * EKG: ST-segmendi elevatsioon, patoloogiline Q-sakk 
+  
+**7.3 Objektiivsed uuringud**
+
+  * EKG!!, kardiomonitooring,
+  * RR, 
+  * SpO2
+
+**7.4 Meditsiiniline esmaabi**
+
+  * Lamav asend tõstetud peaalusega (vajadusel poolistuv asend, aga ei istu, ei käi!) 
+  * Veenitee
+  * Hapnik: kui stabiilne – ninasond 1-2L/min,  4-8 l/min (soovitavalt niisutatult),
+  * Rahustada
+  * Kiire transport haiglasse (nekroosi areng 6-8 h!!)
+
+**7.5 Ravimid**
+
+  * Aspririn 250-500 mg p.o
+  * Nitroglütseriin esmaselt 1-2 doosi s.l  (0,4-0,8 mg), NB! üle 3 doosi 15 min jooksul ei tohi manustada.
+  * Nitroglütseriin alates 5-10 mikrogramm/min i.v perfuusoriga, so 10mg  ad 20 ml perf kiirus 0,6-6.0 ml/h
+  * Nitroinfusioon tuleb lõpetada koheselt kui RRsüst langeb alla 90 mmHg (või hüpertoonikul rohkem kui 30%) või kui tahükardia süveneb!
+  * Morfiin,alusta 2-4 mg aeglaselt  i.v.:lahus 10 mg ad 10 ml, järgnevalt 5-10 minutiliste vahedega valu vaibumiseni kokku kuni 10-15 mg.NB! Parema vatsakese infarkti puhul kasutada ettevaatlikult! 
+  *  Soovitavalt  ette manustada metoklopramiidi 10 mg aeglaselt i.v
+  * Metoprolool alusta 1 mg i.v: 5 mg ad 10 ml kiirusega 1 mg/min kuni 5 mg , seejärel 5-10 min vahega kokku 10-15 mg. Manustamine lõpetada kohseselt kui RR langeb alla 90mmHG, südamelöögisagedus langeb alla 45 x/min.
+
+
+
+===== 8. Krambihoog/ Epileptiline staatus  =====
+
+**8.1 Tekkemehhanism**
+ 
+Ajutine muutus käitumises, mis on tingitud massiivsest elektrilise impulsi üleandmise häirest peaajus, mille tulemusena tekivad kontrollimatud lihaskontraktsioonid ja millega kaasneb teadvusetus.
+Põhjused: epilepsia, ajukasvaja, peatrauma, insult, mürgitus, KNS infektsioon, hüpoksia, harva ka  madal v kõrge veresuhkur jm.
+
+**8.2 Tunnused**
+
+  * Jäik kangestus ja teadvuse kadu (ca 30 sek ,aga v-o ka kauem)
+  * Hingamine võib olla korrapäratu
+  * Tõmblused jäsemetes ja/või näos
+  * Teadvuse taastudes on patsient segaduses, ei orienteeru ajas ja ruumis
+  * Võib tunda peavalu ning soovi magada
+
+**8.3 Objektiivsed uuringud**
+
+  * Teadvus, hingamine
+  * Keelehammustus
+  * Saturatsioon (norm SpO2, 95...100%)
+  * Veresuhkur (norm 4,5 ... 5,5 mmol/l, diabeedi sümptomaatika ...> 7 ...>11,1 mmol/l)
+  * Vererõhk (norm 130/85)
+  * EKG. Kardiomonitooring
+  * RR
+  * Temperatuur (36,5 ... 37,0)
+  * Kontrollida võimalikku peatrauma olemasolu
+
+**8.4 Meditsiiniline esmaabi**
+
+  * Kaitse lisavigastuste eest
+  * Hapnik O2 10 l/min, reservuaaariga maskiga (juba krambihoo ajal, kuna hüpoksia oht)
+  * Veenitee
+  * Hingamise ja teadvuse jälgimine
+  * Transport haiglasse (küliliasendis teadvusetuse korral), va kroonilised epilepsiahaiged, kes on korralikult uuritud, jalgitud ja ravitud ja kes võtavad korralikult ravimeid ning kes on taastunud adekvaatsele tasemele või jäävad koju adekvaatse kaaslase jälgimisele.
+
+**8.5 Ravimid**
+
+  * Diasepaam: 5-10 mg i.v (ei vaja lahjendust, süstimise kiirus 5 mg/min), juhul kui veenitee viibib, siis 10 mg p.r  - krambihoo kupeerimisega alustada  võim, kiiresti, vältimaks võimalikku ajukahjustust.
+
+
+===== 9. Hüpoglükeemiline kooma =====
+
+**9.1 Tekkemehhanism**
+ 
+Suhkrupuudus veres / madal veresuhkur ....
+
+**9.2 Tunnused**
+
+  * Hingamine normaalne,
+  * Nahk niiske, kahvatu
+  * Näljatunne, janu puudub
+  * Lihased pinges, värin, krambid
+  * Areng kiiresti
+
+**9.3 Objektiivsed uuringud**
+ 
+  * Teadvus, hingamine, vereringe
+  * Veresuhkur (norm 3,8 ... 5,6 mmol/l, madal ... < 3,3 mmol/l)
+  * Saturatsioon (norm SpO2, 95...100%)
+  * Vererõhk (norm 130/85)
+  * Vajadusel EKG või monitor
+
+**9.4 Meditsiiniline esmaabi**
+
+  * 10 ...20 gr kiiresti imenduvaid süsivesikuid suukaudselt keele alla (3...4 tl suhkrut või mett või glükoositablett)
+  * Veenitee, glükoos (25...100 ml 40% glükoosi i.v; vajadusel korrata 5% glükoosi infusioonina kuni veresuhkur on 10 mmol/l)
+  * Hapnik O2  4 l/min
+
+**9.5 Ravimid**
+
+
+...
+
+
+
+===== 10 Hüperglükeemiline kooma =====
+
+**10.1 Tekkemehhanism**
+ 
+Insuliinipuudulikkus organismis, mis takistab veresuhkru imendumist organismi
+
+**10.2 Tunnused**
+
+  * Atsetoonilõhn, sügav hingamine
+  * Nahk kuiv, nägu punetav
+  * Näljatunne puudub, janu
+  * Lihased lõdvad
+  * Areng aeglaselt
+
+**10.3 Objektiivsed uuringud**
+ 
+  * Teadvus, hingamine, vereringe
+  * Veresuhkur (norm 3,8 ... 5,6 mmol/l, diabeedi sümptomaatika ...> 7 ...>11,1 mmol/l)
+  * Saturatsioon (norm SpO2, 95...100%)
+  * Vererõhk (norm 130/85)
+  * Vajadusel EKG või monitor
+
+**10.4 Meditsiiniline esmaabi**
+
+  * Veenitee, 0,9% NaCl
+  * Lühitoimeline insuliin
+  * Hapnik O2  4 l/min
+  * Vajadusel transport haiglasse
+
+**10.5 Ravimid**
+
+...
+
+
+===== 11. Äge kõht =====
+Äkki algav, ohtlikult kulgev ja enamasti esmakordselt diagnoositud kõhuvalu, mis tavaliselt iseenesest ei taandu ja eeldab operatiivset ravi.
+
+===== 12. Kõhuvalu=====
+Enamasti haiguse tagajärg, võib olla ka krooniline.
+
+**12.1 Tekkemehhanism**
+ 
+  * Levinumad haigused: Pimesoolepõletik, sapi- ja neerukoolikud (valusööstud), soolesulgus, äge kõhunäärmepõletik ja ägedad günekoloogilised haigused.
+  * Põletikud
+  * Haavandid
+  * Sapi- ja neerukivid
+  * Kroonilised seedetrakti haigused (reflukhaigus e. söögitoru põletik, mao limaskesta põletik e. gastriit, haavandtõbi, )
+
+**12.2 Tunnused**
+
+  * iiveldus ja oksendamine
+  * pinges/kõva kõht
+  * kõhuvalu
+  * külmatunne
+  * kõhulahtisus
+  * temperatuuri tõus
+  * seedetrakti verejooks (veriroe)
+
+**12.3 Objektiivsed uuringud**
+ 
+  * palpeerime kõhtu, mõõdame vererõhku, jälgime üldiselt, viime kiiremas korras haiglasse.
+  * Kõhukoopa auskultatsioon (Peristaltika)
+  * Kõhukatete perkussioon
+  * Per rectum uuring
+
+**12.4 Meditsiiniline esmaabi**
+
+  * hapnikravi
+  * ravitakse haiguse põhjust, mitte tunnuseid (valu)
+
+
+===== 13. Kõhulahtisus =====
+
+**Jaguneb kaheks**:
+  - Peensoole tüüpi
+  - Jämesoole tüüpi
+Võib olla nii **kroonilise** või **ägeda** iseloomuga
+
+**13.1 Tekkemehhanism**
+ 
+  * Viirusinfektsioon (Peensoole tüüpi)
+  * Bakteriaalne toidumürgistus (Jämesoole tüüpi)
+  * Kroonilise kõhulahtisuse korral võib põhjustajaks olla mõni põhihaigus.
+  * Seedetraktiväline põhjus (hirm, uued ravimid)
+
+**13.2 Tunnused**
+
+  * äge oksendamine
+  * kõhulahtisus
+  * võib anda palavikku
+  * kõhuvalud
+  * indoksikatsiooni nähud
+  * vesine ja suuremahuline väljaheide (peensoole tüüpi)
+  * nabaümbruse valu (peensoole tüüpi)
+  * krambitaolised kõhuvalud alakõhus (jämesoole tüüpi)
+  * mädas-limane ja/või verine, väikesemahuline väljaheide (jämesoole tüüpi)
+
+**13.3 Objektiivsed uuringud**
+
+  * palpeerime kõhtu, mõõdame vererõhku, jälgime üldiselt
+  * mõõdame veresuhkrut
+  * kõhukoopa auskultatsioon (Peristaltika)
+
+**13.4 Meditsiiniline esmaabi**
+
+  * piisavalt juua
+  * ravi on sümptomaatiline
+  * aktiivsüsi
+  * tilk

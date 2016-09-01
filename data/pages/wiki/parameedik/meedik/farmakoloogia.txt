@@ -1,0 +1,172 @@
+====== Farmakoloogia ======
+
+**Ravimi mõiste** - iga valmistatud, turustatud või turustamiseks määratud aine, mis on ette nähtud haigete ravimiseks, haigusseisundi kergendamiseks, elutalitluse taastamiseks, korrigeerimiseks või muutmiseks (WHO määratlus)
+
+**Ravimi nimetus** - keemiline nimetus; (geneeriline e üldine nimetus), kaubanduslik e firmanimi:
+
+Näide: amiodaroon / Cordarone v Amiokordin; atsetüülsalitsüülhape/ Aspirin; metoklopramiid/ Cerucal; diklofenak/ Diclac, Almiral
+
+**Ravimite liigitus**
+
+  * käsimüügiravimid: vähemohtlikud väärkasutamisel, kasutamise üle otsustab patsient, ent siiski tegemist „mürgiga”.
+  * retseptiga väljastatavad ravimid: väärkasutamise tagajärjed raskemad, kasutamise üle otsustab pädev meditsiinitöötaja.
+  * narkootilised ja psühhotroopsed ravimid: samuti retseptiravimid, tekitavad psüühilist ja füüsilist ravimsõltuvust, tekitavad tolerantsuse, mõjutavad psüühikat, erilise järelevalve all.
+
+**Ravimvorm**
+
+Ravimvorm = toimeaine(d)+ abiained
+Abiained:
+  * kaitsevad toimeainet keskkonnamõjutuste eest (näit happelise maomahla vastane tabletikate);
+  * juhivad toimeaine mõju algust ja kestvust;
+  * võimaldavad täpset annustamist (näit väikese toimeaine annuse puhul on tabletis palju abiained, et oleks võimalik manustada);
+  * lõhna ja maitse parandamiseks (tbl puhul).
+
+Erinevate ravimvormide näiteid:
+  * Vedelad: lahus, tinktuur, tilgad, suspensioon, emulsioon, siirup, kuivsiirup
+  * Tahked: tablett, kapsel, pulber
+  * Pooltahked: suposiit, salv, pasta, kreem, geel
+  * Muud: aerosool, plaaster, nahaliim, -lakk
+
+Näide: atsetüülsalitsüülhape ehk aspiriin on ravimi toimeaine, aspiriini tablett on ravimvorm.
+
+
+
+
+
+
+===== Ravimite toimeviisid =====
+
+**1. Retseptorite stimuleerimine või pärssimine**
+
+Retseptorid on organismi osad, mis suudavad erutust vastu võtta. Antud juhul on nendeks suured molekulid, mis asuvad raku välisseinal, aga vahel ka raku sees. Nende toimimist on kõige parem võrrelda ukselukkudega, kus ravim on võtmeks ja retseptor lukuauguks.
+Põhimõtteliselt on olemas neli võimalikku olukorda:
+
+  - Võti sobib lukuauku ja keerab luku kinni. Farmakoloogias nimetatakse seda agonismiks. Sellisel viisil toimivat ravimit nimetatakse agonistiks.
+  - Võti sobib lukuauku, aga sellega ei saa lukku kinni keerata. Kui võti lukuauku kinni jääb (toimeaine seondub retseptoriga), siis ei saa seda lukku ka teise võtmega kinni keerata. Seda seisundit nimetatakse antagonismiks. Niisugune retseptor jääb teiste hormoonide või ravimite jaoks blokeerituks. Antagonistid suudavad ravimeid ka nende retseptoritelt ära tõrjuda (konkureeriv = väljatõrjuv antagonism).
+  - On olemas ka mittekonkureeriv antagonism. Sellisel juhul kinnitub antagonist mitte otse „lukuauku“, vaid retseptori muule kohale ja hakkab agonisti toimet mõjutama.
+  - Funktsionaalse antagonisti toime ei ole seotud võtme ja lukuaugu teooriaga, vaid sellel on lihtsalt mingi agonistiga vastupidine toime. (Näide: Ketonaal põhjustab kõrvaltoimena suurenenud süljeeritust, Atropin aga toimib vastupidiselt. Mõlemat ravimit koos manustades jääb Ketonaali kõrvaltoime ära.)
+
+Viimane variant oleks see, et võti ei sobi lukuauku. Sellisel juhul ei toimu loomulikult ka mingit reaktsiooni.
+Ravimi ja retseptori vaheline side võib olla ajutine (= pöörduv), nagu see tavaliselt ka on, või siis püsiv (= pöördumatu).
+
+**2. Ensüümide aktiveerimine või pärssimine**
+
+Ensüümid on kehaomased valgud, mis stimuleerivad ainetevahelisi keemilisi reaktsioone (biokatalüsaatorid). Mõned ravimid seonduvad nende retseptoritega ja aktiveerivad või pärsivad nende tööd. Ensüümide pärssimise klassikaliseks näiteks on atsetüülsalitsüülhape, aspiriin. See pärsib ensüümi nimega tsüklooksügenaas ja selle kaudu ka palaviku teket ning vereliblede kokkukleepumist.
+
+**3. Ioonikanalite avamine ja blokeerimine**
+
+Ioonikanalite avamise ja blokeerimise teel võimaldatakse või takistatakse ioonide, näiteks naatriumi, kaaliumi, kaltsiumi või kloori sisse- ja väljavoolu rakkudes.
+Selle mehhanismi näiteks on lokaalanesteetikumid nagu Xylocain, mis blokeerivad avatud naatriumikanalid.
+
+**4. Transpordisüsteemide mõjutamine**
+
+Molekulide transportimine raku sisse ja sealt välja toimub väikeste avade (kanalite) kaudu, mis lasevad läbi ainult väga konkreetseid aineid, või transpordisüsteemide abil (ioonipumbad ja transporterid), mida väga tugevasti lihtsustatuna võib ette kujutada pöördustena või vesiratastena.
+
+**5. Toime ravimite endi keemiliste või füüsikaliste omaduste tõttu**
+
+Selle näiteks on makromolekulaarsete infusioonilahuste toimimine veremahu asendamisel.
+
+
+===== Manustamisviisid =====
+
+**1. Veeni** - Intravenoosne (i/v) ravimite manustamine otse veresoontesse, nimelt veenidesse, on kiirabiolukorras soovitatav ravimi manustamisviis. Eelised:
+  * Kiire toime – pole vaja toimeaine omastamise mehhanismi järel oodata.
+  * Maksast minnakse mööda – seedetrakti kaudu ravimite manustamisel läbivad ravimid kõigepealt maksa, mis osa toimeainest lagundab.
+  * Hea reguleeritavus – sageli saab patsienti jälgides manustada just toimimiseks vajaliku doosi.
+
+**2. Lihasesse** - Intramuskulaarne manustamine (i/m) on kiirabi puhul kasutusel, kui manustatava ravimimi toimet ei soovita koheselt või ei peab see toimima pikema aja jooksul, nt. spasmolüütikumid koolikulise kõhuvalu korral.
+
+**3. Pärasoolde** - Rektaalset manustamist kasutatakse kiirabis harva. Erandiks on siin Diazepam-rektioolid, Dormicum, Eferalgan-küünlad (= suposiidid). Eeliseks on kindlasti manustamistoimingu lihtsus. Kui aga pärasool on roojaga täitunud, siis võib toimeaine resorptsioon väga kaua aega võtta.
+
+**4. Naha alla** - Subkutaanselt (s.c.) manustamist kiirabiolukordades tavaliselt ei kasutata, kui mõned erandid välja arvata. Selle põhjuseks on toimeaine väga aeglane omastamine ja sellest tulenevalt ka pikk ooteaeg ravimi mõjumiseni.
+
+**5. Luusisene** - Spetsiaalsete luunõelte abil punkteeritakse sääreluu ülaotsa (suuremate laste puhul ka pahkluu sisekülje) hea verevarustusega luuüdi. See manustamisviis sobib eriti hästi lastega juhtunud õnnetuste puhul (elustamine, trauma), kuna see on kiire, lihtne ja vähese riskiga. Kõiki ravimeid saab doseerida nii nagu veenisiseseltki. Infusioonravi korral võib olla vajalik survemansettide kasutamine.
+
+**6. Keele alla või ninna** - Sublinguaalselt (s/l) ehk suu limaskesta kaudu või nasaalselt ehk nina limaskesta kaudu ravimite manustamisel omastatakse toimeaine kiiresti, sest need limaskestad on hea verevarustusega. Keele alla manustamise korral ei pea ravim erinevalt suukaudsest (oraalsest) manustamisest läbi maksa minema ja sihtelundini jõuab rohkem toimeainet.
+
+**7. Suukaudselt** - Ravimite oraalne (p.o.) manustamine on vältimatu abi korral tagaplaanil, sest ravimi mõjumiseks läheb aega ja patsient peab selge teadvusega olema.
+
+**8. Sissehingamise teel** - Inhalaatoriga manustamise eeliseks on, et toimeaine jõuab otse kopsudesse, ilma et peaks organismis ringiga minema. Nii jäävad pikaajalisel kortisooniga pihustiravil süsteemsed (kogu kehas tekkivad) kõrvaltoimed peaaegu täielikult ära. Praktikas on nebulisaatoriga hapnikumaski kasutamine ravimite manustamisel end paremast küljest näidanud kui tavalised pihustid.
+
+==== Manustamiskoht ja toime keskmine kiirus ====
+
+  * Toopiline e. välispidine - tunde v päevi
+  * Suukaudne - 30-90 min
+  * Rektaalne - 5-30 min (ettearvamatu)
+  * Nahaalune - 15-30 min
+  * Lihasesisene - 10-20 min
+  * Keelealune - 3-5 min
+  * Inhalatsioon - 3 min
+  * Endotrahheaalselt - 3 min
+  * Veenisisene - 30-60 sek
+  * Südamesisene - 15 sek
+
+**Annuste mõju jagunemine**
+  * toimiv vs mittetoimiv
+  * minimaalne -> terapeutiline -> toksiline -> surmav
+
+**Annust mõjutavad asjaolud**
+  * nn isikupära – tundlikkus ravimi suhtes, geneetiline omapära, allergia
+  * iga – 18-60 aastane on farmakoloogiliselt täiskasvanud; vanuritel kehamass väiksem, muud ealised muutused (annus reeglina väiksem); laste kehamass väiksem, kõik funktsioonid pole välja arenenud (annus reeglina 1/20 täiskasvanu annusest iga eluaasta kohta)
+  * sugu – M kehamass suurem, ainevahetus kiirem (M 0,1 ml/kg*h; N 0,08)
+  * seisund –  ravim mõjutab rohkem hälbinud organismi, eritumine oleneb maksa ja neerude seisundist. 
+  * ravimvorm –  vt toimekiirust vastavalt manustamiskohale
+  * suhtumine – platseeboefekt, 
+  * toitumine – tühi kõht – mõju kiirem ja tugevam;
+  * füüsiline/vaimne koormus, kliima  jm
+
+==== Ravimiallergia ====
+
+Immuunsüsteemi muutunud või tugevnenud immuunreaktsioon ravimile.
+
+Allergia kujunemine: esimesel kokkupuutel sensibilatsioon, alates teisest kokkupuutest allergiline reaktsioon. 
+
+Sagedasemad ravimallergia põhjustajad: vaktsiinid, antibiootikumid, mittesteroidsed valuvaigistid (näit Diclofenak).
+Riskifaktoriks on just parenteraalne manustamine, eriti subkutaanne (s.c).
+
+Ravimallergia ennetamine:
+  * võimalusel monoteraapia
+  * vältida teadaolevat allergeeni (NB! anamneesi võtmine – allergiate üle küsimine)
+  * vältida harilike allergeenide paikset kasutamist
+  * patsiendi jälgimine ja selgitustöö
+
+Ravimallergia ravi:
+  - Lõpetada koheselt ravimi manustamine!!
+  - Kergema allergilise reaktsiooni – lööve, riniit, konjuktiviit – Zyrtec 10 mg (tsetirisiin) 1 tbl/päevas
+  - Astmahoo puhul Ventolin (salbutamool), 1-2 inhalatsiooni 
+  - Anafülaktilise šoki korral:
+    * Vajadusel elustada
+    * Tagada vabad hingamisteed ja hapnikravi
+    * Rajada veenitee, alustada infusioonravi
+    * manustada Adrenalini 1 mg ad 20 ml  -> 1 ml kaupa ettevaatlikult i.v südametegevust jälgides (vajalik doos tavaliselt 0,5- 1 mg)
+
+Anafülaktiline šoki tunnused: külm ja higine nahk, südamepekslemine, teadvuse häired, hirm.
+  * Riniit – allergiline nohu
+  * Konjuktiviit – silma sidekesta põletik
+
+
+
+
+
+
+
+
+
+===== Kõrvaltoimed =====
+
+Lisaks põhitoimele on igal ravimil ka suuremal või vähemal määral soovitavad kõrvaltoimed.
+Soovimatuid kõrvaltoimeid võib tekkida ravimi põhitoimest tulenevalt (näiteks unisus pärast diasepaami manustamist) või ka sellest sõltumatult (näiteks süstimise valu lihasesse ravimi manustamisel). Samuti võivad need tekkida liiga kiirest süstimisest, vale manustamisviisi kasutamisest või üledoseerimisest.
+Mõningad kõrvaltoimed võivad olla ühes olukorras ebasoovitavad, teises aga soovitavad ja isegi ravi soodustavad.
+
+===== Vastunäidustused =====
+
+Mitte iga ravim ei sobi kõigile antud haiguspildiga patsientidele. Kui näiteks mingi ravimi toimeainel on lisaks põhitoimele ka krampe soodustav kõrvalmõju, siis ei tohi seda epileptikutele manustada. Paljusid ravimeid ei soovitata rasedatele manustada, sest need võivad lapsele halvasti mõjuda.
+
+===== Kokkusobimatus =====
+
+Kokkusobimatusest räägitakse siis, kui kaks ravimit ei tohi (väljaspool keha) kokku puutuda. Siin on klassikaliseks näiteks naatriumbikarbonaat (sooda) – kui seda manustatakse koos mingi muu ravimiga, näiteks ühise veenikanüüli kaudu, siis kaotab toimeaine oma mõju.
+
+===== Sõltuvusained =====
+
+Mõnede kiirabi ravimite kasutamine on seadustega rangelt reguleeritud, kuna need võivad sõltuvust tekitada. Sellisteks ravimiteks on näiteks Morfiin, Fentanyl ja Pethidin. Nende ravimite kasutamine ja varude täiendamine peab iga kord kirjalikult dokumenteeritud olema ja neid dokumente tuleb säilitada. Ka tuleb neid ravimeid hoida võõrastele kättesaamatul moel.
+

@@ -1,0 +1,220 @@
+====== Tegevused 2016 ======
+2016.a. tegevused taskide kaupa. 
+
+===== TETRIS 16.4 =====
+
+==== 15.nädal 11.04.2016 - 17.04.2016 ====
+
+  * TETRIS-1540 - TVT otsuste pakkide nimekirjas EMPISes kuvatakse MVM ja TVT pakke läbisegi
+  * TETRIS-1669 - MVM_2 - MVM taotluse/otsuse tegevusnuppude täiendused
+  * TETRIS-1735 - Töötingimuste nimekiri
+  * TETRIS-1736 - Töötingimuste lisamise/muutmise modal
+  * TETRIS-1566 - TVH taotlusel "Andmed on salvestamata" modaal
+  * TETRIS-1539 - REDIS- o-neti kasutuselevõtt
+    * TETRIS-1734 - O-neti klassifikaator baasi, äriobjektide täiendused
+    * TETRIS-1735 - Töötingimuste nimekiri
+    * TETRIS-1736 - Töötingimuste lisamise/muutmise modal
+  * TETRIS-1504 - Tetrise ekspertiisi vormil näidata ekspertiisi kinnitamise kuupäeva.
+  * TETRIS-1215 - MVM komponentide täiendused seoses TVT otsuselt TK kulul kojukande otsuse tegemisega
+  * tekitasin taski: TETRIS-1845 - Makseviisi muutmine ebaõnnestub
+  * tekitasin taski, speki järgi korrektne?: TETRIS-1846 - TVH / TVT taotluse endale võtmisel kuvatakse veateates taotluse_id-d
+  * TETRIS-1350 - TVH taotluste nimekiri - menetleja ja isiku nimi
+  * tekitasin taski: TETRIS-1852 - TVH pealt TVT taotluse lisamise tühistamine katki
+  * tekitasin taski: TETRIS-1853 - TVH taotluse endale võtmise link katki
+  * TETRIS-1611 - TVT taotlusel salvestada töötukassa esindus TKO_ID-le
+  * TETRIS-1074 - TVT otsuse tähtaeg
+  * TETRIS-1872 - MVM kustutamine kukub koduaadressi tõttu (child record found)
+
+==== 14.nädal 4.04.2016 - 10.04.2016 ====
+
+  * TETRIS-1541 - MVM taotlusel ei saa valida otsuse kohapeal kättesaamiseks TKO-d, puudub "Lisainfo" kast
+  * TETRIS-1633 - TVH taotlus TAB1 salvestamisel modalis vana error
+    * tekitasin taski: TETRIS-1737 - andmete salvestuse edukusteade ilma reaalse salvestuseta
+  * TETRIS-1469 - EKS_3 kui on visiidipõhine, siis välistavad tingimused on muudetav ja valideerimist tuleb täiendada
+    * tekitasin taski: TETRIS-1746 - Hindamisse suunamise nupud lepingu nimekirja taga
+  * TETRIS-1610 - REDIS. Teenuseosutajate nimekirja kuvamise probleem
+  * TETRIS-1661 - JUHTUM_1.1 ekspertiis visiidipõhiseks muutmise tegevused
+    * tekitasin taski: TETRIS-1755 - modalist väljumine ei talu ESC-i
+  * läks arendajale tagas: TETRIS-1566 - TVH taotlusel "Andmed on salvestamata" modaal
+  * TETRIS-1718 - TVH taotluse dokumendi lisamisel ExceptionControllerAdvice.runtimeException
+  * TETRIS-1742 - Kustutatud staatuses taotlused nimekirjas
+  * TETRIS-1537 - REDIS. Ekspertiisi liigi värskendamise probleem ekspertiisivormi päises
+  * tekitasin taski: TETRIS-1768 - menetluses TVT muutmisel eemaldatakse taotluse menetleja seos
+
+===== HIS 4.11.1 =====
+
+==== 11.nädal 14.03.2016 - 20.03.2016 ====
+
+  * EHEALTHPRS-443 - Show error message when invalid identification code is entered
+  * EHEALTHTRT-3161 - Return clinical diagnosis instead of plain ICD-10 text with dyn form ext() diagnosis related functions
+  * EHEALTHREC-1604 - Show dead patients in str.unit discharged patients' list
+  * EHEALTHADM-716 - RCS.01.1 visit properties edit - company search to org
+  * EHEALTHADM-722 - Company report parameter - company autocomplete to org
+  * EHEALTHADM-717 - SRV.02.1.5 appointed article list edit - company search to org
+  * EHEALTHADM-719 - TR.12.07.2 unbilled services list - company search to org
+  * EHEALTHADM-718 - TRD.09.2 plan add/edit - company search to org
+  * EHEALTHADM-710 - Payer report parameter - company search to org
+  * EHEALTHADM-712 - BIL.04.2 contract payer list - company search to org
+  * EHEALTHSYS-581 - Company person structure units query - stun to org
+  * EHEALTHADM-714 - BIL.03.2 pricelist add/edit - company search to org
+  * EHEALTHADM-713 - BIL.04.3 contract search - company search to org
+  * EHEALTHADM-715 - RCS.02.1 sickness case properties edit - company search to org
+  * EHEALTHBIL-984 - BIL.28.1 fix warranty letters list pagination
+  * EHEALTHSYS-454 - printoutide <template> tag'e ehitada SYS_RESOURCE_DEPENDENCY pealt
+  * EHEALTHSYS-559 - Süsteemsete sõnumite kuva ja haldus ei escape HTML-i
+  * EHEALTHADM-709 - teenusegruppide otsing kuvab kirjeid mitmekordselt
+  * EHEALTHTRT-3079 - Operation protocol tab edit - stun select to org
+  * EHEALTHPRS-429 - täiendada isikukirjete liitmise funktsionaalset kirjeldust
+    * TYKHISSUP-2000 - Isikute liitmisel kuvatakse mobiili numbrit, aga kandub üle lauatelefon
+  * TYKHISSUP-2268 - Väljavõte patsiendile määratud NH dieetidest
+  * EHEALTHREC-1623 - RCG.11.2 "Haigusjuhu andmed - raviarstid" kuvab kirjeid mitmekordselt
+  * EHEALTHITK-3790 - Pt topelt allüksuste patsientide nimekirjas
+  * EHEALTHTRT-3202 - 4.11.1 tsüklis Angulari kuvade üle vaatamine: Dental funktsionaalsus
+  * EHEALTHBIL-1002 - 4.11.1 tsüklis Angulari kuvade üle vaatamine: Warranty letter
+  * EHEALTHADM-550 - Asutuse struktuurüksuse tasemete muutmine tekitab tõrke
+  * EHEALTHADM-752 - töösuhteta struktuurüksus kukub ADM.01.1 kuvalt valides
+
+===== HIS 4.10.3 =====
+
+==== 10.nädal 7.03.2016 - 13.03.2016 ====
+
+  * EHEALTHITK-3843 - Surma aeg muuta
+  * EHEALTHITK-3845 - Surma aeg muuta
+  * TYKHISSUP-2249 - HJ topelt raviarstid TÜK-lives
+  * EHEALTHITK-3846 - Surma aeg muuta
+  * EHEALTHREC-1623 - RCG.11.2 "Haigusjuhu andmed - raviarstid" kuvab kirjeid mitmekordselt
+  * TYKHISSUP-2258 - IS_VALID=N tunnusega välismaalaste kirjete parandamine
+  * EHEALTHITK-3841 - HJ topelt raviarstid ITK-lives
+  * EHEALTHPRS-438 - UNDEF IK-d kontrollitakse Haigekassa kindlustatuse vastu
+  * EHEALTHITK-3619 - eLaboris Leedu kodanik ei ole IK järgi leitav Telli menüüpunktist
+
+
+==== 9.nädal 29.02.2016 - 6.03.2016 ====
+
+  * TYKHISSUP-2234 - Muuta surma aeg
+  * TYKHISSUP-2235 - Muuta surma aeg
+  * TYKHISSUP-2226 - Eelmise päeva amb vastuvõttude peale minek blokeeritud dr Makkol
+  * EHEALTHADM-692 - Autocomplete lõhub diagnoosi halduse komponendi (ADM.08.2) ära
+  * EHEALTHPRS-438 - UNDEF IK-d kontrollitakse Haigekassa kindlustatuse vastu
+  * EHEALTHITK-3836 - Surma aeg muuta
+  * TYKHISSUP-1487 - pärast sessiooni aegumist logimisel konto valimata
+  * EHEALTHITK-3707 - saatekirjadel nr 15-339161
+  * EHEALTHITK-3839 - Patsiendi isikukood ei vasta reeglitele 03.03.2016
+  * TYKHISSUP-2249 - HJ topelt raviarstid TÜK-lives
+  * EHEALTHITK-3841 - HJ topelt raviarstid ITK-lives
+
+==== 8.nädal 22.02.2016 - 28.02.2016 ====
+
+  * TYKHISSUP-2217 - muuta surma kellaaeg
+  * TYKHISSUP-2219 - Palun muuta leeduka kindlustatuse staatust
+  * TYKHISSUP-2227 - Palun muuta tühistatud TVL aktiivseks tagasi
+  * MESSAGEFABRIC-8 - Lisada sõnumikeskusesse avalike ressursside raames lisandunud uued interaktioonid
+  * TYKHISSUP-2222 - isikukirjete liitmine
+  * TYKHISSUP-2226 - Eelmise päeva amb vastuvõttude peale minek blokeeritud dr Makkol
+    * tekitasin taski: EHEALTHREC-1617 - järjekorrasüsteemiga eelnevate päevade pt-de vaatamine katki
+  * EHEALTHITK-3250 - Isikud topelt, kes sisestas?
+  * EHEALTHITK-3828 - Surma aeg muuta
+  * EHEALTHREC-1618 - tõrked järjekorrasüsteemiga peale 25.02.2015 versioonivahetust
+==== 7.nädal 15.02.2016 - 21.02.2016 ====
+
+  * EHEALTHITK-3814 - Surma aeg muuta
+  * EHEALTHREC-1600 - Create registration with Qmatic ticket
+  * EHEALTHREC-1601 - Add button to call by Qmatic ticket
+  * EHEALTHREC-1552 - Open patient screen in view mode from history context
+  * TYKHISSUP-2180 - kehtetu asutuse kirje nimeta
+  * EHEALTHTRT-3124 - LKD välispõhjuse diagnoos muudetakse kaasuvaks
+    * seotud support task sai lahenduse: TYKHISSUP-2095 - välispõhjus muudetakse kaasuvaks diagnoosiks
+  * EHEALTHPRS-445 - LS.USER_MODIFY_TIME kasutamise korrastustööd
+  * LTHIS_SUPPORT-265 - After update logo are being overwritten (reception.logo.rptlibrary)
+  * TYKHISSUP-1612 - Sama RHK10 LKD-sse
+
+==== 6.nädal 8.02.2016 - 14.02.2016 ====
+
+  * TYKHISSUP-2161 - Palun muuta TVL
+  * EHEALTHITK-3808 - Surma aeg muuta
+  * EHEALTHADM-740 - Complication classifier update
+  * EHEALTHBIL-976 - Trükikuva ei arvesta liidetud isikuga
+  * EHEALTHTRT-3126 - Voodipäevatasude arvutamise komponent TR.16.02 ei väärtusta väljasid "Periood" ja "Tegelik kogus"
+  * EHEALTHPRS-444 - Isikuandmete kuval telefoni ja emaili formaadikontrollid
+  * EHEALTHBIL-973 - When new payer (person) is selected apply data freshness check
+  * EHEALTHPRS-439 - Additional parameter APPLY_DATA_FRESHNESS_CHECK for patient search
+  * EHEALTHREC-1599 - Add Qmatic UI to RDC.01.1 context
+  * tekitasin taski: EHEALTHADM-749 - Diagnoosi haldus ADM.08.2 märgib diagnosis_dova_crossmap kirjed kustutatuks
+
+
+
+==== 5.nädal 1.02.2016 - 7.02.2016 ====
+
+  * TYKHISSUP-2143 - HO-kliiniku vastuvõtud uues majas al 22.02.2016
+  * EHEALTHITK-3756 - Isikuandmete kuval e-maili ja mobiili numbri kontrollid ei toimi
+  * EHEALTHREC-1552 - Open patient screen in view mode from history context
+  * LTHIS_SUPPORT-262 - Error in resource "reception.logo.rptlibrary"
+  * LTHIS_SUPPORT-252 - Missing translation resources
+  * EHEALTHREC-1559 - Registratuurid stun->org
+    * seotud task korrastatud: TYKHISSUP-2068 - uue registratuuri tegemine
+  * LTHIS_SUPPORT-33 - Prevention programs attendance list - results are not coming
+  * EHEALTHTRT-3126 - Voodipäevatasude arvutamise komponent TR.16.02 ei väärtusta väljasid "Periood" ja "Tegelik kogus"
+    * seotud task jääb EDU tsüklivahetuse ootele: EHEALTHITK-3745 - Voodipäevatasu arvelt aadress puudu
+  * EHEALTHSUPPORT-189755 - Rakenduse testimine suletud asutusega: personis
+  * EHEALTHSUPPORT-189750 - Rakenduse testimine suletud asutusega: adminis, systemis
+  * LTHIS_SUPPORT-264 - Need the list of all duplicated patients (LIVING_SUBJECT)
+  * TYKHISSUP-2158 - Väljavõte rasedatest
+
+
+==== 4.nädal 25.01.2016 - 31.01.2016 ====
+
+  * EHEALTHITK-3795 - Muuta surma aeg
+  * TYKHISSUP-2139 - ruumi nr graafikust kadunud
+  * EHEALTHADM-723 - avalike ressursside digiloo nimekirja vaates eriala ja eriala nimetus puudu
+  * LTHIS_SUPPORT-250 - Problem with adding printout logos for different owners in the same environment
+  * LTHIS_SUPPORT-249 - ROA.01.2 "Print documents" > dropdown list content is not being displayed correctly
+
+
+==== 3.nädal 18.01.2016 - 24.01.2016 ====
+
+  * TYKHISSUP-2124 - mis kell vormistati arve
+  * LTHIS_SUPPORT-134 - (MPI.06.2) "Additional info" data is not being saved
+  * EHEALTHREC-1572 - Qmatic, use queue instead of pool
+  * LTHIS_SUPPORT-34 - SESK Prevention programs - multiple duplicates created after nightly job
+  * EHEALTHITK-3787 - Elus patsiendi isikuandmetes näitab surmaaega!
+  * TYKHISSUP-2130 - Lives struktuuril 481010 vale raviprofiil
+  * EHEALTHREC-928 - Person view tagastab liidetud isikule kaks vastust
+  * EHEALTHITK-3791 - Surma aeg muuta
+  * EHEALTHFRP-750 - Qmaticu integreerimine HISiga
+  * TYKHISSUP-2136 - Haiguslood, mida admin (RCS.02.1) komponendis ei kuvata
+
+==== 2.nädal 11.01.2016 - 17.01.2016 ====
+
+  * TYKHISSUP-2110 - TVL muuta kehtivaks
+  * TYKHISSUP-2082 - Silmakliiniku tervisekaardid tõsta uude registratuuri Puusepa 8 UUS registratuur
+  * LTHIS_SUPPORT-219 - RVUL-prod Reports return error: "system.param.not_defined"
+  * TYKHISSUP-1612 - Sama RHK10 LKD-sse
+  * EHEALTHITK-3774 - Surma aeg muuta
+  * EHEALTHITK-3778 - Surma aeg muuta
+  * TYKHISSUP-2123 - eHL kasutajate kontode audit
+  * EHEALTHITK-3782 - Surma aeg muuta
+
+
+==== 1.nädal 4.01.2016 - 10.01.2016 ====
+
+  * EHEALTHITK-3726 - 2 isikukoodiga vastsündinu, vaja tühistada
+  * EHEALTHREC-1545 - qmaticu-ga seotud bugid
+  * EHEALTHREC-1555 - Update Qmatic side view RCG.03.7
+  * TYKHISSUP-2090 - arve trükikuval tundmatu nimi
+     * tekitasin taski: EHEALTHBIL-976 - Trükikuva ei arvesta liidetud isikuga
+  * EHEALTHFRP-884 - Uuendatud NCSP-de klassifikaator eHL keskkondadesse
+  * TYKHISSUP-2051 - ui.treatment.lops.manage laiendamine ja kitsendamine ei tööta
+  * TYKHISSUP-2068 - uue registratuuri tegemine
+      * tekitasin taski: EHEALTHREC-1559 - Registratuurid stun->org
+  * EHEALTHADM-723 - avalike ressursside digiloo nimekirja vaates eriala ja eriala nimetus puudu
+  * TYKHISSUP-2095 - välispõhjus muudetakse kaasuvaks diagnoosiks
+      * tekitasin taski: EHEALTHTRT-3124 - LKD välispõhjuse diagnoos muudetakse kaasuvaks
+  * EHEALTHITK-3715 - Probleem Leedu kodaniku IK: 48511130278 lisamisega Ehealthi
+      * taasavasin taski: EHEALTHPRS-330 - Haigekassa kontroll käivitub ka välismaalase IK puhul
+  * TYKHISSUP-2100 - silmakliinik puusepa 8 piirkonnas
+  * EHEALTHITK-3745 - Voodipäevatasu arvelt aadress puudu
+    * taasavasin taski: EHEALTHTRT-3126 - Voodipäevatasude arvutamise komponent TR.16.02 ei väärtusta väljasid "Periood" ja "Tegelik kogus"
+  * EHEALTHITK-3747 - Isikuandmete kuval Lisainfo ploki asukoht vale
+    * taasavasin taski: EHEALTHPRS-431 Täiendada MPI conf koodiga GUARDIAN
+  * TYKHISSUP-2082 - Silmakliiniku tervisekaardid tõsta uude registratuuri Puusepa 8 UUS registratuur
+  * EHEALTHITK-3755 - Hooldaja Isikuandmete kuval aadresse ei kuvata

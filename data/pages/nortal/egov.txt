@@ -1,0 +1,194 @@
+====== eGov märkmed ======
+
+Alates 21.03.2016 
+
+
+Igapäevane skype grupp (sh kuu kavandatud aja raporteerimiseks): TETRIS QA
+
+üldised taskid: 
+  * eGov üldkoosoleku aja logimise task EGOVERNMENTEE-1
+  * Igapäevase SCRUM-i aja logimise task TETRIS-2
+  * Koosolekute aja logimise task TETRIS-4
+  * Tetrise support task TETRIS-1370
+  * Kalle sisseelamise task TETRIS-1626
+  * arendajate korrapidamise üldine task - (nb! nädalate kaupa on eraldi subtaskid) - TETRIS-1602
+    * korrapidaja arendaja ülesanded [[https://confluence.nortal.com/pages/viewpage.action?pageId=137993729|confus]]
+
+
+Üldine töövoog:
+
+  üldine töövoog keskkondade vahel: 
+  TVH - "meie" töövõimehindamise taotlus 
+  * EMPIS
+  * TETRIS
+  * REDIS
+  * EMPIS 
+
+
+  TVT - "kõrvaltoas" töövõime taotlus
+  * Unordered List Itempuhtalt TETRIS-es
+
+===== Kasutatud akronüümid =====
+
+  * TVH - TööVõimeHindamine
+  * TVT - TööVõimeTaotlus
+  * MVM - MakseViisiMuutmine
+  * TKO - TöötuKassaOsakond
+  * TSK - TerviseSeisundiKirjeldus
+  * TÖR - TÖötamiseRegister
+  * ITP - IseTeenindusPortaal
+  * CAS - CentralAuthenticationService
+  * TST - ToetuseSaamiseTingimused
+  * TTO - TeenuseOsutaja
+  * TVR - TööVõimeReform
+  * NK - NõueteKohane
+
+
+
+===== Keskkonnad =====
+
+  * https://empis.webmedia.int/empis-latest/
+  * https://tk-cas.webmedia.int/tetris/
+  * https://tk-cas.webmedia.int/redis/
+
+===== Andmebaasid =====
+
+  * empis_latest@TTKORA
+  * tetris_test@TTKORA
+  * empis_to_tetris@TTKORA
+  * empis / testEmp1s @ TEMPIS
+  * TETRIS / KL9u4jjSTK4la @ TEMPIS
+  * EMPIS_TO_TETRIS / KL8jfjnb2V6rk @ TEMPIS
+  * TETRIS / KL9u4jjSTK4la @ TOOTUKASSA_LIVE3
+
+===== SSH =====
+
+  * int mooduli restart: service int restart
+
+mõned sagedamini kasutatavad käsud:
+  * vi int/config/xtee.properties
+  * tail -f tomcat8/logs/tetris.log
+  * tail -f tomcat8/logs/redis.log
+  * tail -f int/logs/int.log
+  * tail -f int/logs/int-xtee.log
+  * tail -f int/logs/int.log | grep ServiceCheck.check
+  * tail -f tomcat8/logs/tetris.log | grep 1000011563
+
+turvakonfi asukoht
+  *  vi /home/cas/tomcat8/tetris-conf/proxy-security.properties
+
+rakenduse restartimiseks
+  * tomcat8/restart.sh
+
+===== Viited =====
+
+  * TETRISES kasutatavad REST-teenused (https://tk-cas.webmedia.int/swagger/) 
+  * Issue lisamisel silmas pidada (https://confluence.nortal.com/pages/viewpage.action?pageId=130128116)
+
+===== SCRUM ettekanne =====
+
+**SCRUM ettekanne:**
+
+  - Mis eile tegid?
+  - Mis täna?
+  - Kas takistusi on?
+
+
+^ Eilne tegevus ^ Tänane tegevus ^ Takistused ^
+| 1. kolimine II -> IV, istumine Kaiduriga, istumine Arliga, eHealth taskide lõpetamine/ delegeerimine, keskkondadele ligipääsude seadistamine ja confuga tutvumine | 2. andmebaasiga tutvumine (empis_latest@TTKORA), Äriobjektid, TVH (hindamise) tervikprotsess, tetrises töövoo läbimine | 3. -  |
+| 1. andmebaasiga tutvumine, äriobjektid, TVH protsessi, TETRISes exploratory  | 2. Töövoogudega tutvumine, seosed andmemudeliga  | 3. OOF, haige  |
+| 1. kolleegi tagasisidevormide täitmine, keskkondadega tutvumine, CAS-üldine loogika | 2. 16.4 tutvustus, arenguvestlus, projektijuhiga vestlus, keskkondadega tutvumine | 3. - | 
+
+**TK-CAS**
+
+ajutine sisselogimine hetkel arli/Parool123
+
+central authentication service kohta [[https://en.wikipedia.org/wiki/Central_Authentication_Service|wiki]]
+
+===== IP seadistamine =====
+  * ipconfig /release
+  * ipconfig /renew
+
+===== Cron ===== 
+
+  * Cron format is a simple, yet powerful and flexible way to define time and frequency of various actions.
+  * Cron vormindusest saab täpsemalt lugeda [[http://www.nncron.ru/help/EN/working/cron-format.htm|siin]].
+  * Cron kalkulaator asub [[http://www.cronmaker.com/|siin]].
+
+
+
+===== Skriptid ja seosed =====
+
+**Taotluse ja rakenduse kasutaja omavaheline seos**
+
+	TETRIS_TEST.TAOTLUS.ID
+	TETRIS_TEST.TAOTLUS_MENETLEJA_AJALUGU.KASUTAJAKONTO_ID
+	EMPIS_LATEST.OS_KASUTAJAKONTO
+	EMPIS_LATEST.OS_KASUTAJA
+
+**Taotluse ja makseviisi seosed TETRIS_TEST-is**
+
+  select m.makseviis_kood, k.kojukanne_kood
+         from taotlus t 
+         left join tvt_taotlus tt on t.id = tt.taotlus_id
+         left join mvm_taotlus mt on tt.taotlus_id = mt.tvt_taotlus_id
+         left join makseviis m on mt.makseviis_id = m.id
+         left join pangakonto p on m.id = p.makseviis_id
+         left join kojukanne k on m.id = k.makseviis_id
+         left join kojukanne_aadress ka on k.id = ka.kojukanne_id
+         where t.id = 1011008   
+
+**Taotluse kontrollid ja tulemused** 
+
+  select ktl.* 
+         from taotlus t 
+         join kontroll k on t.id = k.taotlus_id
+         join kontroll_tulemus kt on k.id = kt.kontroll_id
+         join kontroll_tulemus_lisaandmed ktl on kt.id = ktl.kontroll_tulemus_id
+         where t.id = 1010972
+         and k.liik_kood = 'KASVATAB_LAST'
+         and (ktl.tyyp_kood = 'RR_HOOLDUS_TYYP' or ktl.tyyp_kood = 'RR_HOOLDUS_STAATUS');
+
+**Konkreetse privileegi ja seda omavate kasutajate seos**
+  	-- tetrise schemast id-d
+  	select * from sec_roll_privileeg where privileeg_kood = 'tvh.menetleja.roll'
+
+  	-- empise schemast kasutajad
+  select kasutaja.*
+       from os_roll r
+       join os_kasutajakonto_roll kr on kr.roll_id = r.id 
+       join os_kasutajakonto k on kr.kasutajakonto_id = k.id
+       join os_kasutaja kasutaja on k.kasutaja_id = kasutaja.id 
+       where (r.kehtiv_kuni > sysdate or r.kehtiv_kuni is null)
+       and (kr.kehtiv_kuni > sysdate or kr.kehtiv_kuni is null)
+       and (k.kehtiv_kuni > sysdate or k.kehtiv_kuni is null)
+       and (kasutaja.kehtiv_kuni > sysdate or kasutaja.kehtiv_kuni is null)
+       and r.id in (
+       1000000741,
+       1000000738,
+       1000000740,
+       1000000758,
+       1000000739,
+       1000000640
+       )
+
+**Integratsiooniteenuse päringud kirjutatakse järgmisesse tabelisse: **
+
+  select *
+         from INT_SERVICE_REQUEST
+
+**Baasist konkreetse muudatuse teinud taski leidmine**
+TÄIENDADA SEOST!!! 
+  select * from sys_db_change_history
+  select * from sys_db_change_history_log where sql_text like '%SAAB_PAASTETOETUS%';
+
+===== Ajutine lahendus TETRIS live logide juurdepääsuks =====
+
+  * https://redis.tootukassa.ee:9009/redis_logs/ anti/ orgla
+  * https://tetris.tootukassa.ee:9009/tetris_logs/ anti/ orgla
+  * https://int.tootukassa.ee:9009/int_logs/ anti/ orgla
+
+
+===== Rakenduse TOMCAT ligipääsud =====
+
+  * http://tk-cas.webmedia.int:8081/manager/html tomcat/ tomcat

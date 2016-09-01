@@ -1,0 +1,126 @@
+<a name="nortalmarkmed__"></a>
+<h1><bookmark content="Märkmed" level="0" /><a name="nortalmarkmed__maerkmed">Märkmed</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><bookmark content="Keskkonnas hambakaardi keele vahetamine" level="1" /><a name="nortalmarkmed__keskkonnas_hambakaardi_keele_vahetamine">Keskkonnas hambakaardi keele vahetamine</a></h2>
+<div class="level2">
+
+<p>
+Muuta läbi ssh keskkonna seadistusi. Faili nimi on runtime.properties, mis näiteks lt_test keskkonnas asub /LT_TEST/EHEALTH_HOME/CONF/. Seal tuleb muuta vastava mooduli ehealth-ui.lang=lt väärtus milleks parasjagu tarvis on, näiteks et eesti ja en inglise jaoks. Lisaks tuleb käivitada vastav moodul läbi tomcati. Selleks leida vastava moodul tomcatist ning valida „undeploy“. Taaskäivitamiseks paigadada nt uusim mooduli versioon. Keel peab sellega vahetunud olema. 
+</p>
+
+<p>
+Predemos pääseb failile runtime.properties ligi:
+ssh ehlarendus
+home/ build/ ehealth_home/ predemo_wlsnode_home/ conf/ runtime.properties
+peale muudatuste tegemist mõlemas nodes muudatuste tegemiseks käivitada conf/ kataloogis skript argumendiks tehtud kataloogi nimi:
+./syncEhealthHome.sh predemo_wlsnode_home/
+</p>
+
+</div>
+
+<h2><bookmark content="Mooduli versiooni käsitsi läbi ssh vaatamine" level="1" /><a name="nortalmarkmed__mooduli_versiooni_kaesitsi_laebi_ssh_vaatamine">Mooduli versiooni käsitsi läbi ssh vaatamine</a></h2>
+<div class="level2">
+
+<p>
+Versioon on kirjas failis: 
+Tomcat8060/ webapps/ test-ui/ META-INF/ MANIFEST.MF
+</p>
+
+</div>
+
+<h2><bookmark content="Logidest andmete otsimine" level="1" /><a name="nortalmarkmed__logidest_andmete_otsimine">Logidest andmete otsimine</a></h2>
+<div class="level2">
+
+<p>
+Logide jooksev kuvamine: 
+</p>
+<pre class="code">tail -f ehealth-integration-lt.log</pre>
+
+<p>
+Logidest märksõna otsimine: 
+</p>
+<pre class="code">grep &#039;kalle.jagula&#039; devcluster-predemo.log</pre>
+
+<p>
+Logidest 5 rida enne ja pärast otsing kahe märksõna abil:
+</p>
+<pre class="code">grep -B 5 -A 5 &#039;LopsSearchService#search\|kalle.jagula&#039; devcluster-predemo.log</pre>
+
+</div>
+
+<h2><bookmark content="Aruannete parandamine" level="1" /><a name="nortalmarkmed__aruannete_parandamine">Aruannete parandamine</a></h2>
+<div class="level2">
+
+<p>
+Rippmenüüs pealkirja muutmine
+ [28.09.2015 12:41:08] sergius.tsimbalist: lisaks iga reporti jaoks peab olema system_message koodiga “report.” + report_code + “.text” kus on selle reporti nimetus
+Ehk siis midagi sellist: 
+select * 
+</p>
+<pre class="code">     from system_message_text
+     where message_code like &#039;report.BR2.12.4.1.text&#039; 
+     for update</pre>
+
+<p>
+kui viskab ette birt üldise akna:
+</p>
+
+<p>
+<img src="/docuwiki/lib/exe/fetch.php?w=200&amp;tok=826510&amp;media=nortal:birt_aken.png" class="media" alt="" width="200" />
+</p>
+<ul>
+<li class="level1"><div class="li"> [28.09.2015 15:31:59] sergius.tsimbalist: &lt;property name=“fileName”&gt;template.rptlibrary&lt;/property&gt; peab olema sama nimetus mis on report.template.library leedu ressusrsi FILE_NAME veerus</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:32:40] sergius.tsimbalist: kuna praegu seal on template.rptlibrary nimi, siis kui aruannetes teha ka &lt;property name=“fileName”&gt;template.rptlibrary&lt;/property&gt; siis hakkab töötama</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:58:20] Kalle Jagula: report.template.library → template.library ei aidanud :/</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 15:58:46] sergius.tsimbalist: template.rptlibrary</div>
+</li>
+<li class="level1"><div class="li"> [28.09.2015 16:03:44] Kalle Jagula: läks tööle. aitäh.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="Baasis cache tühjendamine" level="1" /><a name="nortalmarkmed__baasis_cache_tuehjendamine">Baasis cache tühjendamine</a></h2>
+<div class="level2">
+<pre class="code">INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+    VALUES (&#039;ORGANIZATION_IDENTIFIER&#039;,&#039;NULLIFY&#039;,SYSDATE);
+INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+    VALUES (&#039;ORGANIZATION_NAME&#039;,&#039;NULLIFY&#039;,SYSDATE);</pre>
+
+</div>
+
+<h2><bookmark content="Excelis stringile vajalike characterite lisamine" level="1" /><a name="nortalmarkmed__excelis_stringile_vajalike_characterite_lisamine">Excelis stringile vajalike characterite lisamine</a></h2>
+<div class="level2">
+
+<p>
+Selleks, et saaks neid kasutada näiteks suurema INSERT päringu juures:
+</p>
+<pre class="code">=&quot;&#039;&quot;&amp;B2&amp;&quot;&#039;,&quot;</pre>
+
+<p>
+Kogu INSERT päring võiks näiteks Exceli veerus midagi sellist olla: 
+</p>
+<pre class="code">=&quot;insert into service_group_service sgs 
+(sgs.service_classifier_id, sgs.service_c_group_id, sgs.sys_delete_status, sgs.sys_modify_uid)
+values (&#039;&quot;&amp;B2&amp;&quot;&#039;,1,&#039;N&#039;,&#039;KALLE&#039;);&quot;</pre>
+
+</div>
+
+<h2><bookmark content="Docuwiki" level="1" /><a name="nortalmarkmed__docuwiki">Docuwiki</a></h2>
+<div class="level2">
+<ul>
+<li class="level1 node"><div class="li"> ühest serverist teise kandmisel pole mõtet kõiki andmeid üle kanda, sest docuwiki tekitab hulgalist sodi millest kasu vaid konkreetses kohas. kustutada võib järgnevaid teeke:</div>
+<ul>
+<li class="level3"><div class="li"> attic; cache</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>

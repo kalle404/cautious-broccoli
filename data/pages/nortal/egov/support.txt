@@ -1,0 +1,11 @@
+====== Support ======
+
+Õigustatud isiku kontroll: https://confluence.nortal.com/pages/viewpage.action?pageId=119444130
+
+SKA-s hinnatud ja otsuse kuupäev. - see on OIK juures
+
+seotud tabelid: 
+
+  * oigustatud_isik
+  * oigustatud_isik_pohjus
+  * osa_tulemus

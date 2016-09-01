@@ -1,0 +1,69 @@
+====== Vereringeseiskus ======
+
+Esmase vereringeseiskuse korral (cardiac arrest – CA) esineb kõige tõenäolisema vereringe seiskuse vormina just vatsakeste virvendus (> 70%). Parimad ravitulemused / ellujäämisvõimalused annab siin varajane defibrillatsioon. Vatsakeste virvenduse (VF) ajal tekib vatsakeste lihaste üksikute rakkude juhuslik depolarisatsioon ning kaob igasugune suunatud mehaaniline tegevus. Südamerütm näitab kiiret, kaootilist ebareeglipärast mustrit, millel on juhuslik sagedus ja amplituud. Vatsakeste virvendus jaotatakse mõnikord kõrgelaineliseks ja madalalaineliseks, olenevalt rütmi amplituudi kõrgusest. Madalalaineline VF on asüstooliast raskesti eristatav ja ei allu defibrillatsioonile. Hea kvaliteediga elustamisvõtted võivad suurendada fibrillatsioonilaine amplituudi ja muuta rütmi defibrilleeritavaks. Korduvate šokkide kasutamine madalainelise VF korral võib põhjustada müokardi kahjustuse nii voolust kui kaudse südamemassaaži katkestamisest.
+
+Vereringeseiskusega südamerütmid jagatakse kahte gruppi:
+  * Defibrilleeritavad rütmid:
+    * [[https://en.wikipedia.org/wiki/Ventricular_fibrillation|Vatsakeste virvendus]] (VF) 
+    * [[https://en.wikipedia.org/wiki/Ventricular_tachycardia|Pulsita ventikulaarne tahhükardia]] (VT)
+  * Mittedefibrilleeritavad rütmid:
+    * [[https://en.wikipedia.org/wiki/Asystole|Asüstoolia]] (ASY)
+    * [[https://en.wikipedia.org/wiki/Pulseless_electrical_activity|Pulsita elektriline aktiivsus]] (PEA = EMD)
+
+====== ACLS algoritm ======
+
+
+  * Patsient teadvuseta.
+  * Avada ülemised hingamisteed, hinnata elutunnuste olemasolu.
+    * Kutsu spets.abi. 
+  * CPR 30:2, kuni defibrillaator/ monitor on ühendatud.
+    * Rajada ja kindlustada veenitee, avatud hingamisteed, O2-lisa. 
+  * (1) Südame rütm?
+    * Defibrilleeritav (VF/ VT):
+      * Koheselt taastada CPR 30:2 2 minutit.
+      * Esimesel võimalusel defibrilleerida. 
+      * Peale 3x defibrilleerimist manustada:
+        * 1mg adrenaliini iv või io. 
+        * 300mg amiodarooni lahjendatud 20ml 5% glükoosiga. 
+      * Tagasi (1). 
+    * Mittedefibrilleeritav (Asüstoolia/ EMD): 
+      * Esimesel võimalusel manustada:
+        * 1mg adrenaliini iv või io. 
+      * Koheselt taastada CPR 30:2 2 minutit. 
+      * Manustada adrenaliini uuesti 3-5 minuti tagant. 
+      * Tagasi (1). 
+
+
+
+===== ACLS lõppkontrolli hindamine =====
+
+^ Kirjeldus       ^  Olulisus          ^ 
+| teadvuse kontroll, sh valuaisting   |  2  |
+| hingamisteede avamine korrektse võttega   |  1  |
+| hingamise kontroll   |  1  |
+| vereringe kontroll (a.carotis)   |  2  |
+| hingamis/vereringeseiskuse kontroll mitte üle 20sek   |  2  |
+| kohene CPR 15sek   |  1  |
+| monitooring 30sek jooksul peale hingamisseiskuse tuvastamist   |  2  |
+| esimesel võimalusel defibrilleerimine (10sek **monitooritud** seiskusest)   |  2  |
+| vereringeseiskuse vormi tuvastus (VT, VF, AS, PEA)   |  2  |
+| hapnikravi alustamine 2min jooksul (alates hingamisseiskuse tuvastamist)   |  2  |
+| ventilatsioon AMBU-ga pole efektiivne kokku 4 vent.tsükli jooksul (mask, alalõug, pea, samaaegne massaaž, hüperv!)   |  1  |
+| kaudset südamemassaaži ei ole katkestatud rohkem kui 10sek   |  1  |
+| massaaž pole ebaefektiivne kauem kui 30sek   |  2  |
+| masseerijat vahetatakse 4min tagant   |  3  |
+| kõritoru paigaldamine hiljemalt 5min jooksul hingamisseiskuse tuvastamisest   |  2  |
+| kõritoru korrektne paigaldamine (puhtus, manseti täitmine, kinnitamine sh AMBU, auskultatsioon)   |  2  |
+| defibrilleerimine 2(max 3)min järel    |  2  |
+| korrektne defibrilleerimine (ohutus! vajadusel geel, surve)   |  3  |
+| korrektne kanüleerimine (puhtus, veenižgutt pole peal jm)   |  3  |
+| adrenaliin ja amiodaroon peale 3. defibrileerimist   |  3  |
+| ravimeid manustatakse vastavalt algoritmile (õige doos, ajavahemik 3-5min)   |  3  |
+| korrektne ravimite manustamine (puhtus, käsi üles, boolus peale, korrektne lahjendamine jm)   |  3  |
+| rütmi kontroll monitorilt/ pulsi kontroll enne defibrilleerimist, ravimi manustamist   |  1  |
+
+**Juhend hindamiseks**
+^ ^  Max arv       ^ Samaaaegselt ^
+| 1. kategooria viga  |  0  | 0 | 0 |  
+| 2. kategooria viga  |  4  | 3 | 1 |
+| 3. kategooria viga  |  5  | 2 | 4 |

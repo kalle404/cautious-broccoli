@@ -1,0 +1,8 @@
+====== SoapUI-ga mockimine ======
+
+
+Integratsioonimooduli konfiguratsiooni vajalik teha muudatus, mis teenus vastu mockimist käima hakkab. Aadressiks panna võrgus enda arvuti aadress ning vastav mockimis teenus. Enne saab brauseris järgi vaadata, kas vastav teenus on kättesaadav või mitte. Näiteks: 
+  * #security-server-emtav5=http://dell982.webmedia.int:8088/emtav5
+  * #security-server-kir=http://dell823:8088/mockKirBinding
+
+

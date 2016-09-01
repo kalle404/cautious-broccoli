@@ -1,0 +1,169 @@
+====== Märkmed ======
+
+
+===== Keskkonnas hambakaardi keele vahetamine =====
+
+Muuta läbi ssh keskkonna seadistusi. Faili nimi on runtime.properties, mis näiteks lt_test keskkonnas asub /LT_TEST/EHEALTH_HOME/CONF/. Seal tuleb muuta vastava mooduli ehealth-ui.lang=lt väärtus milleks parasjagu tarvis on, näiteks et eesti ja en inglise jaoks. Lisaks tuleb käivitada vastav moodul läbi tomcati. Selleks leida vastava moodul tomcatist ning valida „undeploy“. Taaskäivitamiseks paigadada nt uusim mooduli versioon. Keel peab sellega vahetunud olema. 
+
+Predemos pääseb failile runtime.properties ligi:
+ssh ehlarendus
+home/ build/ ehealth_home/ predemo_wlsnode_home/ conf/ runtime.properties
+peale muudatuste tegemist mõlemas nodes muudatuste tegemiseks käivitada conf/ kataloogis skript argumendiks tehtud kataloogi nimi:
+./syncEhealthHome.sh predemo_wlsnode_home/
+
+
+===== Mooduli versiooni käsitsi läbi ssh vaatamine =====
+
+Versioon on kirjas failis: 
+Tomcat8060/ webapps/ test-ui/ META-INF/ MANIFEST.MF
+
+
+===== Logidest andmete otsimine =====
+
+Logide jooksev kuvamine: 
+  tail -f ehealth-integration-lt.log
+
+Logidest märksõna otsimine: 
+  grep 'kalle.jagula' devcluster-predemo.log
+
+Logidest 5 rida enne ja pärast otsing kahe märksõna abil:
+  grep -B 5 -A 5 'LopsSearchService#search\|kalle.jagula' devcluster-predemo.log
+
+
+===== Aruannete parandamine =====
+
+Rippmenüüs pealkirja muutmine
+ [28.09.2015 12:41:08] sergius.tsimbalist: lisaks iga reporti jaoks peab olema system_message koodiga "report." + report_code + ".text" kus on selle reporti nimetus
+Ehk siis midagi sellist: 
+select * 
+       from system_message_text
+       where message_code like 'report.BR2.12.4.1.text' 
+       for update
+
+kui viskab ette birt üldise akna:
+
+{{:nortal:birt_aken.png?nolink&200|}}
+
+  * [28.09.2015 15:31:59] sergius.tsimbalist: <property name="fileName">template.rptlibrary</property> peab olema sama nimetus mis on report.template.library leedu ressusrsi FILE_NAME veerus
+  * [28.09.2015 15:32:40] sergius.tsimbalist: kuna praegu seal on template.rptlibrary nimi, siis kui aruannetes teha ka <property name="fileName">template.rptlibrary</property> siis hakkab töötama
+  * [28.09.2015 15:58:20] Kalle Jagula: report.template.library -> template.library ei aidanud :/
+  * [28.09.2015 15:58:46] sergius.tsimbalist: template.rptlibrary
+  * [28.09.2015 16:03:44] Kalle Jagula: läks tööle. aitäh.
+
+
+===== Baasis cache tühjendamine =====
+
+  INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+      VALUES ('ORGANIZATION_IDENTIFIER','NULLIFY',SYSDATE);
+  INSERT INTO Sys_Cache_Manager (cache_name, KEY, Modify_Time) 
+      VALUES ('ORGANIZATION_NAME','NULLIFY',SYSDATE);
+
+
+===== Excelis stringile vajalike characterite lisamine =====
+
+Selleks, et saaks neid kasutada näiteks suurema INSERT päringu juures:
+  ="'"&B2&"',"
+  
+Kogu INSERT päring võiks näiteks Exceli veerus midagi sellist olla: 
+  ="insert into service_group_service sgs 
+  (sgs.service_classifier_id, sgs.service_c_group_id, sgs.sys_delete_status, sgs.sys_modify_uid)
+  values ('"&B2&"',1,'N','KALLE');"
+
+
+===== Docuwiki =====
+  * ühest serverist teise kandmisel pole mõtet kõiki andmeid üle kanda, sest docuwiki tekitab hulgalist sodi millest kasu vaid konkreetses kohas. kustutada võib järgnevaid teeke:
+      * attic; cache
+
+
+===== COMMONSi uuendamine =====
+
+kuidas predemos commonsi uuendamine käib? kas lihtsalt deploy nagu teiste moodulitegi puhul?
+
+commonsit eraldi ei deployda, kui on vaja mingi mooduli sisse saada uus commons, siis publitseerida sellest moodulist uus uversioon, siis ta võtab uuema commonsi sinna sisse
+
+===== GIT paigaldus ja kasutamine =====
+
+Git artikkel [[https://en.wikipedia.org/wiki/Git_(software)|Wikipedias]] ja ametlik [[https://git-scm.com/|koduleht]], kus hoitakse ka [[https://git-scm.com/doc|dokumentatsiooni]]. 
+
+Git töövoog on üldiselt järgmine: WORKING COPY -> STAGING AREA -> REPOSITORY
+
+üldisemad käsud:
+  * jooksev asukoht: pwd
+  * liigu koju: cd ~ 
+
+versiooni vaatamine: 
+  * git --version
+
+kasutaja ja e-posti määramine, vajalik mitme kasutajaga git-i kasutamiseks:
+  * git config --global user.name "Bucky Roberts"
+  * git config --global user.email "bucky@github.com"
+
+seadistuste vaatamiseks: 
+  * git config --list
+
+jooksva kataloogi repo-na kasutamiseks: 
+  * git init
+  * alamkataloogide ja failide lisamiseks lihtsaim viis on peale seda sisestada "git add ."
+
+faili sisu indeksisse lisamiseks: 
+  * git add . 
+  * punkt lõpus tähendab sisuliselt "all"
+
+faili muudatuse repo-sse salvestamiseks:
+  * git commit -m "this is first commit"
+  * tuimalt WORKING COPYIST -> REPO-sse: git commit -am "tuimalt"
+
+kasutaja tehtud muudatuste logi vaatamine:
+  * git log --author=="kalleja"
+
+Hetkeolukord kuva, kas on salvestamata infot ja lisatud faile võrreldes WORKING COPY ja STAGING AREA:
+  * git status
+
+WORKING COPY ja STAGING AREA erinevuse kuvamiseks:
+  * git diff
+
+STAGING AREA ja REPO erinevuse kuvamiseks:
+  * git diff --staged
+
+Konkreetse faili taastamiseks REPO-st tuleb see REPO-st enne välja võtta:
+  * git checkout -- index.html
+
+Failide STAGING AREA-st tagasi toomiseks:
+  * git reset HEAD 
+
+Vanade versioonide taastamiseks REPO-st:
+  * git log (vaadata millist versiooni taastada)
+  * git checkout [vajalik kogus SHA] -- [faili nimi]
+
+Github-i REPO-ga majandamiseks: 
+
+REPO muutuja seadistamine: 
+  * git remote add [mingi muutujua - githubRepo] [githubi repo aadress] 
+Kõikide failide korraga üles lükkamine: 
+  * git **push** -u githubRepo master
+
+Failide allalaadimine 
+  * git **pull**
+
+===== Java objects =====
+
+Great work! Let's review everything that we've learned about object-oriented programming in Java so far.
+
+  * **Class**: a blueprint for how a data structure should function
+  * **Constructor**: instructs the class to set up the initial state of an object
+  * **Object**: instance of a class that stores the state of a class
+  * **Method**: set of instructions that can be called on an object
+  * **Parameter**: values that can be specified when creating an object or calling a method
+  * **Return value**: specifies the data type that a method will return after it runs
+  * **Inheritance**: allows one class to use functionality defined in another class
+
+Classes
+
+Objects 
+
+Methods 
+
+Instances 
+
+
+

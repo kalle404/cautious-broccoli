@@ -1,0 +1,6 @@
+====== IP seadistamine ======
+
+  * ipconfig /release
+  * ipconfig /renew
+
+

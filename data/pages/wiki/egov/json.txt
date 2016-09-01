@@ -1,0 +1,7 @@
+====== JSONi vastu testimine ======
+
+  - Ava Chromes soovitud rest teenus (nt https://tk-cas.webmedia.int/tetris/#/taotlus/tvh/1017048/) 
+  - Ava Inspekteeri (või Ctrl+Shift+I) ja ava TAB Network
+  - Leia nimekirjas vastava koodiga kirje (hetkel 1017048)
+  - Kopeeri vastus JSON mõnda online editori näiteks (http://www.jsoneditoronline.org/) 
+  - VÕI kopeeri vastus JSON Notepad++ ja trepi JSON viewer-iga ära. 

@@ -1,0 +1,1801 @@
+
+<h1 class="sectionedit1" id="pl_sql_tutorial">PL/SQL Tutorial</h1>
+<div class="level1">
+
+<p>
+Originaal asub <a href="http://www.tutorialspoint.com/plsql/index.htm" class="urlextern" title="http://www.tutorialspoint.com/plsql/index.htm"  rel="nofollow">siin</a>. 
+</p>
+
+<p>
+PL/SQL is a combination of SQL along with the procedural features of programming languages. It was developed by Oracle Corporation in the early 90&#039;s to enhance the capabilities of SQL.
+</p>
+
+<p>
+PL/SQL is one of three key programming languages embedded in the Oracle Database, along with SQL itself and Java.
+</p>
+
+<p>
+This tutorial will give you great understanding on PL/SQL to proceed with Oracle database and other advanced RDBMS concepts.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "PL/SQL Tutorial" [1-533] -->
+<h3 class="sectionedit2" id="audience">Audience</h3>
+<div class="level3">
+
+<p>
+This tutorial is designed for Software Professionals, who are willing to learn PL/SQL Programming Language in simple and easy steps. This tutorial will give you great understanding on PL/SQL Programming concepts, and after completing this tutorial, you will be at intermediate level of expertise from where you can take yourself to higher level of expertise.
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Audience" [534-913] -->
+<h3 class="sectionedit3" id="prerequisites">Prerequisites</h3>
+<div class="level3">
+
+<p>
+Before proceeding with this tutorial, you should have a basic understanding of software basic concepts like what is database, source code, text editor and execution of programs, etc. If you already have understanding on SQL and other computer programming language then it will be an added advantage to proceed.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Prerequisites" [914-1251] -->
+<h2 class="sectionedit4" id="pl_sql_-_overview">PL/SQL - Overview</h2>
+<div class="level2">
+
+<p>
+The PL/SQL programming language was developed by Oracle Corporation in the late 1980s as procedural extension language for SQL and the Oracle relational database. Following are notable facts about PL/SQL:
+</p>
+<ul>
+<li class="level1"><div class="li"> SQL is a completely portable, high-performance transaction-processing language.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides a built-in interpreted and <abbr title="Operating System">OS</abbr> independent programming environment.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL can also directly be called from the command-line SQL*Plus interface.</div>
+</li>
+<li class="level1"><div class="li"> Direct call can also be made from external programming language calls to database.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL&#039;s general syntax is based on that of ADA and Pascal programming language.</div>
+</li>
+<li class="level1"><div class="li"> Apart from Oracle, PL/SQL is available in TimesTen in-memory database and IBM DB2.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "PL/SQL - Overview" [1252-2000] -->
+<h3 class="sectionedit5" id="features_of_pl_sql">Features of PL/SQL</h3>
+<div class="level3">
+
+<p>
+PL/SQL has the following features:
+</p>
+<ul>
+<li class="level1"><div class="li"> PL/SQL is tightly integrated with SQL.</div>
+</li>
+<li class="level1"><div class="li"> It offers extensive error checking.</div>
+</li>
+<li class="level1"><div class="li"> It offers numerous data types.</div>
+</li>
+<li class="level1"><div class="li"> It offers a variety of programming structures.</div>
+</li>
+<li class="level1"><div class="li"> It supports structured programming through functions and procedures.</div>
+</li>
+<li class="level1"><div class="li"> It supports object-oriented programming.</div>
+</li>
+<li class="level1"><div class="li"> It supports developing web applications and server pages.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Features of PL/SQL" [2001-2418] -->
+<h3 class="sectionedit6" id="advantages_of_pl_sql">Advantages of PL/SQL</h3>
+<div class="level3">
+
+<p>
+PL/SQL has the following advantages:
+</p>
+<ul>
+<li class="level1"><div class="li"> SQL is the standard database language and PL/SQL is strongly integrated with SQL. PL/SQL supports both static and dynamic SQL. Static SQL supports DML operations and transaction control from PL/SQL block. Dynamic SQL is SQL allows embedding DDL statements in PL/SQL blocks.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL allows sending an entire block of statements to the database at one time. This reduces network traffic and provides high performance for the applications.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL gives high productivity to programmers as it can query, transform, and update data in a database.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL saves time on design and debugging by strong features, such as exception handling, encapsulation, data hiding, and object-oriented data types.</div>
+</li>
+<li class="level1"><div class="li"> Applications written in PL/SQL are fully portable.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides high security level.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides access to predefined SQL packages.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides support for Object-Oriented Programming.</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL provides support for Developing Web Applications and Server Pages.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "Advantages of PL/SQL" [2419-3484] -->
+<h2 class="sectionedit7" id="pl_sql_-_basic_syntax">PL/SQL - Basic Syntax</h2>
+<div class="level2">
+
+<p>
+PL/SQL is a block-structured language, meaning that PL/SQL programs are divided and written in logical blocks of code. Each block consists of three sub-parts:
+</p>
+<ol>
+<li class="level1"><div class="li"> <strong>Declarations</strong> - This section starts with the keyword <strong>DECLARE</strong>. It is an optional section and defines all variables, cursors, subprograms, and other elements to be used in the program.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Executable Commands</strong> - This section is enclosed between the keywords <strong>BEGIN</strong> and <strong>END</strong> and it is a mandatory section. It consists of the executable PL/SQL statements of the program. It should have at least one executable line of code, which may be just a NULL command to indicate that nothing should be executed.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Exception handling</strong> - This section starts with the keyword <strong>EXCEPTION</strong>. This section is again optional and contains exception(s) that handle errors in the program.</div>
+</li>
+</ol>
+
+<p>
+Every PL/SQL statement ends with a semicolon <strong>(;)</strong>. PL/SQL blocks can be nested within other PL/SQL blocks using <strong>BEGIN</strong> and <strong>END</strong>. Here is the basic structure of a PL/SQL block:
+</p>
+<pre class="code">DECLARE
+   &lt;declarations section&gt;
+BEGIN
+   &lt;executable command(s)&gt;
+EXCEPTION
+   &lt;exception handling&gt;
+END;</pre>
+
+</div>
+<!-- EDIT7 SECTION "PL/SQL - Basic Syntax" [3485-4678] -->
+<h3 class="sectionedit8" id="the_hello_world_example">The &quot;Hello World!&quot; example:</h3>
+<div class="level3">
+<pre class="code">DECLARE
+   message  varchar2(20):= &#039;Hello, World!&#039;;
+BEGIN
+   dbms_output.put_line(message);
+END;
+\</pre>
+
+<p>
+The <strong>end;</strong> line signals the end of the PL/SQL block. To run the code from SQL command line, you may need to type / at the beginning of the first blank line after the last line of the code. When the above code is executed at SQL prompt, it produces the following result:  
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+<!-- EDIT8 SECTION "The Hello World! example:" [4679-5166] -->
+<h3 class="sectionedit9" id="the_pl_sql_identifiers">The PL/SQL Identifiers</h3>
+<div class="level3">
+
+<p>
+PL/SQL identifiers are constants, variables, exceptions, procedures, cursors, and reserved words. The identifiers consist of a letter optionally followed by more letters, numerals, dollar signs, underscores, and number signs and should not exceed 30 characters.
+</p>
+
+<p>
+By default, identifiers are not case-sensitive. So you can use <strong>integer</strong> or <strong>INTEGER</strong> to represent a numeric value. You cannot use a reserved keyword as an identifier.
+</p>
+
+</div>
+<!-- EDIT9 SECTION "The PL/SQL Identifiers" [5167-5636] -->
+<h3 class="sectionedit10" id="the_pl_sql_delimiters">The PL/SQL Delimiters</h3>
+<div class="level3">
+
+<p>
+A delimiter is a symbol with a special meaning. Following is the list of delimiters in PL/SQL:
+</p>
+<div class="table sectionedit11"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Delimiter      </th><th class="col1 leftalign"> Description       </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> +, -, *, /    </td><td class="col1 leftalign"> Addition, subtraction/negation, multiplication, division  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> %  </td><td class="col1 leftalign"> Attribute indicator  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> &#039;  </td><td class="col1"> Character string delimiter </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> .  </td><td class="col1 leftalign"> Component selector  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> (,)  </td><td class="col1 leftalign"> Expression or list delimiter  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> :  </td><td class="col1 leftalign"> Host variable indicator  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> ,  </td><td class="col1 leftalign"> Item sepparator  </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> “  </td><td class="col1 leftalign"> Quoted 	identifier delimiter  </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> =  </td><td class="col1 leftalign"> Relational operator  </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> @  </td><td class="col1 leftalign"> Remote access indicator  </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> ;  </td><td class="col1 leftalign"> Statement terminator  </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> :=  </td><td class="col1 leftalign"> Assignment operator  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> ⇒ </td><td class="col1 leftalign"> Association operator  </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> <em>||</em> </td><td class="col1 leftalign"> Concatenation operator  </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 leftalign"> <em>*</em><em>*</em>  </td><td class="col1 leftalign"> Exponentiation operator  </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 leftalign"> «, »  </td><td class="col1 leftalign"> Label delimiter (begin and end)  </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 leftalign"> /*, */  </td><td class="col1 rightalign">  Multi-line comment delimiter (begin and end) </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> – </td><td class="col1 leftalign"> Single-line comment indicator  </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> .. </td><td class="col1 leftalign"> Range operator  </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0 leftalign"> &lt;, &gt;, ⇐, &gt;=  </td><td class="col1 leftalign"> Relational operators  </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0 leftalign"> &lt;&gt;, &#039;=, ~=, <em>^=</em>  </td><td class="col1 leftalign"> Different versions of NOT EQUAL  </td>
+	</tr>
+</table></div>
+<!-- EDIT11 TABLE [5766-6629] -->
+</div>
+<!-- EDIT10 SECTION "The PL/SQL Delimiters" [5637-6631] -->
+<h3 class="sectionedit12" id="the_pl_sql_comments">The PL/SQL Comments</h3>
+<div class="level3">
+
+<p>
+Program comments are explanatory statements that you can include in the PL/SQL code that you write and helps anyone reading its source code. All programming languages allow for some form of comments.
+</p>
+
+<p>
+The PL/SQL supports single-line and multi-line comments. All characters available inside any comment are ignored by PL/SQL compiler. The PL/SQL single-line comments start with the delimiter – (double hyphen) and multi-line comments are enclosed by /* and */.
+</p>
+<pre class="code">DECLARE
+   -- variable declaration
+   message  varchar2(20):= &#039;Hello, World!&#039;;
+BEGIN
+   /*
+    *  PL/SQL executable statement(s)
+    */
+   dbms_output.put_line(message);
+END;
+/</pre>
+
+<p>
+When the above code is executed at SQL prompt, it produces the following result:
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+<!-- EDIT12 SECTION "The PL/SQL Comments" [6632-7465] -->
+<h3 class="sectionedit13" id="pl_sql_program_units">PL/SQL Program Units</h3>
+<div class="level3">
+
+<p>
+A PL/SQL unit is any one of the following:
+</p>
+<ul>
+<li class="level1"><div class="li"> PL/SQL block</div>
+</li>
+<li class="level1"><div class="li"> Function</div>
+</li>
+<li class="level1"><div class="li"> Package</div>
+</li>
+<li class="level1"><div class="li"> Package body</div>
+</li>
+<li class="level1"><div class="li"> Procedure</div>
+</li>
+<li class="level1"><div class="li"> Trigger</div>
+</li>
+<li class="level1"><div class="li"> Type</div>
+</li>
+<li class="level1"><div class="li"> Type body</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT13 SECTION "PL/SQL Program Units" [7466-7651] -->
+<h2 class="sectionedit14" id="pl_sql_-_data_types">PL/SQL - Data Types</h2>
+<div class="level2">
+
+<p>
+PL/SQL variables, constants and parameters must have a valid data type, which specifies a storage format, constraints, and valid range of values. This tutorial will take you through <strong>SCALAR</strong> and <strong>LOB</strong> data types available in PL/SQL and other two data types will be covered in other chapters.
+</p>
+<div class="table sectionedit15"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Category      </th><th class="col1 leftalign"> Description       </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Scalar   </td><td class="col1 leftalign"> Single values with no internal components, such as a NUMBER, DATE, or BOOLEAN.  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Large Object (LOB)  </td><td class="col1 leftalign"> Pointers to large objects that are stored separately from other data items, such as text, graphic images, video clips, and sound waveforms.  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Composite  </td><td class="col1 leftalign"> Data items that have internal components that can be accessed individually. For example, collections and records.  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> Reference  </td><td class="col1 leftalign"> Pointers to other data items.  </td>
+	</tr>
+</table></div>
+<!-- EDIT15 TABLE [7982-8464] -->
+</div>
+<!-- EDIT14 SECTION "PL/SQL - Data Types" [7652-8465] -->
+<h3 class="sectionedit16" id="pl_sql_scalar_data_types_and_subtypes">PL/SQL Scalar Data Types and Subtypes</h3>
+<div class="level3">
+
+<p>
+PL/SQL Scalar Data Types and Subtypes come under the following categories:
+</p>
+<div class="table sectionedit17"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Data type  </th><th class="col1 leftalign"> Description  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Numeric  </td><td class="col1 leftalign"> Numeric values on which arithmetic operations are performed.  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Character  </td><td class="col1 leftalign"> Alphanumeric values that represent single characters or strings of characters.  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Boolean  </td><td class="col1 leftalign"> Logical values on which logical operations are performed.  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> Datetime  </td><td class="col1 leftalign"> Dates and times.  </td>
+	</tr>
+</table></div>
+<!-- EDIT17 TABLE [8591-8902] -->
+<p>
+PL/SQL provides subtypes of data types. For example, the data type NUMBER has a subtype called INTEGER. You can use subtypes in your PL/SQL program to make the data types compatible with data types in other programs while embedding PL/SQL code in another program, such as a Java program.
+</p>
+
+</div>
+<!-- EDIT16 SECTION "PL/SQL Scalar Data Types and Subtypes" [8466-9193] -->
+<h3 class="sectionedit18" id="pl_sql_numeric_data_types_and_subtypes">PL/SQL Numeric Data Types and Subtypes</h3>
+<div class="level3">
+
+<p>
+Following is the detail of PL/SQL pre-defined numeric data types and their sub-types:
+</p>
+<ul>
+<li class="level1"><div class="li"> PLS_INTEGER		Signed integer in range -2,147,483,648 through 2,147,483,647, represented in 32 bits</div>
+</li>
+<li class="level1"><div class="li"> BINARY_INTEGER	Signed integer in range -2,147,483,648 through 2,147,483,647, represented in 32 bits</div>
+</li>
+<li class="level1"><div class="li"> BINARY_FLOAT	Single-precision IEEE 754-format floating-point number</div>
+</li>
+<li class="level1"><div class="li"> BINARY_DOUBLE	Double-precision IEEE 754-format floating-point number</div>
+</li>
+<li class="level1"><div class="li"> NUMBER(prec, scale)	Fixed-point or floating-point number with absolute value in range 1E-130 to (but not including) 1.0E126. A NUMBER variable can also represent 0.</div>
+</li>
+<li class="level1"><div class="li"> DEC(prec, scale)	ANSI specific fixed-point type with maximum precision of 38 decimal digits.</div>
+</li>
+<li class="level1"><div class="li"> DECIMAL(prec, scale)	IBM specific fixed-point type with maximum precision of 38 decimal digits.</div>
+</li>
+<li class="level1"><div class="li"> NUMERIC(pre, secale)	Floating type with maximum precision of 38 decimal digits.</div>
+</li>
+<li class="level1"><div class="li"> DOUBLE PRECISION	ANSI specific floating-point type with maximum precision of 126 binary digits (approximately 38 decimal digits)</div>
+</li>
+<li class="level1"><div class="li"> FLOAT	ANSI and IBM specific floating-point type with maximum precision of 126 binary digits (approximately 38 decimal digits)</div>
+</li>
+<li class="level1"><div class="li"> INT	ANSI specific integer type with maximum precision of 38 decimal digits</div>
+</li>
+<li class="level1"><div class="li"> INTEGER	ANSI and IBM specific integer type with maximum precision of 38 decimal digits</div>
+</li>
+<li class="level1"><div class="li"> SMALLINT	ANSI and IBM specific integer type with maximum precision of 38 decimal digits</div>
+</li>
+<li class="level1"><div class="li"> REAL	Floating-point type with maximum precision of 63 binary digits (approximately 18 decimal digits)</div>
+</li>
+</ul>
+
+<p>
+Following is a valid declaration:
+</p>
+<pre class="code">  DECLARE
+     num1 INTEGER;
+     num2 REAL;
+     num3 DOUBLE PRECISION;
+  BEGIN
+     null;
+  END;
+  /
+  </pre>
+
+</div>
+<!-- EDIT18 SECTION "PL/SQL Numeric Data Types and Subtypes" [9194-10922] -->
+<h3 class="sectionedit19" id="pl_sql_character_data_types_and_subtypes">PL/SQL Character Data Types and Subtypes</h3>
+<div class="level3">
+
+<p>
+Following is the detail of PL/SQL pre-defined character data types and their sub-types:
+</p>
+<ul>
+<li class="level1"><div class="li"> CHAR	Fixed-length character string with maximum size of 32,767 bytes</div>
+</li>
+<li class="level1"><div class="li"> VARCHAR2	Variable-length character string with maximum size of 32,767 bytes</div>
+</li>
+<li class="level1"><div class="li"> RAW	Variable-length binary or byte string with maximum size of 32,767 bytes, not interpreted by PL/SQL</div>
+</li>
+<li class="level1"><div class="li"> NCHAR	Fixed-length national character string with maximum size of 32,767 bytes</div>
+</li>
+<li class="level1"><div class="li"> NVARCHAR2	Variable-length national character string with maximum size of 32,767 bytes</div>
+</li>
+<li class="level1"><div class="li"> LONG	Variable-length character string with maximum size of 32,760 bytes</div>
+</li>
+<li class="level1"><div class="li"> LONG RAW	Variable-length binary or byte string with maximum size of 32,760 bytes, not interpreted by PL/SQL</div>
+</li>
+<li class="level1"><div class="li"> ROWID	Physical row identifier, the address of a row in an ordinary table</div>
+</li>
+<li class="level1"><div class="li"> UROWID	Universal row identifier (physical, logical, or foreign row identifier)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT19 SECTION "PL/SQL Character Data Types and Subtypes" [10923-11845] -->
+<h3 class="sectionedit20" id="pl_sql_boolean_data_types">PL/SQL Boolean Data Types</h3>
+<div class="level3">
+
+<p>
+The <strong>BOOLEAN</strong> data type stores logical values that are used in logical operations. The logical values are the Boolean values TRUE and FALSE and the value NULL.
+</p>
+
+<p>
+However, SQL has no data type equivalent to BOOLEAN. Therefore, Boolean values cannot be used in:
+</p>
+<ul>
+<li class="level1"><div class="li"> SQL statements</div>
+</li>
+<li class="level1"><div class="li"> Built-in SQL functions (such as TO_CHAR)</div>
+</li>
+<li class="level1"><div class="li"> PL/SQL functions invoked from SQL statements</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT20 SECTION "PL/SQL Boolean Data Types" [11846-12258] -->
+<h3 class="sectionedit21" id="pl_sql_datetime_and_interval_types">PL/SQL Datetime and Interval Types</h3>
+<div class="level3">
+
+<p>
+The <strong>DATE</strong> datatype to store fixed-length datetimes, which include the time of day in seconds since midnight. Valid dates range from January 1, 4712 BC to December 31, 9999 AD.
+</p>
+
+<p>
+The default date format is set by the Oracle initialization parameter NLS_DATE_FORMAT. For example, the default might be &#039;DD-MON-YY&#039;, which includes a two-digit number for the day of the month, an abbreviation of the month name, and the last two digits of the year, for example, 01-OCT-12.
+</p>
+
+<p>
+Each DATE includes the century, year, month, day, hour, minute, and second. The following table shows the valid values for each field:
+</p>
+
+<p>
+^ Field Name  ^ Valid Datetime values  ^ Valid interval values  ^
+</p>
+<div class="table sectionedit22"><table class="inline">
+	<tr class="row0">
+		<td class="col0 leftalign"> YEAR  </td><td class="col1 leftalign"> -4712 to 9999 (excluding year 0)  </td><td class="col2 leftalign"> Any nonzero integer  </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0 leftalign"> MONTH  </td><td class="col1 leftalign"> 01 to 12  </td><td class="col2 leftalign"> 0 to 11  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> DAY  </td><td class="col1 leftalign"> 01 to 31 (limited by the values of MONTH and YEAR, according to the rules of the calendar for the locale)  </td><td class="col2 leftalign"> Any nonzero integer  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> HOUR  </td><td class="col1 leftalign"> 00 to 23  </td><td class="col2 leftalign"> 0 to 23  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> MINUTE  </td><td class="col1 leftalign"> 00 to 59  </td><td class="col2 leftalign"> 0 to 59  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> SECOND  </td><td class="col1 leftalign"> 00 to 59.9(n), where 9(n) is the precision of time fractional seconds  </td><td class="col2 leftalign"> 0 to 59.9(n), where 9(n) is the precision of interval fractional seconds  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> TIMEZONE_HOUR  </td><td class="col1 leftalign"> -12 to 14 (range accommodates daylight savings time changes)	 </td><td class="col2 leftalign"> Not applicable  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> TIMEZONE_MINUTE  </td><td class="col1 leftalign"> 00 to 59  </td><td class="col2 leftalign"> Not applicable  </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign"> TIMEZONE_REGION  </td><td class="col1 leftalign"> Found in the dynamic performance view V$TIMEZONE_NAMES  </td><td class="col2 leftalign"> Not applicable  </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> TIMEZONE_ABBR  </td><td class="col1 leftalign"> Found in the dynamic performance view V$TIMEZONE_NAMES  </td><td class="col2 leftalign"> Not applicable  </td>
+	</tr>
+</table></div>
+<!-- EDIT22 TABLE [12982-13798] -->
+</div>
+<!-- EDIT21 SECTION "PL/SQL Datetime and Interval Types" [12259-13800] -->
+<h3 class="sectionedit23" id="pl_sql_large_object_lob_data_types">PL/SQL Large Object (LOB) Data Types</h3>
+<div class="level3">
+
+<p>
+Large object (LOB) data types refer large to data items such as text, graphic images, video clips, and sound waveforms. LOB data types allow efficient, random, piecewise access to this data. Following are the predefined PL/SQL LOB data types:
+</p>
+<ul>
+<li class="level1"><div class="li"> BFILE	Used to store large binary objects in operating system files outside the database.	System-dependent. Cannot exceed 4 gigabytes (<abbr title="Gigabyte">GB</abbr>).</div>
+</li>
+<li class="level1"><div class="li"> BLOB	Used to store large binary objects in the database.	8 to 128 terabytes (TB)</div>
+</li>
+<li class="level1"><div class="li"> CLOB	Used to store large blocks of character data in the database.	8 to 128 TB</div>
+</li>
+<li class="level1"><div class="li"> NCLOB	Used to store large blocks of NCHAR data in the database.	8 to 128 TB</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT23 SECTION "PL/SQL Large Object (LOB) Data Types" [13801-14484] -->
+<h3 class="sectionedit24" id="pl_sql_user-defined_subtypes">PL/SQL User-Defined Subtypes</h3>
+<div class="level3">
+
+<p>
+A subtype is a subset of another data type, which is called its base type. A subtype has the same valid operations as its base type, but only a subset of its valid values.
+</p>
+
+<p>
+PL/SQL predefines several subtypes in package STANDARD. For example, PL/SQL predefines the subtypes CHARACTER and INTEGER as follows:
+</p>
+<pre class="code">SUBTYPE CHARACTER IS CHAR;
+SUBTYPE INTEGER IS NUMBER(38,0);</pre>
+
+<p>
+You can define and use your own subtypes. The following program illustrates defining and using a user-defined subtype:
+</p>
+<pre class="code">DECLARE
+   SUBTYPE name IS char(20);
+   SUBTYPE message IS varchar2(100);
+   salutation name;
+   greetings message;
+BEGIN
+   salutation := &#039;Reader &#039;;
+   greetings := &#039;Welcome to the World of PL/SQL&#039;;
+   dbms_output.put_line(&#039;Hello &#039; || salutation || greetings);
+END;
+/</pre>
+
+<p>
+When the above code is executed at SQL prompt, it produces the following result:
+</p>
+<pre class="code">Hello Reader Welcome to the World of PL/SQL</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+<!-- EDIT24 SECTION "PL/SQL User-Defined Subtypes" [14485-15484] -->
+<h3 class="sectionedit25" id="nulls_in_pl_sql">NULLs in PL/SQL</h3>
+<div class="level3">
+
+<p>
+PL/SQL NULL values represent missing or unknown data and they are not an integer, a character, or any other specific data type. Note that NULL is not the same as an empty data string or the null character value &#039;\0&#039;. A null can be assigned but it cannot be equated with anything, including itself.  
+</p>
+
+</div>
+<!-- EDIT25 SECTION "NULLs in PL/SQL" [15485-15817] -->
+<h2 class="sectionedit26" id="pl_sql_-_variables">PL/SQL - Variables</h2>
+<div class="level2">
+
+<p>
+A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in PL/SQL has a specific data type, which determines the size and layout of the variable&#039;s memory; the range of values that can be stored within that memory and the set of operations that can be applied to the variable.
+</p>
+
+<p>
+The name of a PL/SQL variable consists of a letter optionally followed by more letters, numerals, dollar signs, underscores, and number signs and should not exceed 30 characters. By default, variable names are not case-sensitive. You cannot use a reserved PL/SQL keyword as a variable name.
+</p>
+
+<p>
+PL/SQL programming language allows to define various types of variables, which we will cover in subsequent chapters like date time data types, records, collections, etc. For this chapter, let us study only basic variable types.
+</p>
+
+</div>
+<!-- EDIT26 SECTION "PL/SQL - Variables" [15818-16696] -->
+<h3 class="sectionedit27" id="variable_declaration_in_pl_sql">Variable Declaration in PL/SQL</h3>
+<div class="level3">
+
+<p>
+PL/SQL variables must be declared in the declaration section or in a package as a global variable. When you declare a variable, PL/SQL allocates memory for the variable&#039;s value and the storage location is identified by the variable name.
+</p>
+
+<p>
+The syntax for declaring a variable is:
+</p>
+<pre class="code">variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]</pre>
+
+<p>
+Where, variable_name is a valid identifier in PL/SQL, datatype must be a valid PL/SQL data type or any user defined data type which we already have discussed in last chapter. Some valid variable declarations along with their definition are shown below:
+</p>
+<pre class="code">sales number(10, 2);
+pi CONSTANT double precision := 3.1415;
+name varchar2(25);
+address varchar2(100);</pre>
+
+<p>
+When you provide a size, scale or precision limit with the data type, it is called a <strong>constrained declaration</strong>. Constrained declarations require less memory than unconstrained declarations. For example:
+</p>
+<pre class="code">sales number(10, 2);
+name varchar2(25);
+address varchar2(100);</pre>
+
+</div>
+<!-- EDIT27 SECTION "Variable Declaration in PL/SQL" [16697-17740] -->
+<h3 class="sectionedit28" id="initializing_variables_in_pl_sql">Initializing Variables in PL/SQL</h3>
+<div class="level3">
+
+<p>
+Whenever you declare a variable, PL/SQL assigns it a default value of NULL. If you want to initialize a variable with a value other than the NULL value, you can do so during the declaration, using either of the following:
+</p>
+<ul>
+<li class="level1"><div class="li"> The DEFAULT keyword</div>
+</li>
+<li class="level1"><div class="li"> The assignment operator</div>
+</li>
+</ul>
+
+<p>
+For example: 
+</p>
+<pre class="code">counter binary_integer := 0;
+greetings varchar2(20) DEFAULT &#039;Have a Good Day&#039;;</pre>
+
+<p>
+You can also specify that a variable should not have a <strong>NULL</strong> value using the <strong>NOT NULL</strong> constraint. If you use the NOT NULL constraint, you must explicitly assign an initial value for that variable.
+</p>
+
+<p>
+It is a good programming practice to initialize variables properly otherwise, sometimes program would produce unexpected result. Try the following example which makes use of various types of variables:  
+</p>
+<pre class="code">DECLARE
+ a integer := 10;
+ b integer := 20;
+ c integer;
+ f real;
+BEGIN
+ c := a + b;
+ dbms_output.put_line(&#039;Value of c: &#039; || c);
+ f := 70.0/3.0;
+ dbms_output.put_line(&#039;Value of f: &#039; || f);
+END;</pre>
+
+</div>
+<!-- EDIT28 SECTION "Initializing Variables in PL/SQL" [17741-18786] -->
+<h3 class="sectionedit29" id="variable_scope_in_pl_sql">Variable Scope in PL/SQL</h3>
+<div class="level3">
+
+<p>
+PL/SQL allows the nesting of Blocks, i.e., each program block may contain another inner block. If a variable is declared within an inner block, it is not accessible to the outer block. However, if a variable is declared and accessible to an outer Block, it is also accessible to all nested inner Blocks. There are two types of variable scope:
+</p>
+<ul>
+<li class="level1"><div class="li"> Local variables - variables declared in an inner block and not accessible to outer blocks.</div>
+</li>
+<li class="level1"><div class="li"> Global variables - variables declared in the outermost block or a package.</div>
+</li>
+</ul>
+
+<p>
+Following example shows the usage of Local and Global variables in its simple form:
+</p>
+<pre class="code">DECLARE
+ -- Global variables 
+ num1 number := 95; 
+ num2 number := 85; 
+BEGIN 
+ dbms_output.put_line(&#039;Outer Variable num1: &#039; || num1);
+ dbms_output.put_line(&#039;Outer Variable num2: &#039; || num2);
+ DECLARE 
+    -- Local variables
+    num1 number := 195; 
+    num2 number := 185; 
+ BEGIN 
+    dbms_output.put_line(&#039;Inner Variable num1: &#039; || num1);
+    dbms_output.put_line(&#039;Inner Variable num2: &#039; || num2);
+ END; 
+END;</pre>
+
+</div>
+<!-- EDIT29 SECTION "Variable Scope in PL/SQL" [18787-19872] -->
+<h3 class="sectionedit30" id="assigning_sql_query_results_to_pl_sql_variables">Assigning SQL Query Results to PL/SQL Variables</h3>
+<div class="level3">
+
+<p>
+You can use the SELECT INTO statement of SQL to assign values to PL/SQL variables. For each item in the SELECT list, there must be a corresponding, type-compatible variable in the INTO list. The following example illustrates the concept: Let us create a table named CUSTOMERS:
+</p>
+
+<p>
+(For SQL statements please look at the <a href="http://www.tutorialspoint.com/sql/index.htm" class="urlextern" title="http://www.tutorialspoint.com/sql/index.htm"  rel="nofollow">SQL tutorial</a>)
+</p>
+<pre class="code">CREATE TABLE CUSTOMERS(
+ ID   INT NOT NULL,
+ NAME VARCHAR (20) NOT NULL,
+ AGE INT NOT NULL,
+ ADDRESS CHAR (25),
+ SALARY   DECIMAL (18, 2),       
+ PRIMARY KEY (ID)
+);</pre>
+
+<p>
+Next, let us insert some values in the table:
+</p>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, &#039;Ramesh&#039;, 32, &#039;Ahmedabad&#039;, 2000.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, &#039;Khilan&#039;, 25, &#039;Delhi&#039;, 1500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, &#039;kaushik&#039;, 23, &#039;Kota&#039;, 2000.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, &#039;Chaitali&#039;, 25, &#039;Mumbai&#039;, 6500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, &#039;Hardik&#039;, 27, &#039;Bhopal&#039;, 8500.00 );</pre>
+<pre class="code">INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, &#039;Komal&#039;, 22, &#039;MP&#039;, 4500.00 );</pre>
+
+<p>
+The following program assigns values from the above table to PL/SQL variables using the SELECT INTO clause of SQL:
+</p>
+<pre class="code">DECLARE
+   c_id customers.id%type := 1;
+   c_name  customers.name%type;
+   c_addr customers.address%type;
+   c_sal  customers.salary%type;
+BEGIN
+   SELECT name, address, salary INTO c_name, c_addr, c_sal
+   FROM customers
+   WHERE id = c_id;</pre>
+<pre class="code">   dbms_output.put_line
+   (&#039;Customer &#039; ||c_name || &#039; from &#039; || c_addr || &#039; earns &#039; || c_sal);
+END;</pre>
+
+</div>
+<!-- EDIT30 SECTION "Assigning SQL Query Results to PL/SQL Variables" [19873-21638] -->
+<h2 class="sectionedit31" id="pl_sql_-_constants_and_literals">PL/SQL - Constants and Literals</h2>
+<div class="level2">
+
+<p>
+A constant holds a value that once declared, does not change in the program. A constant declaration specifies its name, data type, and value, and allocates storage for it. The declaration can also impose the NOT NULL constraint.
+</p>
+
+</div>
+<!-- EDIT31 SECTION "PL/SQL - Constants and Literals" [21639-21913] -->
+<h3 class="sectionedit32" id="declaring_a_consant">Declaring a consant</h3>
+<div class="level3">
+
+<p>
+A constant is declared using the CONSTANT keyword. It requires an initial value and does not allow that value to be changed. For example:
+</p>
+<pre class="code">PI CONSTANT NUMBER := 3.141592654;</pre>
+<pre class="code">DECLARE
+   -- constant declaration
+   pi constant number := 3.141592654;
+   -- other declarations
+   radius number(5,2); 
+   dia number(5,2); 
+   circumference number(7, 2);
+   area number (10, 2);
+BEGIN 
+   -- processing
+   radius := 9.5; 
+   dia := radius * 2; 
+   circumference := 2.0 * pi * radius;
+   area := pi * radius * radius;
+   -- output
+   dbms_output.put_line(&#039;Radius: &#039; || radius);
+   dbms_output.put_line(&#039;Diameter: &#039; || dia);
+   dbms_output.put_line(&#039;Circumference: &#039; || circumference);
+   dbms_output.put_line(&#039;Area: &#039; || area);
+END;
+/</pre>
+
+</div>
+<!-- EDIT32 SECTION "Declaring a consant" [21914-22717] -->
+<h3 class="sectionedit33" id="the_pl_sql_literals">The PL/SQL Literals</h3>
+<div class="level3">
+
+<p>
+A literal is an explicit numeric, character, string, or Boolean value not represented by an identifier. For example, TRUE, 786, NULL, &#039;tutorialspoint&#039; are all literals of type Boolean, number, or string. PL/SQL, literals are case-sensitive. PL/SQL supports the following kinds of literals:
+</p>
+<ul>
+<li class="level1"><div class="li"> Numeric Literals</div>
+</li>
+<li class="level1"><div class="li"> Character Literals</div>
+</li>
+<li class="level1"><div class="li"> String Literals</div>
+</li>
+<li class="level1"><div class="li"> BOOLEAN Literals</div>
+</li>
+<li class="level1"><div class="li"> Date and Time Literals</div>
+</li>
+</ul>
+
+<p>
+The following table provides examples from all these categories of literal values.
+</p>
+<pre class="code">050 78 -14 0 +32767
+6.6667 0.0 -12.0 3.14159 +7800.00
+6E5 1.0E-8 3.14159e0 -1E38 -9.5e-3
+&#039;Hello, world!&#039;
+&#039;Tutorials Point&#039;
+&#039;19-NOV-12&#039;</pre>
+<div class="table sectionedit34"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Literal type  </th><th class="col1 leftalign"> Example   </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign" colspan="2"> Numeric Literals  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Character Literals  </td><td class="col1 leftalign"> &#039;A&#039; &#039;%&#039; &#039;9&#039; &#039; &#039; &#039;z&#039; &#039;(&#039;  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign" colspan="2"> String Literals  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> BOOLEAN Literals  </td><td class="col1 leftalign"> TRUE, FALSE and NULL  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> Date and Time Literals  </td><td class="col1 leftalign"> DATE &#039;1978-12-25&#039;; <br/>
+TIMESTAMP &#039;2012-10-29 12:01:01&#039;;   </td>
+	</tr>
+</table></div>
+<!-- EDIT34 TABLE [23385-23643] -->
+<p>
+To embed single quotes within a string literal, place two single quotes next to each other as shown below:
+</p>
+<pre class="code">DECLARE
+   message  varchar2(30):= &#039;&#039;That&#039;&#039;s tutorialspoint.com!&#039;&#039;;
+BEGIN
+   dbms_output.put_line(message);
+END;
+/</pre>
+
+</div>
+<!-- EDIT33 SECTION "The PL/SQL Literals" [22718-23881] -->
+<h2 class="sectionedit35" id="pl_sql_-_operators">PL/SQL - Operators</h2>
+<div class="level2">
+
+<p>
+An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulation. PL/SQL language is rich in built-in operators and provides the following types of operators:
+</p>
+<ul>
+<li class="level1"><div class="li"> Arithmetic operators</div>
+</li>
+<li class="level1"><div class="li"> Relational operators</div>
+</li>
+<li class="level1"><div class="li"> Comparison operators</div>
+</li>
+<li class="level1"><div class="li"> Logical operators</div>
+</li>
+<li class="level1"><div class="li"> String operators</div>
+</li>
+</ul>
+
+<p>
+This tutorial will explain the arithmetic, relational, comparison and logical operators one by one. The String operators will be discussed under the chapter: <strong>PL/SQL - Strings</strong> (LINK).
+</p>
+
+</div>
+<!-- EDIT35 SECTION "PL/SQL - Operators" [23882-24420] -->
+<h3 class="sectionedit36" id="arithmetic_operators">Arithmetic Operators</h3>
+<div class="level3">
+
+<p>
+Following table shows all the arithmetic operators supported by PL/SQL. Assume variable A holds 10 and variable B holds 5 then:
+</p>
+<div class="table sectionedit37"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> + </td><td class="col1"> Adds two operands </td><td class="col2"> A + B will give 15 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> - </td><td class="col1"> Substracts second operand from the first </td><td class="col2"> A - B will give 5 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> * </td><td class="col1"> Multiplies both operands </td><td class="col2"> A * B will give 50 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> / </td><td class="col1"> Divides numerator by de-numerator </td><td class="col2"> A / B will give 2 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> * * </td><td class="col1"> Exponentiation operator, raises one operand to the power of other </td><td class="col2"> * * B will give 100000 </td>
+	</tr>
+</table></div>
+<!-- EDIT37 TABLE [24582-24951] -->
+</div>
+<!-- EDIT36 SECTION "Arithmetic Operators" [24421-24952] -->
+<h3 class="sectionedit38" id="relational_operators">Relational operators</h3>
+<div class="level3">
+
+<p>
+Relational operators compare two expressions or values and return a Boolean result. Following table shows all the relational operators supported by PL/SQL. Assume variable A holds 10 and variable B holds 20, then:
+</p>
+
+<p>
+!=
+</p>
+
+<p>
+&lt;&gt;
+</p>
+
+<p>
+~=
+</p>
+<div class="table sectionedit39"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> = </td><td class="col1"> Checks if the values of two operands are equal or not, if yes then condition becomes true. </td><td class="col2"> (A = B) is not true. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Checks if the values of two operands are equal or not, if values are not equal then condition becomes true. </td><td class="col1" colspan="2"> (A != B) is true. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> &gt; </td><td class="col1"> Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true. </td><td class="col2"> (A &gt; B) is not true. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> &lt; </td><td class="col1"> Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true. </td><td class="col2"> (A &lt; B) is true. </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> &gt;= </td><td class="col1"> Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true. </td><td class="col2"> (A &gt;= B) is not true. </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> ⇐ </td><td class="col1"> Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true. </td><td class="col2"> A ⇐ B) is true. </td>
+	</tr>
+</table></div>
+<!-- EDIT39 TABLE [25212-26104] -->
+</div>
+<!-- EDIT38 SECTION "Relational operators" [24953-26106] -->
+<h3 class="sectionedit40" id="comparison_operator">Comparison operator</h3>
+<div class="level3">
+
+<p>
+Comparison operators are used for comparing one expression to another. The result is always either TRUE, FALSE OR NULL.
+</p>
+<div class="table sectionedit41"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> LIKE </td><td class="col1"> The LIKE operator compares a character, string, or CLOB value to a pattern and returns TRUE if the value matches the pattern and FALSE if it does not. </td><td class="col2"> If &#039;Zara Ali&#039; like &#039;Z% A_i&#039; returns a Boolean true, whereas, &#039;Nuha Ali&#039; like &#039;Z% A_i&#039; returns a Boolean false. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> BETWEEN </td><td class="col1"> The BETWEEN operator tests whether a value lies in a specified range. x BETWEEN a AND b means that x &gt;= a and x ⇐ b. </td><td class="col2"> If x = 10 then, x between 5 and 20 returns true, x between 5 and 10 returns true, but x between 11 and 20 returns false. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> IN </td><td class="col1"> The IN operator tests set membership. x IN (set) means that x is equal to any member of set. </td><td class="col2"> If x = &#039;m&#039; then, x in (&#039;a&#039;, &#039;b&#039;, &#039;c&#039;) returns boolean false but x in (&#039;m&#039;, &#039;n&#039;, &#039;o&#039;) returns Boolean true. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> IS NULL </td><td class="col1"> The IS NULL operator returns the BOOLEAN value TRUE if its operand is NULL or FALSE if it is not NULL. Comparisons involving NULL values always yield NULL. </td><td class="col2"> If x = &#039;m&#039;, then &#039;x is null&#039; returns Boolean false. </td>
+	</tr>
+</table></div>
+<!-- EDIT41 TABLE [26259-27260] -->
+</div>
+<!-- EDIT40 SECTION "Comparison operator" [26107-27261] -->
+<h3 class="sectionedit42" id="logical_operators">Logical operators</h3>
+<div class="level3">
+
+<p>
+Following table shows the Logical operators supported by PL/SQL. All these operators work on Boolean operands and produces Boolean results. Assume variable A holds true and variable B holds false, then:
+</p>
+<div class="table sectionedit43"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> and </td><td class="col1 leftalign"> Called logical AND operator. If both the operands are true then condition becomes true.	 </td><td class="col2"> (A and B) is false. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> or </td><td class="col1"> Called logical OR Operator. If any of the two operands is true then condition becomes true. </td><td class="col2"> (A or B) is true. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> not </td><td class="col1"> Called logical NOT Operator. Used to reverse the logical state of its operand. If a condition is true then Logical NOT operator will make it false. </td><td class="col2"> not (A and B) is true. </td>
+	</tr>
+</table></div>
+<!-- EDIT43 TABLE [27495-27956] -->
+</div>
+<!-- EDIT42 SECTION "Logical operators" [27262-27957] -->
+<h3 class="sectionedit44" id="pl_sql_operator_precedence">PL/SQL Operator Precedence</h3>
+<div class="level3">
+
+<p>
+Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator:
+</p>
+
+<p>
+For example x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.
+</p>
+
+<p>
+Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.
+</p>
+
+<p>
+=, &lt;, &gt;, ⇐, &gt;=, &lt;&gt;, !=, ~=, ^=,
+</p>
+
+<p>
+IS NULL, LIKE, BETWEEN, IN
+</p>
+<div class="table sectionedit45"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Operator </th><th class="col1"> Operation </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> * * </td><td class="col1"> exponentiation </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> +,- </td><td class="col1"> identity, negation </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> *, / </td><td class="col1"> multiplication, division </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> +, -, <em>||</em> </td><td class="col1"> addition, subtraction, concatenation </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0" colspan="2"> comparison </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> NOT </td><td class="col1"> logical negation </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> AND </td><td class="col1"> conjunction </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> OR </td><td class="col1"> inclusion </td>
+	</tr>
+</table></div>
+<!-- EDIT45 TABLE [28683-28938] -->
+<p>
+Example:
+</p>
+<div class="hiddenGlobal  hiddenActive"><div class="hiddenElements"></div><div class="hiddenHead  hiddenSinceBeginning"><div class="hiddenOnHidden">
+<p>
+Kuva
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+Peida
+</p>
+</div></div> <!-- .hiddenHead --><div class="hiddenBody"><pre class="code">DECLARE
+   a number(2) := 20;
+   b number(2) := 10;
+   c number(2) := 15;
+   d number(2) := 5;
+   e number(2) ;
+BEGIN
+   e := (a + b) * c / d;      -- ( 30 * 15 ) / 5
+   dbms_output.put_line(&#039;Value of (a + b) * c / d is : &#039;|| e );
+   e := ((a + b) * c) / d;   -- (30 * 15 ) / 5
+   dbms_output.put_line(&#039;Value of ((a + b) * c) / d is  : &#039; ||  e );
+   e := (a + b) * (c / d);   -- (30) * (15/5)
+   dbms_output.put_line(&#039;Value of (a + b) * (c / d) is  : &#039;||  e );
+   e := a + (b * c) / d;     --  20 + (150/5)
+   dbms_output.put_line(&#039;Value of a + (b * c) / d is  : &#039; ||  e );
+END;
+/</pre>
+</div></div>
+</div>
+<!-- EDIT44 SECTION "PL/SQL Operator Precedence" [27958-29589] -->
+<h2 class="sectionedit46" id="pl_sql_-_conditions">PL/SQL - Conditions</h2>
+<div class="level2">
+
+<p>
+Decision-making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
+</p>
+
+<p>
+Following is the general from of a typical conditional (i.e., decision making) structure found in most of the programming languages:
+</p>
+
+<p>
+<img src="/docuwiki/lib/exe/fetch.php?media=nortal:decision_making.jpg" class="media" alt="" />
+</p>
+
+<p>
+PL/SQL programming language provides following types of decision-making statements. Click the following links to check their detail.
+</p>
+<div class="table sectionedit47"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Statement </th><th class="col1"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> IF - THEN statement </td><td class="col1"> The IF statement associates a condition with a sequence of statements enclosed by the keywords THEN and END IF. If the condition is true, the statements get executed and if the condition is false or NULL then the IF statement does nothing. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> IF-THEN-ELSE statement </td><td class="col1"> IF statement adds the keyword ELSE followed by an alternative sequence of statement. If the condition is false or NULL , then only the alternative sequence of statements get executed. It ensures that either of the sequence of statements is executed. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> IF-THEN-ELSIF statement </td><td class="col1"> It allows you to choose between several alternatives. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Case statement </td><td class="col1"> Like the IF statement, the CASE statement selects one sequence of statements to execute. However, to select the sequence, the CASE statement uses a selector rather than multiple Boolean expressions. A selector is an expression whose value is used to select one of several alternatives. </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Searched CASE statement </td><td class="col1"> The searched CASE statement has no selector, and it&#039;s WHEN clauses contain search conditions that yield Boolean values. </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> nested IF-THEN-ELSE </td><td class="col1"> You can use one IF-THEN or IF-THEN-ELSIF statement inside another IF-THEN or IF-THEN-ELSIF statement(s). </td>
+	</tr>
+</table></div>
+<!-- EDIT47 TABLE [30248-31492] -->
+</div>
+<!-- EDIT46 SECTION "PL/SQL - Conditions" [29590-31493] -->
+<h2 class="sectionedit48" id="pl_sql_-_loops">PL/SQL - Loops</h2>
+<div class="level2">
+
+<p>
+There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.
+</p>
+
+<p>
+Programming languages provide various control structures that allow for more complicated execution paths.
+</p>
+
+<p>
+A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages:
+</p>
+
+<p>
+<img src="/docuwiki/lib/exe/fetch.php?media=nortal:loop_architecture.jpg" class="media" alt="" />
+</p>
+
+<p>
+There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.
+</p>
+
+<p>
+Programming languages provide various control structures that allow for more complicated execution paths.
+</p>
+
+<p>
+A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages:
+</p>
+<div class="table sectionedit49"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Loop Type </th><th class="col1"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> LOOP Basic </td><td class="col1"> In this loop structure, sequence of statements is enclosed between the LOOP and END LOOP statements. At each iteration, the sequence of statements is executed and then control resumes at the top of the loop. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> LOOP WHILE </td><td class="col1"> Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> LOOP FOR </td><td class="col1"> Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Nested loops in PL/SQL </td><td class="col1"> You can use one or more loop inside any another basic loop, while or for loop. </td>
+	</tr>
+</table></div>
+<!-- EDIT49 TABLE [32601-33229] -->
+</div>
+<!-- EDIT48 SECTION "PL/SQL - Loops" [31494-33230] -->
+<h3 class="sectionedit50" id="labeling_a_pl_sql_loop">Labeling a PL/SQL Loop</h3>
+<div class="level3">
+
+<p>
+PL/SQL loops can be labeled. The label should be enclosed by double angle brackets (« and ») and appear at the beginning of the LOOP statement. The label name can also appear at the end of the LOOP statement. You may use the label in the EXIT statement to exit from the loop.
+</p>
+
+<p>
+The following program illustrates the concept:
+</p>
+<pre class="code">DECLARE
+   i number(1);
+   j number(1);
+BEGIN
+   &lt;&lt; outer_loop &gt;&gt;
+   FOR i IN 1..3 LOOP
+      &lt;&lt; inner_loop &gt;&gt;
+      FOR j IN 1..3 LOOP
+         dbms_output.put_line(&#039;i is: &#039;|| i || &#039; and j is: &#039; || j);
+      END loop inner_loop;
+   END loop outer_loop;
+END;
+/</pre>
+
+</div>
+<!-- EDIT50 SECTION "Labeling a PL/SQL Loop" [33231-33879] -->
+<h3 class="sectionedit51" id="the_loop_control_statements">The Loop Control Statements</h3>
+<div class="level3">
+
+<p>
+Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.
+</p>
+
+<p>
+PL/SQL supports the following control statements. Labeling loops also helps in taking the control outside a loop. Click the following links to check their details.
+</p>
+<div class="table sectionedit52"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> Control Statement </th><th class="col1"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> EXIT statement </td><td class="col1"> The Exit statement completes the loop and control passes to the statement immediately after END LOOP </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> CONTINUE statement </td><td class="col1"> Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> GOTO statement </td><td class="col1"> Transfers control to the labeled statement. Though it is not advised to use GOTO statement in your program. </td>
+	</tr>
+</table></div>
+<!-- EDIT52 TABLE [34252-34672] -->
+</div>
+<!-- EDIT51 SECTION "The Loop Control Statements" [33880-34673] -->
+<h1 class="sectionedit53" id="pl_sql_-_strings">PL/SQL - Strings</h1>
+<div class="level1">
+
+<p>
+The string in PL/SQL is actually a sequence of characters with an optional size specification. The characters could be numeric, letters, blank, special characters or a combination of all. PL/SQL offers three kinds of strings:
+</p>
+<ul>
+<li class="level1"><div class="li"> Fixed-length strings: In such strings, programmers specify the length while declaring the string. The string is right-padded with spaces to the length so specified.</div>
+</li>
+<li class="level1"><div class="li"> Variable-length strings: In such strings, a maximum length up to 32,767, for the string is specified and no padding takes place.</div>
+</li>
+<li class="level1"><div class="li"> Character large objects (CLOBs): These are variable-length strings that can be up to 128 terabytes.</div>
+</li>
+</ul>
+
+<p>
+PL/SQL strings could be either variables or literals. A string literal is enclosed within quotation marks. For example,
+</p>
+<pre class="code">&#039;This is a string literal.&#039; Or &#039;hello world&#039;</pre>
+
+<p>
+To include a single quote inside a string literal, you need to type two single quotes next to one another, like:
+</p>
+<pre class="code">&#039;this isn&#039;&#039;t what it looks like&#039;</pre>
+
+</div>
+<!-- EDIT53 SECTION "PL/SQL - Strings" [34674-35656] -->
+<h2 class="sectionedit54" id="declaring_string_variables">Declaring String Variables</h2>
+<div class="level2">
+
+<p>
+Oracle database provides numerous string datatypes , like, CHAR, NCHAR, VARCHAR2, NVARCHAR2, CLOB, and NCLOB. The datatypes prefixed with an &#039;N&#039; are &#039;national character set&#039; datatypes, that store Unicode character data.
+</p>
+
+<p>
+If you need to declare a variable-length string, you must provide the maximum length of that string. For example, the VARCHAR2 data type. The following example illustrates declaring and using some string variables:
+</p>
+<pre class="code">DECLARE
+   name varchar2(20);
+   company varchar2(30);
+   introduction clob;
+   choice char(1);
+BEGIN
+   name := &#039;John Smith&#039;;
+   company := &#039;Infotech&#039;;
+   introduction := &#039; Hello! I&#039;&#039;m John Smith from Infotech.&#039;;
+   choice := &#039;y&#039;;
+   IF choice = &#039;y&#039; THEN
+      dbms_output.put_line(name);
+      dbms_output.put_line(company);
+      dbms_output.put_line(introduction);
+   END IF;
+END;
+/</pre>
+
+<p>
+To declare a fixed-length string, use the CHAR datatype. Here you do not have to specify a maximum length for a fixed-length variable. If you leave off the length constraint, Oracle Database automatically uses a maximum length required. So following two declarations below are identical:
+</p>
+<pre class="code"> red_flag CHAR(1) := &#039;Y&#039;;
+ red_flag CHAR    := &#039;Y&#039;;  </pre>
+
+</div>
+<!-- EDIT54 SECTION "Declaring String Variables" [35657-36905] -->
+<h2 class="sectionedit55" id="pl_sql_string_functions_and_operators">PL/SQL String Functions and Operators</h2>
+<div class="level2">
+
+<p>
+PL/SQL offers the concatenation operator (||) for joining two strings. The following table provides the string functions provided by PL/SQL:
+</p>
+<ol>
+<li class="level1"><div class="li"> <abbr title="American Standard Code for Information Interchange">ASCII</abbr>(x); Returns the <abbr title="American Standard Code for Information Interchange">ASCII</abbr> value of the character x.</div>
+</li>
+<li class="level1"><div class="li"> CHR(x); Returns the character with the <abbr title="American Standard Code for Information Interchange">ASCII</abbr> value of x.</div>
+</li>
+<li class="level1"><div class="li"> CONCAT(x, y); Concatenates the strings x and y and return the appended string.</div>
+</li>
+<li class="level1"><div class="li"> INITCAP(x); Converts the initial letter of each word in x to uppercase and returns that string.</div>
+</li>
+<li class="level1"><div class="li"> INSTR(x, find_string [, start] [, occurrence]); Searches for find_string in x and returns the position at which it occurs.</div>
+</li>
+<li class="level1"><div class="li"> INSTRB(x); Returns the location of a string within another string, but returns the value in bytes.</div>
+</li>
+<li class="level1"><div class="li"> LENGTH(x); Returns the number of characters in x.</div>
+</li>
+<li class="level1"><div class="li"> LENGTHB(x); Returns the length of a character string in bytes for single byte character set.</div>
+</li>
+<li class="level1"><div class="li"> LOWER(x); Converts the letters in x to lowercase and returns that string.</div>
+</li>
+<li class="level1"><div class="li"> LPAD(x, width [, pad_string]); Pads x with spaces to left, to bring the total length of the string up to width characters.</div>
+</li>
+<li class="level1"><div class="li"> LTRIM(x [, trim_string]); Trims characters from the left of x.</div>
+</li>
+<li class="level1"><div class="li"> NANVL(x, value); Returns value if x matches the NaN special value (not a number), otherwise x is returned.</div>
+</li>
+<li class="level1"><div class="li"> NLS_INITCAP(x); Same as the INITCAP function except that it can use a different sort method as specified by NLSSORT.</div>
+</li>
+<li class="level1"><div class="li"> NLS_LOWER(x); Same as the LOWER function except that it can use a different sort method as specified by NLSSORT.</div>
+</li>
+<li class="level1"><div class="li"> NLS_UPPER(x); Same as the UPPER function except that it can use a different sort method as specified by NLSSORT.</div>
+</li>
+<li class="level1"><div class="li"> NLSSORT(x); Changes the method of sorting the characters. Must be specified before any NLS function; otherwise, the default sort will be used.</div>
+</li>
+<li class="level1"><div class="li"> NVL(x, value); Returns value if x is null; otherwise, x is returned.</div>
+</li>
+<li class="level1"><div class="li"> NVL2(x, value1, value2); Returns value1 if x is not null; if x is null, value2 is returned.</div>
+</li>
+<li class="level1"><div class="li"> REPLACE(x, search_string, replace_string); Searches x for search_string and replaces it with replace_string.</div>
+</li>
+<li class="level1"><div class="li"> RPAD(x, width [, pad_string]); Pads x to the right.</div>
+</li>
+<li class="level1"><div class="li"> RTRIM(x [, trim_string]); Trims x from the right.</div>
+</li>
+<li class="level1"><div class="li"> SOUNDEX(x); Returns a string containing the phonetic representation of x.</div>
+</li>
+<li class="level1"><div class="li"> SUBSTR(x, start [, length]); Returns a substring of x that begins at the position specified by start. An optional length for the substring may be supplied.</div>
+</li>
+<li class="level1"><div class="li"> SUBSTRB(x); Same as SUBSTR except the parameters are expressed in bytes instead of characters for the single-byte character systems</div>
+</li>
+<li class="level1"><div class="li"> TRIM([trim_char FROM) x); Trims characters from the left and right of x.</div>
+</li>
+<li class="level1"><div class="li"> UPPER(x); Converts the letters in x to uppercase and returns that string.</div>
+</li>
+</ol>
+
+<p>
+<strong>Example 1</strong>
+</p>
+<pre class="code">DECLARE
+   greetings varchar2(11) := &#039;hello world&#039;;
+BEGIN
+   dbms_output.put_line(UPPER(greetings));</pre>
+<pre class="code">   dbms_output.put_line(LOWER(greetings));</pre>
+<pre class="code">   dbms_output.put_line(INITCAP(greetings));</pre>
+<pre class="code">   /* retrieve the first character in the string */
+   dbms_output.put_line ( SUBSTR (greetings, 1, 1));</pre>
+<pre class="code">   /* retrieve the last character in the string */
+   dbms_output.put_line ( SUBSTR (greetings, -1, 1));</pre>
+<pre class="code">   /* retrieve five characters, 
+      starting from the seventh position. */
+   dbms_output.put_line ( SUBSTR (greetings, 7, 5));</pre>
+<pre class="code">   /* retrieve the remainder of the string,
+      starting from the second position. */
+   dbms_output.put_line ( SUBSTR (greetings, 2));</pre>
+<pre class="code">   /* find the location of the first &quot;e&quot; */
+   dbms_output.put_line ( INSTR (greetings, &#039;e&#039;));
+END;
+/</pre>
+
+</div>
+<!-- EDIT55 SECTION "PL/SQL String Functions and Operators" [36906-40424] -->
+<h1 class="sectionedit56" id="pl_sql_-_arrays">PL/SQL - Arrays</h1>
+<div class="level1">
+
+<p>
+PL/SQL programming language provides a data structure called the VARRAY, which can store a fixed-size sequential collection of elements of the same type. A varray is used to store an ordered collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+</p>
+
+<p>
+All varrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.
+</p>
+
+<p>
+<a href="/docuwiki/lib/exe/detail.php?id=nortal%3Aplsql&amp;media=nortal:varrays.jpg" class="media" title="nortal:varrays.jpg"><img src="/docuwiki/lib/exe/fetch.php?media=nortal:varrays.jpg" class="media" alt="" /></a>
+</p>
+
+<p>
+An array is a part of collection type data and it stands for variable-size arrays. We will study other collection types in a later chapter &#039;PL/SQL Collections&#039;.
+</p>
+
+<p>
+Each element in a varray has an index associated with it. It also has a maximum size that can be changed dynamically.
+</p>
+
+</div>
+<!-- EDIT56 SECTION "PL/SQL - Arrays" [40425-41220] -->
+<h2 class="sectionedit57" id="creating_a_varray_type">Creating a Varray Type</h2>
+<div class="level2">
+
+<p>
+A varray type is created with the CREATE TYPE statement. You must specify the maximum size and the type of elements stored in the varray.
+</p>
+
+<p>
+The basic syntax for creating a VRRAY type at the schema level is:
+</p>
+<pre class="code">CREATE OR REPLACE TYPE varray_type_name IS VARRAY(n) of &lt;element_type&gt;</pre>
+
+<p>
+Where,
+</p>
+<ul>
+<li class="level1"><div class="li"> varray_type_name is a valid attribute name,</div>
+</li>
+<li class="level1"><div class="li"> n is the number of elements (maximum) in the varray,</div>
+</li>
+<li class="level1"><div class="li"> element_type is the data type of the elements of the array.</div>
+</li>
+</ul>
+
+<p>
+Maximum size of a varray can be changed using the ALTER TYPE statement.
+</p>
+
+<p>
+For example,
+</p>
+<pre class="code">CREATE Or REPLACE TYPE namearray AS VARRAY(3) OF VARCHAR2(10);
+/
+Type created.</pre>
+
+<p>
+The basic syntax for creating a VRRAY type within a PL/SQL block is:
+</p>
+<pre class="code">TYPE varray_type_name IS VARRAY(n) of &lt;element_type&gt;</pre>
+
+<p>
+For example:
+</p>
+<pre class="code">TYPE namearray IS VARRAY(5) OF VARCHAR2(10);
+Type grades IS VARRAY(5) OF INTEGER;</pre>
+
+<p>
+<strong>Example 1</strong>
+The following program illustrates using varrays:  
+</p>
+<pre class="code">DECLARE
+   type namesarray IS VARRAY(5) OF VARCHAR2(10);
+   type grades IS VARRAY(5) OF INTEGER;
+   names namesarray;
+   marks grades;
+   total integer;
+BEGIN
+   names := namesarray(&#039;Kavita&#039;, &#039;Pritam&#039;, &#039;Ayan&#039;, &#039;Rishav&#039;, &#039;Aziz&#039;);
+   marks:= grades(98, 97, 78, 87, 92);
+   total := names.count;
+   dbms_output.put_line(&#039;Total &#039;|| total || &#039; Students&#039;);
+   FOR i in 1 .. total LOOP
+      dbms_output.put_line(&#039;Student: &#039; || names(i) || &#039;
+      Marks: &#039; || marks(i));
+   END LOOP;
+END;
+/</pre>
+
+<p>
+Please note:
+</p>
+<ul>
+<li class="level1"><div class="li"> In oracle environment, the starting index for varrays is always 1.</div>
+</li>
+<li class="level1"><div class="li"> You can initialize the varray elements using the constructor method of the varray type, which has the same name as the varray.</div>
+</li>
+<li class="level1"><div class="li"> Varrays are one-dimensional arrays.</div>
+</li>
+<li class="level1"><div class="li"> A varray is automatically NULL when it is declared and must be initialized before its elements can be referenced.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT57 SECTION "Creating a Varray Type" [41221-43073] -->
+<h1 class="sectionedit58" id="pl_sql_-_procedures">PL/SQL - Procedures</h1>
+<div class="level1">
+
+<p>
+A <strong>subprogram</strong> is a program unit/module that performs a particular task. These subprograms are combined to form larger programs. This is basically called the &#039;Modular design&#039;. A subprogram can be invoked by another subprogram or program which is called the calling program.
+</p>
+
+<p>
+A subprogram can be created:
+</p>
+<ul>
+<li class="level1"><div class="li"> At schema level</div>
+</li>
+<li class="level1"><div class="li"> Inside a package</div>
+</li>
+<li class="level1"><div class="li"> Inside a PL/SQL block</div>
+</li>
+</ul>
+
+<p>
+A schema level subprogram is a standalone subprogram. It is created with the CREATE PROCEDURE or CREATE FUNCTION statement. It is stored in the database and can be deleted with the DROP PROCEDURE or DROP FUNCTION statement.
+</p>
+
+<p>
+A subprogram created inside a package is a packaged subprogram. It is stored in the database and can be deleted only when the package is deleted with the DROP PACKAGE statement. We will discuss packages in the chapter &#039;PL/SQL - Packages&#039;.
+</p>
+
+<p>
+PL/SQL subprograms are named PL/SQL blocks that can be invoked with a set of parameters. PL/SQL provides two kinds of subprograms:
+</p>
+<ul>
+<li class="level1"><div class="li"> Functions: these subprograms return a single value, mainly used to compute and return a value.</div>
+</li>
+<li class="level1"><div class="li"> Procedures: these subprograms do not return a value directly, mainly used to perform an action.</div>
+</li>
+</ul>
+
+<p>
+This chapter is going to cover important aspects of a PL/SQL procedure and we will cover PL/SQL function in next chapter.
+</p>
+
+</div>
+<!-- EDIT58 SECTION "PL/SQL - Procedures" [43074-44403] -->
+<h2 class="sectionedit59" id="parts_of_a_pl_sql_subprogram">Parts of a PL/SQL Subprogram</h2>
+<div class="level2">
+
+<p>
+Each PL/SQL subprogram has a name, and may have a parameter list. Like anonymous PL/SQL blocks and, the named blocks a subprograms will also have following three parts:
+</p>
+<div class="table sectionedit60"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> S.N. </th><th class="col1"> Parts &amp; Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 1 </td><td class="col1 leftalign"> <strong>Declarative Part</strong> - It is an optional part. However, the declarative part for a subprogram does not start with the DECLARE keyword. It contains declarations of types, cursors, constants, variables, exceptions, and nested subprograms. These items are local to the subprogram and cease to exist when the subprogram completes execution.  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 2 </td><td class="col1"> <strong>Executable Part</strong> - This is a mandatory part and contains statements that perform the designated action. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 3 </td><td class="col1 leftalign"> <strong>Exception-handling</strong> - This is again an optional part. It contains the code that handles run-time errors.  </td>
+	</tr>
+</table></div>
+<!-- EDIT60 TABLE [44616-45224] -->
+</div>
+<!-- EDIT59 SECTION "Parts of a PL/SQL Subprogram" [44404-45225] -->
+<h2 class="sectionedit61" id="creating_a_procedure">Creating a Procedure</h2>
+<div class="level2">
+
+<p>
+A procedure is created with the CREATE OR REPLACE PROCEDURE statement. The simplified syntax for the CREATE OR REPLACE PROCEDURE statement is as follows:
+</p>
+<pre class="code">CREATE [OR REPLACE] PROCEDURE procedure_name
+[(parameter_name [IN | OUT | IN OUT] type [, ...])]
+{IS | AS}
+BEGIN
+  &lt; procedure_body &gt;
+END procedure_name;</pre>
+
+<p>
+Where,
+</p>
+<ul>
+<li class="level1"><div class="li"> procedure-name specifies the name of the procedure.</div>
+</li>
+<li class="level1"><div class="li"> [OR REPLACE] option allows modifying an existing procedure.</div>
+</li>
+<li class="level1"><div class="li"> The optional parameter list contains name, mode and types of the parameters. IN represents that value will be passed from outside and OUT represents that this parameter will be used to return a value outside of the procedure.</div>
+</li>
+<li class="level1"><div class="li"> procedure-body contains the executable part.</div>
+</li>
+<li class="level1"><div class="li"> The AS keyword is used instead of the IS keyword for creating a standalone procedure.  </div>
+</li>
+</ul>
+
+<p>
+<strong>Example</strong>
+</p>
+
+<p>
+The following example creates a simple procedure that displays the string &#039;Hello World!&#039; on the screen when executed.
+</p>
+<pre class="code">CREATE OR REPLACE PROCEDURE greetings
+AS
+BEGIN
+   dbms_output.put_line(&#039;Hello World!&#039;);
+END;
+/</pre>
+
+</div>
+<!-- EDIT61 SECTION "Creating a Procedure" [45226-46325] -->
+<h2 class="sectionedit62" id="executing_a_standalone_procedure">Executing a Standalone Procedure</h2>
+<div class="level2">
+
+<p>
+A standalone procedure can be called in two ways:
+</p>
+<ul>
+<li class="level1"><div class="li"> Using the EXECUTE keyword</div>
+</li>
+<li class="level1"><div class="li"> Calling the name of the procedure from a PL/SQL block</div>
+</li>
+</ul>
+
+<p>
+The above procedure named &#039;greetings&#039; can be called with the EXECUTE keyword as:
+</p>
+<pre class="code">EXECUTE greetings;</pre>
+
+<p>
+The above call would display:
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+<p>
+The procedure can also be called from another PL/SQL block:
+</p>
+<pre class="code">BEGIN
+   greetings;
+END;
+/</pre>
+
+<p>
+The above call would display:
+</p>
+<pre class="code">Hello World</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+<!-- EDIT62 SECTION "Executing a Standalone Procedure" [46326-46893] -->
+<h2 class="sectionedit63" id="deleting_a_standalone_procedure">Deleting a Standalone Procedure</h2>
+<div class="level2">
+
+<p>
+A standalone procedure is deleted with the DROP PROCEDURE statement. Syntax for deleting a procedure is:
+</p>
+<pre class="code">DROP PROCEDURE procedure-name;</pre>
+
+<p>
+So you can drop greetings procedure by using the following statement:
+</p>
+<pre class="code">DROP PROCEDURE greetings;</pre>
+
+</div>
+<!-- EDIT63 SECTION "Deleting a Standalone Procedure" [46894-47176] -->
+<h2 class="sectionedit64" id="parameter_modes_in_pl_sql_subprograms">Parameter Modes in PL/SQL Subprograms</h2>
+<div class="level2">
+<div class="table sectionedit65"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0"> S.N. </th><th class="col1"> Parameter Mode &amp; Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> 1 </td><td class="col1"> <strong>IN</strong> - An IN parameter lets you pass a value to the subprogram. It is a read-only parameter. Inside the subprogram, an IN parameter acts like a constant. It cannot be assigned a value. You can pass a constant, literal, initialized variable, or expression as an IN parameter. You can also initialize it to a default value; however, in that case, it is omitted from the subprogram call. It is the default mode of parameter passing. Parameters are passed by reference. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> 2 </td><td class="col1"> <strong>OUT</strong> - An OUT parameter returns a value to the calling program. Inside the subprogram, an OUT parameter acts like a variable. You can change its value and reference the value after assigning it. The actual parameter must be variable and it is passed by value. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 3 </td><td class="col1"> <strong>IN OUT</strong> - An IN OUT parameter passes an initial value to a subprogram and returns an updated value to the caller. It can be assigned a value and its value can be read. The actual parameter corresponding to an IN OUT formal parameter must be a variable, not a constant or an expression. Formal parameter must be assigned a value. Actual parameter is passed by value. </td>
+	</tr>
+</table></div>
+<!-- EDIT65 TABLE [47228-48391] -->
+<p>
+<strong>IN &amp; OUT Mode Example 1</strong>
+</p>
+
+<p>
+This program finds the minimum of two values, here procedure takes two numbers using IN mode and returns their minimum using OUT parameters.
+</p>
+<pre class="code">DECLARE
+   a number;
+   b number;
+   c number;</pre>
+<pre class="code">PROCEDURE findMin(x IN number, y IN number, z OUT number) IS
+BEGIN
+   IF x &lt; y THEN
+      z:= x;
+   ELSE
+      z:= y;
+   END IF;
+END; </pre>
+<pre class="code">BEGIN
+   a:= 23;
+   b:= 45;
+   findMin(a, b, c);
+   dbms_output.put_line(&#039; Minimum of (23, 45) : &#039; || c);
+END;
+/</pre>
+
+<p>
+When the above code is executed at SQL prompt, it produces the following result:
+</p>
+<pre class="code"> Minimum of (23, 45) : 23</pre>
+<pre class="code">PL/SQL procedure successfully completed.</pre>
+
+</div>
+<!-- EDIT64 SECTION "Parameter Modes in PL/SQL Subprograms" [47177-49056] -->
+<h2 class="sectionedit66" id="methods_for_passing_parameters">Methods for Passing Parameters</h2>
+<div class="level2">
+
+<p>
+Actual parameters could be passed in three ways:
+</p>
+<ul>
+<li class="level1"><div class="li"> Positional notation</div>
+</li>
+<li class="level1"><div class="li"> Named notation</div>
+</li>
+<li class="level1"><div class="li"> Mixed notation</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT66 SECTION "Methods for Passing Parameters" [49057-49213] -->
+<h3 class="sectionedit67" id="positional_notation">POSITIONAL NOTATION</h3>
+<div class="level3">
+
+<p>
+In positional notation, you can call the procedure as:
+</p>
+<pre class="code">findMin(a, b, c, d);</pre>
+
+<p>
+In positional notation, the first actual parameter is substituted for the first formal parameter; the second actual parameter is substituted for the second formal parameter, and so on. So, a is substituted for x, b is substituted for y, c is substituted for z and d is substituted for m.
+</p>
+
+</div>
+<!-- EDIT67 SECTION "POSITIONAL NOTATION" [49214-49610] -->
+<h3 class="sectionedit68" id="named_notation">NAMED NOTATION</h3>
+<div class="level3">
+
+<p>
+In named notation, the actual parameter is associated with the formal parameter using the arrow symbol ( ⇒ ). So the procedure call would look like:
+</p>
+<pre class="code">findMin(x=&gt;a, y=&gt;b, z=&gt;c, m=&gt;d);</pre>
+
+</div>
+<!-- EDIT68 SECTION "NAMED NOTATION" [49611-49824] -->
+<h3 class="sectionedit69" id="mixed_notation">MIXED NOTATION</h3>
+<div class="level3">
+
+<p>
+In mixed notation, you can mix both notations in procedure call; however, the positional notation should precede the named notation.
+</p>
+
+<p>
+The following call is legal:
+</p>
+<pre class="code">findMin(a, b, c, m=&gt;d);</pre>
+
+<p>
+But this is not legal:
+</p>
+<pre class="code">findMin(x=&gt;a, b, c, d);  </pre>
+
+</div>
+<!-- EDIT69 SECTION "MIXED NOTATION" [49825-] -->

@@ -1,0 +1,312 @@
+====== QMATIC järjekorrasüsteem ======
+
+===== Seotud taskid Jiras =====
+  * EHEALTHFRP-750 - Qmaticu integreerimine HISiga
+      * EHEALTHINT-907 - Qmatic webService integration
+      * EHEALTHREC-1523 - Add side view for Qmatic integration
+      * EHEALTHREC-1529 - Update "Registreeri" buttons with qmatic functionality
+      * EHEALTHREC-1530 - Add "CALL" button to ROA.05.1
+      * EHEALTHREC-1555 - Update Qmatic side view RCG.03.7
+      * EHEALTHREC-1572 - Qmatic, use queue instead of pool
+      * EHEALTHREC-1545 - qmaticu-ga seotud bugid
+      * EHEALTHREC-1589 - Modify restrictions and notifications in QmaticUI
+  * EHEALTHFRP-894 - Qmaticu iseteeninduse integratsioon
+      * EHEALTHCOMMONS-201028 - Create UI for Qmatic self check-in kiosk
+      * EHEALTHREC-1573 - Create Self Check-in webservice
+      * EHEALTHREC-1574 - Create UI for self check-in
+  * EHEALTHFRP-907 - QM järjekorrasüsteem päevaravis   
+      * EHEALTHREC-1599 - Add Qmatic UI to RDC.01.1 context
+      * EHEALTHREC-1600 - Create registration with Qmatic ticket
+      * EHEALTHREC-1601 - Add button to call by Qmatic ticket
+
+
+
+===== qmatic =====
+
+superadmin/ ulan
+
+nb! kuna tyk-livesse pääseb nortalist läbi ühe ip aadressi, milleks on "tartu.webmedia.ee (194.126.102.99)", siis tuleb registratuuri/ arsti töölaua arvutitelt ip-aadresse vajaduse korral üle tõsta. kahel erineval seadmel sama ip-aadressi ei tohi olla, vastasel korral saab kasutaja veateate qmatic.queue.error.ip_not_unique - "Teie IP aadressiga leiti mitu seadet, järjekorrasüsteemi ei saa käivitada". üks võimalik lahendus kontorist mitme seadmega testimiseks on logida end sisse Nortali VPN-i, mis annab arvutile nn "tallinna" IP aadressi, milleks on "tallinn.webmedia.ee (88.196.5.77)". 
+
+
+===== Vajalikud privileegid =====
+ui.reception.queue
+
+===== Keskkonna seadistused =====
+
+
+TYK moodul versiooniga 1.9.2.3+ on olemas vajalikud parameetrid ja loendid:
+  * Süsteemsed parameetrid:
+      * QMATIC_SERVER_ADDRESS
+          * test server: http://qmatictest.kliinikum.ee:8080
+              * http://192.168.56.6:8080 (?)
+          * live server: http://qmatic.kliinikum.ee:8080
+              * http://192 (?) 
+      * QMATIC_WALKDIRECT_SERVICE_ID 
+        * id väärtus rest teenuste seast (/rest/entrypoint/branches/1/services/)
+      *  QMATIC_DOCTOR_QUEUE_ID
+        * 5
+  * Loendis DEVICE_PROPERTY peavad olema järgmised väärtused:
+      * QMATIC_QUEUE_ID
+      * QMATIC_USER
+      * QMATIC_DEFAULT_PROFILE_ID
+      * SERVICE_POINT_ID
+
+Keskonnas tehtavad konkreetsed töökoha seadistused: 
+  * Tekitada struktuurüksus, kus Qmaticut kasutama hakatakse.
+  * Tekitada ruumid, kus arstid/õed vastuvõtte läbi viivad.
+    * Siduda struktuurüksus ruumidega (STRUCTURE_UNIT_PLACE kirjed)
+  * Tekitada registratuuri ja arstidele/õdedele arvutid seadmete alla (DEVICE kirjed)
+    * Siduda ruumid ja seadmed omavahel (PLACE_DEVICE kirjed)
+    * Tekitada registraatorite arvutitele vastavad seadistused (DEVICE_PROPERTY kirjed)
+    * Tekitada arsti/õdede arvutitele vastavad seadistused (DEVICE_PROPERTY kirjed) - vaata vastavaid seadistusi allolevatest peatükkidest. 
+  * Tekitada arstile **ruumiga** seotud vastuvõtugraafikud. 
+
+
+===== Reception - registratuuritöötaja seadistused =====
+
+Required for reception device: \\
+  - Device IP must be set (DEVICE.IP = HIS -> kasutajanimi -> printerite vaikeseaded)
+  - Device must have following properties: 
+
+**Lisatunnus** 
+^ Tunnuse kood      		^ Tunnus ET       					^ Väärtus         	 	 ^ Kommentaar^
+| QMATIC_USER			| Qmatic Orchestra kasutajanimi     			| (example: "esimene1")		 | admin UI-st -> "User management" alt |
+| QMATIC_DEFAULT_PROFILE_ID	| Qmatic Orchestra vaikimisi kasutatava profiili id     | (example: 1)       		 | vajalik saab rest-teenuste kirjelduste alt (http://localhost:1112/rest/entrypoint/branches/1/services/) |
+| SERVICE_POINT_ID		| Qmatic Orchestra järjekorrasüsteemi teenusepunkti id	| (example: 1)      		 | admin UI-st -> "User management" alt |
+
+
+
+===== Treatment - arsti või õe arvuti seadistused =====
+
+Required for doctor device:
+  - Device IP must be set (DEVICE.IP = HIS -> kasutajanimi -> printerite vaikeseaded)
+  - Device must be connected to room 
+  - Device must have following properties:
+
+**Lisatunnus** 
+^ Tunnuse kood      		^ Tunnus ET       					^ Väärtus         	 	 ^ Kommentaar^
+| QMATIC_USER			| Qmatic Orchestra kasutajanimi     			| tabloo kasutajanimi (excelis)	 | admin UI-st -> "User management" alt     |
+| QMATIC_QUEUE_ID		| Qmatic Orchestra järjekorrasüsteemi järjekorra id     | Qmaticu järjekorra ID 	 | (http://localhost:1112/rest/entrypoint/branches/1/queues/) |
+| SERVICE_POINT_ID		| Qmatic Orchestra järjekorrasüsteemi teenusepunkti id	| arsti külastuse ruumi ID (excelis)	 | (seotud kabineti kohal oleva tablooga) admin UI-st → “User management” alt |
+| QMATIC_DEFAULT_PROFILE_ID	| Qmatic Orchestra vaikimisi kasutatava profiili id 	| 7 		  		 | vajalik saab rest-teenuste kirjelduste alt (http://localhost:1112/rest/entrypoint/branches/1/services/) |
+
+
+  * tekita endale uus seade "arvuti"
+  * määra sellele oma IP aadress
+  * määra sellele vajalikud lisatunnused: 
+      * QMATIC_USER = nt "esimene1"
+      * QMATIC_QUEUE_ID = nt "1"
+      * SERVICE_POINT_ID = nt "37"
+  * ühenda omavahel seade ja asukoht (admin -> seadme seosed asukohtade ja teenustega)
+
+
+===== Toimisloogika =====
+
+  * Qmaticu ja HIS-i vahelise integratsiooni tarvis salvestatakse pileti ID ambulatoorse juhu korral  DOMAIN_VALUE CODE from AMB_RESERVATION_PROPERTY where DOMAIN_CODE = 'QUEUE_TICKET_ID' ning päevastatsionaarse juhul korral STAT_REGISTRATION.QUEUE_TICKET_ID. 
+  * Patsiendile tekitatakse ambulatoorse broneeringu (AMB_RESERVATION) kirje kas läbi eelneva broneerimise või vajadusel kohalpeal, läbi broneeringuta registreerimise. 
+  * Patsiendi saabudes võtab ta Qmaticu järjekorrasüsteemi seadmest numbri ning ta kutsutakse selle alusel registratuuri. 
+    * Kutsumine toimub moel, kus registraator valib enda töölaualt valiku "järgmine" ning pt numbri saabudes süttib registraatori füüsilise töölaua kohal pt number. 
+  * Registraator seob Qmaticu numbri ja HIS-i AMB_RESERVATION kirje omavahel, valides HIS-i Qmaticu komponendist patsiendi järjekorranumbri ning tema HIS-i aja. Külastusaega on võimalik valida kas Ambulatoorse registraatori töölaual (ROA.02.2) või broneeringuta registeerimise kuval "Vastuvõtuaja otsimine" (SCH.06.1), mõlemal kuval on võimalik valida Qmaticu komponendist ka patsiendi jäjekorra numbrit. 
+    * Eduka registreerimise tulemusena (AMB_RESERVATION.RESERVATION_STATE_DOVA_CODE = ACTIVE -> COMPLETED) tekitatakse AMB_RESERVATION kirjega seotud AMB_RESERVATION_PROPERTY kirje, mille DOMAIN_CODE = 'QUEUE_TICKET_ID' ja DOMAIN_VALUE_CODE = "qmaticu väline ticket id".
+  * Eduka registreerimise tulemusena tekib AMB_RESERVATION kirje arsti töölauale Ambulatoorse vastuvõtu töölauale (ROA.05.1). Sealjuures on Qmaticu järjekorra number arsti/õe tööruumiga seotud läbi AMB_RESERVATION.TREATMENT_ROOM_ID.
+  * Arsti/õe tööarvuti (DEVICE kirje) on omakorda tööruumiga seotud läbi PLACE_DEVICE kirje. 
+      * Qmaticu järjekorrasüsteemiga toimimiseks peab registraatori ja arsti/õe arvuti seadistused (DEVICE_PROPERTY kirjed) olema eelnevalt tehtud, vt. antud juhendi vastavaid peatükke.
+  * Patsiendi nime ees kuvatakse tema Qmaticu järjekorra numbrit. Arst/õde valib välja patsiendi kutsumiseks ning vajutab kuval ROA.05.1 vastava pt nime ees olevale järjekorra numbrile. 
+      * Arsti/õe tööruumi ukse kohal süttib vastava patsiendi Qmaticu järjekorranumber. 
+      * Sealjuures võib arst soovi korral valida teise arsti patsiendi ning kutsuda. Sellisel juhul süttib (vastavalt tema tööarvuti PLACE_DEVICE seadetele) patsiendi järjekorranumber hoopis tema ukse kohal. 
+      * Arstil on võimalik kutsuda sama päeva patsiente uuesti, st Ambulatoorse vastuvõtu töölaual (ROA.05.1) kuvatakse jooksva päeva patsientide nimede ees vastavaid Qmatic järjekorranumbreid. 
+
+==== Qmatic self check-in ====
+
+Self check-in töövoog erineb tavalisest sellega, et registreerimise protsess tehakse mitte registratuuri töötaja vaid patsiendi enda poolt. Patsient identifitseerib end ID-kaardi abil ning valib enda broneeringute seast vajaliku, saades vastava teabe juhul 1) kui pt pole ühtegi broneeringut samal päeval; 2) kui pt on samal päeval üks broneering; 3) kui pt on sama päeva jooksul mitu broneeringut (valik). 
+
+
+==== Teadetetablood ====
+
+Teadetetabloosid on nende otstarbe lõikes nelja tüüpi.
+  - Registratuuri suur teadetetabloo - kutsutakse järjekorranumbri alusel pt kas registratuuri või konkreetsesse arsti ruumi. 
+  - Registraatorite tablood - kutsutakse järjekorranumbri alusel pt konkreetse registraatori juurde. Kui registraator on valinud "järgmine" siis järjekorras järgmine number, kui registraator on valinud "uuesti", siis sama järjekorranumber uuesti. 
+  - Ooteala tablood - kuvavad patsientidele teavet järjekorranumbrite konkreetsetesse ruumidesse kutsumiste kohta (mitte registraatori juurde kutsumiste kohta!).
+  - Ruumitablood - teavitavad vastava järjekorranumbriga patsienti, mis ruumi teda kutsuti. 
+
+
+
+===== Seotud skriptid =====
+
+Kas keskkonnas on süsteemsed parameetrid olemas? 
+	select * 
+	from sys_parameter
+	where code in ('QMATIC_SERVER_ADDRESS','QMATIC_WALKDIRECT_SERVICE_ID')
+
+Kas arvuti sidumiseks vajalikud loendi väärtused on olemas? 
+	select * 
+	from sys_domain_value_text 
+	where domain_code = 'DEVICE_PROPERTY' 
+	and domain_value_code in ('QMATIC_QUEUE_ID','QMATIC_USER','QMATIC_DEFAULT_PROFILE_ID')
+
+
+===== Qmatic admin juurdepääsu tekitamine =====
+
+Tekita TYK-live ühendusele juurde tunnel nt Qmatic test serverisse (kas ülal viidatud tekstiline või IP-aadressiga: 192.168.56.6:8080) local portiga nt 1111. 
+Seejärel peaks admin UI olema kättesaadav: localhost:1111
+Konkreetsete REST-teenuste liikumist näeb nt (servicepoint branch peab ka õige olema, konkreetse VISIT kirje jaoks lisada lõppu visit_id): http://localhost:1111/rest/servicepoint/branches/1/visits/
+===== 9.12.2015 koosolek =====
+
+Kohalviibijad: Ats Rand, Sander Saarend, Kalle Jagula
+
+Ats: mida meil on homme vaja saavutada \\
+10.12.2015 kell 1100 võiks kohapeal olla \\
+  * propagaatorisse lähevad seadistused ära (tyk-1.9.2.3)
+  * Seadistame predemo vajalikud asjad ära
+  * Kati kirjutas töövoo testimiseks meili, need üle vaadata
+  * mängime töövoo läbi, ühed on patsiendid, teised on retseptionis, kolmandad treatmendis
+      * mängime happytrailid, recallid, arsti kutsumised ja tagasikutsumised läbi
+      * Hansab küll seadistab, aga iga kabinetid ja numbrid peavad vastama kindlasti! 
+      * Igas treatment ruumis on kaks arvutit, mõlemas arvutist peab saama callida. 
+          * Kuidas saab retseptsioon korrastada, kui järjekord mingil põhjusel sassi läheb RECEPTION (RECEPTIONIL on kohustus kontrollida numbri ja isiku broneeringu vastavust) 
+          * kuidas arst saab asja korrastada, kui järjekord mingil põhjusel sassi läheb TREATMENT
+      * Kui kiiresti mingid asjad vahetuvad ning kas need on patsiendi/ arsti vaatest normaalsed. 
+      * Ka II korruse silmakliiniku või teistes korpustes asuvate kliinikute patsiendid võivad ennast eriarsti järjekorda sättida (võtavad pileti) ja registratuurileti äärde sattuda. Alles registratuuris selgub, et nendel sisekliinikusse või onkusse asja ei ole. Nende järjekorranumbrit siis ei saa kusagile alamjärjekorda edasi suunata, sest nendes kliinikutes tabloosid ei ole.
+          * Silmakliinikusse on võimalik samast registratuurist teha ambulatoorset registreerimist, mis samas ei ole Qmaticu järjekord. Testida, et need järjekorrad omavahel konflikti ei läheks.
+          * Testida teisis Qmaticu järjekordi ning eriarsti järjekorda, et need omavahel konflikti ei läheks (kuigi peaksid olema teise id-ga ning ei tohiks tülli minna). 
+
+===== REST teenused =====
+
+Tekitada tunnel @chestnut serverisse, mille destination 192.168.56.6:8080 ja local port nt 1111. 
+
+tööprofiilid: 
+
+http://localhost:1112/rest/servicepoint/branches/1/workProfiles/ 
+
+kõik aktiivsed ticket-id: 
+
+http://localhost:1112/rest/servicepoint/branches/1/visits/ 
+
+konkreetse servicepoint seadistuste vaatamine: 
+
+http://localhost:1112/rest/servicepoint/branches/1/servicePoints/22/
+
+
+===== Märkused =====
+<del>- juhul kui kahel arvutil on sama IP, siis rakendus kukub - ebatõenäoline olukord aga võiks sellegipoolest anda korrektse veateate.
+  - kui pt registreerida, siis jääb kutsutud number ikka aktiivseks - receptionist peaks ära kaduma, kui pt on registreeritud arsti juurde. 
+  - kui reservationi küljes on kabinett mis pole seotud qmaticuga, siis ei saa praegu ära queue numbrit ära visata aga peaks.
+  - kui roa.05.1 kuval on aeg möödunud (või muu võimalus, järele vaadata), kaob arsti pt kutsumise võimalus ära (kas on ikka viga?)
+  - amb_reservation_property kirjetel peaks asjad ära nulleerima öise jobiga! 
+  - roa.05.1 annab veateadet punast, et seadistus on puudu kuigi seadistus on olemas tegelikult. 
+  - roa.05.1 kutsumisel sai kliinikumis testimisel veaekraani.</del>
+
+  * juhul kui qmatic kukub, siis kas peale taastumist on rakendus endiselt kasutatav. 
+  * kas töövood toimivad ka ilma qmaticu seadistuseta edasi 
+
+mõned läbiproovitud testkaasused: 
+  * registreerimine ilma järjekorranumbrita privileegiga ui.reception.queue - ei õnnestu = SUCCESS
+  * registreerimine ilma järjekorranumbrita privileegita ui.reception.queue - õnnestub = SUCCESS
+  * "töötan koos" määramisel kaob arsti töölaual kutsungi võimalus ära = PROBLEEM
+  * broneeringuga registreerimisel õnnestub Qmaticuga siduda = SUCCESS
+  * broneeringuta registreerimisel õnnestub Qmaticuga siduda = SUCCESS
+  * kui kutsuda teise arsti järjekorras olevat pt, siis vähemalt waiting time järgi reageeris = SUCCESS? (uurida)
+  * olukord kus amb_reservation_property.domain_value_code ei ole üldiselt unikaalne aga on antud päeva raames, sobib käesoleva arendusega. mis juhtub aga siis, kui qmaticu server kukub ning sama päeva sees on kaks sama id-ga ticketit (näiteks 1000, 1001 jne) - see saab vist probleem olla siis, kui qmaticut restarditakse vähemalt kaks korda ööpäeva raames. ühekordsel restartimisel, kui qmatic on enne jooksnud on id-d 1??? ega pole sama ööpäeva sees päris 1000, 1001 jne. 
+  * paistab et arsti arvutiga on samuti täitsa okei registreerimisi teha - kas see on probleem või mitte? vaadata kas liiguvad ka õigetesse poolidesse. tingimusel et arstil pole vastavaid privileege, pole reaalne asi. 
+  * registraatori vaates võiks sõne "järjekorra number" olla ühel real, praegu poolitab kuval kahele reale.
+  * juhul kui ühe ruumiga on (erinevatest kohtadest broneerimise tarvis) seotud mitu struktuurüksust, peab ruumide callimine endiselt töötama, kas töötab? 
+
+
+==== Qmaticu andmed toodangus ====
+
+=== Qmaticut kasutavad struktuurüksused ===
+
+  * qmatic registratuuri seadistusega arvutid 
+
+  select d.*
+       from device d 
+       where exists 
+       (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_USER' and end_date is null and sys_delete_status = 'N')
+       and exists 
+       (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_DEFAULT_PROFILE_ID' and end_date is null and sys_delete_status = 'N')
+       and exists 
+       (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'SERVICE_POINT_ID' and end_date is null and sys_delete_status = 'N')        
+       and not exists 
+       (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_QUEUE_ID' and end_date is null and sys_delete_status = 'N')        
+       order by d.id;
+
+
+
+  * qmatic treatment seadistusega arvutid
+
+  /* nb! kuna ruumid võivad paikneda korraga mitmes struktuurüksuses graafikute tõttu, on osad arvutid topelt */
+  select d.id, d.code as device_code, d.ip, p.code as room_code, p.description, o.display_code as stun_code, o.display_name as stun_name, o2.display_name, o3.display_name
+       from device d 
+       left join place_device pd on d.id = pd.device_id
+       left join place p on pd.place_id = p.id
+       left join structure_unit_place sup on p.id = sup.place_id
+       left join organization o on sup.structure_unit_id = o.id
+       left join organization o2 on o.parent_id = o2.id
+       left join organization o3 on o2.parent_id = o3.id
+       where exists (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_USER' and end_date is null and sys_delete_status = 'N')
+       and exists (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_DEFAULT_PROFILE_ID' and end_date is null and sys_delete_status = 'N')
+       and exists (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'SERVICE_POINT_ID' and end_date is null and sys_delete_status = 'N')        
+       and exists (select * from device_property dp where d.id = dp.device_id and property_type_dova_code = 'QMATIC_QUEUE_ID' and end_date is null and sys_delete_status = 'N')        
+       and pd.end_date is null
+       and sup.end_date is null
+       order by d.id;
+
+  * qmatic tänased piletid
+
+	select arp.domain_value_code as ticket, p.code as room, ls.display_code, sc.case_number, v.start_date as visit_start, v.end_date as visit_end, o.display_code, o.display_name, o2.display_name, o3.display_name, s.staff_code, s.staff_name
+       from amb_reservation_property arp
+       join amb_reservation ar on arp.amb_reservation_id = ar.id
+       join place p on ar.treatment_room_id = p.id
+       join visit v on ar.visit_id = v.id
+       join sickness_case sc on v.sickness_case_id = sc.id
+       join living_subject ls on sc.person_link_id = ls.id
+       join organization o on v.structure_unit_id = o.id
+       join organization o2 on o.parent_id = o2.id
+       join organization o3 on o2.parent_id = o3.id
+       join staff s on v.staff_id = s.id
+       where arp.domain_code = 'QUEUE_TICKET_ID'
+       and arp.sys_modify_time > (select to_date(sysdate,'dd-mm-yy') from dual)
+       and arp.sys_delete_status = 'N'
+       order by arp.id asc
+
+==== Toodangus avastatud probleemid ====
+
+  - arstid kasutavad ambulatoorseid broneeringuid kui omalaadseid to-do liste, mis ei ole funktsionaalsuse kui kasutamise viga. näiteks kui pt analüüsid peaksid tulema teatud päeval, tekitab arst sellele päevale pseudokülastuse, et tegeleda pt analüüsidega ning vajadusel võtab temaga ühendust, tekitab "päris" külastuse jmt. probleem uue funktsionaalsusega, sest nüüd ei saa enam numbrita külastusele ligi privileegi olemasolul. 
+    * arstidele sai tehtud eraldi qmaticu privileegita ui.reception.queue konto, et vajadusel saaks pt külastuse konteksti ka ilma numbrita pt puhul.
+    * Ats tegeleb, et registreerimisprotsessis oleks võimalik privileegi olemasolul ka ilma Qmaticuta registreerida vajadusel. 
+  - kui Qmaticu server on restardis ja ühendus eHl-iga puudub, saavad kasutajad täisekraanil veateate
+    * probleem, kuna lõppkasutajad ei saa aru mida nad valesti on teinud. peaks kuvatama korrektne veateade. 
+    * uurida MartinR-lt kuidas viga korrata. 
+  - kui Qmaticu serveris on kasutaja seadistused tegemata, saavad kasutajad veateate: 
+    * NullPointerException -> 
+      * QmaticQueueServiceImpl.updateWorkProfileId(QmaticQueueServiceImpl.java:312)
+      * QmaticQueueServiceImpl.transferActiveTicketToPlaceQueue(QmaticQueueServiceImpl.java:141)
+    * lahendus: uurida, kas Qmatic adminis on üldse selline kasutaja kirjeldatud. kui pole siis tekitadada korrektne kasutajakirje. 
+  - pt kutsungi peale suunati ta valesse kabinetti:
+    * kabinett ja tabloo on omavahel valesti seadistatud. uurida Qmatic administ "Business Configuration" -> rippmenüü "Branches" -> topeltklõps "Kliinikum". Seal uurida jaotusest "Service points" ruumide seadistusi. 
+  - qmaticu UI ja eHl-i UI vaheline konflikt. registratuuris kasutatakse mõlemat paralleelselt, mis põhjustab Qmaticu UI-st välja viskamist ning probleeme prioriteetidega. 
+    * Ats tegeleb, et kolida registreerimisprotsess tervikuna eHl-i. 
+
+
+==== Sanderi kommentaarid toimimisloogikale ====
+
+[17:30:11 | Edited 17:30:16] Sander Saarend: vana transferiga oli süsteem selline:
+registreerimisel - 
+1) qmatic ticket id seotakse reservationiga
+2) qmatic ticket liigutatakse konkreetse kabinetiga seotud queuesse, selle queue id leitakse järgnevalt: reservation -> place -> device -> device property -> qmatic_queue_id
+
+kutsumisel -
+1) kui reservationiga on seotud ticket_id, on selle reservationi kõrval kutsumise nupp
+2) kutsumise nuppu vajutades leitakse kutsutakse vastav pilet konkreetsest queuest, queue id leitakse jällegi device -> device property -> qmatic_queue_id
+
+uue transferiga süsteem selline:
+registreerimisel - 
+1) qmatic ticket id seotakse reservationiga
+2) qmatic ticket liigutatakse üldisesse arstide queuesse sys parameetri qmatic_doctor_queue_id järgi
+
+kutsumisel -
+1) kui reservationiga on seotud ticket_id, on selle reservationi kõrval kutsumise nupp
+2) kutsumise nuppu vajutades leitakse kutsutakse vastav pilet üldisest arstide queuest, sama qmatic_doctor_queue_id järgi
+[17:30:17] Sander Saarend: ehk siis
+[17:30:41] Sander Saarend: varem oli place tarvis seadistada just selle jaoks, et leida queue id, kuhu / kust piletit liigutada
+[17:30:53] Sander Saarend: aga uue süsteemiga seda placei enam me põhimõtteliselt ei kasutagi

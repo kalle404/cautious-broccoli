@@ -1,0 +1,308 @@
+
+<h1 class="sectionedit1" id="tvh_hj_staatused_ja_menetlustegevused">TVH HJ staatused ja menetlustegevused</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Juhtumi staatuse muutmisega kaasnevad <a href="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.1-+Juhtumi+staatuste+muutumisega+kaasnevad+tegevused" rel="nofollow">tegevused</a>. </div>
+</li>
+<li class="level1"><div class="li"> Menetlustegevuste <a href="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.4+-+Menetlustegevuste+nimekiri" class="urlextern" title="https://confluence.nortal.com/display/TVHTVT/JUHTUM_1.4+-+Menetlustegevuste+nimekiri" rel="nofollow">nimekiri</a>.</div>
+</li>
+</ul>
+
+<p>
+<strong>Esitamine</strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> OOTEL → ESITATUD</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: JUHTUMI_MENETLUSTAHTAEG</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> ESITATUD → MENETLUSES</div>
+</li>
+<li class="level1 node"><div class="li"> MENETLUSES → HINDAMISE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: HINDAMISE_TAHTAEG</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: KOOSTA_LABIVAATAMATA_OTSUS, KOOSTA_HINDAMATA_OTSUS, KOOSTA_MENETLUSE_LOPETAM_OTSUS</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Hindamine</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> HINDAMISE_OOTEL → HINDAMISEL</div>
+</li>
+<li class="level1"><div class="li"> HINDAMISEL → TAISTAITMISEL</div>
+</li>
+<li class="level1 node"><div class="li"> TAISTAITMISEL → TAIENDAMISEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: SAADA_TAISTAITMISELE <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup></div>
+</li>
+<li class="level2"><div class="li"> Tegevus peatatakse, kui oli ootel: JUHTUMI_MENETLUSTAHTAEG, HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> TAIENDAMISEL → TAIENDATUD</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: TAISTAIDETUD_YLEVAATUS</div>
+</li>
+<li class="level2"><div class="li"> Lisatav tegevus: JUHTUMI_MENETLUSTAHTAEG (kui täidetud on Taotlus::Metaandmed::NkEsitamiseKp)</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud:JUHTUMI_MENETLUSTAHTAEG</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> TAIENDATUD → HINDAMISEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: TAISTAIDETUD_YLEVAATUS</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud:HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> TAIENDATUD → OTSUSE_OOTEL</div>
+</li>
+<li class="level1 node"><div class="li"> HINDAMISEL → E_TERVIS_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisandub tegevus: ARSTILT_ANDMED_TAIENDADA</div>
+</li>
+<li class="level2"><div class="li"> Tegevus peatatakse, kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, YRITA_HINNATA, VISIIDIGA_HINDAMISE_TAHTAEG, TAIENDA_HINNANGUT</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> E_TERVIS_OOTEL → HINDAMISEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: ARSTI_ANDMED_OOTEL</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HINDAMISEL → VISIIDI_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: TULEB_VISIIDIPOHINE_HINDAMINE</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VISIIDI_OOTEL → VISIIDIGA_HINDAMISEL </div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: VISIIDIGA_HINDAMISE_TAHTAEG</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT, TULEB_VISIIDIPOHINE_HINDAMINE</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VISIIDI_OOTEL → HINDAMISEL </div>
+<ul>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: TULEB_VISIIDIPOHINE_HINDAMINE</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VISIIDI_OOTEL → HINDAMATA</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, TULEB_VISIIDIPOHINE_HINDAMINE, YRITA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> VISIIDIGA_HINDAMISEL → HINDAMISEL</div>
+</li>
+<li class="level1"><div class="li"> HINDAMISEL → VISIIDIGA_HINDAMISEL</div>
+</li>
+<li class="level1 node"><div class="li"> VISIIDIGA_HINDAMISEL → HINNATUD</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: JUHTUM_HINNATUD</div>
+</li>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: EI_JOUA_TAHTAJAKS_HINNATUD, JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VISIIDIGA_HINDAMISEL → HINDAMATA</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HINDAMISEL → HINNATUD</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: JUHTUM_HINNATUD</div>
+</li>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HINDAMISEL → HINDAMATA</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HINNATUD → PARANDAMISE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus peatatakse, kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> HINDAMATA → PARANDAMISE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus peatatakse, kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> PARANDAMISE_OOTEL → HINDAMATA</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: HINDAMISE_TAHTAEG, MUUTUNUD_HINDAMISE_TAHTAEG, VISIIDIGA_HINDAMISE_TAHTAEG, YRITA_HINNATA, TAIENDA_HINNANGUT;</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> PARANDAMISE_OOTEL → VISIIDIGA_HINDAMISEL</div>
+</li>
+<li class="level1"><div class="li"> PARANDAMISE_OOTEL → HINDAMISEL</div>
+</li>
+</ul>
+
+<p>
+<strong>Otsuse koostamine</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> HINDAMATA → OTSUSE_OOTEL</div>
+</li>
+<li class="level1"><div class="li"> HINNATUD → OTSUSE_OOTEL</div>
+</li>
+<li class="level1"><div class="li"> MENETLUSES → OTSUSE_OOTEL</div>
+</li>
+<li class="level1 node"><div class="li"> OTSUSE_OOTEL → OTSUS_KOOSTATUD</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: JUHTUM_HINNATUD, JUHTUM_EI_SAA_HINNATA, TAPSUSTA_OTSUST, KOOSTA_LABIVAATAMATA_OTSUS, TAISTAIDETUD_YLEVAATUS, KOOSTA_HINDAMATA_OTSUS, KOOSTA_MENETLUSE_LOPETAM_OTSUS, TERVISE_ANDMED_PUUDUVAD, ARSTILT_ANDMED_KYSITUD</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> OTSUSE_KOOSTATUD → OTSUSE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: TAPSUSTA_OTSUST</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> OTSUSE_OOTEL → HINDAMATA</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: TAPSUSTA_OTSUST</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> OTSUSE_OOTEL → HINNATUD</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus saab teostatud: TAPSUSTA_OTSUST</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> OTSUS_KOOSTATUD → LOPETATUD</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: (kõik ootel tegevused)</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: (kõik peatatud tegevused)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> LOPETATUD → VAIE_ALGATATUD</div>
+</li>
+</ul>
+
+<p>
+<strong>Vaie</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> LOPETATUD → VAIDEOTSUSE_OOTEL</div>
+</li>
+<li class="level1"><div class="li"> VAIE_ALGATATUD → VAIE_ARSTI_VASTUSE_OOTEL</div>
+</li>
+<li class="level1"><div class="li"> VAIE_ARSTI_VASTUSE_OOTEL → VAIE_TTO_YLEVAATUS</div>
+</li>
+<li class="level1"><div class="li"> VAIE_TTO_YLEVAATUS → VAIE_EKSPERTIIS_MUUTMINE</div>
+</li>
+<li class="level1 node"><div class="li"> VAIE_TTO_YLEVAATUS → VAIE_ARSTI_VASTUSE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: VAIE_TK_ARSTI_HINNANG_LOPLIK</div>
+</li>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: VAIE_TTO_ARSTI_HINNANG</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: VAIE_TK_ARSTI_HINNANG</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VAIE_EKSPERTIIS_MUUTMINE → VAIE_ARSTI_VASTUSE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Lisatav tegevus: VAIE_TK_ARSTI_HINNANG_LOPLIK</div>
+</li>
+<li class="level2"><div class="li"> Tegevus saab teostatud: VAIE_TTO_ARSTI_HINNANG</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: VAIE_TK_ARSTI_HINNANG</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VAIE_ARSTI_VASTUSE_OOTEL → VAIDEOTSUSE_OOTEL</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: VAIE_TK_ARSTI_HINNANG, VAIE_TK_ARSTI_HINNANG_LOPLIK</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VAIDEOTSUSE_OOTEL → LOPETATUD</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: (kõik ootel tegevused)</div>
+</li>
+<li class="level2"><div class="li"> Tegevus muutub kehtetuks, kui oli ootel või peatatud: (kõik peatatud tegevused)</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> VAIE_ARSTI_VASTUSE_OOTEL → LOPETATUD</div>
+<ul>
+<li class="level2"><div class="li"> Tegevus teostatakse kui oli ootel: VAIE_TK_ARSTI_HINNANG, VAIE_TK_ARSTI_HINNANG_LOPLIK</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "TVH HJ staatused ja menetlustegevused" [1-6744] -->
+<h2 class="sectionedit2" id="seotud_skriptid">Seotud skriptid</h2>
+<div class="level2">
+
+<p>
+<strong>Hindamisjuhtumi staatuse kehtiva nimetuse leidmine</strong>
+</p>
+<pre class="code">select * 
+       from empis_domain_value edv
+       left join empis_domain_value_criterion edvc 
+            on edv.domain_code = edvc.domain_code
+            and edv.code = edvc.domain_value_code
+       where edv.domain_code = &#039;JUHTUM_STAATUS&#039;
+       and edv.code like &#039;HINDAMISE_OOTEL&#039;</pre>
+
+<p>
+<strong>Menetlustegevuse kehtiva nimetuse leidmine</strong>
+</p>
+<pre class="code">select *
+       from empis_domain_value edv
+       left join empis_domain_value_criterion edvc 
+            on edv.domain_code = edvc.domain_code
+            and edv.code = edvc.domain_value_code
+       where edv.domain_code = &#039;TVR_TEGEVUS_TYYP&#039;
+       and edv.code = &#039;VAIE_TK_ARSTI_HINNANG&#039;</pre>
+
+</div>
+<!-- EDIT2 SECTION "Seotud skriptid" [6745-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+baasis mõned näited on, aga korrata ei õnnestu?</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+ebareaalne olukord aga vältimaks, et menetlustegevused jäävad püsti  ekspertiis on saadetud parandamisse ja  siis isik surebj</div>
+</div>

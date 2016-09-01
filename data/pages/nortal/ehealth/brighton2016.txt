@@ -1,0 +1,69 @@
+====== TestBash Brighton conference 2016 ======
+
+Conference homepage:
+http://www.ministryoftesting.com/training-events/testbash-brighton-2016/
+===== Workshop day =====
+
+  * "Understanding and Testing RESTful WEb Services" by Mark Winteringham
+    * Mark Winteringham (@2bittester,https://uk.linkedin.com/in/markwinteringham)
+  * Goals of given workshop were generally: 
+    * Explore what is a Web Service
+    * Discover different test design techniques
+    * Build different requests to query and manipulate data
+  * slides available at: http://mwtestconsultancy.co.uk/presentations/understanding_web_services/
+  * rather different opinion which checks should be done on UI and which via integration
+  * suggested (better?) alternative to postman: http://jmeter.apache.org/
+
+===== Conference day =====
+
+  * "Building the Right Thing: How Testers Can Help" by Lisa Crispin and Emma Armstrong
+    * Lisa Crispin (@lisacrispin; http://lisacrispin.com/)
+    * Emma Armstrong (@EmmaATester; http://taooftesting.co.uk/)
+  * "Testing or Hacking? Real Advice on Effective Security Testing Strategies" by Dan Billing
+    * Dan Billing (@TheTestDoctor; https://thetestdoctor.wordpress.com/)
+    * http://www.satisfice.com/tools/htsm.pdf
+    * James Bach "Integration testing"
+    * Security **should** be (most definitely) be part of conversation
+  * "A Pairing Experiment" by Katrina Clokie
+    * Katrina Clokie (@katrina_tester; http://katrinatester.blogspot.com.ee/)
+    * "Agreement of **terms** in your team"
+    * Pair testing as a tool to share experience
+    * Increases effectiveness
+    * 1 hour sessions twice a month would do just fine
+  * "Model Fatigue and How to Break It" by John Stevenson
+    * John Stevenson (@steveo1967; http://www.steveo1967.blogspot.com.ee/)
+    * Models can become stale
+    * We suffer model fatigue by not revisiting our models
+    * Some creativity models can help (SCAMPER/ThinkPAK)
+    * SCAMPER model itself: https://mewtblog.files.wordpress.com/2015/10/scannable-document-on-10-oct-2015-16_29_32.png
+  * "Accepting Ignorance - The Force of a Good Tester" by Patrick Prill
+    * Patrick Prill (@testpappy; https://testpappy.wordpress.com/)
+    * German tester of 8+ years
+    * Incourages life long learning of everything, one probably won't learn everything but can die trying
+    * principle of DIKW pyramid: https://www.google.ee/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=DIKW+pyramid
+  * "Test/QA a Gate Keeper's Experience" by Michael Wansley
+    * Michael Wansley (@teewanz ; https://en.wikipedia.org/wiki/Wanz)
+      * sellise loo autor: https://www.youtube.com/watch?v=QK8mJJJvaes
+      * old-school black-box tester, less technical and inclination into management side (what really **sells**)
+  * "Having All Your Testers Code: It Doesn't Have to be a Big Deal" by Anna Baik and Andrew Morton
+    * Anna Baik (@TesterAB; http://annabetesting.blogspot.com.ee/)
+      * Test Manager at [[https://www.brightpearl.com/|Brightpearl]]
+    * Andrew Morton (@TestingChef; http://testingchef.blogspot.com.ee/)
+    * This is our story of how we introduced test automation in our company, and discovered that testers learning to code isn’t a big deal. 
+  * "Do Testers Need a Thick Skin? Or Should We Admit We're Simply Human?" by Nicola Sedgwick
+    * Nicola Sedgwick (@nicolasedgwick; http://www.nicola-sedgwick.com/)
+      * Freelance software tester, many and different projects
+      * Experience about being a handy scapegoat practically in every project 
+  * "Smart Algorithms - Are We Ready For This?" by Bill Matthews
+    * Bill Matthews (@bill_matthews; http://www.targettesting.co.uk/)
+      * Freelance test consultant for 10+ years
+    * Same topic discussed in NTD2016 (http://nordictestingdays.eu/events/workshops/smart-algorithms-are-we-ready)
+    * 
+  * "Nowhere to Hide: Adjusting to Being a Team's Sole Tester" by Nicola Owen
+    * Nicola Owen (@NicolaO55; http://nickytests.blogspot.com.ee/)
+      * Originally from NZ, currently in Sweden
+      * mostly motivational speech, try harder and learn more
+      * pairing is a good thing to drag newby into project
+      * 
+  * 99 seconds Talks
+    *  https://twitter.com/search?q=%23testbash%2099&src=typd

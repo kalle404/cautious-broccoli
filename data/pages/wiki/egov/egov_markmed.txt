@@ -1,0 +1,156 @@
+====== eGov märkmed ======
+
+Alates 21.03.2016 
+
+
+**Skype grupid**
+
+  * TETRIS QA
+  * QA
+  * Töötukassa
+  * Töötukassa live 
+
+**Üldised spekid**
+
+  * [[https://confluence.nortal.com/display/PUBLICBU/Ajaaruandlus|Ajaaruandlus]]
+  * [[https://confluence.nortal.com/display/EMPIS/X-tee+testandmed|X-tee testandmed]]
+  * [[https://confluence.nortal.com/display/TVHTVT/Registrite+testandmed|Registrite testandmed]]
+  * [[https://confluence.nortal.com/display/TVHTVT/Keskkonnad|Keskkonnad]]
+  * [[https://confluence.nortal.com/pages/viewpage.action?pageId=130128116|Analüütikutele issue lisamise eripärad]]
+  * [[https://confluence.nortal.com/display/TVHTVT/TETRIS+Home|Tetris home]]
+    * [[https://confluence.nortal.com/pages/viewpage.action?pageId=143819710|Vaided üldine]]
+
+
+**Üldised taskid**
+
+  * [[https://jira.nortal.com/browse/EGOVERNMENTEE-1|EGOVERNMENTEE-1]] - eGov üldkoosoleku aja logimise task 
+  * [[https://jira.nortal.com/browse/TETRIS-2|TETRIS-2]] - Igapäevase SCRUM-i aja logimise task 
+  * [[https://jira.nortal.com/browse/TETRIS-4|TETRIS-4]] - Koosolekute aja logimise task 
+  * [[https://jira.nortal.com/browse/COM-8|COM-8]] - tehniliste probleemide kõrvaldamise task (nt IP aadressi tõrge laptopil)
+  * [[https://jira.nortal.com/browse/TETRIS-1370|TETRIS-1370]] - Tetrise support task 
+  * [[https://jira.nortal.com/browse/TETRIS-1626TETRIS-1626]] - Kalle sisseelamise task 
+  * [[https://jira.nortal.com/browse/TETRIS-1602|TETRIS-1602]] - arendajate korrapidamise üldine task - (nb! nädalate kaupa on eraldi subtaskid)
+    * korrapidaja arendaja ülesanded [[https://confluence.nortal.com/pages/viewpage.action?pageId=137993729|confus]]
+    * TETRIS ja REDIS korrapidamine [[https://docs.google.com/spreadsheets/d/1VmZP-UBqsIaVRSmPi_ktXjPW_tgFX7U1qDopufdnygk/edit#gid=0|GoogleDocs-i tabel]]
+  * [[https://jira.nortal.com/browse/EMPIS-199064|EMPIS-199064]] - Voore ürituse ajalogimine (mittebillitav)
+
+
+
+===== Kasutatud akronüümid =====
+
+  * TVH - TööVõimeHindamine
+  * TVT - TööVõimeTaotlus
+  * MVM - MakseViisiMuutmine
+  * TKO - TöötuKassaOsakond
+  * TSK - TerviseSeisundiKirjeldus
+  * TÖR - TÖötamiseRegister
+  * ITP - IseTeenindusPortaal
+  * CAS - CentralAuthenticationService
+  * TST - ToetuseSaamiseTingimused
+  * TTO - TervishoiuTeenuseOsutaja
+  * TVR - TööVõimeReform
+  * NK - NõueteKohane
+
+
+
+
+
+
+===== Tetris trükistega seotud probleemid =====
+
+Empises on **Administreerimine** ->  **Dokumentide Haldus** -> **Trükiste Haldus**. Tab-il TETRIS on tetrise trükised. seal tuleb õige trükis otsida üles ja vaadata kas saab muuta seda. kui saab, siis saab klient seda ise ka lives teha
+
+Juhul kui on vajadus siiski baasi kaudu muudatusi teha, siis otsuse põhjused asuvad näiteks siin: 
+
+  select * 
+       from TVR_OTSUS_POHJUS top
+       where kuni_kp is null
+       and top.otsus_protsess_kood = 'TVT'
+       and top.otsus_tyyp_kood = 'MITTEMAARAMINE'
+       and top.otsus_pohjus_kood = 'ISIK_ON_TOOVOIMELINE';
+
+===== Varia =====
+
+  * TETRISES kasutatavad REST-teenused (https://tk-cas.webmedia.int/swagger/) 
+  * Issue lisamisel silmas pidada (https://confluence.nortal.com/pages/viewpage.action?pageId=130128116)
+
+ajutine sisselogimine hetkel arli/Parool123
+
+central authentication service kohta [[https://en.wikipedia.org/wiki/Central_Authentication_Service|wiki]]
+
+===== Skriptid ja seosed =====
+
+**Taotluse ja rakenduse kasutaja omavaheline seos**
+
+	TETRIS_TEST.TAOTLUS.ID
+	TETRIS_TEST.TAOTLUS_MENETLEJA_AJALUGU.KASUTAJAKONTO_ID
+	EMPIS_LATEST.OS_KASUTAJAKONTO
+	EMPIS_LATEST.OS_KASUTAJA
+
+**Taotluse ja makseviisi seosed TETRIS_TEST-is**
+
+  select m.makseviis_kood, k.kojukanne_kood
+         from taotlus t 
+         left join tvt_taotlus tt on t.id = tt.taotlus_id
+         left join mvm_taotlus mt on tt.taotlus_id = mt.tvt_taotlus_id
+         left join makseviis m on mt.makseviis_id = m.id
+         left join pangakonto p on m.id = p.makseviis_id
+         left join kojukanne k on m.id = k.makseviis_id
+         left join kojukanne_aadress ka on k.id = ka.kojukanne_id
+         where t.id = 1011008   
+
+**Taotluse kontrollid ja tulemused** 
+
+  select ktl.* 
+         from taotlus t 
+         join kontroll k on t.id = k.taotlus_id
+         join kontroll_tulemus kt on k.id = kt.kontroll_id
+         join kontroll_tulemus_lisaandmed ktl on kt.id = ktl.kontroll_tulemus_id
+         where t.id = 1010972
+         and k.liik_kood = 'KASVATAB_LAST'
+         and (ktl.tyyp_kood = 'RR_HOOLDUS_TYYP' or ktl.tyyp_kood = 'RR_HOOLDUS_STAATUS');
+
+**Konkreetse privileegi ja seda omavate kasutajate seos**
+  	-- tetrise schemast id-d
+  	select * from sec_roll_privileeg where privileeg_kood = 'tvh.menetleja.roll'
+
+  	-- empise schemast kasutajad
+  select kasutaja.*
+       from os_roll r
+       join os_kasutajakonto_roll kr on kr.roll_id = r.id 
+       join os_kasutajakonto k on kr.kasutajakonto_id = k.id
+       join os_kasutaja kasutaja on k.kasutaja_id = kasutaja.id 
+       where (r.kehtiv_kuni > sysdate or r.kehtiv_kuni is null)
+       and (kr.kehtiv_kuni > sysdate or kr.kehtiv_kuni is null)
+       and (k.kehtiv_kuni > sysdate or k.kehtiv_kuni is null)
+       and (kasutaja.kehtiv_kuni > sysdate or kasutaja.kehtiv_kuni is null)
+       and r.id in (
+       1000000741,
+       1000000738,
+       1000000740,
+       1000000758,
+       1000000739,
+       1000000640
+       )
+
+**Integratsiooniteenuse päringud kirjutatakse järgmisesse tabelisse: **
+
+  select *
+         from INT_SERVICE_REQUEST
+
+**Baasist konkreetse muudatuse teinud taski leidmine**
+TÄIENDADA SEOST!!! 
+  select * from sys_db_change_history
+  select * from sys_db_change_history_log where sql_text like '%SAAB_PAASTETOETUS%';
+
+
+** EMPIS keskkonna uuendamine ** 
+
+  - vali bamboost keskkond mida soovid uuendada (nt "update latest")
+  - vali nimekirjast build mida soovid paigaldada, klikka rohelisel lingil
+  - vali kuval "deploy" taga "play" nuppu ja järgmises aknas ok.
+
+** Millele viitab sys_muutuja_id ** 
+
+  * juhul kui tegemist on REDIS kasutajaga, siis REDIS_ISIK_ROLL.ID
+  * juhul kui tegemist on TETRIS kasutajaga, siis EMPIS_TO_TETRIS.EMPIS_KASUTAJAKONTO.ID (vist?)

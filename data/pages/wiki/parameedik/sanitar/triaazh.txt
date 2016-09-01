@@ -1,0 +1,99 @@
+====== Triaaži määramine ======
+
+
+Mõiste „triaaž“ pärineb prantsuse sõjameditsiinist ja tähendab valikut, eraldamist, sorteerimist (inglise keeles kasutatakse ka sõna sorting).
+
+Triaaž on vigastuste hindamine ja kannatanute jagamine nelja triaažigruppi eesmärgiga päästa võimalikult palju patsiente, sorteerides esmalt kannatanute hulgast välja kõige raskemini vigastatud isikud. Triaaži läbiviiv meedik peab alati patsientide hulka suhestama meditsiiniliste ja logistiliste ressurssidega (transpordimahud, haiglamahud).
+
+[[parameedik:sanitar:moisted#triaazh|Triaaž]]
+ on väga dünaamiline süsteem, s.t patsiendid läbivad sageli mitu triaažietappi (näide: pneumotooraks (õhkrind) grupp I -- ravi (drenaaž) -- grupp II või III).
+
+Optimaalse tööprotsessi saavutamiseks on triaaž ülioluline. Triaaži (vähemalt selle teist etappi) peaksid võimaluse korral läbi viima kogenud erakorralise meditsiini arstid või anestesioloogid, kuna tegemist on meditsiiniliste ja eetiliste piiride ääremail asuva ülesandega.
+
+Rohkete kannatanutega õnnetused loovad suured käärid olemasoleva meditsiinilise ressursi ja abivajajate vahel. Suure kannatanute arvuga sündmust (Mass Casulty Incident – MCI) võib defineerida Eestis (mandriosal) kui olustikku, kus on ühel ajal rohkem kui 5 kannatanut, mis koormab küll meditsiinilist ressurssi, kuid ei muutu sellele ülekoormavaks. Suurõnnetus (MCE) on sündmus, kus patsiente on enam kui 20, mis koormab kohaliku tervishoiusüsteemi üle.
+
+Eksisteerivad mitmed väärkujutlused katastroofivõimekusest.
+  * Planeerijate ning ametnike sagedane arvamus sellest, mis nende arvates suurõnnetustel toimub on:
+    * sündmuskoha struktuuri kiire loomine ühise staabi/juhtgrupi alluvuses,
+    * sündmuskohalt patsientide koordineeritud transport vastuvõtvatesse haiglatesse,
+    * esmaabi osutavad erakorralise meditsiini tehnikud.
+  * **Reaalsuses** toimub aga järgnev (suurõnnetuste kokkuvõtete järgi):
+    * sündmuskoha struktuuri ühine staap/juhtgrupp luuakse hilja, kui üldse,
+    * esmaabi osutajateks sündmuskohal on kannatanud ise ning kõrvalseisjad,
+    * patsiente transporditakse kõikvõimalikel saadaolevatel viisidel lähimasse tervishoiuasutusse.
+
+Suured ressursilised piirangud sunnivad olemasolevat ravistandardit muutma. Triaaž on protseduur lahendamaks ebakõla kannatanute ning abiandjate hulga vahel, rakendades lihtsat reeglit: teha head võimalikult suurele hulgale inimestele.
+Sihiks on kannatanud prioriseerida:
+  * vigastuste tõsiduse astmete järgi,
+  * meditsiinilise abi võimaluste järgi,
+
+et võimaldada maksimaalse hulga vigastatute abistamist (näiteks: prioriteet evakuatsiooniks, transpordiks haiglasse – operatsiooniks või teisteks spetsiifilisteks protseduurideks).
+
+Suure kannatanute hulga korral tuleks triaaži teha mitu korda, sest patsientide seisund võib ajas muutuda.
+
+Triaaži võivad teha kogenud erakorralise meditsiini tehnikud. Personali, kes triaaži teeb, tuleks sagedasti roteerida, kuna triaaž mõjub füüsiliselt ning psüühiliselt koormavalt. Tavaliselt markeeritakse kannatanud punast, kollast, rohelist või valget värvi tasemetega või märgitakse klassidega I-IV.
+
+Eriti süvitsi tuleks kaaluda triaažikategooria määramist:
+  * lastel,
+  * vanuritel,
+  * patsientidel, kes on kokku puutunud ohtlike ainetega, sest kiire ja tõhus dekontaminatsioon võib osutuda määravaks nende edasisele prognoosile.
+
+Triaaži töövahenditena kasutatakse spetsiaalselt loodud kaarti, mis saadavad igat patsienti. Suurte kannatanute hulgaga sündmustel lihtsate lahenduste kasutamine kiirendab tervet protseduuri, näiteks värviliste käevõrude või värviliste lintide kasutamine. Dekontaminatsiooni staatuse näitamiseks sobivad samad lahendused (üks värv näitamaks triaaži astet, teine värv näitamaks dekontaminatsiooni staatust).
+
+==== Hetkel KV-s kasutatava esmase triaaži põhimõtted ====
+
+  - Võimalikult hea abi võimalikult suurele hulgale kannatanutele.
+  - Olemasolevate ressursside maksimaalselt efektiivne kasutamine.
+  - Võtmeisikute rivvi tagasi saatmine võimalikult kiiresti.
+  - Triaaži tuleb teostada alati kui kannatanute number ületab olemasolevad ressursid (abistajad või vahendid).
+  - Esmase triaaži läbiviimiseks optimaalselt 30 sekundit.
+
+===== START-triaaž =====
+
+START- triaaž (Simple Triage And Rapid Treatment) on üks enam kasutatav triaažisüsteem suure hulga kannatanutega sündmuste korral, loodud aitama suurimat hulka kannatanuid olemasolevate ressursidega. START-triaaž arendati Hoag Hospital Newport Beach’i ning Fire and Marine Department in California, USA koostööna.
+
+Märgatavate erinevuste tõttu laste vigastustes ning psühholoogias loodi JumpSTART, pakkumaks objektiivsemat raamistikku laste triaažis.
+
+START triaaž on lihtne algoritm, mis baseerub ABC-l ja BLS-il. Kannatanute prioriteetide kategooriad on:
+
+  - **PUNANE/ ÜLIKIIRE** - Kannatanud, kes vajavad kohest tähelepanu elupäästvateks protseduurideks (nt intubatsioon, pneumotooraks)
+  - **KOLLANE/ KIIRE** - Kannatanud, kes vajavad kiiret abi, vältimaks elu või jäseme kaotust (peavigastused, luumurrud, vaskulaarsed või okulaarsed vigastused)
+  - **ROHELINE/ MINIMAALNE** - Kannatanud, kellel on kergemad vigastused või ainult psühholoogilised traumad (väikesemad haavad, marrastused)
+  - **MUST/ HUKKUNU** - Kannatanud, kes on surnud või suremas, kelle eest ei saa hetkel olemasolevate ressurssidega hoolt kanda
+
+Triaažil eristatakse erinevaid etappe: esmase triaaži teeb ohu puudumisel sündmuskoha meedik vahetult sündmuskohal, mille tulemusena suunatakse kiiremat abi vajavad (punased T1) kannatanud kogumispunkti. Teisese triaaži teeb ravipunkti meedik kannatanute kogumispunktis või selle olemasolul ravipunktis, mille tulemusena grupeeritakse kannatanud transpordiks haiglatesse. Kolmandane triaaž toimub vastuvõtva haigla erakorralise meditsiini osakonnas, mille tulemusena grupeeritakse kannatanud haigla osakondadesse.
+
+===== Triaaži määramise algoritm =====
+
+{{:parameedik:triaazh.png?nolink|}}
+
+
+==== Sarnane KV-s kasutatav triaaž ====
+ 
+
+  * Kõnnib? 
+    * Jah
+      * Vigastatud: T3
+      * Vigastamata: T4 (ellujäänute alale)
+    * Ei 
+      * Hingab? 
+        * Jah
+          * Hingamise sagedus? 
+            * Alla 10 või üle 30 korra minutis: T1
+            * 10 kuni 30 korda minutis
+              * Pulss?
+                * 120 või rohkem: T1
+                * Vähem kui 120 korda minutis: T2
+        * Ei
+          * Avada hingamisteed
+            * Hingab? 
+              * Ei: Dead
+              * Jah: T1
+==== Teisene triaaž ====
+
+  * Teisene triaaž teostatakse tavaliselt kannatanute kogumispunktis või ravitsoonis. 
+  * Uuritakse kannatanut põhjalikumalt ja võimalik, et hinnatakse ümber esmase triaaži ajal määratud prioriteedid. 
+  * Teisene triaaž on aluseks kannatanute toimetamise järjekorrale haiglasse.
+===== Viited =====
+
+  * Erakorralise meditsiini tehniku käsiraamat (alates lk 685)

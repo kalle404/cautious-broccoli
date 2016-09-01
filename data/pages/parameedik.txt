@@ -1,0 +1,138 @@
+====== parameediku nädalavahetus ======
+
+18-20.03.2016 
+
+
+===== EKG =====
+
+Lühikene ülevaade EKG ajaloole. EKG-d kasutatakse tänapäeval väga laialdaselt. Ehk siis südamefilmi tegemine. Milleks tehakse EKG-d? Hinnatakse südametööd, saadakse näiteks teada, milline on südame rütm, kas on mingeid normist kõrvalekaldeid südame tegevuses. Milline on südame kontraktsioon ehk kui tugev on südame kokkutõmme - seda EI ole võimalik EKG-ga hinnata. Kui "pumba" funktsioon on täidetud, seda POLE EKG-ga võimalik hinnata. Elektri liikumist aga on. 
+
+EKG kvaliteeti mõjutavad faktorid - südame poolt põhjustavad faktorid ja muud kehapoolsed faktorid (karvane rind, rasvkude jne - südant ümbritsevate kudede elektriline juhtivus). Südame asend ja kaugus rindkere seinast. Skeletilihase värin - lihasvärin mõjutab filmikvaliteeti. Takistus nahapinnal tuleb viia miinimumi. Isik peab lebama rahulikult, liikumatuna, kergelt hingates ja soojas. 
+
+Erinevatesse kohtadesse paigutatud elektroodide kehalt saadud elektriimpulsside peegeldused on erinevad. See ongi eesmärgiks tegelikult. 
+
+Oluline on (1) palju elektroode on; (2) kuhu need kinnitatakse. EKG-s on kokku: 
+**Jäsemeelektroode** 4tk, pannakse reeglina jäseme otstesse. Aktsepteeritud on ka reied ja õlad vajadusel. Paigaldatakse moel, et elektroodid tehakse märjad ning asetatakse vastu jäset minimaalse takistusega. 
+
+punane ja kollane - ülajäsemetele (punane Right parem käsi, kollane Left vasak käsi)
+must ja roheline - alajäsemetele (must Neutral parem jalg, roheline F vasak jalg)
+
+**Rindkerelektroode** 6 tk, on jaotatud esmaseks kolmeks (1,2,3) ja teiseseks kolmeks (4,5,6). Kinnitamise järjekord 1 -> 2 -> 4 -> 3 -> 5 -> 6. 
+
+  * paremale rinnaku kõrvale neljanda roide alla paremale poole (punane või number 1)
+  * vasakule poolele esimese vastu (kollane või number 2) 
+  * viies roide vahemik rangluu keskjoonelt vasakule poole rindkere (pruun või number 4)
+  * täpselt teise ja neljanda vahele roide peale (roheline või number 3)
+  * kaenla eesmine joon viies roide vahemik, neljandaga  samal tasemel (või number 5)
+  * kaenla keskjoon viies vahe vasakul pool (või number 6)
+
+
+NB! Mõnikord võib juhtuda vajadus parempoolse EKG järele! Tegemist on pigem haruldasemate juhtumitega. 
+
+Paberi lugemine - arvestatakse suuri ruute ja väikseid ruute. Arvestatakse ka paberi liikumise kiirust, mille standard on 25mm/sek. Tavaliselt on paberi kiirus paberi peal kirjeldatud. 
+
+nt 300/6 suurt ruutu == südamerütm ca 50 x/min
+nt 300/4 suurt ruutu == südamerütm ca 75 x/min
+
+NB! Seade ise annab ka hinnangu, kuid sellest ei peaks pigem juhinduda. 
+
+===== EKG analüüs =====
+
+Südame tekkinud elektri leviku teket ja vaibumist, mis fikseeritakse kehapinnalt. Ei näita kuidas see pump töötab, vaid näitab kuidas eleketer südames liigub. EKG on laialt kasutatav südame seisundi hindamisel. Hinnatakse eelkõige muutuste tekkimist. 
+
+**Mis on sakid** 
+
+  - P wave - esimene jõnksukene. Südame siinussõlmes tekkinud impulss, mis hakkas liikuma mööda südant mille tulemusena tekib südames kokkutõmme ehk kontraktsioon. Impulss liigub südame paremast kojast südame paremasse vatsakesse. 
+  - Q wave - enamasti patoloogiline ja enamusele inimestest ei tekigi
+  - R wave - 
+  - S wave - 
+  - T wave - 
+
+ST segment
+
+
+===== Vereringe seiskumise vormid =====
+
+  * VT - ventrikulaarne trahükardia, pulsiga/ pulsita? 
+  * VF - (70-80% juhtudest)vatsakeste fibrillatsioon -> saab kasutada defibrillaatorit
+  * AS - asüstoolia
+  * PEA - pulsita elektriline aktiivsus
+
+Krikotüreotoomia - 
+
+Intraossaalne ravimite manustamine 
+
+ERC Guidelines 2015 südamerütmite kohta (milised on defibrilleeritavad ja milised mitte)
+
+**Ravimite manustamine**
+
+Ravimid mida manustada: 
+  - Adrenaliin
+  - Amiodaroon
+
+===== Rütmi hinnang =====
+
+  - Rütmi hinnang
+  - PEA/AS (mitte defibrilleeritav) 
+      - C - südamemassaaž
+      - A - vabad hingamisteed
+      - B - ventileerimine
+      - veenitee
+      - monitooring
+      - adrenaliin (1mg)
+  - VT/VF
+    - def
+    - vent + SM 2min
+    - rütmi hindamine
+    - 3 def järgselt 300mg cordaron
+    - 5 def järgselt 1mg adrenaliini 150mg amiodaroon
+      
+
+
+===== Märkused =====
+
+  * EKG-st arusaamiseks on tarvilik õppida südame vereringe ja erutus põhjalikult üle. 
+  * Millised südameseisundud on defibrilleeritavad ja millised mitte, kuidas need eristuvad.
+  * parameediku guidelinesi koostamise metoodikat uurida, kuidas ettepanekud koostatakse. 
+  * erinevad kanüülitüübid üle vaadata. 
+
+===== Traumahaige käsitlus =====
+
+20.03.2016
+
+Vereringe taastumise rütmid. 
+
+<C> -> A -> B -> C -> D -> E
+
+B - hingamine on reeglina brigaadijuhi tegevus kes jälgib elulisi näitajaid tervikuna 
+
+perkussiivsed hingamise hindamise tehnika: 
+http://www.centerworks.com/using-percussive-breathing-techniques-to-reduce-neck-and-back-pain/
+
+C - muude tegevuste kõrval oluline jälgida, et pt pole šokis:
+  - V - ventilatsioon
+  - I - infusioon
+  - P - preparaadid
+  - P - protseduurid
+
+D - teadvuse taseme hindamine (AVPU), lisaks näiteks pupillide hindamine (pupillide võrdsus, reageerimine valgusele), jäsemete erinev tunnetamine, surin jäsemetes, 
+
+E - keskkonnategurid, kannatanu kõikide väiksemate vigastuste kaardistamine ja nendega tegelemine. 
+
+NB! Sõltuvalt pt seisundist tuleb hindamist elutähtsate punktide osas korduvalt teha, sageduse määrab pt olukorra tõsidus. 
+
+kopsude auskultatsioon - ?
+
+Traumahaige ülevaatamine - ülevalt alla poole. valikuliselt, sõltuvalt metoodikast kas pea, kael, kere ja jäsemed või ülevalt alla ja jäsemed sh jooksvalt. 
+
+NB! Googeldamiseks märksõna "patient secondary survey"
+
+prognostiline verekaotus - ? erinevate vigastuste tõenäoline verekaotus
+
+googelda "blood on the floor and four more" 
+
+
+VAATAME VIDEOT: "ISAF soldier steps on a landmine"
+
+Uurida mõisted Advanced Life Support
+
