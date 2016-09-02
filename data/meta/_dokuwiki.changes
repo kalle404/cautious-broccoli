@@ -1,15 +1,3 @@
-1472107303	::1	E	wiki:egov:tvh_menetlustegevused	admin			303
-1472107469	::1	E	wiki:egov:tvh_menetlustegevused	admin	[Seotud skriptid] 		313
-1472107500	::1	E	wiki:egov:tvh_menetlustegevused	admin	[TVH HJ staatused ja menetlustegevused] 		8
-1472124485	::1	E	wiki:egov:tetris_vaie	admin			732
-1472131306	::1	E	wiki:egov:tvh_menetlustegevused	admin			122
-1472131352	::1	E	wiki:egov:tvh_menetlustegevused	admin			20
-1472131474	::1	E	wiki:egov:tvh_menetlustegevused	admin			10
-1472131652	::1	E	wiki:egov:tvh_menetlustegevused	admin			302
-1472132132	::1	E	wiki:egov:tvh_menetlustegevused	admin			284
-1472132977	::1	E	wiki:egov:tvh_menetlustegevused	admin			2406
-1472133228	::1	E	wiki:egov:tvh_menetlustegevused	admin			0
-1472134111	::1	E	wiki:egov:tetris_vaie	admin	[TETRIS vaide protsessid] 		4
 1472223300	::1	E	wiki:it:regex	admin	[Viited] 		76
 1472224063	::1	E	wiki:it:regex	admin			150
 1472224297	::1	E	wiki:it:regex	admin	[Viited] 		83
@@ -35,3 +23,6 @@
 1472738131	::1	E	wiki:it:git	admin	[Mida uurida vaja] 		131
 1472742122	::1	D	wiki:ehealth:ligipaasud	admin	removed		-2856
 1472742350	::1	E	wiki:egov:egov_markmed	admin			-1370
+1472743067	::1	E	wiki:it:git	admin			218
+1472743211	::1	E	wiki:it:git	admin	[Version control] 		3
+1472743676	::1	E	wiki:it:git	admin	[Mida uurida vaja] 		-2

@@ -1,4 +1,4 @@
-====== Version control ======
+====== Version management ======
 
 ===== Git =====
 
@@ -138,5 +138,12 @@ To specify the repo using Git, we'll have to add the remote and label it as the 
   * erinevate branchide tekitamine kahes arvutis
     * näiteks branchi tekitamine remotest käib käsuga: '**git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME>**'
   * branchide lisamine masterisse peale arenduse lõppu: liikuda master branch-i ja merge
-  * kui on tõsiselt vaja töökohas oleva seisuga repo üle kirjutada: '**git push --force origin mix**'
+  * kui on tõsiselt vaja töökohas oleva seisuga repo üle kirjutada: '**git push -f origin master**'
   * kuvada, millised branchid on olemas ning millised versioonid deploy-tud: '**git branch -v**'
+
+
+===== kalle404 githubi repo info =====
+
+  * [[https://github.com/kalle404|profiil]] 
+  * [[https://github.com/kalle404/cautious-broccoli|docuwiki repo]]
+  * [[https://github.com/kalle404/cuddly-parakeet|jaani repo]]
