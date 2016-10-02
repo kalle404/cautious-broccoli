@@ -387,8 +387,17 @@ from daily_revenue
 <pre class="code">SELECT *
 FROM empis_sys_param_vaartus
 WHERE param_kood = &#039;TVH_SKAIS2_ANDMEVAHETUS&#039;
-AND sysdate BETWEEN kehtiv_alates AND coalesce(kehtiv_kuni, sysdate);
-  </pre>
+AND sysdate BETWEEN kehtiv_alates AND coalesce(kehtiv_kuni, sysdate);</pre>
+
+<p>
+<strong> ühe tabeli lõikes topeltkirjete leidmine </strong>
+</p>
+<pre class="code">select * from tblcontacts 
+  where concat(fn, sn) in 
+(select concat(fn, sn)
+  from tblcontacts
+  group by concat(fn, sn)
+  having count(*) &gt; 1 )</pre>
 
 </div>
 <!-- EDIT24 SECTION "EMPIS kehtiva süsteemse parameetri väärtuse leidmine" [10860-] -->

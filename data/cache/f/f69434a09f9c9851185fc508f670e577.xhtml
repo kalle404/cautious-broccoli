@@ -19,8 +19,100 @@ This tutorial will give you great understanding on PL/SQL to proceed with Oracle
 </p>
 
 </div>
-<!-- EDIT1 SECTION "PL/SQL Tutorial" [1-531] -->
-<h3 class="sectionedit2" id="audience">Audience</h3>
+<!-- EDIT1 SECTION "PL/SQL Tutorial" [1-532] -->
+<h3 class="sectionedit2" id="normal_forms">Normal forms</h3>
+<div class="level3">
+<ul>
+<li class="level1 node"><div class="li"> (1) First normal form </div>
+<ul>
+<li class="level2"><div class="li"> each column must contain only one value </div>
+</li>
+<li class="level2"><div class="li"> no table can have repeating groups of related data</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> (2) Second normal form </div>
+<ul>
+<li class="level2"><div class="li"> requirements described in (1) </div>
+</li>
+<li class="level2"><div class="li"> and every column in the table that is not a key must be dependent upon the primary key</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Third normal form</div>
+<ul>
+<li class="level2"><div class="li"> requirements described in (2)</div>
+</li>
+<li class="level2"><div class="li"> and every non-key column is mutually independent.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Overruling normalization
+</p>
+<ul>
+<li class="level1"><div class="li"> As much as ensuring that a database is in 3NF will help guarantee reliability and viability, you won&#039;t fully normalize every database with which you work. Before undermining the proper methods, though, understand that doing so may have devastating long-term consequence. </div>
+</li>
+<li class="level1"><div class="li"> The two primary reasons to overrule normalization are convenience and performance. Fewer tables are easier to manipulate and comprehend than more. Further, because of their more intricate nature, normalized databases will most likely be slower for updating, retrieving data from, and modifying. Normalization, in short, is a trade-off between data integrity/ scalability and simplicity/ speed. On the other hand, there are ways to improve your database&#039;s performance but few to remedy corrupted data that can result from poor design. </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Normal forms" [533-1803] -->
+<h3 class="sectionedit3" id="database_optimization">Database optimization</h3>
+<div class="level3">
+
+<p>
+The performance of your database is primarily dependent upon its structure and indexes. When creating databases, try to
+</p>
+<ul>
+<li class="level1"><div class="li"> choose the best storage engine; </div>
+</li>
+<li class="level1"><div class="li"> use the smallest data type possible for each column; </div>
+</li>
+<li class="level1"><div class="li"> define columns as NOT NULL whenever possible; </div>
+</li>
+<li class="level1"><div class="li"> use integers as primary keys; </div>
+</li>
+<li class="level1"><div class="li"> judicously define indexes, selecting the correct type and applying them to the right column or columns; </div>
+</li>
+<li class="level1"><div class="li"> limit indexes to certain number of characters, if applicable. </div>
+</li>
+</ul>
+
+<p>
+Along with these tips, there are two simple techniques for optimizing tables. One way to improve MySQL&#039;s performance is to run an OPTIMIZE command on such tables. This query will rid a table of any unnecessary overhead, thereby speeding any interactions with it. Running this command is particulary beneficial after changing a table via an ALTER command. 
+</p>
+<pre class="code">OPTIMIZE TABLE //tablename//</pre>
+
+<p>
+To improve a query&#039;s efficency, it helps to understand how exactly MySQL will run that query. This can be accomplished using the EXPLAIN SQL keyword. Explaining queries is a very advanced topic, so see th MySQL manual or search the Web for more information. 
+</p>
+
+<p>
+<strong>To show columns</strong>
+</p>
+<pre class="code">show columns from tblcontacts;</pre>
+
+<p>
+<strong> To describe a table </strong>
+</p>
+<pre class="code">describe tblcontracts; </pre>
+
+<p>
+<strong>To explain an action</strong>
+</p>
+<pre class="code">  explain 
+    select con.zippostcode 
+    from tblcontacts con
+    join tblcontracts cont on con.contactid = cont.contractclient
+    where con.contactid = 48;</pre>
+
+</div>
+<!-- EDIT3 SECTION "Database optimization" [1804-3266] -->
+<h3 class="sectionedit4" id="audience">Audience</h3>
 <div class="level3">
 
 <p>
@@ -28,8 +120,8 @@ This tutorial is designed for Software Professionals, who are willing to learn P
 </p>
 
 </div>
-<!-- EDIT2 SECTION "Audience" [532-911] -->
-<h3 class="sectionedit3" id="prerequisites">Prerequisites</h3>
+<!-- EDIT4 SECTION "Audience" [3267-3646] -->
+<h3 class="sectionedit5" id="prerequisites">Prerequisites</h3>
 <div class="level3">
 
 <p>
@@ -37,8 +129,8 @@ Before proceeding with this tutorial, you should have a basic understanding of s
 </p>
 
 </div>
-<!-- EDIT3 SECTION "Prerequisites" [912-1250] -->
-<h2 class="sectionedit4" id="pl_sql_-_overview">PL/SQL - Overview</h2>
+<!-- EDIT5 SECTION "Prerequisites" [3647-3985] -->
+<h2 class="sectionedit6" id="pl_sql_-_overview">PL/SQL - Overview</h2>
 <div class="level2">
 
 <p>
@@ -60,8 +152,8 @@ The PL/SQL programming language was developed by Oracle Corporation in the late 
 </ul>
 
 </div>
-<!-- EDIT4 SECTION "PL/SQL - Overview" [1251-1999] -->
-<h3 class="sectionedit5" id="features_of_pl_sql">Features of PL/SQL</h3>
+<!-- EDIT6 SECTION "PL/SQL - Overview" [3986-4734] -->
+<h3 class="sectionedit7" id="features_of_pl_sql">Features of PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -85,8 +177,8 @@ PL/SQL has the following features:
 </ul>
 
 </div>
-<!-- EDIT5 SECTION "Features of PL/SQL" [2000-2417] -->
-<h3 class="sectionedit6" id="advantages_of_pl_sql">Advantages of PL/SQL</h3>
+<!-- EDIT7 SECTION "Features of PL/SQL" [4735-5152] -->
+<h3 class="sectionedit8" id="advantages_of_pl_sql">Advantages of PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -114,8 +206,8 @@ PL/SQL has the following advantages:
 </ul>
 
 </div>
-<!-- EDIT6 SECTION "Advantages of PL/SQL" [2418-3483] -->
-<h2 class="sectionedit7" id="pl_sql_-_basic_syntax">PL/SQL - Basic Syntax</h2>
+<!-- EDIT8 SECTION "Advantages of PL/SQL" [5153-6218] -->
+<h2 class="sectionedit9" id="pl_sql_-_basic_syntax">PL/SQL - Basic Syntax</h2>
 <div class="level2">
 
 <p>
@@ -142,8 +234,8 @@ EXCEPTION
 END;</pre>
 
 </div>
-<!-- EDIT7 SECTION "PL/SQL - Basic Syntax" [3484-4677] -->
-<h3 class="sectionedit8" id="the_hello_world_example">The &quot;Hello World!&quot; example:</h3>
+<!-- EDIT9 SECTION "PL/SQL - Basic Syntax" [6219-7412] -->
+<h3 class="sectionedit10" id="the_hello_world_example">The &quot;Hello World!&quot; example:</h3>
 <div class="level3">
 <pre class="code">DECLARE
    message  varchar2(20):= &#039;Hello, World!&#039;;
@@ -159,8 +251,8 @@ The <strong>end;</strong> line signals the end of the PL/SQL block. To run the c
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT8 SECTION "The Hello World! example:" [4678-5165] -->
-<h3 class="sectionedit9" id="the_pl_sql_identifiers">The PL/SQL Identifiers</h3>
+<!-- EDIT10 SECTION "The Hello World! example:" [7413-7900] -->
+<h3 class="sectionedit11" id="the_pl_sql_identifiers">The PL/SQL Identifiers</h3>
 <div class="level3">
 
 <p>
@@ -172,14 +264,14 @@ By default, identifiers are not case-sensitive. So you can use <strong>integer</
 </p>
 
 </div>
-<!-- EDIT9 SECTION "The PL/SQL Identifiers" [5166-5635] -->
-<h3 class="sectionedit10" id="the_pl_sql_delimiters">The PL/SQL Delimiters</h3>
+<!-- EDIT11 SECTION "The PL/SQL Identifiers" [7901-8370] -->
+<h3 class="sectionedit12" id="the_pl_sql_delimiters">The PL/SQL Delimiters</h3>
 <div class="level3">
 
 <p>
 A delimiter is a symbol with a special meaning. Following is the list of delimiters in PL/SQL:
 </p>
-<div class="table sectionedit11"><table class="inline">
+<div class="table sectionedit13"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Delimiter      </th><th class="col1 leftalign"> Description       </th>
@@ -249,10 +341,10 @@ A delimiter is a symbol with a special meaning. Following is the list of delimit
 		<td class="col0 leftalign"> &lt;&gt;, &#039;=, ~=, <em>^=</em>  </td><td class="col1 leftalign"> Different versions of NOT EQUAL  </td>
 	</tr>
 </table></div>
-<!-- EDIT11 TABLE [5765-6628] -->
+<!-- EDIT13 TABLE [8500-9363] -->
 </div>
-<!-- EDIT10 SECTION "The PL/SQL Delimiters" [5636-6630] -->
-<h3 class="sectionedit12" id="the_pl_sql_comments">The PL/SQL Comments</h3>
+<!-- EDIT12 SECTION "The PL/SQL Delimiters" [8371-9365] -->
+<h3 class="sectionedit14" id="the_pl_sql_comments">The PL/SQL Comments</h3>
 <div class="level3">
 
 <p>
@@ -280,8 +372,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT12 SECTION "The PL/SQL Comments" [6631-7464] -->
-<h3 class="sectionedit13" id="pl_sql_program_units">PL/SQL Program Units</h3>
+<!-- EDIT14 SECTION "The PL/SQL Comments" [9366-10199] -->
+<h3 class="sectionedit15" id="pl_sql_program_units">PL/SQL Program Units</h3>
 <div class="level3">
 
 <p>
@@ -307,14 +399,14 @@ A PL/SQL unit is any one of the following:
 </ul>
 
 </div>
-<!-- EDIT13 SECTION "PL/SQL Program Units" [7465-7650] -->
-<h2 class="sectionedit14" id="pl_sql_-_data_types">PL/SQL - Data Types</h2>
+<!-- EDIT15 SECTION "PL/SQL Program Units" [10200-10385] -->
+<h2 class="sectionedit16" id="pl_sql_-_data_types">PL/SQL - Data Types</h2>
 <div class="level2">
 
 <p>
 PL/SQL variables, constants and parameters must have a valid data type, which specifies a storage format, constraints, and valid range of values. This tutorial will take you through <strong>SCALAR</strong> and <strong>LOB</strong> data types available in PL/SQL and other two data types will be covered in other chapters.
 </p>
-<div class="table sectionedit15"><table class="inline">
+<div class="table sectionedit17"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Category      </th><th class="col1 leftalign"> Description       </th>
@@ -333,16 +425,16 @@ PL/SQL variables, constants and parameters must have a valid data type, which sp
 		<td class="col0 leftalign"> Reference  </td><td class="col1 leftalign"> Pointers to other data items.  </td>
 	</tr>
 </table></div>
-<!-- EDIT15 TABLE [7981-8463] -->
+<!-- EDIT17 TABLE [10716-11198] -->
 </div>
-<!-- EDIT14 SECTION "PL/SQL - Data Types" [7651-8464] -->
-<h3 class="sectionedit16" id="pl_sql_scalar_data_types_and_subtypes">PL/SQL Scalar Data Types and Subtypes</h3>
+<!-- EDIT16 SECTION "PL/SQL - Data Types" [10386-11199] -->
+<h3 class="sectionedit18" id="pl_sql_scalar_data_types_and_subtypes">PL/SQL Scalar Data Types and Subtypes</h3>
 <div class="level3">
 
 <p>
 PL/SQL Scalar Data Types and Subtypes come under the following categories:
 </p>
-<div class="table sectionedit17"><table class="inline">
+<div class="table sectionedit19"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Data type  </th><th class="col1 leftalign"> Description  </th>
@@ -361,14 +453,14 @@ PL/SQL Scalar Data Types and Subtypes come under the following categories:
 		<td class="col0 leftalign"> Datetime  </td><td class="col1 leftalign"> Dates and times.  </td>
 	</tr>
 </table></div>
-<!-- EDIT17 TABLE [8590-8901] -->
+<!-- EDIT19 TABLE [11325-11636] -->
 <p>
 PL/SQL provides subtypes of data types. For example, the data type NUMBER has a subtype called INTEGER. You can use subtypes in your PL/SQL program to make the data types compatible with data types in other programs while embedding PL/SQL code in another program, such as a Java program.
 </p>
 
 </div>
-<!-- EDIT16 SECTION "PL/SQL Scalar Data Types and Subtypes" [8465-9192] -->
-<h3 class="sectionedit18" id="pl_sql_numeric_data_types_and_subtypes">PL/SQL Numeric Data Types and Subtypes</h3>
+<!-- EDIT18 SECTION "PL/SQL Scalar Data Types and Subtypes" [11200-11927] -->
+<h3 class="sectionedit20" id="pl_sql_numeric_data_types_and_subtypes">PL/SQL Numeric Data Types and Subtypes</h3>
 <div class="level3">
 
 <p>
@@ -419,8 +511,8 @@ Following is a valid declaration:
   </pre>
 
 </div>
-<!-- EDIT18 SECTION "PL/SQL Numeric Data Types and Subtypes" [9193-10921] -->
-<h3 class="sectionedit19" id="pl_sql_character_data_types_and_subtypes">PL/SQL Character Data Types and Subtypes</h3>
+<!-- EDIT20 SECTION "PL/SQL Numeric Data Types and Subtypes" [11928-13656] -->
+<h3 class="sectionedit21" id="pl_sql_character_data_types_and_subtypes">PL/SQL Character Data Types and Subtypes</h3>
 <div class="level3">
 
 <p>
@@ -448,8 +540,8 @@ Following is the detail of PL/SQL pre-defined character data types and their sub
 </ul>
 
 </div>
-<!-- EDIT19 SECTION "PL/SQL Character Data Types and Subtypes" [10922-11844] -->
-<h3 class="sectionedit20" id="pl_sql_boolean_data_types">PL/SQL Boolean Data Types</h3>
+<!-- EDIT21 SECTION "PL/SQL Character Data Types and Subtypes" [13657-14579] -->
+<h3 class="sectionedit22" id="pl_sql_boolean_data_types">PL/SQL Boolean Data Types</h3>
 <div class="level3">
 
 <p>
@@ -469,8 +561,8 @@ However, SQL has no data type equivalent to BOOLEAN. Therefore, Boolean values c
 </ul>
 
 </div>
-<!-- EDIT20 SECTION "PL/SQL Boolean Data Types" [11845-12257] -->
-<h3 class="sectionedit21" id="pl_sql_datetime_and_interval_types">PL/SQL Datetime and Interval Types</h3>
+<!-- EDIT22 SECTION "PL/SQL Boolean Data Types" [14580-14992] -->
+<h3 class="sectionedit23" id="pl_sql_datetime_and_interval_types">PL/SQL Datetime and Interval Types</h3>
 <div class="level3">
 
 <p>
@@ -488,7 +580,7 @@ Each DATE includes the century, year, month, day, hour, minute, and second. The 
 <p>
 ^ Field Name  ^ Valid Datetime values  ^ Valid interval values  ^
 </p>
-<div class="table sectionedit22"><table class="inline">
+<div class="table sectionedit24"><table class="inline">
 	<tr class="row0">
 		<td class="col0 leftalign"> YEAR  </td><td class="col1 leftalign"> -4712 to 9999 (excluding year 0)  </td><td class="col2 leftalign"> Any nonzero integer  </td>
 	</tr>
@@ -520,10 +612,10 @@ Each DATE includes the century, year, month, day, hour, minute, and second. The 
 		<td class="col0 leftalign"> TIMEZONE_ABBR  </td><td class="col1 leftalign"> Found in the dynamic performance view V$TIMEZONE_NAMES  </td><td class="col2 leftalign"> Not applicable  </td>
 	</tr>
 </table></div>
-<!-- EDIT22 TABLE [12981-13797] -->
+<!-- EDIT24 TABLE [15716-16532] -->
 </div>
-<!-- EDIT21 SECTION "PL/SQL Datetime and Interval Types" [12258-13799] -->
-<h3 class="sectionedit23" id="pl_sql_large_object_lob_data_types">PL/SQL Large Object (LOB) Data Types</h3>
+<!-- EDIT23 SECTION "PL/SQL Datetime and Interval Types" [14993-16534] -->
+<h3 class="sectionedit25" id="pl_sql_large_object_lob_data_types">PL/SQL Large Object (LOB) Data Types</h3>
 <div class="level3">
 
 <p>
@@ -541,8 +633,8 @@ Large object (LOB) data types refer large to data items such as text, graphic im
 </ul>
 
 </div>
-<!-- EDIT23 SECTION "PL/SQL Large Object (LOB) Data Types" [13800-14483] -->
-<h3 class="sectionedit24" id="pl_sql_user-defined_subtypes">PL/SQL User-Defined Subtypes</h3>
+<!-- EDIT25 SECTION "PL/SQL Large Object (LOB) Data Types" [16535-17218] -->
+<h3 class="sectionedit26" id="pl_sql_user-defined_subtypes">PL/SQL User-Defined Subtypes</h3>
 <div class="level3">
 
 <p>
@@ -577,8 +669,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT24 SECTION "PL/SQL User-Defined Subtypes" [14484-15483] -->
-<h3 class="sectionedit25" id="nulls_in_pl_sql">NULLs in PL/SQL</h3>
+<!-- EDIT26 SECTION "PL/SQL User-Defined Subtypes" [17219-18218] -->
+<h3 class="sectionedit27" id="nulls_in_pl_sql">NULLs in PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -586,8 +678,8 @@ PL/SQL NULL values represent missing or unknown data and they are not an integer
 </p>
 
 </div>
-<!-- EDIT25 SECTION "NULLs in PL/SQL" [15484-15816] -->
-<h2 class="sectionedit26" id="pl_sql_-_variables">PL/SQL - Variables</h2>
+<!-- EDIT27 SECTION "NULLs in PL/SQL" [18219-18551] -->
+<h2 class="sectionedit28" id="pl_sql_-_variables">PL/SQL - Variables</h2>
 <div class="level2">
 
 <p>
@@ -603,8 +695,8 @@ PL/SQL programming language allows to define various types of variables, which w
 </p>
 
 </div>
-<!-- EDIT26 SECTION "PL/SQL - Variables" [15817-16695] -->
-<h3 class="sectionedit27" id="variable_declaration_in_pl_sql">Variable Declaration in PL/SQL</h3>
+<!-- EDIT28 SECTION "PL/SQL - Variables" [18552-19430] -->
+<h3 class="sectionedit29" id="variable_declaration_in_pl_sql">Variable Declaration in PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -632,8 +724,8 @@ name varchar2(25);
 address varchar2(100);</pre>
 
 </div>
-<!-- EDIT27 SECTION "Variable Declaration in PL/SQL" [16696-17739] -->
-<h3 class="sectionedit28" id="initializing_variables_in_pl_sql">Initializing Variables in PL/SQL</h3>
+<!-- EDIT29 SECTION "Variable Declaration in PL/SQL" [19431-20474] -->
+<h3 class="sectionedit30" id="initializing_variables_in_pl_sql">Initializing Variables in PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -672,8 +764,8 @@ BEGIN
 END;</pre>
 
 </div>
-<!-- EDIT28 SECTION "Initializing Variables in PL/SQL" [17740-18785] -->
-<h3 class="sectionedit29" id="variable_scope_in_pl_sql">Variable Scope in PL/SQL</h3>
+<!-- EDIT30 SECTION "Initializing Variables in PL/SQL" [20475-21520] -->
+<h3 class="sectionedit31" id="variable_scope_in_pl_sql">Variable Scope in PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -707,8 +799,8 @@ BEGIN
 END;</pre>
 
 </div>
-<!-- EDIT29 SECTION "Variable Scope in PL/SQL" [18786-19871] -->
-<h3 class="sectionedit30" id="assigning_sql_query_results_to_pl_sql_variables">Assigning SQL Query Results to PL/SQL Variables</h3>
+<!-- EDIT31 SECTION "Variable Scope in PL/SQL" [21521-22606] -->
+<h3 class="sectionedit32" id="assigning_sql_query_results_to_pl_sql_variables">Assigning SQL Query Results to PL/SQL Variables</h3>
 <div class="level3">
 
 <p>
@@ -760,8 +852,8 @@ BEGIN
 END;</pre>
 
 </div>
-<!-- EDIT30 SECTION "Assigning SQL Query Results to PL/SQL Variables" [19872-21637] -->
-<h2 class="sectionedit31" id="pl_sql_-_constants_and_literals">PL/SQL - Constants and Literals</h2>
+<!-- EDIT32 SECTION "Assigning SQL Query Results to PL/SQL Variables" [22607-24372] -->
+<h2 class="sectionedit33" id="pl_sql_-_constants_and_literals">PL/SQL - Constants and Literals</h2>
 <div class="level2">
 
 <p>
@@ -769,8 +861,8 @@ A constant holds a value that once declared, does not change in the program. A c
 </p>
 
 </div>
-<!-- EDIT31 SECTION "PL/SQL - Constants and Literals" [21638-21912] -->
-<h3 class="sectionedit32" id="declaring_a_consant">Declaring a consant</h3>
+<!-- EDIT33 SECTION "PL/SQL - Constants and Literals" [24373-24647] -->
+<h3 class="sectionedit34" id="declaring_a_consant">Declaring a consant</h3>
 <div class="level3">
 
 <p>
@@ -800,8 +892,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT32 SECTION "Declaring a consant" [21913-22716] -->
-<h3 class="sectionedit33" id="the_pl_sql_literals">The PL/SQL Literals</h3>
+<!-- EDIT34 SECTION "Declaring a consant" [24648-25451] -->
+<h3 class="sectionedit35" id="the_pl_sql_literals">The PL/SQL Literals</h3>
 <div class="level3">
 
 <p>
@@ -829,7 +921,7 @@ The following table provides examples from all these categories of literal value
 &#039;Hello, world!&#039;
 &#039;Tutorials Point&#039;
 &#039;19-NOV-12&#039;</pre>
-<div class="table sectionedit34"><table class="inline">
+<div class="table sectionedit36"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Literal type  </th><th class="col1 leftalign"> Example   </th>
@@ -852,7 +944,7 @@ The following table provides examples from all these categories of literal value
 TIMESTAMP &#039;2012-10-29 12:01:01&#039;;   </td>
 	</tr>
 </table></div>
-<!-- EDIT34 TABLE [23384-23642] -->
+<!-- EDIT36 TABLE [26119-26377] -->
 <p>
 To embed single quotes within a string literal, place two single quotes next to each other as shown below:
 </p>
@@ -864,8 +956,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT33 SECTION "The PL/SQL Literals" [22717-23880] -->
-<h2 class="sectionedit35" id="pl_sql_-_operators">PL/SQL - Operators</h2>
+<!-- EDIT35 SECTION "The PL/SQL Literals" [25452-26615] -->
+<h2 class="sectionedit37" id="pl_sql_-_operators">PL/SQL - Operators</h2>
 <div class="level2">
 
 <p>
@@ -889,14 +981,14 @@ This tutorial will explain the arithmetic, relational, comparison and logical op
 </p>
 
 </div>
-<!-- EDIT35 SECTION "PL/SQL - Operators" [23881-24419] -->
-<h3 class="sectionedit36" id="arithmetic_operators">Arithmetic Operators</h3>
+<!-- EDIT37 SECTION "PL/SQL - Operators" [26616-27154] -->
+<h3 class="sectionedit38" id="arithmetic_operators">Arithmetic Operators</h3>
 <div class="level3">
 
 <p>
 Following table shows all the arithmetic operators supported by PL/SQL. Assume variable A holds 10 and variable B holds 5 then:
 </p>
-<div class="table sectionedit37"><table class="inline">
+<div class="table sectionedit39"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
@@ -918,10 +1010,10 @@ Following table shows all the arithmetic operators supported by PL/SQL. Assume v
 		<td class="col0"> * * </td><td class="col1"> Exponentiation operator, raises one operand to the power of other </td><td class="col2"> * * B will give 100000 </td>
 	</tr>
 </table></div>
-<!-- EDIT37 TABLE [24581-24950] -->
+<!-- EDIT39 TABLE [27316-27685] -->
 </div>
-<!-- EDIT36 SECTION "Arithmetic Operators" [24420-24951] -->
-<h3 class="sectionedit38" id="relational_operators">Relational operators</h3>
+<!-- EDIT38 SECTION "Arithmetic Operators" [27155-27686] -->
+<h3 class="sectionedit40" id="relational_operators">Relational operators</h3>
 <div class="level3">
 
 <p>
@@ -939,7 +1031,7 @@ Relational operators compare two expressions or values and return a Boolean resu
 <p>
 ~=
 </p>
-<div class="table sectionedit39"><table class="inline">
+<div class="table sectionedit41"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
@@ -964,16 +1056,16 @@ Relational operators compare two expressions or values and return a Boolean resu
 		<td class="col0"> ⇐ </td><td class="col1"> Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true. </td><td class="col2"> A ⇐ B) is true. </td>
 	</tr>
 </table></div>
-<!-- EDIT39 TABLE [25211-26103] -->
+<!-- EDIT41 TABLE [27946-28838] -->
 </div>
-<!-- EDIT38 SECTION "Relational operators" [24952-26105] -->
-<h3 class="sectionedit40" id="comparison_operator">Comparison operator</h3>
+<!-- EDIT40 SECTION "Relational operators" [27687-28840] -->
+<h3 class="sectionedit42" id="comparison_operator">Comparison operator</h3>
 <div class="level3">
 
 <p>
 Comparison operators are used for comparing one expression to another. The result is always either TRUE, FALSE OR NULL.
 </p>
-<div class="table sectionedit41"><table class="inline">
+<div class="table sectionedit43"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
@@ -992,16 +1084,16 @@ Comparison operators are used for comparing one expression to another. The resul
 		<td class="col0"> IS NULL </td><td class="col1"> The IS NULL operator returns the BOOLEAN value TRUE if its operand is NULL or FALSE if it is not NULL. Comparisons involving NULL values always yield NULL. </td><td class="col2"> If x = &#039;m&#039;, then &#039;x is null&#039; returns Boolean false. </td>
 	</tr>
 </table></div>
-<!-- EDIT41 TABLE [26258-27259] -->
+<!-- EDIT43 TABLE [28993-29994] -->
 </div>
-<!-- EDIT40 SECTION "Comparison operator" [26106-27260] -->
-<h3 class="sectionedit42" id="logical_operators">Logical operators</h3>
+<!-- EDIT42 SECTION "Comparison operator" [28841-29995] -->
+<h3 class="sectionedit44" id="logical_operators">Logical operators</h3>
 <div class="level3">
 
 <p>
 Following table shows the Logical operators supported by PL/SQL. All these operators work on Boolean operands and produces Boolean results. Assume variable A holds true and variable B holds false, then:
 </p>
-<div class="table sectionedit43"><table class="inline">
+<div class="table sectionedit45"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Operator </th><th class="col1"> Description </th><th class="col2"> Example </th>
@@ -1017,10 +1109,10 @@ Following table shows the Logical operators supported by PL/SQL. All these opera
 		<td class="col0"> not </td><td class="col1"> Called logical NOT Operator. Used to reverse the logical state of its operand. If a condition is true then Logical NOT operator will make it false. </td><td class="col2"> not (A and B) is true. </td>
 	</tr>
 </table></div>
-<!-- EDIT43 TABLE [27494-27955] -->
+<!-- EDIT45 TABLE [30229-30690] -->
 </div>
-<!-- EDIT42 SECTION "Logical operators" [27261-27956] -->
-<h3 class="sectionedit44" id="pl_sql_operator_precedence">PL/SQL Operator Precedence</h3>
+<!-- EDIT44 SECTION "Logical operators" [29996-30691] -->
+<h3 class="sectionedit46" id="pl_sql_operator_precedence">PL/SQL Operator Precedence</h3>
 <div class="level3">
 
 <p>
@@ -1042,7 +1134,7 @@ Here, operators with the highest precedence appear at the top of the table, thos
 <p>
 IS NULL, LIKE, BETWEEN, IN
 </p>
-<div class="table sectionedit45"><table class="inline">
+<div class="table sectionedit47"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Operator </th><th class="col1"> Operation </th>
@@ -1073,7 +1165,7 @@ IS NULL, LIKE, BETWEEN, IN
 		<td class="col0"> OR </td><td class="col1"> inclusion </td>
 	</tr>
 </table></div>
-<!-- EDIT45 TABLE [28682-28937] -->
+<!-- EDIT47 TABLE [31417-31672] -->
 <p>
 Example:
 </p>
@@ -1104,8 +1196,8 @@ END;
 /</pre>
 </div></div>
 </div>
-<!-- EDIT44 SECTION "PL/SQL Operator Precedence" [27957-29588] -->
-<h2 class="sectionedit46" id="pl_sql_-_conditions">PL/SQL - Conditions</h2>
+<!-- EDIT46 SECTION "PL/SQL Operator Precedence" [30692-32323] -->
+<h2 class="sectionedit48" id="pl_sql_-_conditions">PL/SQL - Conditions</h2>
 <div class="level2">
 
 <p>
@@ -1123,7 +1215,7 @@ Following is the general from of a typical conditional (i.e., decision making) s
 <p>
 PL/SQL programming language provides following types of decision-making statements. Click the following links to check their detail.
 </p>
-<div class="table sectionedit47"><table class="inline">
+<div class="table sectionedit49"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Statement </th><th class="col1"> Description </th>
@@ -1148,10 +1240,10 @@ PL/SQL programming language provides following types of decision-making statemen
 		<td class="col0"> nested IF-THEN-ELSE </td><td class="col1"> You can use one IF-THEN or IF-THEN-ELSIF statement inside another IF-THEN or IF-THEN-ELSIF statement(s). </td>
 	</tr>
 </table></div>
-<!-- EDIT47 TABLE [30247-31491] -->
+<!-- EDIT49 TABLE [32982-34226] -->
 </div>
-<!-- EDIT46 SECTION "PL/SQL - Conditions" [29589-31492] -->
-<h2 class="sectionedit48" id="pl_sql_-_loops">PL/SQL - Loops</h2>
+<!-- EDIT48 SECTION "PL/SQL - Conditions" [32324-34227] -->
+<h2 class="sectionedit50" id="pl_sql_-_loops">PL/SQL - Loops</h2>
 <div class="level2">
 
 <p>
@@ -1181,7 +1273,7 @@ Programming languages provide various control structures that allow for more com
 <p>
 A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages:
 </p>
-<div class="table sectionedit49"><table class="inline">
+<div class="table sectionedit51"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Loop Type </th><th class="col1"> Description </th>
@@ -1200,10 +1292,10 @@ A loop statement allows us to execute a statement or group of statements multipl
 		<td class="col0"> Nested loops in PL/SQL </td><td class="col1"> You can use one or more loop inside any another basic loop, while or for loop. </td>
 	</tr>
 </table></div>
-<!-- EDIT49 TABLE [32600-33228] -->
+<!-- EDIT51 TABLE [35335-35963] -->
 </div>
-<!-- EDIT48 SECTION "PL/SQL - Loops" [31493-33229] -->
-<h3 class="sectionedit50" id="labeling_a_pl_sql_loop">Labeling a PL/SQL Loop</h3>
+<!-- EDIT50 SECTION "PL/SQL - Loops" [34228-35964] -->
+<h3 class="sectionedit52" id="labeling_a_pl_sql_loop">Labeling a PL/SQL Loop</h3>
 <div class="level3">
 
 <p>
@@ -1228,8 +1320,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT50 SECTION "Labeling a PL/SQL Loop" [33230-33878] -->
-<h3 class="sectionedit51" id="the_loop_control_statements">The Loop Control Statements</h3>
+<!-- EDIT52 SECTION "Labeling a PL/SQL Loop" [35965-36613] -->
+<h3 class="sectionedit53" id="the_loop_control_statements">The Loop Control Statements</h3>
 <div class="level3">
 
 <p>
@@ -1239,7 +1331,7 @@ Loop control statements change execution from its normal sequence. When executio
 <p>
 PL/SQL supports the following control statements. Labeling loops also helps in taking the control outside a loop. Click the following links to check their details.
 </p>
-<div class="table sectionedit52"><table class="inline">
+<div class="table sectionedit54"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Control Statement </th><th class="col1"> Description </th>
@@ -1255,10 +1347,10 @@ PL/SQL supports the following control statements. Labeling loops also helps in t
 		<td class="col0"> GOTO statement </td><td class="col1"> Transfers control to the labeled statement. Though it is not advised to use GOTO statement in your program. </td>
 	</tr>
 </table></div>
-<!-- EDIT52 TABLE [34251-34671] -->
+<!-- EDIT54 TABLE [36986-37406] -->
 </div>
-<!-- EDIT51 SECTION "The Loop Control Statements" [33879-34672] -->
-<h2 class="sectionedit53" id="pl_sql_-_strings">PL/SQL - Strings</h2>
+<!-- EDIT53 SECTION "The Loop Control Statements" [36614-37407] -->
+<h2 class="sectionedit55" id="pl_sql_-_strings">PL/SQL - Strings</h2>
 <div class="level2">
 
 <p>
@@ -1284,8 +1376,8 @@ To include a single quote inside a string literal, you need to type two single q
 <pre class="code">&#039;this isn&#039;&#039;t what it looks like&#039;</pre>
 
 </div>
-<!-- EDIT53 SECTION "PL/SQL - Strings" [34673-35653] -->
-<h3 class="sectionedit54" id="declaring_string_variables">Declaring String Variables</h3>
+<!-- EDIT55 SECTION "PL/SQL - Strings" [37408-38388] -->
+<h3 class="sectionedit56" id="declaring_string_variables">Declaring String Variables</h3>
 <div class="level3">
 
 <p>
@@ -1320,8 +1412,8 @@ To declare a fixed-length string, use the CHAR datatype. Here you do not have to
  red_flag CHAR    := &#039;Y&#039;;  </pre>
 
 </div>
-<!-- EDIT54 SECTION "Declaring String Variables" [35654-36900] -->
-<h2 class="sectionedit55" id="pl_sql_string_functions_and_operators">PL/SQL String Functions and Operators</h2>
+<!-- EDIT56 SECTION "Declaring String Variables" [38389-39635] -->
+<h2 class="sectionedit57" id="pl_sql_string_functions_and_operators">PL/SQL String Functions and Operators</h2>
 <div class="level2">
 
 <p>
@@ -1407,8 +1499,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT55 SECTION "PL/SQL String Functions and Operators" [36901-40419] -->
-<h2 class="sectionedit56" id="pl_sql_-_arrays">PL/SQL - Arrays</h2>
+<!-- EDIT57 SECTION "PL/SQL String Functions and Operators" [39636-43154] -->
+<h2 class="sectionedit58" id="pl_sql_-_arrays">PL/SQL - Arrays</h2>
 <div class="level2">
 
 <p>
@@ -1432,8 +1524,8 @@ Each element in a varray has an index associated with it. It also has a maximum 
 </p>
 
 </div>
-<!-- EDIT56 SECTION "PL/SQL - Arrays" [40420-41213] -->
-<h3 class="sectionedit57" id="creating_a_varray_type">Creating a Varray Type</h3>
+<!-- EDIT58 SECTION "PL/SQL - Arrays" [43155-43948] -->
+<h3 class="sectionedit59" id="creating_a_varray_type">Creating a Varray Type</h3>
 <div class="level3">
 
 <p>
@@ -1516,8 +1608,8 @@ Please note:
 </ul>
 
 </div>
-<!-- EDIT57 SECTION "Creating a Varray Type" [41214-43065] -->
-<h2 class="sectionedit58" id="pl_sql_-_procedures">PL/SQL - Procedures</h2>
+<!-- EDIT59 SECTION "Creating a Varray Type" [43949-45800] -->
+<h2 class="sectionedit60" id="pl_sql_-_procedures">PL/SQL - Procedures</h2>
 <div class="level2">
 
 <p>
@@ -1559,14 +1651,14 @@ This chapter is going to cover important aspects of a PL/SQL procedure and we wi
 </p>
 
 </div>
-<!-- EDIT58 SECTION "PL/SQL - Procedures" [43066-44393] -->
-<h3 class="sectionedit59" id="parts_of_a_pl_sql_subprogram">Parts of a PL/SQL Subprogram</h3>
+<!-- EDIT60 SECTION "PL/SQL - Procedures" [45801-47128] -->
+<h3 class="sectionedit61" id="parts_of_a_pl_sql_subprogram">Parts of a PL/SQL Subprogram</h3>
 <div class="level3">
 
 <p>
 Each PL/SQL subprogram has a name, and may have a parameter list. Like anonymous PL/SQL blocks and, the named blocks a subprograms will also have following three parts:
 </p>
-<div class="table sectionedit60"><table class="inline">
+<div class="table sectionedit62"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> S.N. </th><th class="col1"> Parts &amp; Description </th>
@@ -1582,10 +1674,10 @@ Each PL/SQL subprogram has a name, and may have a parameter list. Like anonymous
 		<td class="col0"> 3 </td><td class="col1 leftalign"> <strong>Exception-handling</strong> - This is again an optional part. It contains the code that handles run-time errors.  </td>
 	</tr>
 </table></div>
-<!-- EDIT60 TABLE [44604-45212] -->
+<!-- EDIT62 TABLE [47339-47947] -->
 </div>
-<!-- EDIT59 SECTION "Parts of a PL/SQL Subprogram" [44394-45213] -->
-<h3 class="sectionedit61" id="creating_a_procedure">Creating a Procedure</h3>
+<!-- EDIT61 SECTION "Parts of a PL/SQL Subprogram" [47129-47948] -->
+<h3 class="sectionedit63" id="creating_a_procedure">Creating a Procedure</h3>
 <div class="level3">
 
 <p>
@@ -1629,8 +1721,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT61 SECTION "Creating a Procedure" [45214-46311] -->
-<h3 class="sectionedit62" id="executing_a_standalone_procedure">Executing a Standalone Procedure</h3>
+<!-- EDIT63 SECTION "Creating a Procedure" [47949-49046] -->
+<h3 class="sectionedit64" id="executing_a_standalone_procedure">Executing a Standalone Procedure</h3>
 <div class="level3">
 
 <p>
@@ -1669,8 +1761,8 @@ The above call would display:
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT62 SECTION "Executing a Standalone Procedure" [46312-46877] -->
-<h3 class="sectionedit63" id="deleting_a_standalone_procedure">Deleting a Standalone Procedure</h3>
+<!-- EDIT64 SECTION "Executing a Standalone Procedure" [49047-49612] -->
+<h3 class="sectionedit65" id="deleting_a_standalone_procedure">Deleting a Standalone Procedure</h3>
 <div class="level3">
 
 <p>
@@ -1684,10 +1776,10 @@ So you can drop greetings procedure by using the following statement:
 <pre class="code">DROP PROCEDURE greetings;</pre>
 
 </div>
-<!-- EDIT63 SECTION "Deleting a Standalone Procedure" [46878-47158] -->
-<h3 class="sectionedit64" id="parameter_modes_in_pl_sql_subprograms">Parameter Modes in PL/SQL Subprograms</h3>
+<!-- EDIT65 SECTION "Deleting a Standalone Procedure" [49613-49893] -->
+<h3 class="sectionedit66" id="parameter_modes_in_pl_sql_subprograms">Parameter Modes in PL/SQL Subprograms</h3>
 <div class="level3">
-<div class="table sectionedit65"><table class="inline">
+<div class="table sectionedit67"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> S.N. </th><th class="col1"> Parameter Mode &amp; Description </th>
@@ -1703,7 +1795,7 @@ So you can drop greetings procedure by using the following statement:
 		<td class="col0"> 3 </td><td class="col1"> <strong>IN OUT</strong> - An IN OUT parameter passes an initial value to a subprogram and returns an updated value to the caller. It can be assigned a value and its value can be read. The actual parameter corresponding to an IN OUT formal parameter must be a variable, not a constant or an expression. Formal parameter must be assigned a value. Actual parameter is passed by value. </td>
 	</tr>
 </table></div>
-<!-- EDIT65 TABLE [47208-48371] -->
+<!-- EDIT67 TABLE [49943-51106] -->
 <p>
 <strong>IN &amp; OUT Mode Example 1</strong>
 </p>
@@ -1738,8 +1830,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT64 SECTION "Parameter Modes in PL/SQL Subprograms" [47159-49036] -->
-<h3 class="sectionedit66" id="methods_for_passing_parameters">Methods for Passing Parameters</h3>
+<!-- EDIT66 SECTION "Parameter Modes in PL/SQL Subprograms" [49894-51771] -->
+<h3 class="sectionedit68" id="methods_for_passing_parameters">Methods for Passing Parameters</h3>
 <div class="level3">
 
 <p>
@@ -1798,8 +1890,8 @@ But this is not legal:
 <pre class="code">findMin(x=&gt;a, b, c, d);  </pre>
 
 </div>
-<!-- EDIT66 SECTION "Methods for Passing Parameters" [49037-50065] -->
-<h2 class="sectionedit67" id="pl_sql_-_functions">PL/SQL - Functions</h2>
+<!-- EDIT68 SECTION "Methods for Passing Parameters" [51772-52800] -->
+<h2 class="sectionedit69" id="pl_sql_-_functions">PL/SQL - Functions</h2>
 <div class="level2">
 
 <p>
@@ -1807,8 +1899,8 @@ PL/SQL function is same as a procedure except that it returns a value. Therefore
 </p>
 
 </div>
-<!-- EDIT67 SECTION "PL/SQL - Functions" [50066-50252] -->
-<h3 class="sectionedit68" id="creating_a_function">Creating a Function</h3>
+<!-- EDIT69 SECTION "PL/SQL - Functions" [52801-52987] -->
+<h3 class="sectionedit70" id="creating_a_function">Creating a Function</h3>
 <div class="level3">
 
 <p>
@@ -1875,8 +1967,8 @@ When above code is executed using SQL prompt, it will produce the following resu
 </p>
 
 </div>
-<!-- EDIT68 SECTION "Creating a Function" [50253-52297] -->
-<h3 class="sectionedit69" id="calling_a_function">Calling a function</h3>
+<!-- EDIT70 SECTION "Creating a Function" [52988-55032] -->
+<h3 class="sectionedit71" id="calling_a_function">Calling a function</h3>
 <div class="level3">
 
 <p>
@@ -1930,8 +2022,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT69 SECTION "Calling a function" [52298-53686] -->
-<h3 class="sectionedit70" id="pl_sql_recursive_functions">PL/SQL Recursive Functions</h3>
+<!-- EDIT71 SECTION "Calling a function" [55033-56421] -->
+<h3 class="sectionedit72" id="pl_sql_recursive_functions">PL/SQL Recursive Functions</h3>
 <div class="level3">
 
 <p>
@@ -1972,8 +2064,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT70 SECTION "PL/SQL Recursive Functions" [53687-54559] -->
-<h2 class="sectionedit71" id="pl_sql_-_cursors">PL/SQL - Cursors</h2>
+<!-- EDIT72 SECTION "PL/SQL Recursive Functions" [56422-57294] -->
+<h2 class="sectionedit73" id="pl_sql_-_cursors">PL/SQL - Cursors</h2>
 <div class="level2">
 
 <p>
@@ -1995,8 +2087,8 @@ You can name a cursor so that it could be referred to in a program to fetch and 
 </ul>
 
 </div>
-<!-- EDIT71 SECTION "PL/SQL - Cursors" [54560-55237] -->
-<h3 class="sectionedit72" id="implicit_cursors">Implicit Cursors</h3>
+<!-- EDIT73 SECTION "PL/SQL - Cursors" [57295-57972] -->
+<h3 class="sectionedit74" id="implicit_cursors">Implicit Cursors</h3>
 <div class="level3">
 
 <p>
@@ -2062,8 +2154,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT72 SECTION "Implicit Cursors" [55238-58054] -->
-<h3 class="sectionedit73" id="explicit_cursors">Explicit Cursors</h3>
+<!-- EDIT74 SECTION "Implicit Cursors" [57973-60789] -->
+<h3 class="sectionedit75" id="explicit_cursors">Explicit Cursors</h3>
 <div class="level3">
 
 <p>
@@ -2163,8 +2255,8 @@ PL/SQL procedure successfully completed.
 </p>
 
 </div>
-<!-- EDIT73 SECTION "Explicit Cursors" [58055-60252] -->
-<h2 class="sectionedit74" id="pl_sql_-_records">PL/SQL - Records</h2>
+<!-- EDIT75 SECTION "Explicit Cursors" [60790-62987] -->
+<h2 class="sectionedit76" id="pl_sql_-_records">PL/SQL - Records</h2>
 <div class="level2">
 
 <p>
@@ -2188,8 +2280,8 @@ PL/SQL can handle the following types of records:
 </ul>
 
 </div>
-<!-- EDIT74 SECTION "PL/SQL - Records" [60253-60892] -->
-<h3 class="sectionedit75" id="table-based_records">Table-Based Records</h3>
+<!-- EDIT76 SECTION "PL/SQL - Records" [62988-63627] -->
+<h3 class="sectionedit77" id="table-based_records">Table-Based Records</h3>
 <div class="level3">
 
 <p>
@@ -2213,8 +2305,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT75 SECTION "Table-Based Records" [60893-61594] -->
-<h3 class="sectionedit76" id="cursor-based_records">Cursor-Based Records</h3>
+<!-- EDIT77 SECTION "Table-Based Records" [63628-64329] -->
+<h3 class="sectionedit78" id="cursor-based_records">Cursor-Based Records</h3>
 <div class="level3">
 
 <p>
@@ -2236,8 +2328,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT76 SECTION "Cursor-Based Records" [61595-62159] -->
-<h3 class="sectionedit77" id="user-defined_records">User-Defined Records</h3>
+<!-- EDIT78 SECTION "Cursor-Based Records" [64330-64894] -->
+<h3 class="sectionedit79" id="user-defined_records">User-Defined Records</h3>
 <div class="level3">
 
 <p>
@@ -2255,8 +2347,8 @@ PL/SQL provides a user-defined record type that allows you to define different r
 </ul>
 
 </div>
-<!-- EDIT77 SECTION "User-Defined Records" [62160-62497] -->
-<h3 class="sectionedit78" id="defining_a_record">Defining a Record</h3>
+<!-- EDIT79 SECTION "User-Defined Records" [64895-65232] -->
+<h3 class="sectionedit80" id="defining_a_record">Defining a Record</h3>
 <div class="level3">
 
 <p>
@@ -2283,8 +2375,8 @@ book1 books;
 book2 books;</pre>
 
 </div>
-<!-- EDIT78 SECTION "Defining a Record" [62498-63043] -->
-<h3 class="sectionedit79" id="accessing_fields">Accessing Fields</h3>
+<!-- EDIT80 SECTION "Defining a Record" [65233-65778] -->
+<h3 class="sectionedit81" id="accessing_fields">Accessing Fields</h3>
 <div class="level3">
 
 <p>
@@ -2341,8 +2433,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT79 SECTION "Accessing Fields" [63044-64437] -->
-<h3 class="sectionedit80" id="records_as_subprogram_parameters">Records as Subprogram Parameters</h3>
+<!-- EDIT81 SECTION "Accessing Fields" [65779-67172] -->
+<h3 class="sectionedit82" id="records_as_subprogram_parameters">Records as Subprogram Parameters</h3>
 <div class="level3">
 
 <p>
@@ -2393,8 +2485,8 @@ END;
 /</pre>
 
 </div>
-<!-- EDIT80 SECTION "Records as Subprogram Parameters" [64438-65644] -->
-<h2 class="sectionedit81" id="pl_sql_-_exceptions">PL/SQL - Exceptions</h2>
+<!-- EDIT82 SECTION "Records as Subprogram Parameters" [67173-68379] -->
+<h2 class="sectionedit83" id="pl_sql_-_exceptions">PL/SQL - Exceptions</h2>
 <div class="level2">
 
 <p>
@@ -2408,8 +2500,8 @@ An error condition during a program execution is called an exception in PL/SQL. 
 </ul>
 
 </div>
-<!-- EDIT81 SECTION "PL/SQL - Exceptions" [65645-66005] -->
-<h3 class="sectionedit82" id="syntax_for_exception_handling">Syntax for Exception Handling</h3>
+<!-- EDIT83 SECTION "PL/SQL - Exceptions" [68380-68740] -->
+<h3 class="sectionedit84" id="syntax_for_exception_handling">Syntax for Exception Handling</h3>
 <div class="level3">
 
 <p>
@@ -2468,8 +2560,8 @@ The above program displays the name and address of a customer whose ID is given.
 </p>
 
 </div>
-<!-- EDIT82 SECTION "Syntax for Exception Handling" [66006-67665] -->
-<h3 class="sectionedit83" id="raising_exceptions">Raising Exceptions</h3>
+<!-- EDIT84 SECTION "Syntax for Exception Handling" [68741-70400] -->
+<h3 class="sectionedit85" id="raising_exceptions">Raising Exceptions</h3>
 <div class="level3">
 
 <p>
@@ -2491,8 +2583,8 @@ You can use above syntax in raising Oracle standard exception or any user-define
 </p>
 
 </div>
-<!-- EDIT83 SECTION "Raising Exceptions" [67666-68354] -->
-<h3 class="sectionedit84" id="user-defined_exceptions">User-defined Exceptions</h3>
+<!-- EDIT85 SECTION "Raising Exceptions" [70401-71089] -->
+<h3 class="sectionedit86" id="user-defined_exceptions">User-defined Exceptions</h3>
 <div class="level3">
 
 <p>
@@ -2554,14 +2646,14 @@ ID must be greater than zero!</pre>
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT84 SECTION "User-defined Exceptions" [68355-69914] -->
-<h3 class="sectionedit85" id="pre-defined_exceptions">Pre-defined Exceptions</h3>
+<!-- EDIT86 SECTION "User-defined Exceptions" [71090-72649] -->
+<h3 class="sectionedit87" id="pre-defined_exceptions">Pre-defined Exceptions</h3>
 <div class="level3">
 
 <p>
 PL/SQL provides many pre-defined exceptions, which are executed when any database rule is violated by a program. For example, the predefined exception NO_DATA_FOUND is raised when a SELECT INTO statement returns no rows. The following table lists few of the important pre-defined exceptions:  
 </p>
-<div class="table sectionedit86"><table class="inline">
+<div class="table sectionedit88"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Exception  </th><th class="col1 leftalign"> Oracle error  </th><th class="col2 leftalign"> SQLCODE  </th><th class="col3 leftalign"> Description  </th>
@@ -2616,10 +2708,10 @@ PL/SQL provides many pre-defined exceptions, which are executed when any databas
 		<td class="col0 leftalign"> ZERO_DIVIDE  </td><td class="col1 centeralign">  01476  </td><td class="col2 centeralign">  1476   </td><td class="col3 leftalign"> It is raised when an attempt is made to divide a number by zero.  </td>
 	</tr>
 </table></div>
-<!-- EDIT86 TABLE [70244-72529] -->
+<!-- EDIT88 TABLE [72979-75264] -->
 </div>
-<!-- EDIT85 SECTION "Pre-defined Exceptions" [69915-72530] -->
-<h2 class="sectionedit87" id="pl_sql_-_triggers">PL/SQL - Triggers</h2>
+<!-- EDIT87 SECTION "Pre-defined Exceptions" [72650-75265] -->
+<h2 class="sectionedit89" id="pl_sql_-_triggers">PL/SQL - Triggers</h2>
 <div class="level2">
 
 <p>
@@ -2639,8 +2731,8 @@ Triggers could be defined on the table, view, schema, or database with which the
 </p>
 
 </div>
-<!-- EDIT87 SECTION "PL/SQL - Triggers" [72531-73069] -->
-<h3 class="sectionedit88" id="benefits_of_triggers">Benefits of Triggers</h3>
+<!-- EDIT89 SECTION "PL/SQL - Triggers" [75266-75804] -->
+<h3 class="sectionedit90" id="benefits_of_triggers">Benefits of Triggers</h3>
 <div class="level3">
 
 <p>
@@ -2664,8 +2756,8 @@ Triggers can be written for the following purposes:
 </ul>
 
 </div>
-<!-- EDIT88 SECTION "Benefits of Triggers" [73070-73428] -->
-<h3 class="sectionedit89" id="creating_triggers">Creating Triggers</h3>
+<!-- EDIT90 SECTION "Benefits of Triggers" [75805-76163] -->
+<h3 class="sectionedit91" id="creating_triggers">Creating Triggers</h3>
 <div class="level3">
 
 <p>
@@ -2766,8 +2858,8 @@ Here following two points are important and should be noted carefully:
 </ul>
 
 </div>
-<!-- EDIT89 SECTION "Creating Triggers" [73429-77021] -->
-<h3 class="sectionedit90" id="triggering_a_trigger">Triggering a Trigger</h3>
+<!-- EDIT91 SECTION "Creating Triggers" [76164-79756] -->
+<h3 class="sectionedit92" id="triggering_a_trigger">Triggering a Trigger</h3>
 <div class="level3">
 
 <p>
@@ -2798,8 +2890,8 @@ New salary: 2000
 Salary difference: 500</pre>
 
 </div>
-<!-- EDIT90 SECTION "Triggering a Trigger" [77022-78013] -->
-<h2 class="sectionedit91" id="pl_sql_-_packages">PL/SQL - Packages</h2>
+<!-- EDIT92 SECTION "Triggering a Trigger" [79757-80748] -->
+<h2 class="sectionedit93" id="pl_sql_-_packages">PL/SQL - Packages</h2>
 <div class="level2">
 
 <p>
@@ -2817,8 +2909,8 @@ A package will have two mandatory parts:
 </ul>
 
 </div>
-<!-- EDIT91 SECTION "PL/SQL - Packages" [78014-78250] -->
-<h3 class="sectionedit92" id="package_specification">Package Specification</h3>
+<!-- EDIT93 SECTION "PL/SQL - Packages" [80749-80985] -->
+<h3 class="sectionedit94" id="package_specification">Package Specification</h3>
 <div class="level3">
 
 <p>
@@ -2843,8 +2935,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">Package created.  </pre>
 
 </div>
-<!-- EDIT92 SECTION "Package Specification" [78251-79156] -->
-<h3 class="sectionedit93" id="package_body">Package Body</h3>
+<!-- EDIT94 SECTION "Package Specification" [80986-81891] -->
+<h3 class="sectionedit95" id="package_body">Package Body</h3>
 <div class="level3">
 
 <p>
@@ -2872,8 +2964,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">Package body created.</pre>
 
 </div>
-<!-- EDIT93 SECTION "Package Body" [79157-80089] -->
-<h3 class="sectionedit94" id="using_the_package_elements">Using the Package Elements</h3>
+<!-- EDIT95 SECTION "Package Body" [81892-82824] -->
+<h3 class="sectionedit96" id="using_the_package_elements">Using the Package Elements</h3>
 <div class="level3">
 
 <p>
@@ -3031,8 +3123,8 @@ Customer(7): Rajnish</pre>
 <pre class="code">PL/SQL procedure successfully completed  </pre>
 
 </div>
-<!-- EDIT94 SECTION "Using the Package Elements" [80090-84143] -->
-<h2 class="sectionedit95" id="pl_sql_-_collections">PL/SQL - Collections</h2>
+<!-- EDIT96 SECTION "Using the Package Elements" [82825-86878] -->
+<h2 class="sectionedit97" id="pl_sql_-_collections">PL/SQL - Collections</h2>
 <div class="level2">
 
 <p>
@@ -3054,7 +3146,7 @@ PL/SQL provides three collection types:
 <p>
 Oracle documentation provides the following characteristics for each type of collections:
 </p>
-<div class="table sectionedit96"><table class="inline">
+<div class="table sectionedit98"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0 leftalign"> Collection type  </th><th class="col1 leftalign"> Number of Elements  </th><th class="col2 leftalign"> Subscript Type  </th><th class="col3 leftalign"> Dense or Sparse  </th><th class="col4 leftalign"> Where Created  </th><th class="col5 leftalign"> Can Be Object Type Attribute  </th>
@@ -3070,7 +3162,7 @@ Oracle documentation provides the following characteristics for each type of col
 		<td class="col0 leftalign"> Variable-size array (Varray)  </td><td class="col1 leftalign"> Bounded  </td><td class="col2 leftalign"> Integer  </td><td class="col3 leftalign"> Always dense  </td><td class="col4 leftalign"> Either in PL/SQL block or at schema level  </td><td class="col5 centeralign">  Yes  </td>
 	</tr>
 </table></div>
-<!-- EDIT96 TABLE [84571-85072] -->
+<!-- EDIT98 TABLE [87306-87807] -->
 <p>
 We have already discussed varray in the chapter &#039;<a href="/docuwiki/doku.php?id=nortal:plsql#pl_sql_-_arrays" class="wikilink1" title="nortal:plsql">PL/SQL arrays</a>&#039;. In this chapter, we will discuss PL/SQL tables.
 </p>
@@ -3080,8 +3172,8 @@ Both types of PL/SQL tables, i.e., index-by tables and nested tables have the sa
 </p>
 
 </div>
-<!-- EDIT95 SECTION "PL/SQL - Collections" [84144-85514] -->
-<h3 class="sectionedit97" id="index-by_table">Index-By Table</h3>
+<!-- EDIT97 SECTION "PL/SQL - Collections" [86879-88249] -->
+<h3 class="sectionedit99" id="index-by_table">Index-By Table</h3>
 <div class="level3">
 
 <p>
@@ -3181,8 +3273,8 @@ Customer(6): Komal</pre>
 <pre class="code">PL/SQL procedure successfully completed</pre>
 
 </div>
-<!-- EDIT97 SECTION "Index-By Table" [85515-88437] -->
-<h3 class="sectionedit98" id="nested_tables">Nested Tables</h3>
+<!-- EDIT99 SECTION "Index-By Table" [88250-91172] -->
+<h3 class="sectionedit100" id="nested_tables">Nested Tables</h3>
 <div class="level3">
 
 <p>
@@ -3291,8 +3383,8 @@ Customer(6): Komal</pre>
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT98 SECTION "Nested Tables" [88438-91677] -->
-<h3 class="sectionedit99" id="collection_methods">Collection Methods</h3>
+<!-- EDIT100 SECTION "Nested Tables" [91173-94412] -->
+<h3 class="sectionedit101" id="collection_methods">Collection Methods</h3>
 <div class="level3">
 
 <p>
@@ -3332,8 +3424,8 @@ PL/SQL provides the built-in collection methods that make collections easier to 
 </ol>
 
 </div>
-<!-- EDIT99 SECTION "Collection Methods" [91678-93229] -->
-<h3 class="sectionedit100" id="collection_exceptions">Collection Exceptions</h3>
+<!-- EDIT101 SECTION "Collection Methods" [94413-95964] -->
+<h3 class="sectionedit102" id="collection_exceptions">Collection Exceptions</h3>
 <div class="level3">
 
 <p>
@@ -3353,8 +3445,8 @@ The following table provides the collection exceptions and when they are raised:
 </ul>
 
 </div>
-<!-- EDIT100 SECTION "Collection Exceptions" [93230-93893] -->
-<h2 class="sectionedit101" id="pl_sql_-_transactions">PL/SQL - Transactions</h2>
+<!-- EDIT102 SECTION "Collection Exceptions" [95965-96628] -->
+<h2 class="sectionedit103" id="pl_sql_-_transactions">PL/SQL - Transactions</h2>
 <div class="level2">
 
 <p>
@@ -3366,8 +3458,8 @@ A successfully executed SQL statement and a committed transaction are not same. 
 </p>
 
 </div>
-<!-- EDIT101 SECTION "PL/SQL - Transactions" [93894-94545] -->
-<h3 class="sectionedit102" id="starting_and_ending_a_transaction">Starting and Ending a Transaction</h3>
+<!-- EDIT103 SECTION "PL/SQL - Transactions" [96629-97280] -->
+<h3 class="sectionedit104" id="starting_and_ending_a_transaction">Starting and Ending a Transaction</h3>
 <div class="level3">
 
 <p>
@@ -3401,8 +3493,8 @@ A transaction ends when one of the following events take place:
 </ul>
 
 </div>
-<!-- EDIT102 SECTION "Starting and Ending a Transaction" [94546-95514] -->
-<h3 class="sectionedit103" id="committing_a_transaction">Committing a Transaction</h3>
+<!-- EDIT104 SECTION "Starting and Ending a Transaction" [97281-98249] -->
+<h3 class="sectionedit105" id="committing_a_transaction">Committing a Transaction</h3>
 <div class="level3">
 
 <p>
@@ -3428,8 +3520,8 @@ VALUES (6, &#039;Komal&#039;, 22, &#039;MP&#039;, 4500.00 );
 COMMIT;</pre>
 
 </div>
-<!-- EDIT103 SECTION "Committing a Transaction" [95515-96303] -->
-<h3 class="sectionedit104" id="rolling_back_transactions">Rolling Back Transactions</h3>
+<!-- EDIT105 SECTION "Committing a Transaction" [98250-99038] -->
+<h3 class="sectionedit106" id="rolling_back_transactions">Rolling Back Transactions</h3>
 <div class="level3">
 
 <p>
@@ -3447,8 +3539,8 @@ When a transaction is aborted due to some unprecedented situation, like system f
 <pre class="code">ROLLBACK; </pre>
 
 </div>
-<!-- EDIT104 SECTION "Rolling Back Transactions" [96304-96794] -->
-<h3 class="sectionedit105" id="savepoints">Savepoints</h3>
+<!-- EDIT106 SECTION "Rolling Back Transactions" [99039-99529] -->
+<h3 class="sectionedit107" id="savepoints">Savepoints</h3>
 <div class="level3">
 
 <p>
@@ -3484,8 +3576,8 @@ Here,ROLLBACK TO sav1; statement rolls back the changes up to the point, where y
 </p>
 
 </div>
-<!-- EDIT105 SECTION "Savepoints" [96795-97747] -->
-<h3 class="sectionedit106" id="automatic_transaction_control">Automatic Transaction Control</h3>
+<!-- EDIT107 SECTION "Savepoints" [99530-100482] -->
+<h3 class="sectionedit108" id="automatic_transaction_control">Automatic Transaction Control</h3>
 <div class="level3">
 
 <p>
@@ -3499,8 +3591,8 @@ You can turn-off auto commit mode using the following command:
 <pre class="code">SET AUTOCOMMIT OFF;</pre>
 
 </div>
-<!-- EDIT106 SECTION "Automatic Transaction Control" [97748-98042] -->
-<h2 class="sectionedit107" id="pl_sql_-_date_time">PL/SQL - Date &amp; Time</h2>
+<!-- EDIT108 SECTION "Automatic Transaction Control" [100483-100777] -->
+<h2 class="sectionedit109" id="pl_sql_-_date_time">PL/SQL - Date &amp; Time</h2>
 <div class="level2">
 
 <p>
@@ -3538,14 +3630,14 @@ The Interval data types are:
 </ul>
 
 </div>
-<!-- EDIT107 SECTION "PL/SQL - Date & Time" [98043-98391] -->
-<h3 class="sectionedit108" id="field_values_for_datetime_and_interval_data_types">Field Values for Datetime and Interval Data Types</h3>
+<!-- EDIT109 SECTION "PL/SQL - Date & Time" [100778-101126] -->
+<h3 class="sectionedit110" id="field_values_for_datetime_and_interval_data_types">Field Values for Datetime and Interval Data Types</h3>
 <div class="level3">
 
 <p>
 Both datetime and interval data types consist of fields. The values of these fields determine the value of the datatype. The following table lists the fields and their possible values for datetimes and intervals.
 </p>
-<div class="table sectionedit109"><table class="inline">
+<div class="table sectionedit111"><table class="inline">
 	<thead>
 	<tr class="row0">
 		<th class="col0"> Field Name </th><th class="col1"> Valid Datetime Values </th><th class="col2"> Valid Interval Values </th>
@@ -3582,10 +3674,10 @@ Both datetime and interval data types consist of fields. The values of these fie
 		<td class="col0"> TIMEZONE_ABBR </td><td class="col1"> Not applicable for DATE or TIMESTAMP. </td><td class="col2"> Not applicable </td>
 	</tr>
 </table></div>
-<!-- EDIT109 TABLE [98667-99611] -->
+<!-- EDIT111 TABLE [101402-102346] -->
 </div>
-<!-- EDIT108 SECTION "Field Values for Datetime and Interval Data Types" [98392-99612] -->
-<h3 class="sectionedit110" id="the_datetime_data_types_and_functions">The Datetime Data Types and Functions</h3>
+<!-- EDIT110 SECTION "Field Values for Datetime and Interval Data Types" [101127-102347] -->
+<h3 class="sectionedit112" id="the_datetime_data_types_and_functions">The Datetime Data Types and Functions</h3>
 <div class="level3">
 
 <p>
@@ -3679,8 +3771,8 @@ Output:
 <pre class="code">8/31/2012 5:26:55.347000 PM</pre>
 
 </div>
-<!-- EDIT110 SECTION "The Datetime Data Types and Functions" [99613-102466] -->
-<h3 class="sectionedit111" id="the_interval_data_types_and_functions">The Interval Data Types and Functions</h3>
+<!-- EDIT112 SECTION "The Datetime Data Types and Functions" [102348-105201] -->
+<h3 class="sectionedit113" id="the_interval_data_types_and_functions">The Interval Data Types and Functions</h3>
 <div class="level3">
 
 <p>
@@ -3708,8 +3800,8 @@ Interval functions:
 </ol>
 
 </div>
-<!-- EDIT111 SECTION "The Interval Data Types and Functions" [102467-103109] -->
-<h2 class="sectionedit112" id="pl_sql_-_dbms_output">PL/SQL - DBMS Output</h2>
+<!-- EDIT113 SECTION "The Interval Data Types and Functions" [105202-105844] -->
+<h2 class="sectionedit114" id="pl_sql_-_dbms_output">PL/SQL - DBMS Output</h2>
 <div class="level2">
 
 <p>
@@ -3781,8 +3873,8 @@ Have a great time exploring pl/sql!</pre>
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT112 SECTION "PL/SQL - DBMS Output" [103110-105192] -->
-<h2 class="sectionedit113" id="pl_sql_-_object_oriented">PL/SQL - Object Oriented</h2>
+<!-- EDIT114 SECTION "PL/SQL - DBMS Output" [105845-107927] -->
+<h2 class="sectionedit115" id="pl_sql_-_object_oriented">PL/SQL - Object Oriented</h2>
 <div class="level2">
 
 <p>
@@ -3824,8 +3916,8 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">Type created.</pre>
 
 </div>
-<!-- EDIT113 SECTION "PL/SQL - Object Oriented" [105193-106488] -->
-<h3 class="sectionedit114" id="instantiating_an_object">Instantiating an Object</h3>
+<!-- EDIT115 SECTION "PL/SQL - Object Oriented" [107928-109223] -->
+<h3 class="sectionedit116" id="instantiating_an_object">Instantiating an Object</h3>
 <div class="level3">
 
 <p>
@@ -3866,8 +3958,8 @@ PL/SQL procedure successfully completed.
 </p>
 
 </div>
-<!-- EDIT114 SECTION "Instantiating an Object" [106489-107548] -->
-<h3 class="sectionedit115" id="member_methods">Member Methods</h3>
+<!-- EDIT116 SECTION "Instantiating an Object" [109224-110283] -->
+<h3 class="sectionedit117" id="member_methods">Member Methods</h3>
 <div class="level3">
 
 <p>
@@ -3890,8 +3982,8 @@ The comparison methods are used for comparing objects. There are two ways to com
 </ul>
 
 </div>
-<!-- EDIT115 SECTION "Member Methods" [107549-108752] -->
-<h3 class="sectionedit116" id="using_map_method">Using Map method</h3>
+<!-- EDIT117 SECTION "Member Methods" [110284-111487] -->
+<h3 class="sectionedit118" id="using_map_method">Using Map method</h3>
 <div class="level3">
 
 <p>
@@ -3967,8 +4059,8 @@ Width: 7</pre>
 <pre class="code">PL/SQL procedure successfully completed.  </pre>
 
 </div>
-<!-- EDIT116 SECTION "Using Map method" [108753-110392] -->
-<h3 class="sectionedit117" id="using_order_method">Using Order method</h3>
+<!-- EDIT118 SECTION "Using Map method" [111488-113127] -->
+<h3 class="sectionedit119" id="using_order_method">Using Order method</h3>
 <div class="level3">
 
 <p>
@@ -4043,8 +4135,8 @@ Width: 44</pre>
 <pre class="code">PL/SQL procedure successfully completed.</pre>
 
 </div>
-<!-- EDIT117 SECTION "Using Order method" [110393-111987] -->
-<h3 class="sectionedit118" id="inheritance_for_pl_sql_objects">Inheritance for PL/SQL Objects:</h3>
+<!-- EDIT119 SECTION "Using Order method" [113128-114722] -->
+<h3 class="sectionedit120" id="inheritance_for_pl_sql_objects">Inheritance for PL/SQL Objects:</h3>
 <div class="level3">
 
 <p>
@@ -4145,8 +4237,8 @@ Material: Steel</pre>
 <pre class="code">PL/SQL procedure successfully completed.  </pre>
 
 </div>
-<!-- EDIT118 SECTION "Inheritance for PL/SQL Objects:" [111988-114317] -->
-<h3 class="sectionedit119" id="abstract_objects_in_pl_sql">Abstract Objects in PL/SQL</h3>
+<!-- EDIT120 SECTION "Inheritance for PL/SQL Objects:" [114723-117052] -->
+<h3 class="sectionedit121" id="abstract_objects_in_pl_sql">Abstract Objects in PL/SQL</h3>
 <div class="level3">
 
 <p>
@@ -4169,4 +4261,4 @@ When the above code is executed at SQL prompt, it produces the following result:
 <pre class="code">Type created.</pre>
 
 </div>
-<!-- EDIT119 SECTION "Abstract Objects in PL/SQL" [114318-] -->
+<!-- EDIT121 SECTION "Abstract Objects in PL/SQL" [117053-] -->

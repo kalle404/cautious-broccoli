@@ -10,6 +10,54 @@ PL/SQL is one of three key programming languages embedded in the Oracle Database
 
 This tutorial will give you great understanding on PL/SQL to proceed with Oracle database and other advanced RDBMS concepts.
 
+
+==== Normal forms  ====
+
+  * (1) First normal form 
+    * each column must contain only one value 
+    * no table can have repeating groups of related data
+  * (2) Second normal form 
+    * requirements described in (1) 
+    * and every column in the table that is not a key must be dependent upon the primary key
+  * Third normal form
+    * requirements described in (2)
+    * and every non-key column is mutually independent.
+
+Overruling normalization
+  * As much as ensuring that a database is in 3NF will help guarantee reliability and viability, you won't fully normalize every database with which you work. Before undermining the proper methods, though, understand that doing so may have devastating long-term consequence. 
+  * The two primary reasons to overrule normalization are convenience and performance. Fewer tables are easier to manipulate and comprehend than more. Further, because of their more intricate nature, normalized databases will most likely be slower for updating, retrieving data from, and modifying. Normalization, in short, is a trade-off between data integrity/ scalability and simplicity/ speed. On the other hand, there are ways to improve your database's performance but few to remedy corrupted data that can result from poor design. 
+
+
+==== Database optimization ====
+
+The performance of your database is primarily dependent upon its structure and indexes. When creating databases, try to
+  * choose the best storage engine; 
+  * use the smallest data type possible for each column; 
+  * define columns as NOT NULL whenever possible; 
+  * use integers as primary keys; 
+  * judicously define indexes, selecting the correct type and applying them to the right column or columns; 
+  * limit indexes to certain number of characters, if applicable. 
+
+Along with these tips, there are two simple techniques for optimizing tables. One way to improve MySQL's performance is to run an OPTIMIZE command on such tables. This query will rid a table of any unnecessary overhead, thereby speeding any interactions with it. Running this command is particulary beneficial after changing a table via an ALTER command. 
+
+  OPTIMIZE TABLE //tablename//
+
+To improve a query's efficency, it helps to understand how exactly MySQL will run that query. This can be accomplished using the EXPLAIN SQL keyword. Explaining queries is a very advanced topic, so see th MySQL manual or search the Web for more information. 
+
+**To show columns** 
+
+	show columns from tblcontacts;
+
+** To describe a table **
+	describe tblcontracts; 
+
+**To explain an action**
+
+    explain 
+      select con.zippostcode 
+      from tblcontacts con
+      join tblcontracts cont on con.contactid = cont.contractclient
+      where con.contactid = 48;
 ==== Audience ====
 
 This tutorial is designed for Software Professionals, who are willing to learn PL/SQL Programming Language in simple and easy steps. This tutorial will give you great understanding on PL/SQL Programming concepts, and after completing this tutorial, you will be at intermediate level of expertise from where you can take yourself to higher level of expertise.

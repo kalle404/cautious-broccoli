@@ -1,0 +1,310 @@
+<a name="wikiitgit__"></a>
+<h1><bookmark content="Version management" level="0" /><a name="wikiitgit__version_management">Version management</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><bookmark content="Git" level="1" /><a name="wikiitgit__git">Git</a></h2>
+<div class="level2">
+
+<p>
+Git <a href="https://git-scm.com/doc" class="urlextern" title="https://git-scm.com/doc" rel="nofollow">documentation</a>
+</p>
+
+<p>
+Git is a version control system that is used for software development and other version control tasks. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows. Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.
+</p>
+
+<p>
+As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server. Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License version 2.
+</p>
+
+<p>
+<strong>Kasutatud mõisted</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Working directory - where you&#039;ll be doing all the work: creating, editing, deleting and organizing files. </div>
+</li>
+<li class="level1"><div class="li"> Staging area - where you&#039;ll list changes you make to the working directory.</div>
+</li>
+<li class="level1 node"><div class="li"> Repository - where Git permanently stores those changes as different <em>versions</em> of the project.</div>
+<ul>
+<li class="level2"><div class="li"> Commit - saving changes to the repository. </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> HEAD - You can think of the HEAD as the “current branch”. When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.</div>
+</li>
+<li class="level1"><div class="li"> CHECKOUT - Updates files in the working tree to match the version in the index or the specified tree. If no paths are given, git checkout will also update HEAD to set the specified branch as the current branch.</div>
+</li>
+<li class="level1"><div class="li"> BRANCH - a branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master. As you initially make commits, you&#039;re given a master branch that points to the last commit you made. Every time you commit, it moves forward automatically.</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="Workflow" level="2" /><a name="wikiitgit__workflow">Workflow</a></h3>
+<div class="level3">
+
+<p>
+<strong>Basic workflow</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Käivita Git Bash</div>
+</li>
+<li class="level1"><div class="li"> Liigu soovitud teeki, milles alustada GIT projekti, ning käivita käsurealt &#039;<strong>git init</strong>&#039; (<em>The command sets up all the tools Git needs to begin tracking changes made to the project</em>). Sellega on vastav kataloog valmis Git versioonihaldust kasutama. </div>
+</li>
+<li class="level1 node"><div class="li"> Failide lisamiseks Git versioonihaldusesse, käivita &#039;<strong>git add [failinimi</strong>&#039; või &#039;<strong>git add </strong>*&#039;.</div>
+<ul>
+<li class="level2"><div class="li"> Käsuga &#039;git status&#039; on näha teegis olevad failid. Juhul kui failid on lisatud Git-i, on need rohelised, juhul kui pole, on need punased. </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Käsuga &#039;<strong>git diff [failinimi]</strong>&#039; on näha failis tehtud muudatused.</div>
+</li>
+<li class="level1 node"><div class="li"> Kui tehtud muudatused on sobivad salvestamiseks, saab need käsuga &#039;<strong>git commit</strong>&#039; reposse saata. </div>
+<ul>
+<li class="level2"><div class="li"> süntaks ise on taoline &#039;<strong>git commit -m “[muudatuse nimi]“</strong>&#039;</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Käsuga &#039;<strong>git log</strong>&#039; on võimalik näha <em>current branch</em>-i commit-e.  </div>
+</li>
+</ul>
+
+<p>
+<strong>Lihtsa töövoo peamised käsud</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>git init</strong> creates a new Git repository</div>
+</li>
+<li class="level1"><div class="li"> <strong>git status</strong> inspects the contents of the working directory and staging area</div>
+</li>
+<li class="level1"><div class="li"> <strong>git add</strong> adds files from the working directory to the staging area</div>
+</li>
+<li class="level1"><div class="li"> <strong>git diff</strong> shows the difference between the working directory and the staging area</div>
+</li>
+<li class="level1"><div class="li"> <strong>git commit</strong> permanently stores file changes from the staging area in the repository</div>
+</li>
+<li class="level1"><div class="li"> <strong>git log</strong> shows a list of all previous commits</div>
+</li>
+</ul>
+
+<p>
+<strong>Backtrack</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Käsuga &#039;<strong>git show head</strong>&#039; kuvatakse viimase commitiga tehtud muudatused pluss &#039;git log&#039; viimase muudatuse teave. </div>
+</li>
+<li class="level1"><div class="li"> juhul kui tekib vajadus taastada faili seis sellisena, nagu see oli peale viimast commiti ehk siis tühistada vahepealsed muudatused, siis seda saab teha käsuga &#039;<strong>git checkout HEAD [failinimi]</strong>&#039;</div>
+</li>
+<li class="level1"><div class="li"> juhul kui <em>staging area</em>-sse sai kogemata lisatud ebasobiv fail, näiteks mõne vajaliku reata, siis <em>staging area</em>-st tagasi saab võtta faili käsuga &#039;<strong>git reset HEAD [failinimi]</strong>&#039;.</div>
+</li>
+<li class="level1"><div class="li"> juhul kui vahepeal on õnnestunud repo-sse commit-ida ühe või mitu versiooni, mida pole vaja, siis tühistada saab seda käsuga &#039;<strong>git reset [SHA]</strong>&#039;, kus SHA = &#039;<strong>git log</strong>&#039; saadud SHA väärtus.</div>
+</li>
+<li class="level1"><div class="li"> repo-st soovitud varasema versiooni kättesaamiseks: &#039;<strong>git checkout [failinimi]</strong>&#039;</div>
+</li>
+</ul>
+
+<p>
+<strong> Backtracki peamised käsud </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>git checkout HEAD filename</strong> discards changes in the working directory.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git reset HEAD filename</strong> unstages file changes in the staging area.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git reset SHA</strong> can be used to reset to a previous commit in your commit history.</div>
+</li>
+</ul>
+
+<p>
+<strong> Git branching </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Uue branch-i loomiseks on käsk &#039;<strong>git branch [new_branch]</strong>&#039;, erinevate branch-ide vahel liikumiseks on aga käsk &#039;<strong>git checkout [branch_name]</strong>&#039;.</div>
+</li>
+<li class="level1"><div class="li"> git käsurea olekuribal (käsurea kohal olev) on näha, mis branchil kasutaja hetkel on, viimane sulgudes olev sõne nt ”(master)”. </div>
+</li>
+<li class="level1"><div class="li"> branch-i muudatuste lisamiseks master branchi commit-i tehtud muudatused, liigu master branchi ning kasuta käsku nt “<strong>git merge [branch_name]</strong>&#039;.</div>
+</li>
+<li class="level1"><div class="li"> erinevate branchide nägemiseks on võimalik kasutada käsklust &#039;<strong>git show-branch</strong>&#039;.</div>
+</li>
+<li class="level1"><div class="li"> sama/samu faile on võimalik erinevate branchide alt muuta ja commit-ida, erinevas branchis vastava failide versiooni laadimiseks kasutada käsku &#039;git checkout HEAD *&#039;.</div>
+</li>
+<li class="level1"><div class="li"> juhul kui konkreetne branch on oma eesmärgi täitnud ning selle võib lisada masterisse ja branch ise kustutada &#039;<strong>git branch -d [branch_name]</strong>&#039;</div>
+</li>
+</ul>
+
+<p>
+<strong> Branching-u peamised käsud </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>git branch</strong> lists all a Git project&#039;s branches.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git branch branch_name</strong> creates a new branch.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git checkout branch_name</strong> used to switch from one branch to another.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git merge branch_name</strong> used to join file changes from one branch to another.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git branch -d branch_name</strong> deletes the branch specified.</div>
+</li>
+</ul>
+
+<p>
+<strong> Git teamwork </strong>
+</p>
+
+<p>
+In order to collaborate, you and team needs:
+</p>
+<ul>
+<li class="level1"><div class="li"> A complete replica of the project on your own computers</div>
+</li>
+<li class="level1"><div class="li"> A way to keep track of and review each other&#039;s work</div>
+</li>
+<li class="level1"><div class="li"> Access to a definitive project version</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> tekitamaks repo-st enale klooni, kasutada käsku &#039;<strong>git clone [repo asukoht] [klooni nimi]</strong>&#039;. klooni nimi on ühtlasi <em>remote</em>. kloonitud projektide andmeid on võimalik näha, vastava klooni asukohas, käsuga &#039;<strong>git remote -v</strong>&#039;.</div>
+</li>
+<li class="level1"><div class="li"> repo-st viimaste muudatuste hankimiseks kasutada klooni asukohas käsku “<strong>git fetch</strong>”. sellega tekitatakse eraldi branchi muudatus, klooni masterisse muudatuste saamiseks kasutada käsku “git merge origin/master”. </div>
+</li>
+<li class="level1"><div class="li"> klooni juures muudatuste tegemiseks on paslik teha uue branch, millesse sooritada soovitud muudatusega. peale muudatuste sooritamist ja commit-i suunata need repo-sse tagasi käsuga “<strong>git push origin [klooni branchi nimi]</strong>”. </div>
+</li>
+<li class="level1"><div class="li"> Repo-sse tekib vastav branch, mida on võimalik repo masteriga liita. peale käsku “<strong>git merge [branch-i nimi]</strong>”.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> A remote is a Git repository that lives outside your Git project folder. Remotes can live on the web, on a shared network or even in a separate folder on your local computer.</div>
+</li>
+<li class="level1"><div class="li"> The Git Collaborative Workflow are steps that enable smooth project development when multiple collaborators are working on the same Git project.</div>
+</li>
+</ul>
+
+<p>
+<strong> Teamworki peamised käsud </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>git clone</strong> creates a local copy of a remote.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git remote -v</strong> lists a Git project&#039;s remotes.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git fetch</strong> fetches work from the remote into the local copy.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git merge origin/master</strong> merges origin/master into your local branch.</div>
+</li>
+<li class="level1"><div class="li"> <strong>git push origin &lt;branch_name&gt;</strong> pushes a local branch to the origin remote.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="GitHub" level="1" /><a name="wikiitgit__github">GitHub</a></h2>
+<div class="level2">
+
+<p>
+GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. Unlike Git, which is strictly a command-line tool, GitHub provides a Web-based graphical interface and desktop as well as mobile integration. It also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project. GitHub offers both plans for private repositories and free accounts, which are usually used to host open-source software projects.
+</p>
+
+<p>
+<strong>Deploying a site to GitHub</strong>
+</p>
+
+<p>
+To specify the repo using Git, we&#039;ll have to add the remote and label it as the origin.
+</p>
+<ul>
+<li class="level1"><div class="li"> The remote is the URL of the repo that will store your site&#039;s contents.</div>
+</li>
+<li class="level1"><div class="li"> The origin is an alias for the remote. You can think of an alias as an abbreviation or a substitute name. This means that instead of having to always type the lengthy remote URL over and over again, you can simply refer to it as origin later on.</div>
+</li>
+</ul>
+<ul>
+<li class="level1 node"><div class="li"> In the terminal, you can add the remote with the following command: &#039;<strong>git remote add origin <a href="https://github.com/your-user-name/your-user-name.github.io.git" class="urlextern" title="https://github.com/your-user-name/your-user-name.github.io.git" rel="nofollow">https://github.com/your-user-name/your-user-name.github.io.git</a></strong>&#039;, antud hetkel &#039;<strong>git remote add origin <a href="https://github.com/kalle404/cautious-broccoli.git" class="urlextern" title="https://github.com/kalle404/cautious-broccoli.git" rel="nofollow">https://github.com/kalle404/cautious-broccoli.git</a></strong>&#039;</div>
+<ul>
+<li class="level2"><div class="li"> Important: If you accidentally make a mistake when adding the remote URL, you can start over and remove the remote with the following command: &#039;<strong>git remote rm origin</strong>&#039;</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Confirm that the remote was succesfully added, by typing the following: &#039;<strong>git remote -v</strong>&#039;</div>
+</li>
+<li class="level1"><div class="li"> Add all of your site&#039;s contents using the following Git command: &#039;<strong>git add .</strong>&#039;</div>
+</li>
+<li class="level1"><div class="li"> Save your changes using Git&#039;s commit command and the following commit message: &#039;<strong>git commit -m “Save my work”</strong>&#039;</div>
+</li>
+<li class="level1"><div class="li"> In the terminal, push the contents of your site to your repo, use Git&#039;s push command and push the contents of your site up to your repo using the following command: &#039;<strong>git push -u origin master</strong>&#039;</div>
+</li>
+</ul>
+
+<p>
+<strong> Getting stuff from GitHub</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Commands can be read <a href="https://help.github.com/articles/fetching-a-remote/" class="urlextern" title="https://help.github.com/articles/fetching-a-remote/" rel="nofollow">here</a>.</div>
+</li>
+</ul>
+
+<p>
+<img src="/docuwiki/lib/exe/fetch.php?w=600&amp;tok=5c324e&amp;media=wiki:it:github_push.png" class="media" alt="" width="600" />
+</p>
+
+<p>
+<strong> Going live with a site </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Domain names are human-friendly names that identify servers on the Internet. A global system known as the Domain Name System (DNS) is used for storing which domain names correspond to which servers.</div>
+</li>
+<li class="level1"><div class="li"> For example, Codecademy&#039;s domain name is <a href="http://www.codecademy.com" class="urlextern" title="http://www.codecademy.com" rel="nofollow">www.codecademy.com</a>. When you type the domain name into your browser, your computer asks the DNS to identify which servers should receive the request in order to load our website.</div>
+</li>
+<li class="level1"><div class="li"> Often, the most time consuming part of buying a domain name is actually deciding what you&#039;d like it to be. Be aware that not all domain names are available; many have already been claimed by others. We&#039;re going to use Amazon Web Services (AWS) to purchase your custom domain. AWS is an industry standard suite of web infrastructure services used frequently by developers. The specific service we&#039;re going to use to purchase your domain name is called Route 53.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="Mida uurida vaja" level="1" /><a name="wikiitgit__mida_uurida_vaja">Mida uurida vaja</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> ühest arendusarvutist reposse commitimine</div>
+</li>
+<li class="level1"><div class="li"> ühest arvutist reposse lisaks commitimine</div>
+</li>
+<li class="level1"><div class="li"> ühes arvutis repo oleku taastamine</div>
+</li>
+<li class="level1"><div class="li"> teisest arvutist repost kloonimine</div>
+</li>
+<li class="level1"><div class="li"> teisest arvutist reposse lisaks commitimine</div>
+</li>
+<li class="level1"><div class="li"> teises arvutis repo oleku taastamine</div>
+</li>
+<li class="level1 node"><div class="li"> erinevate branchide tekitamine kahes arvutis</div>
+<ul>
+<li class="level2"><div class="li"> näiteks branchi tekitamine remotest käib käsuga: &#039;<strong>git push  &lt;REMOTENAME&gt; &lt;LOCALBRANCHNAME&gt;:&lt;REMOTEBRANCHNAME&gt;</strong>&#039;</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> branchide lisamine masterisse peale arenduse lõppu: liikuda master branch-i ja merge</div>
+</li>
+<li class="level1"><div class="li"> kui on tõsiselt vaja töökohas oleva seisuga repo üle kirjutada: &#039;<strong>git push -f origin master</strong>&#039;</div>
+</li>
+<li class="level1"><div class="li"> kuvada, millised branchid on olemas ning millised versioonid deploy-tud: &#039;<strong>git branch -v</strong>&#039;</div>
+</li>
+</ul>
+
+</div>
+
+<h2><bookmark content="kalle404 githubi repo info" level="1" /><a name="wikiitgit__kalle404_githubi_repo_info">kalle404 githubi repo info</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://github.com/kalle404" class="urlextern" title="https://github.com/kalle404" rel="nofollow">profiil</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="https://github.com/kalle404/cautious-broccoli" class="urlextern" title="https://github.com/kalle404/cautious-broccoli" rel="nofollow">docuwiki repo</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://github.com/kalle404/cuddly-parakeet" class="urlextern" title="https://github.com/kalle404/cuddly-parakeet" rel="nofollow">jaani repo</a></div>
+</li>
+</ul>
+
+</div>

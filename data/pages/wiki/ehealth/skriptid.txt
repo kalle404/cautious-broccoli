@@ -304,4 +304,13 @@ Even when there is no repetition of SQL, the WITH clause can simplify complex qu
 	FROM empis_sys_param_vaartus
 	WHERE param_kood = 'TVH_SKAIS2_ANDMEVAHETUS'
 	AND sysdate BETWEEN kehtiv_alates AND coalesce(kehtiv_kuni, sysdate);
-    
+
+
+** ühe tabeli lõikes topeltkirjete leidmine ** 
+
+  select * from tblcontacts 
+    where concat(fn, sn) in 
+  (select concat(fn, sn)
+    from tblcontacts
+    group by concat(fn, sn)
+    having count(*) > 1 )

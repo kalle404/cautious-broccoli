@@ -1,0 +1,5 @@
+====== X-tee ======
+
+
+[9:13:33] Hasso Mehide: proovi sellise responsega, seal jah oli üks wrapper-element puudu, mida x-tee protokoll ette näeb ja mis oli dokumentatsioonis ilusti ära peidetud
+[9:14:20] Hasso Mehide: x-tee protokoll: https://www.ria.ee/public/x_tee/pr-mess_x-road_message_protocol_v4.0_4.0.8_Y-743-11.pdf
